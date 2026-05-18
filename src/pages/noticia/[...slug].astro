@@ -88,12 +88,12 @@ const articleLd = {
   },
   author: [{
     '@type': 'Organization',
-    name: 'SaludLatAm Editorial',
+    name: 'PulsoSano Editorial',
     url: SITE_URL + '/sobre',
   }],
   publisher: {
     '@type': 'NewsMediaOrganization',
-    name: 'SaludLatAm',
+    name: 'PulsoSano',
     url: SITE_URL,
     logo: { '@type': 'ImageObject', url: SITE_URL + '/og-default.png', width: 1200, height: 630 },
   },
@@ -126,11 +126,11 @@ const breadcrumbLd = {
   ],
 };
 
-const shareText = encodeURIComponent(d.titulo + ' — SaludLatAm');
+const shareText = encodeURIComponent(d.titulo + ' — PulsoSano');
 const shareUrl = encodeURIComponent(url);
 ---
 <Base
-  title={d.titulo.length > 60 ? d.titulo : d.titulo + ' — SaludLatAm'}
+  title={d.titulo.length > 60 ? d.titulo : d.titulo + ' — PulsoSano'}
   description={d.resumen}
   image={d.imagen}
   canonical={url}
@@ -196,7 +196,7 @@ const shareUrl = encodeURIComponent(url);
             </a>
           </p>
           <p class="text-xs text-ink-500 mt-2">
-            Artículo divulgativo reescrito en español por SaludLatAm. Consulta el original
+            Artículo divulgativo reescrito en español por PulsoSano. Consulta el original
             para detalles técnicos y referencias bibliográficas completas.
           </p>
         </section>
@@ -261,7 +261,7 @@ const shareUrl = encodeURIComponent(url);
             </div>
             <div>
               <dt class="text-xs text-ink-500">Reescrito por</dt>
-              <dd class="text-ink-900">SaludLatAm + IA editorial</dd>
+              <dd class="text-ink-900">PulsoSano + IA editorial</dd>
             </div>
           </dl>
         </section>
@@ -274,7 +274,7 @@ const shareUrl = encodeURIComponent(url);
             Leer artículo original →
           </a>
           <p class="text-xs text-ink-500 mt-3 leading-relaxed">
-            Los hallazgos y cifras corresponden a la fuente. SaludLatAm reescribe sin
+            Los hallazgos y cifras corresponden a la fuente. PulsoSano reescribe sin
             copiar texto literal.
           </p>
         </section>

@@ -33,7 +33,7 @@ const SITE_URL = (import.meta.env.SITE_URL || 'https://saludlatam.com').replace(
 const itemListLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Últimas noticias de SaludLatAm',
+  name: 'Últimas noticias de PulsoSano',
   itemListOrder: 'https://schema.org/ItemListOrderDescending',
   numberOfItems: items.length,
   itemListElement: items.map((it: any, i: number) => ({
@@ -47,7 +47,7 @@ const itemListLd = {
 const prevUrl = page.url.prev ? new URL(page.url.prev, SITE_URL).toString() : null;
 const nextUrl = page.url.next ? new URL(page.url.next, SITE_URL).toString() : null;
 ---
-<Base title="SaludLatAm — Noticias y avances en salud, basados en evidencia"
+<Base title="PulsoSano — Noticias y avances en salud, basados en evidencia"
       description="Resúmenes diarios en español de la investigación médica internacional. Citamos siempre la fuente original. Contenido informativo, no reemplaza al médico."
       jsonLd={itemListLd}
       prevUrl={prevUrl}
