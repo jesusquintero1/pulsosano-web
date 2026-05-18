@@ -13,8 +13,8 @@ function escape(s) {
 const NEWS_WINDOW_MS = 2 * 24 * 60 * 60 * 1000;
 
 export async function GET(context) {
-  const SITE = (import.meta.env.SITE_URL || context.site?.toString() || 'https://saludlatam.com').replace(/\/$/, '');
-  const PUBLICATION_NAME = 'SaludLatAm';
+  const SITE = (import.meta.env.SITE_URL || context.site?.toString() || 'https://pulsosano.com').replace(/\/$/, '');
+  const PUBLICATION_NAME = 'PulsoSano';
   const PUBLICATION_LANG = 'es';
 
   const cutoff = Date.now() - NEWS_WINDOW_MS;

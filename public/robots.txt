@@ -1,5 +1,5 @@
-# SaludLatAm — robots.txt
-# https://saludlatam.com
+# PulsoSano — robots.txt
+# https://pulsosano.com
 
 User-agent: *
 Allow: /
@@ -46,5 +46,5 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemaps
-Sitemap: https://saludlatam.com/sitemap-index.xml
-Sitemap: https://saludlatam.com/news-sitemap.xml
+Sitemap: https://pulsosano.com/sitemap-index.xml
+Sitemap: https://pulsosano.com/news-sitemap.xml

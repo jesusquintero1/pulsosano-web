@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
-const SITE = process.env.SITE_URL || 'https://saludlatam.com';
+const SITE = process.env.SITE_URL || 'https://PulsoSano.com';
 
 export default defineConfig({
   site: SITE,

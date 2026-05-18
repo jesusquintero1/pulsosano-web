@@ -6,7 +6,7 @@ import requests
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = os.environ.get("SITE_URL", "https://saludlatam.com").rstrip("/")
+SITE = os.environ.get("SITE_URL", "https://pulsosano.com").rstrip("/")
 KEY_FILE = ROOT / "public" / "indexnow-key.txt"
 
 def collect_urls() -> list[str]:

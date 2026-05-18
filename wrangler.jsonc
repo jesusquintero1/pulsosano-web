@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "saludlatam-web",
+  "name": "pulsosano-web",
   "compatibility_date": "2026-05-17",
   "workers_dev": true,
   "preview_urls": false,
@@ -9,7 +9,7 @@
     "not_found_handling": "404-page"
   },
   "routes": [
-    { "pattern": "saludlatam.com", "custom_domain": true },
-    { "pattern": "www.saludlatam.com", "custom_domain": true }
+    { "pattern": "pulsosano.com", "custom_domain": true },
+    { "pattern": "www.pulsosano.com", "custom_domain": true }
   ]
 }

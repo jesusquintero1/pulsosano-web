@@ -21,9 +21,9 @@ export interface Props {
   articleTags?: string[];
 }
 
-const SITE_NAME = 'SaludLatAm';
+const SITE_NAME = 'PulsoSano';
 const SITE_TAGLINE = 'Noticias y avances en salud, basados en evidencia, en español.';
-const SITE_URL = (import.meta.env.SITE_URL || Astro.site?.toString() || 'https://saludlatam.com').replace(/\/$/, '');
+const SITE_URL = (import.meta.env.SITE_URL || Astro.site?.toString() || 'https://pulsosano.com').replace(/\/$/, '');
 const ADSENSE = import.meta.env.PUBLIC_ADSENSE_CLIENT || 'ca-pub-__PENDIENTE__';
 const adsenseActive = ADSENSE && !ADSENSE.includes('__PENDIENTE__');
 

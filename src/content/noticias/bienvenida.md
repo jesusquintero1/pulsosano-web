@@ -1,19 +1,19 @@
 ---
-titulo: "Bienvenido a SaludLatAm: divulgación médica basada en evidencia"
+titulo: "Bienvenido a PulsoSano: divulgación médica basada en evidencia"
 resumen: "Un agregador automático de noticias y avances en salud, reescritos en español neutro, citando siempre la fuente original."
-porQueImporta: "Latinoamérica tiene poca cobertura en español de la investigación médica internacional. SaludLatAm acerca esos hallazgos sin reemplazar al médico."
+porQueImporta: "Latinoamérica tiene poca cobertura en español de la investigación médica internacional. PulsoSano acerca esos hallazgos sin reemplazar al médico."
 categoria: "Salud Pública y Política"
 fuente:
-  nombre: "SaludLatAm"
-  url: "https://saludlatam.com/sobre"
+  nombre: "PulsoSano"
+  url: "https://pulsosano.com/sobre"
 fecha: 2026-05-18
 tags: ["bienvenida", "metodologia", "divulgacion"]
 autorIA: "editorial"
 ---
 
-## Qué es SaludLatAm
+## Qué es PulsoSano
 
-SaludLatAm es un proyecto editorial automatizado que reúne noticias y avances en salud
+PulsoSano es un proyecto editorial automatizado que reúne noticias y avances en salud
 provenientes de instituciones médicas reconocidas (NIH, OMS, Mayo Clinic, Cleveland Clinic,
 Harvard Health, Diario Médico, EFE Salud, entre otras) y las reescribe en español neutro
 para audiencias latinoamericanas.

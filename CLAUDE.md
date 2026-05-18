@@ -1,4 +1,4 @@
-# CLAUDE.md — SaludLatAm
+# CLAUDE.md — PulsoSano
 
 Sitio agregador automático de noticias y avances en salud, en español neutro,
 monetizado con Google AdSense. Nicho YMYL (Your Money Your Life).
@@ -10,7 +10,7 @@ monetizado con Google AdSense. Nicho YMYL (Your Money Your Life).
 - Modelo IA: **claude-haiku-4-5** con prompt caching (`cache_control: ephemeral`).
 - Hosting: **Cloudflare Workers Static Assets** (NO Pages, NO adapter).
 - CI/CD: **GitHub Actions**, cron `0 */2 * * *`.
-- Dominio sugerido: `saludlatam.com`.
+- Dominio sugerido: `pulsosano.com`.
 
 ## Comandos
 
@@ -26,7 +26,7 @@ py scripts/aggregator.py --limit 5
 1. **Wrangler 3 falla** en deploys solo-assets con "Missing entry-point".
    El workflow fuerza `wranglerVersion: "4"` en `cloudflare/wrangler-action@v3`.
 2. **`.env` con SITE_URL incorrecto** sobreescribe el build. Verificar tras cada
-   deploy: `curl https://saludlatam.com/ | grep canonical`.
+   deploy: `curl https://pulsosano.com/ | grep canonical`.
 3. **Cloudflare cache** tarda 2-5 minutos en propagar. Bustear con `?v=$(date +%s)`.
 4. **Astro `getStaticPaths`** corre en contexto aislado: declarar helpers DENTRO
    de la función, no en el frontmatter superior.

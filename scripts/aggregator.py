@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SaludLatAm — Agregador automático de noticias médicas.
+PulsoSano — Agregador automático de noticias médicas.
 
 - Lee feeds RSS definidos en sources.yml.
 - Filtra los ya procesados (dedupe por SHA256 del URL).
@@ -399,7 +399,7 @@ def run(args: argparse.Namespace) -> int:
     max_total = args.limit or int(cfg.get("max_noticias_por_run", 12))
     max_por_fuente = int(cfg.get("max_por_fuente", 2))
     model = cfg.get("modelo", "claude-haiku-4-5")
-    user_agent = cfg.get("user_agent", "Mozilla/5.0 SaludLatAm/1.0")
+    user_agent = cfg.get("user_agent", "Mozilla/5.0 PulsoSano/1.0")
 
     state = load_state()
     processed_hashes = set(state.get("processed_urls", []))
@@ -531,7 +531,7 @@ def run(args: argparse.Namespace) -> int:
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="SaludLatAm — agregador de noticias médicas")
+    p = argparse.ArgumentParser(description="PulsoSano — agregador de noticias médicas")
     p.add_argument("--dry-run", action="store_true", help="No llama al modelo; solo muestra candidatos.")
     p.add_argument("--verbose", "-v", action="store_true", help="Logs detallados.")
     p.add_argument("--limit", type=int, default=0, help="Forzar máximo de noticias en esta corrida.")

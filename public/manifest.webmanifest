@@ -1,6 +1,6 @@
 {
-  "name": "SaludLatAm",
-  "short_name": "SaludLatAm",
+  "name": "PulsoSano",
+  "short_name": "PulsoSano",
   "description": "Noticias y avances en salud, basados en evidencia, en español neutro para Latinoamérica.",
   "start_url": "/",
   "scope": "/",

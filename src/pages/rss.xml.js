@@ -10,7 +10,7 @@ function escape(str) {
 }
 
 export async function GET(context) {
-  const SITE = (import.meta.env.SITE_URL || context.site?.toString() || 'https://saludlatam.com').replace(/\/$/, '');
+  const SITE = (import.meta.env.SITE_URL || context.site?.toString() || 'https://pulsosano.com').replace(/\/$/, '');
   const items = (await getCollection('noticias'))
     .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
     .slice(0, 50);
@@ -31,7 +31,7 @@ export async function GET(context) {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SaludLatAm — Noticias y avances en salud</title>
+    <title>PulsoSano — Noticias y avances en salud</title>
     <link>${SITE}</link>
     <atom:link href="${SITE}/rss.xml" rel="self" type="application/rss+xml" />
     <description>Resúmenes en español de noticias médicas y avances científicos, citando la fuente original.</description>
