@@ -1,24 +1,97 @@
 config:
-  max_noticias_por_run: 12
+  max_noticias_por_run: 18
   max_por_fuente: 2
   modelo: "claude-haiku-4-5"
   user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
-# Fuentes verificadas el 2026-05-18. Si un feed comienza a fallar, marcar activa:false.
+# Fuentes verificadas el 2026-05-18 (segunda ronda con peer-review + LatAm).
+# Pesos: 5 = autoridad máxima (NIH, OMS, OPS, journals peer-review)
+#        4 = institucional o periodismo médico de calidad
+#        3 = divulgación seria
+#        2 = prensa generalista (uso limitado)
 fuentes:
-  # === Inglés — autoridad alta ===
+  # === PEER-REVIEW / Autoridad académica (peso 5) ===
+  - nombre: "Nature Medicine"
+    url: "https://www.nature.com/nm.rss"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  - nombre: "BMJ Open"
+    url: "https://bmjopen.bmj.com/rss/current.xml"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  - nombre: "PLOS Medicine"
+    url: "https://journals.plos.org/plosmedicine/feed/atom"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  # === Agencias e instituciones públicas (peso 5) ===
+  - nombre: "Organización Mundial de la Salud (OMS)"
+    url: "https://www.who.int/rss-feeds/news-english.xml"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  - nombre: "Organización Panamericana de la Salud (OPS) — Español"
+    url: "https://www.paho.org/es/rss.xml"
+    idioma: "es"
+    peso: 5
+    activa: true
+
+  - nombre: "Organización Panamericana de la Salud (OPS) — English"
+    url: "https://www.paho.org/en/rss.xml"
+    idioma: "en"
+    peso: 5
+    activa: true
+
   - nombre: "MedlinePlus News (NIH)"
     url: "https://medlineplus.gov/groupfeeds/new.xml"
     idioma: "en"
     peso: 5
     activa: true
 
-  - nombre: "World Health Organization"
-    url: "https://www.who.int/rss-feeds/news-english.xml"
+  - nombre: "CDC Newsroom"
+    url: "https://tools.cdc.gov/podcasts/feed.asp?feedid=183"
     idioma: "en"
     peso: 5
     activa: true
 
+  # === Periodismo médico especializado (peso 4-5) ===
+  - nombre: "STAT News"
+    url: "https://www.statnews.com/feed/"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  - nombre: "Diario Médico"
+    url: "https://www.diariomedico.com/rss/portada.xml"
+    idioma: "es"
+    peso: 5
+    activa: true
+
+  - nombre: "Reuters Health"
+    url: "https://feeds.feedburner.com/reuters/health"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "BBC Health"
+    url: "http://feeds.bbci.co.uk/news/health/rss.xml"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "The New York Times Health"
+    url: "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  # === Divulgación académica (peso 4) ===
   - nombre: "ScienceDaily Health & Medicine"
     url: "https://www.sciencedaily.com/rss/health_medicine.xml"
     idioma: "en"
@@ -37,37 +110,6 @@ fuentes:
     peso: 4
     activa: true
 
-  - nombre: "BBC Health"
-    url: "http://feeds.bbci.co.uk/news/health/rss.xml"
-    idioma: "en"
-    peso: 4
-    activa: true
-
-  - nombre: "The New York Times Health"
-    url: "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml"
-    idioma: "en"
-    peso: 4
-    activa: true
-
-  - nombre: "STAT News"
-    url: "https://www.statnews.com/feed/"
-    idioma: "en"
-    peso: 5
-    activa: true
-
-  - nombre: "Healthline News"
-    url: "https://www.healthline.com/rss/health-news"
-    idioma: "en"
-    peso: 4
-    activa: true
-
-  # === Español — prioridad SEO LatAm ===
-  - nombre: "Diario Médico"
-    url: "https://www.diariomedico.com/rss/portada.xml"
-    idioma: "es"
-    peso: 5
-    activa: true
-
   - nombre: "Cuídate Plus"
     url: "https://cuidateplus.marca.com/rss"
     idioma: "es"
@@ -80,45 +122,71 @@ fuentes:
     peso: 4
     activa: true
 
-  - nombre: "20Minutos Salud"
-    url: "https://www.20minutos.es/rss/salud/"
-    idioma: "es"
+  # === Divulgación complementaria (peso 3) ===
+  - nombre: "Healthline News"
+    url: "https://www.healthline.com/rss/health-news"
+    idioma: "en"
     peso: 3
     activa: true
 
-  # === Inactivas — bloquean al user-agent del bot (revisar manualmente más tarde) ===
+  - nombre: "PsyPost (Salud Mental)"
+    url: "https://www.psypost.org/feed"
+    idioma: "en"
+    peso: 3
+    activa: true
+
+  - nombre: "ScienceAlert"
+    url: "https://www.sciencealert.com/feed"
+    idioma: "en"
+    peso: 3
+    activa: true
+
+  # === Prensa generalista — uso limitado (peso 2) ===
+  - nombre: "20Minutos Salud"
+    url: "https://www.20minutos.es/rss/salud/"
+    idioma: "es"
+    peso: 2
+    activa: true
+
+  # === INACTIVAS — bloqueadas al user-agent del bot ===
   - nombre: "Harvard Health Blog"
     url: "https://www.health.harvard.edu/blog/feed"
     idioma: "en"
     peso: 5
-    activa: false   # 404 al user-agent del bot (2026-05-18)
+    activa: false   # 404 (2026-05-18)
 
   - nombre: "Mayo Clinic News"
     url: "https://newsnetwork.mayoclinic.org/feed/"
     idioma: "en"
     peso: 5
-    activa: false   # 403 (bloqueo de bot)
+    activa: false   # 403 (2026-05-18)
 
   - nombre: "Cleveland Clinic Health Essentials"
     url: "https://health.clevelandclinic.org/feed/"
     idioma: "en"
     peso: 4
-    activa: false   # 404 al user-agent del bot
+    activa: false   # 404 (2026-05-18)
 
   - nombre: "Medical News Today"
     url: "https://www.medicalnewstoday.com/rss"
     idioma: "en"
     peso: 4
-    activa: false   # 403/404 al user-agent del bot
+    activa: false   # 403/404 (2026-05-18)
+
+  - nombre: "The Lancet"
+    url: "https://www.thelancet.com/rssfeed/lancet_current.xml"
+    idioma: "en"
+    peso: 5
+    activa: false   # 403 (2026-05-18)
 
   - nombre: "Infosalus (Europa Press)"
     url: "https://www.infosalus.com/rss/seccion-salud.xml"
     idioma: "es"
     peso: 5
-    activa: false   # HTTP 200 pero feed sin items
+    activa: false   # 200 sin items (2026-05-18)
 
   - nombre: "EFE Salud"
     url: "https://efesalud.com/feed/"
     idioma: "es"
     peso: 5
-    activa: false   # 429 (rate limit estricto)
+    activa: false   # 429 rate-limit (2026-05-18)

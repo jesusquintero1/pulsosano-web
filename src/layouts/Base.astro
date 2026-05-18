@@ -12,6 +12,8 @@ export interface Props {
   type?: 'website' | 'article';
   jsonLd?: object | object[];
   noindex?: boolean;
+  prevUrl?: string | null;
+  nextUrl?: string | null;
 }
 
 const SITE_NAME = 'SaludLatAm';
@@ -28,6 +30,8 @@ const {
   type = 'website',
   jsonLd,
   noindex = false,
+  prevUrl,
+  nextUrl,
 } = Astro.props;
 
 const url = canonical || new URL(Astro.url.pathname, SITE_URL).toString();
@@ -51,6 +55,8 @@ const organizationLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={url} />
+    {prevUrl && <link rel="prev" href={prevUrl} />}
+    {nextUrl && <link rel="next" href={nextUrl} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <meta property="og:type" content={type} />
@@ -72,7 +78,7 @@ const organizationLd = {
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
     {adsenseActive && (
       <>
@@ -87,6 +93,12 @@ const organizationLd = {
                 window.adsbygoogle.requestNonPersonalizedAds = 1;
               }
             } catch (e) {}
+            // Auto-ads: Google decide insertar anuncios in-content adicionales
+            // donde detecte oportunidad. Suele subir RPM 10-15%.
+            window.adsbygoogle.push({
+              google_ad_client: ADSENSE,
+              enable_page_level_ads: true,
+            });
           })();
         </script>
         <script is:inline async src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE} crossorigin="anonymous"></script>

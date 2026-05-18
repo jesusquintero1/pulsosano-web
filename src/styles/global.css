@@ -29,31 +29,89 @@ a {
 }
 
 @layer components {
+  /* Estilo editorial inspirado en distill.pub: serif para cuerpo,
+     medida ~68ch, jerarquía clara, citas con borde lateral. */
   .prose-medical {
-    @apply max-w-none text-ink-700 leading-relaxed;
+    @apply text-ink-700;
+    font-family: 'Source Serif Pro', ui-serif, Georgia, 'Times New Roman', serif;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 68ch;
   }
   .prose-medical h2 {
-    @apply text-2xl font-semibold text-ink-900 mt-8 mb-3 border-b border-ink-100 pb-2;
+    @apply text-ink-900 mt-10 mb-3 pb-2 border-b border-ink-100;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.625rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
   }
   .prose-medical h3 {
-    @apply text-xl font-semibold text-ink-900 mt-6 mb-2;
+    @apply text-ink-900 mt-7 mb-2;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.3;
   }
   .prose-medical p {
-    @apply my-4;
+    @apply my-5;
+  }
+  /* Drop-cap discreto en el primer párrafo, solo en escritorio. */
+  .prose-medical > p:first-of-type::first-letter {
+    @apply text-brand-700;
+    font-family: 'Source Serif Pro', ui-serif, Georgia, serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+    float: left;
+    padding: 0.25rem 0.5rem 0 0;
+  }
+  @media (max-width: 640px) {
+    .prose-medical > p:first-of-type::first-letter {
+      font-size: inherit;
+      float: none;
+      padding: 0;
+      color: inherit;
+    }
   }
   .prose-medical ul {
-    @apply list-disc pl-6 my-4 space-y-1;
+    @apply list-disc pl-6 my-5 space-y-1;
   }
   .prose-medical ol {
-    @apply list-decimal pl-6 my-4 space-y-1;
+    @apply list-decimal pl-6 my-5 space-y-1;
   }
   .prose-medical a {
-    @apply text-brand-700 underline hover:text-brand-600;
+    @apply text-brand-700 underline decoration-brand-500/50 underline-offset-2 hover:text-brand-600 hover:decoration-brand-500;
   }
   .prose-medical strong {
-    @apply text-ink-900;
+    @apply text-ink-900 font-semibold;
+  }
+  .prose-medical em {
+    @apply italic;
   }
   .prose-medical blockquote {
-    @apply border-l-4 border-brand-500 bg-brand-50 px-4 py-2 italic my-4;
+    @apply border-l-4 border-brand-500 bg-brand-50/60 px-5 py-3 italic my-6 text-ink-700 rounded-r;
+  }
+  .prose-medical figure {
+    @apply my-6;
+  }
+  .prose-medical figcaption {
+    @apply text-sm text-ink-500 mt-2 text-center;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+  .prose-medical code {
+    @apply bg-ink-100 text-ink-900 px-1.5 py-0.5 rounded text-[0.9em];
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  /* Notas marginales: tipografía sans, tamaño chico, color secundario. */
+  .marginalia {
+    @apply text-sm text-ink-700 leading-relaxed;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+  .marginalia h3,
+  .marginalia .marginalia-title {
+    @apply text-xs uppercase tracking-widest text-brand-700 font-semibold mb-2;
+    letter-spacing: 0.08em;
   }
 }

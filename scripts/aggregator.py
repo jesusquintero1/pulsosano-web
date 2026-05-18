@@ -184,6 +184,80 @@ def extract_image(entry: Any) -> Optional[str]:
     return None
 
 
+# ---------- Validadores de compliance YMYL ----------
+
+# Frases médicamente peligrosas para AdSense. Si el modelo las produce,
+# rechazamos el artículo y reintentamos.
+FORBIDDEN_PATTERNS = [
+    r"\btoma(r)?\s+\d+\s*(mg|g|ml|mcg|μg|ui|unidades)\b",
+    r"\bla dosis (es|recomendada|debe)\b",
+    r"\bdosis (recomendada|sugerida|óptima)\b",
+    r"\bcura(r|do|n)?\s+(el|la|los|las)\b",
+    r"\belimina\s+(la enfermedad|el cáncer|la diabetes)\b",
+    r"\b100\s*%\s*(efectivo|seguro|garantizado)\b",
+    r"\bmilagroso\b",
+    r"\bremedio (casero|definitivo|infalible) para\b",
+    r"\b(debe|debes|deberías) tomar\b.*\b(mg|g|ml|mcg)\b",
+]
+
+# Cifras sospechosas: número seguido de unidad médica sin contexto de estudio.
+# (Si la cifra está, debe estar respaldada por palabras como 'estudio', 'según', 'investigadores'.)
+NUMERIC_CLAIM_RX = re.compile(
+    r"\b\d+([,.]\d+)?\s*(mg|mg/kg|g/dl|mmol|μg|ug|ng|kcal|ui)\b",
+    flags=re.IGNORECASE,
+)
+EVIDENCE_WORDS = re.compile(
+    r"\b(según|estudio|estudios|ensayo|investigadores|investigación|publicad[oa]|"
+    r"revista|journal|reportad[oa]|datos|análisis|metaanálisis)\b",
+    flags=re.IGNORECASE,
+)
+
+
+def _tokens(text: str) -> set:
+    return {t.lower() for t in re.findall(r"[a-záéíóúñ]{4,}", text, flags=re.IGNORECASE)}
+
+
+def jaccard_similarity(a: str, b: str) -> float:
+    """Similitud de tokens — para detectar plagio del resumen RSS."""
+    ta, tb = _tokens(a), _tokens(b)
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+def check_compliance(data: dict, source_summary: str) -> tuple[bool, list[str]]:
+    """Devuelve (es_válido, lista_de_problemas)."""
+    problems: list[str] = []
+    body_full = " ".join([
+        data.get("titulo", ""),
+        data.get("resumen", ""),
+        data.get("porQueImporta", ""),
+        data.get("cuerpo", ""),
+    ])
+
+    # 1) Frases prohibidas
+    for pat in FORBIDDEN_PATTERNS:
+        if re.search(pat, body_full, flags=re.IGNORECASE):
+            problems.append(f"frase prohibida: {pat}")
+
+    # 2) Cifras médicas sin contexto de estudio
+    for m in NUMERIC_CLAIM_RX.finditer(body_full):
+        start = max(0, m.start() - 200)
+        ctx = body_full[start:m.end() + 200]
+        if not EVIDENCE_WORDS.search(ctx):
+            problems.append(f"cifra médica sin contexto de estudio: '{m.group(0)}'")
+            break  # con uno basta para rechazar
+
+    # 3) Plagio frente al resumen RSS de la fuente
+    sim = jaccard_similarity(data.get("cuerpo", ""), source_summary or "")
+    if sim > 0.4:
+        problems.append(f"similitud {sim:.2f} > 0.40 con resumen original (posible plagio)")
+
+    return (len(problems) == 0, problems)
+
+
+# ---------- Limpieza HTML ----------
+
 def clean_text(html: str) -> str:
     soup = BeautifulSoup(html or "", "html.parser")
     for tag in soup(["script", "style"]):
@@ -418,7 +492,21 @@ def run(args: argparse.Namespace) -> int:
                 title=c["title"],
                 summary=c["summary"],
             )
-            data = call_anthropic(client, model, user_prompt, verbose=args.verbose)
+
+            # Generación con validación de compliance.
+            data = None
+            for compliance_attempt in range(2):
+                candidate = call_anthropic(client, model, user_prompt, verbose=args.verbose)
+                ok, problems = check_compliance(candidate, c["summary"])
+                if ok:
+                    data = candidate
+                    break
+                print(f"    [compliance] intento {compliance_attempt+1}: {', '.join(problems)}", file=sys.stderr)
+            if data is None:
+                print("    [skip] compliance falló dos veces; se omite esta noticia.", file=sys.stderr)
+                processed_hashes.add(c["hash"])  # no reintentar la misma noticia mañana
+                continue
+
             path = write_article(
                 data,
                 source_name=c["source_name"],

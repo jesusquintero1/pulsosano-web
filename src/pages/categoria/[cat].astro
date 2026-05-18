@@ -25,9 +25,26 @@ const todas = await getCollection('noticias');
 const items = todas
   .filter((n) => n.data.categoria === categoria)
   .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime());
+
+const SITE_URL = (import.meta.env.SITE_URL || 'https://saludlatam.com').replace(/\/$/, '');
+
+const itemListLd = items.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Últimas noticias — ${categoria}`,
+  itemListOrder: 'https://schema.org/ItemListOrderDescending',
+  numberOfItems: items.length,
+  itemListElement: items.slice(0, 30).map((it: any, i: number) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: SITE_URL + '/noticia/' + it.slug + '/',
+    name: it.data.titulo,
+  })),
+} : null;
 ---
 <Base title={categoria + ' — SaludLatAm'}
-      description={'Últimas noticias y artículos divulgativos sobre ' + categoria.toLowerCase() + '. Resúmenes en español citando la fuente original.'}>
+      description={'Últimas noticias y artículos divulgativos sobre ' + categoria.toLowerCase() + '. Resúmenes en español citando la fuente original.'}
+      jsonLd={itemListLd || undefined}>
   <section class="bg-gradient-to-br from-brand-50 via-white to-white">
     <div class="max-w-6xl mx-auto px-4 py-10">
       <p class="text-xs uppercase tracking-widest text-brand-700 font-medium mb-2">Categoría</p>

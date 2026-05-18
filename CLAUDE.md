@@ -58,12 +58,25 @@ Definidas en `scripts/sources.yml`. Cada fuente tiene `peso` (5 = autoridad alta
 Si una empieza a fallar (HTTP 403/404/429), marcar `activa: false` y dejar
 comentario con la fecha.
 
-Verificadas funcionando el 2026-05-18:
-MedlinePlus, WHO, ScienceDaily (3 secciones), BBC Health, NYT Health, STAT News,
-Healthline, Diario Médico, Cuídate Plus, El Mundo Salud, 20Minutos Salud.
+Verificadas funcionando el 2026-05-18 (22 activas):
+- Peer-review: Nature Medicine, BMJ Open, PLOS Medicine
+- Agencias: WHO, OPS/PAHO (es+en), MedlinePlus, CDC Newsroom
+- Periodismo médico: STAT News, Diario Médico, Reuters Health
+- Calidad: BBC Health, NYT Health
+- Divulgación: ScienceDaily (3), Cuídate Plus, El Mundo Salud
+- Complementaria: Healthline, PsyPost, ScienceAlert, 20Minutos
 
-Bloqueadas al user-agent del bot (revisar más adelante):
-Harvard Health, Mayo Clinic, Cleveland Clinic, Medical News Today, Infosalus, EFE Salud.
+Bloqueadas al user-agent del bot:
+Harvard Health, Mayo Clinic, Cleveland Clinic, Medical News Today,
+The Lancet, Infosalus, EFE Salud (marcadas `activa:false`).
+
+## Validadores de compliance YMYL
+
+`scripts/aggregator.py` aplica tras cada generación:
+1. **FORBIDDEN_PATTERNS** — frases prohibidas (dosis, cura, milagroso…).
+2. **NUMERIC_CLAIM_RX** — cifras `mg/g/ml/mcg/UI` sin contexto de estudio.
+3. **jaccard_similarity** — si > 0.40 con el resumen RSS, rechaza por plagio.
+Si falla 2 veces consecutivas, marca la noticia como procesada y la salta.
 
 ## Estructura de archivos
 

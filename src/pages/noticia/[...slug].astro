@@ -74,6 +74,20 @@ const breadcrumbLd = {
 
 const shareText = encodeURIComponent(d.titulo + ' — SaludLatAm');
 const shareUrl = encodeURIComponent(url);
+
+// Tiempo de lectura estimado: ~225 palabras por minuto (es).
+const bodyText: string = (entry.body || '') as string;
+const wordCount = bodyText.split(/\s+/).filter(Boolean).length;
+const readingMin = Math.max(2, Math.round(wordCount / 225));
+
+const tipoEvidencia = (() => {
+  const c = d.categoria;
+  if (c === 'Investigación Clínica') return 'Estudio académico / ensayo';
+  if (c === 'Avances Médicos') return 'Novedad clínica / regulatoria';
+  if (c === 'Medicina Preventiva') return 'Recomendación preventiva';
+  if (c === 'Salud Pública y Política') return 'Política sanitaria / OMS';
+  return 'Divulgación informativa';
+})();
 ---
 <Base
   title={d.titulo + ' — SaludLatAm'}
@@ -83,7 +97,8 @@ const shareUrl = encodeURIComponent(url);
   type="article"
   jsonLd={[articleLd, breadcrumbLd]}
 >
-  <article class="max-w-3xl mx-auto px-4 py-10">
+  <article class="max-w-6xl mx-auto px-4 py-8">
+
     <nav class="text-sm text-ink-500 mb-4" aria-label="Breadcrumbs">
       <a href="/" class="hover:text-brand-700">Inicio</a>
       <span class="mx-2">/</span>
@@ -92,80 +107,152 @@ const shareUrl = encodeURIComponent(url);
       <span class="text-ink-700">{d.titulo}</span>
     </nav>
 
-    <header class="mb-6">
-      <div class="flex items-center gap-2 text-xs mb-3">
+    <header class="mb-8 max-w-4xl">
+      <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
         <span class="inline-flex px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 font-medium">{d.categoria}</span>
         <time class="text-ink-500" datetime={fechaIso}>{fechaTxt}</time>
+        <span class="text-ink-300">·</span>
+        <span class="text-ink-500">{readingMin} min de lectura</span>
       </div>
-      <h1 class="text-3xl md:text-4xl font-bold text-ink-900 leading-tight">{d.titulo}</h1>
-      <p class="mt-4 text-lg text-ink-700">{d.resumen}</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-ink-900 leading-[1.1] tracking-tight" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">{d.titulo}</h1>
+      <p class="mt-5 text-lg md:text-xl text-ink-700 leading-relaxed max-w-3xl" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">{d.resumen}</p>
     </header>
 
     {d.imagen && (
-      <figure class="my-6">
+      <figure class="my-8 max-w-5xl">
         <img src={d.imagen} alt={d.titulo}
-          width="900" height="506" loading="eager" decoding="async"
+          width="1200" height="675" loading="eager" decoding="async"
           referrerpolicy="no-referrer"
           class="w-full h-auto rounded-lg border border-ink-100"
           onerror="this.onerror=null;this.src='/og-default.png';" />
       </figure>
     )}
 
-    <MedicalDisclaimer variant="box" />
+    <div class="grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-12 xl:gap-16">
 
-    {d.porQueImporta && (
-      <aside class="my-6 bg-accent-500/5 border-l-4 border-accent-500 rounded-r-lg p-4">
-        <p class="text-sm"><strong class="text-ink-900">Por qué importa:</strong> <span class="text-ink-700">{d.porQueImporta}</span></p>
-      </aside>
-    )}
+      <!-- COLUMNA PRINCIPAL -->
+      <div>
+        <!-- AdSlot top — arriba del fold, formato horizontal -->
+        <AdSlot slot="6000000001" variant="horizontal" format="auto" lazy={false} />
 
-    <AdSlot slot="4444444444" layout="in-article" format="fluid" />
+        <MedicalDisclaimer variant="box" />
 
-    <div class="prose-medical">
-      <Content />
-    </div>
-
-    <AdSlot slot="5555555555" layout="in-article" format="fluid" />
-
-    <section class="mt-8 p-5 border border-ink-100 rounded-lg bg-ink-100/40">
-      <p class="text-sm text-ink-700">
-        <strong class="text-ink-900">Fuente original:</strong>
-        <a href={d.fuente.url} target="_blank" rel="nofollow noopener noreferrer" class="text-brand-700 underline ml-1">
-          {d.fuente.nombre}
-        </a>
-      </p>
-      <p class="text-xs text-ink-500 mt-2">
-        Artículo divulgativo reescrito en español por SaludLatAm. Consulta el original
-        para detalles técnicos y referencias bibliográficas completas.
-      </p>
-    </section>
-
-    <section class="mt-8" aria-label="Compartir">
-      <p class="text-xs uppercase tracking-widest text-ink-500 mb-2">Compartir</p>
-      <div class="flex flex-wrap gap-2">
-        <a class="px-3 py-1.5 rounded-md bg-ink-900 text-white text-sm hover:bg-ink-700"
-           href={`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`} target="_blank" rel="noopener">X / Twitter</a>
-        <a class="px-3 py-1.5 rounded-md bg-blue-700 text-white text-sm hover:bg-blue-800"
-           href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`} target="_blank" rel="noopener">LinkedIn</a>
-        <a class="px-3 py-1.5 rounded-md bg-green-600 text-white text-sm hover:bg-green-700"
-           href={`https://wa.me/?text=${shareText}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </section>
-
-    {(d.tags && d.tags.length > 0) && (
-      <section class="mt-6">
-        <p class="text-xs uppercase tracking-widest text-ink-500 mb-2">Etiquetas</p>
-        <div class="flex flex-wrap gap-2">
-          {d.tags.map((t: string) => (
-            <span class="px-2 py-0.5 rounded bg-ink-100 text-ink-700 text-xs">#{t}</span>
-          ))}
+        <div class="prose-medical">
+          <Content />
         </div>
-      </section>
-    )}
+
+        <!-- AdSlot in-article — formato fluido (mejor RPM en mobile) -->
+        <AdSlot slot="6000000002" layout="in-article" variant="fluid" format="fluid" lazy={true} />
+
+        <section class="mt-10 p-5 border border-ink-100 rounded-lg bg-ink-100/40">
+          <p class="text-sm text-ink-700">
+            <strong class="text-ink-900">Fuente original:</strong>
+            <a href={d.fuente.url} target="_blank" rel="nofollow noopener noreferrer" class="text-brand-700 underline ml-1">
+              {d.fuente.nombre}
+            </a>
+          </p>
+          <p class="text-xs text-ink-500 mt-2">
+            Artículo divulgativo reescrito en español por SaludLatAm. Consulta el original
+            para detalles técnicos y referencias bibliográficas completas.
+          </p>
+        </section>
+
+        <section class="mt-8" aria-label="Compartir">
+          <p class="text-xs uppercase tracking-widest text-ink-500 mb-2">Compartir</p>
+          <div class="flex flex-wrap gap-2">
+            <a class="px-3 py-1.5 rounded-md bg-ink-900 text-white text-sm hover:bg-ink-700"
+               href={`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`} target="_blank" rel="noopener">X / Twitter</a>
+            <a class="px-3 py-1.5 rounded-md bg-blue-700 text-white text-sm hover:bg-blue-800"
+               href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`} target="_blank" rel="noopener">LinkedIn</a>
+            <a class="px-3 py-1.5 rounded-md bg-green-600 text-white text-sm hover:bg-green-700"
+               href={`https://wa.me/?text=${shareText}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </section>
+
+        {(d.tags && d.tags.length > 0) && (
+          <section class="mt-6">
+            <p class="text-xs uppercase tracking-widest text-ink-500 mb-2">Etiquetas</p>
+            <div class="flex flex-wrap gap-2">
+              {d.tags.map((t: string) => (
+                <span class="px-2 py-0.5 rounded bg-ink-100 text-ink-700 text-xs">#{t}</span>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <!-- ASIDE LATERAL (notas marginales estilo distill.pub) -->
+      <aside class="mt-10 lg:mt-0 lg:sticky lg:top-24 lg:self-start space-y-6">
+
+        <!-- TARJETA: Sobre este artículo -->
+        <section class="marginalia border border-ink-100 rounded-lg p-5 bg-white">
+          <p class="marginalia-title">Sobre este artículo</p>
+          <dl class="space-y-2">
+            <div>
+              <dt class="text-xs text-ink-500">Categoría</dt>
+              <dd class="text-ink-900 font-medium">{d.categoria}</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-ink-500">Tipo de contenido</dt>
+              <dd class="text-ink-900">{tipoEvidencia}</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-ink-500">Publicado</dt>
+              <dd class="text-ink-900"><time datetime={fechaIso}>{fechaTxt}</time></dd>
+            </div>
+            <div>
+              <dt class="text-xs text-ink-500">Lectura estimada</dt>
+              <dd class="text-ink-900">{readingMin} min</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-ink-500">Reescrito por</dt>
+              <dd class="text-ink-900">SaludLatAm + IA editorial</dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- TARJETA: Fuente original -->
+        <section class="marginalia border-l-4 border-brand-500 bg-brand-50/40 rounded-r-lg p-5">
+          <p class="marginalia-title">Fuente original</p>
+          <p class="font-semibold text-ink-900 mb-1">{d.fuente.nombre}</p>
+          <a href={d.fuente.url} target="_blank" rel="nofollow noopener noreferrer" class="text-brand-700 underline text-sm break-words">
+            Leer artículo original →
+          </a>
+          <p class="text-xs text-ink-500 mt-3 leading-relaxed">
+            Los hallazgos y cifras corresponden a la fuente. SaludLatAm reescribe sin
+            copiar texto literal.
+          </p>
+        </section>
+
+        {d.porQueImporta && (
+          <section class="marginalia border-l-4 border-accent-500 bg-accent-500/5 rounded-r-lg p-5">
+            <p class="marginalia-title" style="color:#1d4ed8;">Por qué importa</p>
+            <p class="text-ink-700">{d.porQueImporta}</p>
+          </section>
+        )}
+
+        <!-- TARJETA: Aviso médico siempre visible -->
+        <section class="marginalia border border-ink-200 rounded-lg p-5 bg-white">
+          <p class="marginalia-title">Aviso médico</p>
+          <p class="text-ink-700">
+            Este contenido es informativo. <strong class="text-ink-900">No sustituye la consulta</strong>
+            con un profesional sanitario calificado. Antes de tomar decisiones sobre tu salud,
+            consulta con tu médico.
+          </p>
+          <a href="/aviso-medico" class="inline-block mt-2 text-brand-700 text-sm underline">Más información</a>
+        </section>
+
+        <!-- AdSlot vertical 300x600 — visible solo en lg+, sticky -->
+        <div class="hidden lg:block">
+          <AdSlot slot="6000000003" variant="vertical" format="auto" lazy={true} />
+        </div>
+
+      </aside>
+    </div>
   </article>
 
   {relacionadas.length > 0 && (
-    <section class="max-w-5xl mx-auto px-4 pb-16">
+    <section class="max-w-6xl mx-auto px-4 pb-16 mt-12 border-t border-ink-100 pt-12">
       <h2 class="text-2xl font-bold text-ink-900 mb-6">Más en {d.categoria}</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {relacionadas.map((p: any) => (

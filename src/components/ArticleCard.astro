@@ -20,7 +20,7 @@ const isCompact = variant === 'compact';
   <a href={href} class={`block ${isFeatured ? 'md:w-1/2' : ''} ${isCompact ? 'aspect-[16/9]' : 'aspect-[16/9]'} bg-ink-100 overflow-hidden`}>
     <img
       src={img}
-      alt=""
+      alt={titulo}
       width={isFeatured ? 800 : 600}
       height={isFeatured ? 450 : 338}
       loading="lazy"
