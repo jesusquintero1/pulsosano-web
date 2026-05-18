@@ -1,0 +1,46 @@
+---
+export interface Props {
+  href: string;
+  titulo: string;
+  resumen: string;
+  categoria: string;
+  fecha: Date;
+  imagen?: string;
+  variant?: 'default' | 'featured' | 'compact';
+}
+
+const { href, titulo, resumen, categoria, fecha, imagen, variant = 'default' } = Astro.props;
+const fechaTxt = new Date(fecha).toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' });
+const fallback = '/og-default.png';
+const img = imagen || fallback;
+const isFeatured = variant === 'featured';
+const isCompact = variant === 'compact';
+---
+<article class={`group bg-white border border-ink-100 rounded-xl overflow-hidden hover:shadow-md transition ${isFeatured ? 'md:flex md:flex-row' : ''}`}>
+  <a href={href} class={`block ${isFeatured ? 'md:w-1/2' : ''} ${isCompact ? 'aspect-[16/9]' : 'aspect-[16/9]'} bg-ink-100 overflow-hidden`}>
+    <img
+      src={img}
+      alt=""
+      width={isFeatured ? 800 : 600}
+      height={isFeatured ? 450 : 338}
+      loading="lazy"
+      decoding="async"
+      referrerpolicy="no-referrer"
+      class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+      onerror={`this.onerror=null;this.src='${fallback}';`}
+    />
+  </a>
+  <div class={`p-5 flex flex-col gap-2 ${isFeatured ? 'md:w-1/2 md:p-7' : ''}`}>
+    <div class="flex items-center gap-2 text-xs">
+      <span class="inline-flex px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 font-medium">{categoria}</span>
+      <time class="text-ink-500" datetime={fecha.toISOString?.() || ''}>{fechaTxt}</time>
+    </div>
+    <h3 class={`font-bold text-ink-900 leading-tight group-hover:text-brand-700 transition ${isFeatured ? 'text-2xl md:text-3xl' : isCompact ? 'text-base' : 'text-lg'}`}>
+      <a href={href}>{titulo}</a>
+    </h3>
+    {!isCompact && (
+      <p class="text-sm text-ink-700 leading-relaxed line-clamp-3">{resumen}</p>
+    )}
+    <a href={href} class="mt-auto text-sm text-brand-700 font-medium hover:underline">Leer más →</a>
+  </div>
+</article>

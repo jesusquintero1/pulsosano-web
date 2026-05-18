@@ -1,0 +1,98 @@
+name: Agregador de noticias
+
+on:
+  schedule:
+    # Cada 2 horas, en punto.
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Máx. noticias a generar en esta corrida (vacío = usar config)'
+        required: false
+        default: ''
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'astro.config.mjs'
+      - 'tailwind.config.mjs'
+      - 'package.json'
+      - 'wrangler.jsonc'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: saludlatam-build
+  cancel-in-progress: false
+
+env:
+  SITE_URL: https://saludlatam.com
+  PUBLIC_ADSENSE_CLIENT: ${{ secrets.PUBLIC_ADSENSE_CLIENT }}
+
+jobs:
+  aggregate-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python deps
+        run: pip install --quiet -r scripts/requirements.txt
+
+      - name: Run aggregator (skip on push)
+        if: github.event_name != 'push'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AGG_LIMIT: ${{ github.event.inputs.limit }}
+        run: |
+          if [ -n "${AGG_LIMIT}" ]; then
+            python scripts/aggregator.py --limit "${AGG_LIMIT}"
+          else
+            python scripts/aggregator.py
+          fi
+
+      - name: Commit nuevas noticias (si hay)
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "saludlatam-bot"
+          git config user.email "bot@saludlatam.com"
+          git add src/content/noticias/ scripts/state/processed.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "feat(noticias): agregar nuevas noticias automáticas $(date -u +%Y-%m-%dT%H:%M)"
+            git push
+          else
+            echo "No hay cambios que commitear."
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Node deps
+        run: npm install --no-audit --no-fund
+
+      - name: Build Astro
+        env:
+          SITE_URL: https://saludlatam.com
+          PUBLIC_ADSENSE_CLIENT: ${{ secrets.PUBLIC_ADSENSE_CLIENT }}
+        run: npm run build
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4"
+          command: deploy

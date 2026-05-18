@@ -1,0 +1,50 @@
+---
+const nav = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Investigación', href: '/categoria/investigacion-clinica' },
+  { label: 'Avances', href: '/categoria/avances-medicos' },
+  { label: 'Nutrición', href: '/categoria/nutricion-y-dieta' },
+  { label: 'Salud Mental', href: '/categoria/salud-mental' },
+  { label: 'Fitness', href: '/categoria/fitness-y-ejercicio' },
+  { label: 'Estilo de Vida', href: '/categoria/estilo-de-vida-saludable' },
+];
+const path = Astro.url.pathname;
+---
+<header class="bg-white border-b border-ink-100 sticky top-0 z-40 backdrop-blur-sm bg-white/95">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-2 group" aria-label="SaludLatAm — Inicio">
+      <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-500 text-white shadow-sm group-hover:bg-brand-600 transition" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+          <path d="M10 3a1 1 0 0 0-1 1v5H4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h5v5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-5h5a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-5V4a1 1 0 0 0-1-1h-4z" />
+        </svg>
+      </span>
+      <span class="flex flex-col leading-tight">
+        <span class="font-bold text-lg text-ink-900">SaludLatAm</span>
+        <span class="text-[10px] uppercase tracking-widest text-brand-700">Salud · Evidencia · LatAm</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1 text-sm">
+      {nav.map((item) => {
+        const active = path === item.href || (item.href !== '/' && path.startsWith(item.href));
+        return (
+          <a href={item.href}
+             class={`px-3 py-2 rounded-md font-medium transition ${active ? 'bg-brand-50 text-brand-700' : 'text-ink-700 hover:bg-ink-100'}`}>
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <details class="lg:hidden relative">
+      <summary class="list-none cursor-pointer p-2 rounded-md hover:bg-ink-100" aria-label="Menú">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </summary>
+      <nav class="absolute right-0 mt-2 w-56 bg-white border border-ink-100 rounded-lg shadow-lg py-2 z-50">
+        {nav.map((item) => (
+          <a href={item.href} class="block px-4 py-2 text-sm text-ink-700 hover:bg-brand-50 hover:text-brand-700">{item.label}</a>
+        ))}
+      </nav>
+    </details>
+  </div>
+</header>

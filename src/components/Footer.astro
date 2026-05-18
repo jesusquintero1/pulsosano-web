@@ -1,0 +1,57 @@
+---
+const year = new Date().getFullYear();
+const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
+---
+<footer class="bg-ink-900 text-ink-300 mt-16">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-10">
+    <div>
+      <h2 class="text-white font-bold text-lg mb-3">SaludLatAm</h2>
+      <p class="text-sm leading-relaxed">
+        Noticias y avances en salud, basados en evidencia, en español neutro para Latinoamérica.
+        Contenido divulgativo, redactado a partir de fuentes médicas reconocidas.
+      </p>
+      <p class="text-xs mt-4 text-ink-500">
+        Este contenido es informativo. No sustituye la consulta con un profesional sanitario.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Secciones</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/categoria/investigacion-clinica" class="hover:text-brand-500">Investigación Clínica</a></li>
+        <li><a href="/categoria/avances-medicos" class="hover:text-brand-500">Avances Médicos</a></li>
+        <li><a href="/categoria/nutricion-y-dieta" class="hover:text-brand-500">Nutrición y Dieta</a></li>
+        <li><a href="/categoria/salud-mental" class="hover:text-brand-500">Salud Mental</a></li>
+        <li><a href="/categoria/medicina-preventiva" class="hover:text-brand-500">Medicina Preventiva</a></li>
+        <li><a href="/rss.xml" class="hover:text-brand-500">RSS</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Newsletter</h3>
+      <p class="text-sm mb-3">Recibe lo más relevante de la semana en tu correo.</p>
+      <form action={newsletterEndpoint || '#'} method="POST" class="flex flex-col gap-2">
+        <input type="email" name="email" required placeholder="tu@correo.com"
+          class="px-3 py-2 rounded-md bg-ink-700 border border-ink-500 text-white placeholder:text-ink-300 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+        <button type="submit" class="px-3 py-2 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-md transition">
+          Suscribirme
+        </button>
+      </form>
+      {!newsletterEndpoint && (
+        <p class="text-xs text-ink-500 mt-2">Endpoint pendiente (Formspree).</p>
+      )}
+    </div>
+  </div>
+
+  <div class="border-t border-ink-700">
+    <div class="max-w-6xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between text-xs gap-3">
+      <p>© {year} SaludLatAm. Todos los derechos reservados.</p>
+      <nav class="flex flex-wrap gap-4">
+        <a href="/sobre" class="hover:text-brand-500">Sobre el proyecto</a>
+        <a href="/aviso-medico" class="hover:text-brand-500">Aviso médico</a>
+        <a href="/privacidad" class="hover:text-brand-500">Privacidad</a>
+        <a href="/contacto" class="hover:text-brand-500">Contacto</a>
+      </nav>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,48 @@
+---
+---
+<div id="slm-cookie-banner" class="hidden fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md z-50 bg-white border border-ink-200 rounded-xl shadow-xl p-5">
+  <h2 class="font-semibold text-ink-900 mb-2">Privacidad y cookies</h2>
+  <p class="text-sm text-ink-700 mb-3">
+    Usamos cookies para mejorar tu experiencia y mostrar publicidad. Puedes aceptar
+    el uso de cookies personalizadas o rechazarlas (en ese caso verás publicidad
+    no personalizada). Más detalles en nuestra
+    <a href="/privacidad" class="text-brand-700 underline">política de privacidad</a>.
+  </p>
+  <div class="flex flex-wrap gap-2">
+    <button id="slm-accept" class="px-4 py-2 rounded-md bg-brand-500 hover:bg-brand-600 text-white text-sm font-medium transition">Aceptar todas</button>
+    <button id="slm-reject" class="px-4 py-2 rounded-md border border-ink-300 text-ink-700 hover:bg-ink-100 text-sm transition">Rechazar</button>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var KEY = 'slm_consent';
+    var banner = document.getElementById('slm-cookie-banner');
+    if (!banner) return;
+    function applyConsent(value) {
+      try { localStorage.setItem(KEY, value); } catch (e) {}
+      banner.classList.add('hidden');
+      try {
+        window.adsbygoogle = window.adsbygoogle || [];
+        if (value === 'accepted') {
+          window.adsbygoogle.pauseAdRequests = 0;
+          window.adsbygoogle.requestNonPersonalizedAds = 0;
+        } else {
+          window.adsbygoogle.pauseAdRequests = 0;
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    }
+    var stored;
+    try { stored = localStorage.getItem(KEY); } catch (e) { stored = null; }
+    if (!stored) {
+      banner.classList.remove('hidden');
+    } else {
+      applyConsent(stored);
+    }
+    var accept = document.getElementById('slm-accept');
+    var reject = document.getElementById('slm-reject');
+    if (accept) accept.addEventListener('click', function () { applyConsent('accepted'); });
+    if (reject) reject.addEventListener('click', function () { applyConsent('rejected'); });
+  })();
+</script>

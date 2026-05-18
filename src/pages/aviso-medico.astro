@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
+---
+<Base title="Aviso médico — SaludLatAm"
+      description="SaludLatAm publica contenido divulgativo, informativo, no prescriptivo. No reemplaza la consulta con un profesional sanitario.">
+  <section class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-ink-900">Aviso médico</h1>
+    <p class="text-ink-500 text-sm mt-2">Lee con atención: esta página explica el alcance y los límites del contenido publicado en SaludLatAm.</p>
+
+    <MedicalDisclaimer variant="box" />
+
+    <div class="prose-medical mt-4">
+      <h2>1. Finalidad informativa, no clínica</h2>
+      <p>
+        Todo el contenido publicado en SaludLatAm —noticias, artículos, resúmenes,
+        infografías y boletines— tiene un propósito exclusivamente <strong>informativo
+        y divulgativo</strong>. No constituye consejo médico, diagnóstico, tratamiento,
+        prescripción ni recomendación individual.
+      </p>
+
+      <h2>2. SaludLatAm no presta servicios sanitarios</h2>
+      <p>
+        Nuestro equipo no incluye médicos, enfermeros, farmacéuticos ni otros
+        profesionales sanitarios actuando en su capacidad clínica. SaludLatAm no
+        atiende pacientes, no emite recetas, no realiza diagnósticos y no
+        recomienda intervenciones individuales.
+      </p>
+
+      <h2>3. Consulta siempre con un profesional</h2>
+      <p>
+        Antes de iniciar, modificar o interrumpir cualquier tratamiento, suplemento,
+        rutina de ejercicio o régimen alimentario, <strong>consulta con un médico
+        u otro profesional sanitario calificado</strong> que conozca tu historia
+        clínica y pueda evaluar tu situación particular.
+      </p>
+
+      <h2>4. En caso de emergencia</h2>
+      <p>
+        Si tú o alguien cercano experimenta una emergencia médica, llama de
+        inmediato a los servicios de urgencia de tu país o acude al hospital
+        más cercano. <strong>No esperes a buscar información en internet.</strong>
+      </p>
+
+      <h2>5. Fuentes y limitaciones</h2>
+      <p>
+        Reescribimos contenido a partir de fuentes médicas autorizadas. Procuramos
+        precisión, pero la ciencia avanza rápido y la información publicada hoy
+        puede actualizarse con nuevos estudios. Te recomendamos revisar la fuente
+        original (enlazada en cada artículo) y consultar a un profesional sobre
+        el estado actual del conocimiento en cada tema.
+      </p>
+
+      <h2>6. Sin relación médico-paciente</h2>
+      <p>
+        Leer SaludLatAm, suscribirte al boletín o escribirnos a través del
+        formulario de contacto <strong>no establece una relación
+        médico-paciente</strong>. No respondemos consultas individuales sobre
+        salud y, si recibimos alguna, te invitaremos a buscar atención
+        profesional.
+      </p>
+
+      <h2>7. Limitación de responsabilidad</h2>
+      <p>
+        SaludLatAm no se responsabiliza por decisiones que el lector tome a partir
+        del contenido publicado. El uso de la información es bajo la propia
+        responsabilidad del usuario.
+      </p>
+    </div>
+  </section>
+</Base>

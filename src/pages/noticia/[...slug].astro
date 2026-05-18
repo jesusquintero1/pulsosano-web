@@ -1,0 +1,184 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+export async function getStaticPaths() {
+  const todas = await getCollection('noticias');
+  return todas.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry, todas },
+  }));
+}
+
+const { entry, todas } = Astro.props as any;
+const { Content } = await entry.render();
+const d = entry.data;
+
+function slugCat(c: string) {
+  return c
+    .toLowerCase()
+    .replace(/[áéíóúñ]/g, (ch: string) => ({ á:'a', é:'e', í:'i', ó:'o', ú:'u', ñ:'n' } as any)[ch] || ch)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+const SITE_URL = (import.meta.env.SITE_URL || 'https://saludlatam.com').replace(/\/$/, '');
+const url = SITE_URL + '/noticia/' + entry.slug + '/';
+const catSlug = slugCat(d.categoria);
+
+const fechaTxt = new Date(d.fecha).toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' });
+const fechaIso = new Date(d.fecha).toISOString();
+
+const relacionadas = todas
+  .filter((n: any) => n.slug !== entry.slug && n.data.categoria === d.categoria)
+  .sort((a: any, b: any) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
+  .slice(0, 3);
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalScholarlyArticle',
+  headline: d.titulo,
+  description: d.resumen,
+  inLanguage: 'es',
+  datePublished: fechaIso,
+  dateModified: fechaIso,
+  mainEntityOfPage: url,
+  image: d.imagen || (SITE_URL + '/og-default.png'),
+  author: { '@type': 'Organization', name: 'SaludLatAm' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'SaludLatAm',
+    logo: { '@type': 'ImageObject', url: SITE_URL + '/og-default.png' },
+  },
+  citation: {
+    '@type': 'CreativeWork',
+    name: d.fuente.nombre,
+    url: d.fuente.url,
+  },
+  keywords: (d.tags || []).join(', '),
+  about: { '@type': 'MedicalCondition', name: d.categoria },
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE_URL + '/' },
+    { '@type': 'ListItem', position: 2, name: d.categoria, item: SITE_URL + '/categoria/' + catSlug + '/' },
+    { '@type': 'ListItem', position: 3, name: d.titulo, item: url },
+  ],
+};
+
+const shareText = encodeURIComponent(d.titulo + ' — SaludLatAm');
+const shareUrl = encodeURIComponent(url);
+---
+<Base
+  title={d.titulo + ' — SaludLatAm'}
+  description={d.resumen}
+  image={d.imagen}
+  canonical={url}
+  type="article"
+  jsonLd={[articleLd, breadcrumbLd]}
+>
+  <article class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-ink-500 mb-4" aria-label="Breadcrumbs">
+      <a href="/" class="hover:text-brand-700">Inicio</a>
+      <span class="mx-2">/</span>
+      <a href={'/categoria/' + catSlug + '/'} class="hover:text-brand-700">{d.categoria}</a>
+      <span class="mx-2">/</span>
+      <span class="text-ink-700">{d.titulo}</span>
+    </nav>
+
+    <header class="mb-6">
+      <div class="flex items-center gap-2 text-xs mb-3">
+        <span class="inline-flex px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 font-medium">{d.categoria}</span>
+        <time class="text-ink-500" datetime={fechaIso}>{fechaTxt}</time>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-ink-900 leading-tight">{d.titulo}</h1>
+      <p class="mt-4 text-lg text-ink-700">{d.resumen}</p>
+    </header>
+
+    {d.imagen && (
+      <figure class="my-6">
+        <img src={d.imagen} alt={d.titulo}
+          width="900" height="506" loading="eager" decoding="async"
+          referrerpolicy="no-referrer"
+          class="w-full h-auto rounded-lg border border-ink-100"
+          onerror="this.onerror=null;this.src='/og-default.png';" />
+      </figure>
+    )}
+
+    <MedicalDisclaimer variant="box" />
+
+    {d.porQueImporta && (
+      <aside class="my-6 bg-accent-500/5 border-l-4 border-accent-500 rounded-r-lg p-4">
+        <p class="text-sm"><strong class="text-ink-900">Por qué importa:</strong> <span class="text-ink-700">{d.porQueImporta}</span></p>
+      </aside>
+    )}
+
+    <AdSlot slot="4444444444" layout="in-article" format="fluid" />
+
+    <div class="prose-medical">
+      <Content />
+    </div>
+
+    <AdSlot slot="5555555555" layout="in-article" format="fluid" />
+
+    <section class="mt-8 p-5 border border-ink-100 rounded-lg bg-ink-100/40">
+      <p class="text-sm text-ink-700">
+        <strong class="text-ink-900">Fuente original:</strong>
+        <a href={d.fuente.url} target="_blank" rel="nofollow noopener noreferrer" class="text-brand-700 underline ml-1">
+          {d.fuente.nombre}
+        </a>
+      </p>
+      <p class="text-xs text-ink-500 mt-2">
+        Artículo divulgativo reescrito en español por SaludLatAm. Consulta el original
+        para detalles técnicos y referencias bibliográficas completas.
+      </p>
+    </section>
+
+    <section class="mt-8" aria-label="Compartir">
+      <p class="text-xs uppercase tracking-widest text-ink-500 mb-2">Compartir</p>
+      <div class="flex flex-wrap gap-2">
+        <a class="px-3 py-1.5 rounded-md bg-ink-900 text-white text-sm hover:bg-ink-700"
+           href={`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`} target="_blank" rel="noopener">X / Twitter</a>
+        <a class="px-3 py-1.5 rounded-md bg-blue-700 text-white text-sm hover:bg-blue-800"
+           href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`} target="_blank" rel="noopener">LinkedIn</a>
+        <a class="px-3 py-1.5 rounded-md bg-green-600 text-white text-sm hover:bg-green-700"
+           href={`https://wa.me/?text=${shareText}%20${shareUrl}`} target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </section>
+
+    {(d.tags && d.tags.length > 0) && (
+      <section class="mt-6">
+        <p class="text-xs uppercase tracking-widest text-ink-500 mb-2">Etiquetas</p>
+        <div class="flex flex-wrap gap-2">
+          {d.tags.map((t: string) => (
+            <span class="px-2 py-0.5 rounded bg-ink-100 text-ink-700 text-xs">#{t}</span>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+
+  {relacionadas.length > 0 && (
+    <section class="max-w-5xl mx-auto px-4 pb-16">
+      <h2 class="text-2xl font-bold text-ink-900 mb-6">Más en {d.categoria}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {relacionadas.map((p: any) => (
+          <ArticleCard
+            href={'/noticia/' + p.slug + '/'}
+            titulo={p.data.titulo}
+            resumen={p.data.resumen}
+            categoria={p.data.categoria}
+            fecha={p.data.fecha}
+            imagen={p.data.imagen}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</Base>

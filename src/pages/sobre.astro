@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
+---
+<Base title="Sobre SaludLatAm — Metodología y fuentes"
+      description="Cómo elaboramos cada artículo: fuentes médicas autorizadas, reescritura por IA en español, citación obligatoria del original. Política E-E-A-T.">
+  <section class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-ink-900">Sobre SaludLatAm</h1>
+    <p class="mt-3 text-lg text-ink-700">
+      SaludLatAm es un proyecto editorial automatizado que acerca la investigación
+      médica internacional al público latinoamericano, en español neutro y con
+      enlace directo a las fuentes originales.
+    </p>
+
+    <MedicalDisclaimer variant="box" />
+
+    <div class="prose-medical mt-4">
+      <h2>Nuestra metodología</h2>
+      <p>
+        Cada dos horas, un sistema automático revisa decenas de feeds RSS de
+        instituciones médicas reconocidas, selecciona los titulares más relevantes
+        y los envía a un modelo de inteligencia artificial (Claude Haiku 4.5 de
+        Anthropic) que reescribe el contenido en español, sin copiar texto literal
+        de la fuente. Cada artículo conserva las cifras y los hallazgos del estudio
+        original y cita el enlace al material primario.
+      </p>
+
+      <h2>Fuentes que utilizamos</h2>
+      <p>Trabajamos exclusivamente con fuentes médicas autorizadas:</p>
+      <ul>
+        <li><strong>Estados Unidos:</strong> NIH (MedlinePlus, News in Health), Mayo Clinic, Cleveland Clinic, Harvard Health.</li>
+        <li><strong>Internacional:</strong> Organización Mundial de la Salud (OMS), Medical News Today, ScienceDaily Health.</li>
+        <li><strong>España y LatAm:</strong> Infosalus (Europa Press), Diario Médico, Cuídate Plus, EFE Salud.</li>
+      </ul>
+      <p>
+        No publicamos contenido procedente de blogs personales, medicina alternativa
+        sin respaldo científico, ni testimonios individuales sin verificación.
+      </p>
+
+      <h2>Reglas editoriales (E-E-A-T)</h2>
+      <p>
+        Por tratarse de un proyecto de salud (categoría YMYL — Your Money Your Life
+        de Google), aplicamos reglas estrictas:
+      </p>
+      <ul>
+        <li>Nunca prescribimos medicamentos, dosis ni tratamientos individuales.</li>
+        <li>Nunca prometemos curas ni resultados garantizados.</li>
+        <li>Usamos siempre lenguaje informativo y diferido (“según el estudio…”, “los investigadores observaron…”).</li>
+        <li>Cada artículo recuerda al lector consultar con un profesional sanitario.</li>
+        <li>Cada artículo enlaza la fuente original con atributo <code>nofollow noopener</code>.</li>
+      </ul>
+
+      <h2>Quiénes somos</h2>
+      <p>
+        SaludLatAm es operado por un equipo independiente con interés en la
+        divulgación científica responsable. No tenemos vínculos comerciales con
+        farmacéuticas, laboratorios ni proveedores de servicios médicos. Nuestro
+        modelo de ingresos es publicidad mostrada por Google AdSense, separada
+        editorialmente del contenido.
+      </p>
+
+      <h2>Contacto y correcciones</h2>
+      <p>
+        ¿Encontraste un error o quieres reportar un problema? Escríbenos a través de
+        nuestra <a href="/contacto">página de contacto</a>. Revisamos cada solicitud
+        y corregimos el contenido cuando corresponde, indicando la fecha de
+        actualización en el artículo.
+      </p>
+    </div>
+  </section>
+</Base>

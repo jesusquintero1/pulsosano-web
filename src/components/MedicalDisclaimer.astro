@@ -1,0 +1,31 @@
+---
+export interface Props {
+  variant?: 'inline' | 'box' | 'compact';
+}
+const { variant = 'box' } = Astro.props;
+---
+{variant === 'box' && (
+  <aside class="my-6 border-l-4 border-brand-500 bg-brand-50/60 rounded-r-lg p-4" role="note" aria-label="Aviso médico">
+    <p class="flex items-start gap-2 text-sm text-ink-700">
+      <span class="inline-flex w-5 h-5 rounded-full bg-brand-500 text-white items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      </span>
+      <span>
+        <strong class="text-ink-900">Aviso médico:</strong>
+        este contenido es informativo. No sustituye la consulta con un profesional sanitario calificado.
+        Consulta siempre a tu médico antes de tomar decisiones sobre tu salud o la de tu familia.
+        <a href="/aviso-medico" class="text-brand-700 underline ml-1">Más información</a>.
+      </span>
+    </p>
+  </aside>
+)}
+{variant === 'inline' && (
+  <p class="text-sm italic text-ink-500 my-4">
+    Aviso: contenido informativo. No sustituye la consulta con un profesional sanitario.
+  </p>
+)}
+{variant === 'compact' && (
+  <p class="text-xs text-ink-500">
+    Contenido informativo, no reemplaza al médico.
+  </p>
+)}

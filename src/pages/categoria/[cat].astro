@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
+import { CATEGORIAS } from '../../content/config';
+
+export async function getStaticPaths() {
+  function slugify(c: string) {
+    return c
+      .toLowerCase()
+      .replace(/[áéíóúñ]/g, (ch: string) => ({ á:'a', é:'e', í:'i', ó:'o', ú:'u', ñ:'n' } as any)[ch] || ch)
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+  return CATEGORIAS.map((c) => ({
+    params: { cat: slugify(c) },
+    props: { categoria: c },
+  }));
+}
+
+const { categoria } = Astro.props as { categoria: string };
+const todas = await getCollection('noticias');
+const items = todas
+  .filter((n) => n.data.categoria === categoria)
+  .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime());
+---
+<Base title={categoria + ' — SaludLatAm'}
+      description={'Últimas noticias y artículos divulgativos sobre ' + categoria.toLowerCase() + '. Resúmenes en español citando la fuente original.'}>
+  <section class="bg-gradient-to-br from-brand-50 via-white to-white">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <p class="text-xs uppercase tracking-widest text-brand-700 font-medium mb-2">Categoría</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-ink-900">{categoria}</h1>
+      <p class="text-ink-700 mt-2">{items.length} artículo{items.length === 1 ? '' : 's'} en esta sección.</p>
+      <MedicalDisclaimer variant="compact" />
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    {items.length === 0 ? (
+      <p class="text-ink-500">Aún no hay artículos en esta categoría. Vuelve pronto.</p>
+    ) : (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.map((p: any, i: number) => (
+          <>
+            <ArticleCard
+              href={'/noticia/' + p.slug + '/'}
+              titulo={p.data.titulo}
+              resumen={p.data.resumen}
+              categoria={p.data.categoria}
+              fecha={p.data.fecha}
+              imagen={p.data.imagen}
+            />
+            {i === 5 && <div class="sm:col-span-2 lg:col-span-3"><AdSlot slot="3333333333" /></div>}
+          </>
+        ))}
+      </div>
+    )}
+  </section>
+</Base>

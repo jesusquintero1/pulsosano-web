@@ -1,0 +1,125 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import AdSlot from '../components/AdSlot.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
+import { CATEGORIAS } from '../content/config';
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const todas = await getCollection('noticias');
+  const ordenadas = todas.sort(
+    (a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()
+  );
+  return paginate(ordenadas, { pageSize: 12 });
+}
+
+const { page } = Astro.props as any;
+const items = page.data;
+const featured = items[0];
+const secondary = items.slice(1, 6);
+const rest = items.slice(6);
+
+function slugCat(c: string) {
+  return c
+    .toLowerCase()
+    .replace(/[áéíóúñ]/g, (ch) => ({ á:'a', é:'e', í:'i', ó:'o', ú:'u', ñ:'n' } as any)[ch] || ch)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+---
+<Base title="SaludLatAm — Noticias y avances en salud, basados en evidencia"
+      description="Resúmenes diarios en español de la investigación médica internacional. Citamos siempre la fuente original. Contenido informativo, no reemplaza al médico.">
+  <section class="bg-gradient-to-br from-brand-50 via-white to-white">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <p class="text-xs uppercase tracking-widest text-brand-700 font-medium mb-2">Salud · Evidencia · LatAm</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-ink-900 leading-tight max-w-4xl">
+        Noticias y avances en salud, en español, basados en evidencia.
+      </h1>
+      <p class="mt-4 text-lg text-ink-700 max-w-3xl">
+        Resúmenes diarios de la investigación médica internacional, redactados a partir de
+        instituciones reconocidas (NIH, OMS, Mayo Clinic, Harvard Health y más). Citamos
+        siempre la fuente original.
+      </p>
+      <MedicalDisclaimer variant="box" />
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    {featured && (
+      <>
+        <h2 class="text-2xl font-bold text-ink-900 mb-6">Destacada</h2>
+        <ArticleCard
+          variant="featured"
+          href={'/noticia/' + featured.slug + '/'}
+          titulo={featured.data.titulo}
+          resumen={featured.data.resumen}
+          categoria={featured.data.categoria}
+          fecha={featured.data.fecha}
+          imagen={featured.data.imagen}
+        />
+      </>
+    )}
+
+    {secondary.length > 0 && (
+      <>
+        <h2 class="text-2xl font-bold text-ink-900 mt-12 mb-6">Lo más reciente</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {secondary.map((p: any) => (
+            <ArticleCard
+              href={'/noticia/' + p.slug + '/'}
+              titulo={p.data.titulo}
+              resumen={p.data.resumen}
+              categoria={p.data.categoria}
+              fecha={p.data.fecha}
+              imagen={p.data.imagen}
+            />
+          ))}
+        </div>
+      </>
+    )}
+
+    <AdSlot slot="1111111111" />
+
+    {rest.length > 0 && (
+      <>
+        <h2 class="text-2xl font-bold text-ink-900 mt-8 mb-6">Más noticias</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {rest.map((p: any) => (
+            <ArticleCard
+              href={'/noticia/' + p.slug + '/'}
+              titulo={p.data.titulo}
+              resumen={p.data.resumen}
+              categoria={p.data.categoria}
+              fecha={p.data.fecha}
+              imagen={p.data.imagen}
+            />
+          ))}
+        </div>
+      </>
+    )}
+
+    <nav class="flex justify-between items-center mt-12 text-sm">
+      {page.url.prev ? (
+        <a href={page.url.prev} class="px-4 py-2 rounded-md border border-ink-200 hover:bg-ink-100">← Anteriores</a>
+      ) : <span></span>}
+      <span class="text-ink-500">Página {page.currentPage} de {page.lastPage}</span>
+      {page.url.next ? (
+        <a href={page.url.next} class="px-4 py-2 rounded-md border border-ink-200 hover:bg-ink-100">Siguientes →</a>
+      ) : <span></span>}
+    </nav>
+
+    <AdSlot slot="2222222222" />
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold text-ink-900 mb-6">Explora por tema</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {CATEGORIAS.map((c) => (
+          <a href={'/categoria/' + slugCat(c) + '/'} class="block px-4 py-3 rounded-lg border border-ink-100 bg-white hover:bg-brand-50 hover:border-brand-500 transition">
+            <span class="text-sm font-medium text-ink-900">{c}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </section>
+</Base>
