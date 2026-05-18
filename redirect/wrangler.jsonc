@@ -1,0 +1,12 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "pulsosano-redirect",
+  "main": "./index.js",
+  "compatibility_date": "2026-05-17",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "pulsosano.org", "custom_domain": true },
+    { "pattern": "www.pulsosano.org", "custom_domain": true }
+  ]
+}

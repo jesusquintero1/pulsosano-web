@@ -97,6 +97,15 @@ jobs:
           wranglerVersion: "4"
           command: deploy
 
+      - name: Deploy redirect worker (pulsosano.org -> pulsosano.com)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4"
+          workingDirectory: ./redirect
+          command: deploy
+
       - name: Ping IndexNow (Bing + Yandex)
         if: github.event_name != 'push'
         env:
