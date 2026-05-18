@@ -96,3 +96,15 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: "4"
           command: deploy
+
+      - name: Ping IndexNow (Bing + Yandex)
+        if: github.event_name != 'push'
+        env:
+          SITE_URL: https://saludlatam.com
+        run: python scripts/indexnow_submit.py || true
+
+      - name: Ping Google sitemap
+        if: github.event_name != 'push'
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://saludlatam.com/sitemap-index.xml" || true
+          curl -s "https://www.google.com/ping?sitemap=https://saludlatam.com/news-sitemap.xml" || true

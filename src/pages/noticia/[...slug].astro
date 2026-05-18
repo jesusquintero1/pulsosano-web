@@ -37,29 +37,83 @@ const relacionadas = todas
   .sort((a: any, b: any) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
   .slice(0, 3);
 
+// Tiempo de lectura estimado: ~225 palabras por minuto (es).
+const bodyText: string = (entry.body || '') as string;
+const wordCount = bodyText.split(/\s+/).filter(Boolean).length;
+const readingMin = Math.max(2, Math.round(wordCount / 225));
+
+const tipoEvidencia = (() => {
+  const c = d.categoria;
+  if (c === 'Investigación Clínica') return 'Estudio académico / ensayo';
+  if (c === 'Avances Médicos') return 'Novedad clínica / regulatoria';
+  if (c === 'Medicina Preventiva') return 'Recomendación preventiva';
+  if (c === 'Salud Pública y Política') return 'Política sanitaria / OMS';
+  return 'Divulgación informativa';
+})();
+
+// Schema híbrido: NewsArticle (para Google Discover / Top Stories) +
+// MedicalScholarlyArticle según la categoría.
+const isResearch = d.categoria === 'Investigación Clínica' || d.categoria === 'Avances Médicos';
+const articleType = isResearch ? ['NewsArticle', 'MedicalScholarlyArticle'] : 'NewsArticle';
+
+// TOC: extraer H2 del markdown para anchors visibles en SERP de Google.
+const h2Regex = /^##\s+(.+?)\s*$/gm;
+const tocItems: { text: string; slug: string }[] = [];
+let m: RegExpExecArray | null;
+while ((m = h2Regex.exec(bodyText)) !== null) {
+  const t = m[1].replace(/[#*_`]/g, '').trim();
+  const s = t.toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  if (s) tocItems.push({ text: t, slug: s });
+}
+
 const articleLd = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalScholarlyArticle',
-  headline: d.titulo,
+  '@type': articleType,
+  headline: d.titulo.slice(0, 110), // Google News exige ≤ 110 caracteres
+  alternativeHeadline: d.resumen.slice(0, 160),
   description: d.resumen,
   inLanguage: 'es',
+  isAccessibleForFree: true,
   datePublished: fechaIso,
   dateModified: fechaIso,
-  mainEntityOfPage: url,
-  image: d.imagen || (SITE_URL + '/og-default.png'),
-  author: { '@type': 'Organization', name: 'SaludLatAm' },
-  publisher: {
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  image: {
+    '@type': 'ImageObject',
+    url: d.imagen || (SITE_URL + '/og-default.png'),
+    width: 1200,
+    height: 630,
+  },
+  author: [{
     '@type': 'Organization',
+    name: 'SaludLatAm Editorial',
+    url: SITE_URL + '/sobre',
+  }],
+  publisher: {
+    '@type': 'NewsMediaOrganization',
     name: 'SaludLatAm',
-    logo: { '@type': 'ImageObject', url: SITE_URL + '/og-default.png' },
+    url: SITE_URL,
+    logo: { '@type': 'ImageObject', url: SITE_URL + '/og-default.png', width: 1200, height: 630 },
   },
   citation: {
     '@type': 'CreativeWork',
     name: d.fuente.nombre,
     url: d.fuente.url,
   },
+  isBasedOn: d.fuente.url,
   keywords: (d.tags || []).join(', '),
-  about: { '@type': 'MedicalCondition', name: d.categoria },
+  articleSection: d.categoria,
+  wordCount: wordCount,
+  about: isResearch
+    ? { '@type': 'MedicalCondition', name: d.categoria }
+    : { '@type': 'Thing', name: d.categoria },
+  // Speakable: indica a asistentes de voz qué partes leer.
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'header p', '.prose-medical p:first-of-type'],
+  },
 };
 
 const breadcrumbLd = {
@@ -74,28 +128,18 @@ const breadcrumbLd = {
 
 const shareText = encodeURIComponent(d.titulo + ' — SaludLatAm');
 const shareUrl = encodeURIComponent(url);
-
-// Tiempo de lectura estimado: ~225 palabras por minuto (es).
-const bodyText: string = (entry.body || '') as string;
-const wordCount = bodyText.split(/\s+/).filter(Boolean).length;
-const readingMin = Math.max(2, Math.round(wordCount / 225));
-
-const tipoEvidencia = (() => {
-  const c = d.categoria;
-  if (c === 'Investigación Clínica') return 'Estudio académico / ensayo';
-  if (c === 'Avances Médicos') return 'Novedad clínica / regulatoria';
-  if (c === 'Medicina Preventiva') return 'Recomendación preventiva';
-  if (c === 'Salud Pública y Política') return 'Política sanitaria / OMS';
-  return 'Divulgación informativa';
-})();
 ---
 <Base
-  title={d.titulo + ' — SaludLatAm'}
+  title={d.titulo.length > 60 ? d.titulo : d.titulo + ' — SaludLatAm'}
   description={d.resumen}
   image={d.imagen}
   canonical={url}
   type="article"
   jsonLd={[articleLd, breadcrumbLd]}
+  publishedTime={fechaIso}
+  modifiedTime={fechaIso}
+  articleSection={d.categoria}
+  articleTags={d.tags || []}
 >
   <article class="max-w-6xl mx-auto px-4 py-8">
 
@@ -183,6 +227,17 @@ const tipoEvidencia = (() => {
 
       <!-- ASIDE LATERAL (notas marginales estilo distill.pub) -->
       <aside class="mt-10 lg:mt-0 lg:sticky lg:top-24 lg:self-start space-y-6">
+
+        {tocItems.length > 1 && (
+          <section class="marginalia border border-ink-100 rounded-lg p-5 bg-white">
+            <p class="marginalia-title">En este artículo</p>
+            <ol class="space-y-1 text-sm list-decimal pl-5 marker:text-brand-500">
+              {tocItems.map((t) => (
+                <li><a href={'#' + t.slug} class="text-ink-700 hover:text-brand-700 hover:underline">{t.text}</a></li>
+              ))}
+            </ol>
+          </section>
+        )}
 
         <!-- TARJETA: Sobre este artículo -->
         <section class="marginalia border border-ink-100 rounded-lg p-5 bg-white">

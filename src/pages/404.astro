@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { CATEGORIAS } from '../content/config';
+
+const recientes = (await getCollection('noticias'))
+  .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
+  .slice(0, 6);
+
+function slugCat(c: string) {
+  return c
+    .toLowerCase()
+    .replace(/[áéíóúñ]/g, (ch: string) => ({ á:'a', é:'e', í:'i', ó:'o', ú:'u', ñ:'n' } as any)[ch] || ch)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+---
+<Base
+  title="Página no encontrada (404) — SaludLatAm"
+  description="La página que buscas no existe o fue movida. Encuentra aquí las últimas noticias y categorías de SaludLatAm."
+  noindex={true}>
+  <section class="max-w-4xl mx-auto px-4 py-16 text-center">
+    <p class="text-7xl font-bold text-brand-500" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">404</p>
+    <h1 class="mt-4 text-3xl md:text-4xl font-bold text-ink-900" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">
+      La página que buscas no existe
+    </h1>
+    <p class="mt-3 text-ink-700 max-w-2xl mx-auto">
+      Puede que el enlace esté roto o que la noticia haya sido reorganizada.
+      Mientras tanto, te dejamos algunas alternativas para que sigas leyendo.
+    </p>
+
+    <form action="https://www.google.com/search" method="GET" class="mt-8 max-w-xl mx-auto flex gap-2">
+      <input type="hidden" name="sitesearch" value="saludlatam.com" />
+      <input type="text" name="q" placeholder="Buscar en SaludLatAm…" required
+        class="flex-1 px-4 py-3 border border-ink-200 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500" />
+      <button type="submit" class="px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-md">
+        Buscar
+      </button>
+    </form>
+
+    <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+      {CATEGORIAS.map((c) => (
+        <a href={'/categoria/' + slugCat(c) + '/'} class="block px-4 py-3 rounded-lg border border-ink-100 bg-white hover:bg-brand-50 hover:border-brand-500 transition text-left">
+          <span class="text-sm font-medium text-ink-900">{c}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {recientes.length > 0 && (
+    <section class="max-w-6xl mx-auto px-4 pb-16">
+      <h2 class="text-2xl font-bold text-ink-900 mb-6 text-center">Lo más reciente</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recientes.map((p: any) => (
+          <ArticleCard
+            href={'/noticia/' + p.slug + '/'}
+            titulo={p.data.titulo}
+            resumen={p.data.resumen}
+            categoria={p.data.categoria}
+            fecha={p.data.fecha}
+            imagen={p.data.imagen}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</Base>

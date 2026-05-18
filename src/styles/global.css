@@ -104,6 +104,21 @@ a {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
 
+  /* Anchor links auto-generados en H2/H3 por rehype-autolink-headings */
+  .prose-medical h2,
+  .prose-medical h3 {
+    scroll-margin-top: 6rem;
+  }
+  .prose-medical .anchor-link {
+    @apply text-ink-300 ml-2 opacity-0 transition;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  .prose-medical h2:hover .anchor-link,
+  .prose-medical h3:hover .anchor-link {
+    @apply opacity-100 text-brand-500;
+  }
+
   /* Notas marginales: tipografía sans, tamaño chico, color secundario. */
   .marginalia {
     @apply text-sm text-ink-700 leading-relaxed;

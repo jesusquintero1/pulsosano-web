@@ -1,0 +1,44 @@
+{
+  "name": "SaludLatAm",
+  "short_name": "SaludLatAm",
+  "description": "Noticias y avances en salud, basados en evidencia, en español neutro para Latinoamérica.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "lang": "es",
+  "categories": ["health", "news", "education", "medical"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og-default.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Investigación Clínica",
+      "url": "/categoria/investigacion-clinica/",
+      "description": "Últimos ensayos clínicos y papers"
+    },
+    {
+      "name": "Salud Mental",
+      "url": "/categoria/salud-mental/",
+      "description": "Bienestar emocional y neurociencia"
+    },
+    {
+      "name": "Nutrición",
+      "url": "/categoria/nutricion-y-dieta/",
+      "description": "Alimentación basada en evidencia"
+    }
+  ]
+}

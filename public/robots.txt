@@ -1,4 +1,50 @@
+# SaludLatAm — robots.txt
+# https://saludlatam.com
+
 User-agent: *
 Allow: /
+Disallow: /404
+Disallow: /scripts/
+Disallow: /api/
 
+# Bots de IA — permitidos (queremos aparecer en Discover y respuestas)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Bots scrapers maliciosos — bloqueados
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemaps
 Sitemap: https://saludlatam.com/sitemap-index.xml
+Sitemap: https://saludlatam.com/news-sitemap.xml
