@@ -1,0 +1,44 @@
+# Headers globales aplicados por Cloudflare Workers Static Assets
+# Formato: https://developers.cloudflare.com/workers/static-assets/headers/
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: cross-origin
+
+# Assets versionados por Astro (hash en nombre) → cache largo
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes y fuentes → cache largo con revalidación
+/*.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.jpg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.webp
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.svg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Sitemaps y feeds → revalidar a menudo
+/sitemap-index.xml
+  Cache-Control: public, max-age=600, s-maxage=600
+/news-sitemap.xml
+  Cache-Control: public, max-age=300, s-maxage=300
+/rss.xml
+  Cache-Control: public, max-age=600, s-maxage=600
+/robots.txt
+  Cache-Control: public, max-age=3600
+/ads.txt
+  Cache-Control: public, max-age=3600
+
+# IndexNow key file → no cache (debe leer el último valor)
+/indexnow-key.txt
+  Cache-Control: no-cache, no-store, must-revalidate
