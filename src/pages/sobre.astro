@@ -1,71 +1,130 @@
 ---
 import Base from '../layouts/Base.astro';
 import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
+
+const siteUrl = import.meta.env.SITE_URL || 'https://pulsosano.com';
+
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsMediaOrganization',
+  name: 'PulsoSano',
+  url: siteUrl,
+  logo: `${siteUrl}/logo-square.png`,
+  foundingDate: '2026-05-17',
+  description: 'Medio digital de divulgación médica en español para Latinoamérica, basado en evidencia y fuentes autorizadas.',
+  email: 'contacto@pulsosano.com',
+  knowsLanguage: ['es', 'es-419'],
+  areaServed: ['MX', 'CO', 'AR', 'CL', 'PE', 'VE', 'EC', 'GT', 'CU', 'BO', 'DO', 'HN', 'PY', 'SV', 'NI', 'CR', 'PA', 'UY', 'PR', 'US'],
+  publishingPrinciples: `${siteUrl}/metodologia`,
+  ethicsPolicy: `${siteUrl}/metodologia#etica`,
+  diversityPolicy: `${siteUrl}/metodologia#diversidad`,
+  correctionsPolicy: `${siteUrl}/metodologia#correcciones`,
+  ownershipFundingInfo: `${siteUrl}/sobre#financiacion`,
+  actionableFeedbackPolicy: `${siteUrl}/contacto`,
+};
 ---
-<Base title="Sobre PulsoSano — Metodología y fuentes"
-      description="Cómo elaboramos cada artículo: fuentes médicas autorizadas, reescritura por IA en español, citación obligatoria del original. Política E-E-A-T.">
+<Base title="Sobre PulsoSano — misión, financiación y editorial"
+      description="PulsoSano es un medio independiente de divulgación médica en español para Latinoamérica. Conoce nuestra misión, modelo editorial automatizado y política de independencia.">
+
+  <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
+
   <section class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-ink-500 mb-4" aria-label="breadcrumb">
+      <a href="/" class="hover:text-brand-600">Inicio</a> <span class="mx-1">/</span> Sobre
+    </nav>
+
     <h1 class="text-3xl md:text-4xl font-bold text-ink-900">Sobre PulsoSano</h1>
     <p class="mt-3 text-lg text-ink-700">
-      PulsoSano es un proyecto editorial automatizado que acerca la investigación
-      médica internacional al público latinoamericano, en español neutro y con
-      enlace directo a las fuentes originales.
+      PulsoSano es un medio digital independiente que acerca la investigación médica
+      internacional al público hispanohablante, en español neutro para Latinoamérica
+      y con enlace directo a las fuentes originales.
     </p>
 
     <MedicalDisclaimer variant="box" />
 
-    <div class="prose-medical mt-4">
-      <h2>Nuestra metodología</h2>
+    <div class="prose-medical mt-6">
+      <h2>Nuestra misión</h2>
       <p>
-        Cada dos horas, un sistema automático revisa decenas de feeds RSS de
-        instituciones médicas reconocidas, selecciona los titulares más relevantes
-        y los envía a un modelo de inteligencia artificial (Claude Haiku 4.5 de
-        Anthropic) que reescribe el contenido en español, sin copiar texto literal
-        de la fuente. Cada artículo conserva las cifras y los hallazgos del estudio
-        original y cita el enlace al material primario.
+        Hacer que los avances en salud, nutrición y bienestar publicados por
+        organismos sanitarios, revistas científicas peer-review y agencias de
+        noticias médicas estén disponibles para el público de habla hispana
+        en cuestión de horas, sin pérdida de rigor y con cita explícita de la
+        fuente primaria.
       </p>
 
-      <h2>Fuentes que utilizamos</h2>
-      <p>Trabajamos exclusivamente con fuentes médicas autorizadas:</p>
+      <h2>Cómo trabajamos (resumen)</h2>
+      <p>
+        Cada dos horas, un sistema editorial automatizado revisa fuentes
+        verificadas (revistas peer-review, organismos sanitarios oficiales y
+        agencias de noticias especializadas), selecciona las noticias de mayor
+        interés público y produce un resumen en español, con cita obligatoria
+        del original.
+      </p>
+      <p>
+        El proceso completo, los criterios de selección de fuentes, la política
+        de correcciones y las reglas éticas están detallados en nuestra página
+        de <a href="/metodologia">metodología editorial</a>.
+      </p>
+
+      <h2>Equipo editorial</h2>
+      <p>
+        PulsoSano es operado por un comité editorial responsable de la curaduría
+        de fuentes, la supervisión de calidad y la política médica. La composición
+        del comité, su declaración de independencia y los contactos directos están
+        en la página de <a href="/equipo-editorial">equipo editorial</a>.
+      </p>
+
+      <h2 id="financiacion">Financiación e independencia</h2>
+      <p>
+        PulsoSano se financia exclusivamente con publicidad mostrada por
+        <strong>Google AdSense</strong>. No tenemos vínculos comerciales con
+        farmacéuticas, laboratorios, clínicas privadas, aseguradoras ni
+        proveedores de servicios médicos.
+      </p>
       <ul>
-        <li><strong>Estados Unidos:</strong> NIH (MedlinePlus, News in Health), Mayo Clinic, Cleveland Clinic, Harvard Health.</li>
-        <li><strong>Internacional:</strong> Organización Mundial de la Salud (OMS), Medical News Today, ScienceDaily Health.</li>
-        <li><strong>España y LatAm:</strong> Infosalus (Europa Press), Diario Médico, Cuídate Plus, EFE Salud.</li>
+        <li>No publicamos contenido patrocinado ni publirreportajes.</li>
+        <li>No vendemos espacios editoriales: la línea entre redacción y publicidad es estricta.</li>
+        <li>El sistema de anuncios (AdSense) opera de forma independiente del flujo editorial.</li>
+        <li>El comité editorial no recibe pagos de terceros por mencionar productos, marcas ni instituciones.</li>
       </ul>
-      <p>
-        No publicamos contenido procedente de blogs personales, medicina alternativa
-        sin respaldo científico, ni testimonios individuales sin verificación.
-      </p>
 
-      <h2>Reglas editoriales (E-E-A-T)</h2>
-      <p>
-        Por tratarse de un proyecto de salud (categoría YMYL — Your Money Your Life
-        de Google), aplicamos reglas estrictas:
-      </p>
+      <h2>Categorías cubiertas</h2>
       <ul>
-        <li>Nunca prescribimos medicamentos, dosis ni tratamientos individuales.</li>
-        <li>Nunca prometemos curas ni resultados garantizados.</li>
-        <li>Usamos siempre lenguaje informativo y diferido (“según el estudio…”, “los investigadores observaron…”).</li>
-        <li>Cada artículo recuerda al lector consultar con un profesional sanitario.</li>
-        <li>Cada artículo enlaza la fuente original con atributo <code>nofollow noopener</code>.</li>
+        <li><a href="/categoria/investigacion-clinica">Investigación Clínica</a></li>
+        <li><a href="/categoria/avances-medicos">Avances Médicos</a></li>
+        <li><a href="/categoria/nutricion-y-dieta">Nutrición y Dieta</a></li>
+        <li><a href="/categoria/salud-mental">Salud Mental</a></li>
+        <li><a href="/categoria/fitness-y-ejercicio">Fitness y Ejercicio</a></li>
+        <li><a href="/categoria/medicina-preventiva">Medicina Preventiva</a></li>
+        <li><a href="/categoria/enfermedades-y-tratamientos">Enfermedades y Tratamientos</a></li>
+        <li><a href="/categoria/estilo-de-vida-saludable">Estilo de Vida Saludable</a></li>
+        <li><a href="/categoria/salud-publica-y-politica">Salud Pública y Política</a></li>
       </ul>
 
-      <h2>Quiénes somos</h2>
+      <h2>Lo que NO hacemos</h2>
+      <ul>
+        <li>No damos consejos médicos individuales ni dosis específicas.</li>
+        <li>No prometemos curas ni resultados garantizados.</li>
+        <li>No reproducimos texto literal de las fuentes originales.</li>
+        <li>No publicamos contenido procedente de blogs personales, medicina alternativa sin respaldo científico ni testimonios sin verificación.</li>
+        <li>No publicamos contenido generado sin que su fuente sea verificable y enlazable.</li>
+      </ul>
+
+      <h2>Cómo contactarnos</h2>
       <p>
-        PulsoSano es operado por un equipo independiente con interés en la
-        divulgación científica responsable. No tenemos vínculos comerciales con
-        farmacéuticas, laboratorios ni proveedores de servicios médicos. Nuestro
-        modelo de ingresos es publicidad mostrada por Google AdSense, separada
-        editorialmente del contenido.
+        Para reportar errores, sugerir fuentes o cualquier consulta editorial,
+        usa nuestra <a href="/contacto">página de contacto</a> o escribe a
+        <a href="mailto:contacto@pulsosano.com">contacto@pulsosano.com</a>.
+        Revisamos cada mensaje y respondemos en un plazo máximo de 5 días hábiles.
       </p>
 
-      <h2>Contacto y correcciones</h2>
-      <p>
-        ¿Encontraste un error o quieres reportar un problema? Escríbenos a través de
-        nuestra <a href="/contacto">página de contacto</a>. Revisamos cada solicitud
-        y corregimos el contenido cuando corresponde, indicando la fecha de
-        actualización en el artículo.
-      </p>
+      <h2>Documentos relacionados</h2>
+      <ul>
+        <li><a href="/metodologia">Metodología editorial</a> — cómo seleccionamos fuentes, validamos contenido y aplicamos E-E-A-T.</li>
+        <li><a href="/equipo-editorial">Equipo editorial</a> — quién compone el comité y su declaración de independencia.</li>
+        <li><a href="/aviso-medico">Aviso médico</a> — disclaimer completo y limitaciones del contenido.</li>
+        <li><a href="/privacidad">Política de privacidad</a> — datos, cookies y AdSense.</li>
+      </ul>
     </div>
   </section>
 </Base>

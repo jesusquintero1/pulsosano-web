@@ -1,15 +1,54 @@
 ---
 import Base from '../layouts/Base.astro';
 const endpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
+
+const contactLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contacto — PulsoSano',
+  url: 'https://pulsosano.com/contacto',
+  mainEntity: {
+    '@type': 'NewsMediaOrganization',
+    name: 'PulsoSano',
+    email: 'contacto@pulsosano.com',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'editorial',
+        email: 'editorial@pulsosano.com',
+        availableLanguage: ['Spanish'],
+      },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'corrections',
+        email: 'correcciones@pulsosano.com',
+        availableLanguage: ['Spanish'],
+      },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: 'contacto@pulsosano.com',
+        availableLanguage: ['Spanish'],
+      },
+    ],
+  },
+};
 ---
 <Base title="Contacto — PulsoSano"
-      description="Escríbenos para correcciones editoriales, sugerencias o asuntos legales relacionados con PulsoSano.">
+      description="Contacta al equipo editorial de PulsoSano: correcciones, sugerencias, asuntos legales y consultas profesionales. Respuesta en máximo 5 días hábiles.">
+
+  <script type="application/ld+json" set:html={JSON.stringify(contactLd)} />
+
   <section class="max-w-2xl mx-auto px-4 py-10">
+    <nav class="text-sm text-ink-500 mb-4" aria-label="breadcrumb">
+      <a href="/" class="hover:text-brand-600">Inicio</a> <span class="mx-1">/</span> Contacto
+    </nav>
+
     <h1 class="text-3xl md:text-4xl font-bold text-ink-900">Contacto</h1>
     <p class="mt-3 text-ink-700">
-      ¿Detectaste un error en un artículo, quieres sugerir un tema o necesitas
-      contactarnos por motivos legales? Usa este formulario y te responderemos en
-      un plazo razonable.
+      Escríbenos para reportar errores, sugerir temas o cualquier consulta editorial,
+      legal o profesional. Respondemos a las correcciones en un plazo máximo de
+      <strong>5 días hábiles</strong>.
     </p>
 
     <div class="mt-6 p-5 border-l-4 border-brand-500 bg-brand-50 rounded-r-lg text-sm text-ink-700">
@@ -18,7 +57,50 @@ const endpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
       emergencia, comunícate con los servicios de urgencia de tu país.
     </div>
 
-    <form action={endpoint || '#'} method="POST" class="mt-8 space-y-4">
+    <h2 class="mt-8 text-xl font-semibold text-ink-900">Canales directos</h2>
+    <p class="mt-2 text-sm text-ink-600">Para una respuesta más rápida, escribe directamente al canal que corresponda:</p>
+
+    <div class="mt-4 overflow-hidden border border-ink-200 rounded-lg">
+      <table class="w-full text-sm">
+        <thead class="bg-ink-50">
+          <tr>
+            <th class="px-4 py-2 text-left font-semibold text-ink-900">Asunto</th>
+            <th class="px-4 py-2 text-left font-semibold text-ink-900">Email</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink-100">
+          <tr>
+            <td class="px-4 py-2.5 text-ink-700">General / lectores</td>
+            <td class="px-4 py-2.5">
+              <a href="mailto:contacto@pulsosano.com" class="text-brand-700 hover:underline">contacto@pulsosano.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2.5 text-ink-700">Correcciones de contenido</td>
+            <td class="px-4 py-2.5">
+              <a href="mailto:correcciones@pulsosano.com" class="text-brand-700 hover:underline">correcciones@pulsosano.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2.5 text-ink-700">Asuntos editoriales profesionales</td>
+            <td class="px-4 py-2.5">
+              <a href="mailto:editorial@pulsosano.com" class="text-brand-700 hover:underline">editorial@pulsosano.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2.5 text-ink-700">Privacidad / asuntos legales</td>
+            <td class="px-4 py-2.5">
+              <a href="mailto:privacidad@pulsosano.com" class="text-brand-700 hover:underline">privacidad@pulsosano.com</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="mt-10 text-xl font-semibold text-ink-900">Formulario</h2>
+    <p class="mt-2 text-sm text-ink-600">Si prefieres, también puedes escribirnos mediante este formulario:</p>
+
+    <form action={endpoint || 'mailto:contacto@pulsosano.com'} method="POST" class="mt-4 space-y-4" enctype={endpoint ? 'application/x-www-form-urlencoded' : 'text/plain'}>
       <div>
         <label for="nombre" class="block text-sm font-medium text-ink-900 mb-1">Nombre</label>
         <input type="text" id="nombre" name="nombre" required
@@ -35,7 +117,8 @@ const endpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
           <option>Corrección editorial</option>
           <option>Sugerencia de tema</option>
           <option>Asunto legal / privacidad</option>
-          <option>Publicidad</option>
+          <option>Consulta profesional</option>
+          <option>Publicidad / AdSense</option>
           <option>Otro</option>
         </select>
       </div>
@@ -47,11 +130,11 @@ const endpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
       <button type="submit" class="px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-md transition">
         Enviar mensaje
       </button>
-      {!endpoint && (
-        <p class="text-xs text-ink-500">
-          (Configura <code>PUBLIC_NEWSLETTER_ENDPOINT</code> con tu endpoint de Formspree para activar el formulario.)
-        </p>
-      )}
     </form>
+
+    <p class="mt-8 text-xs text-ink-500">
+      Tiempos de respuesta: <strong>correcciones</strong> hasta 5 días hábiles ·
+      <strong>consultas generales</strong> hasta 10 días hábiles · <strong>asuntos legales</strong> según corresponda.
+    </p>
   </section>
 </Base>

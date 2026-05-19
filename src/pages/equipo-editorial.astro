@@ -1,0 +1,168 @@
+---
+import Base from '../layouts/Base.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
+
+const siteUrl = import.meta.env.SITE_URL || 'https://pulsosano.com';
+
+const teamLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Equipo editorial — PulsoSano',
+  url: `${siteUrl}/equipo-editorial`,
+  mainEntity: {
+    '@type': 'NewsMediaOrganization',
+    name: 'PulsoSano',
+    url: siteUrl,
+    foundingDate: '2026-05-17',
+    email: 'editorial@pulsosano.com',
+    sameAs: [],
+    member: [
+      {
+        '@type': 'OrganizationRole',
+        roleName: 'Comité Editorial',
+        description: 'Curaduría de fuentes, supervisión de calidad y política médica de PulsoSano.',
+      },
+    ],
+  },
+};
+---
+<Base title="Equipo editorial — PulsoSano"
+      description="Comité editorial responsable de la curaduría de fuentes, supervisión de calidad y política médica de PulsoSano. Declaración de independencia y contactos.">
+
+  <script type="application/ld+json" set:html={JSON.stringify(teamLd)} />
+
+  <section class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-ink-500 mb-4" aria-label="breadcrumb">
+      <a href="/" class="hover:text-brand-600">Inicio</a> <span class="mx-1">/</span> Equipo editorial
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold text-ink-900">Equipo editorial</h1>
+    <p class="mt-3 text-lg text-ink-700">
+      PulsoSano es operado por un comité editorial responsable de la curaduría
+      de fuentes, la supervisión de calidad y la aplicación de las reglas
+      editoriales descritas en nuestra <a href="/metodologia" class="text-brand-700 underline">metodología</a>.
+    </p>
+
+    <MedicalDisclaimer variant="box" />
+
+    <div class="prose-medical mt-6">
+
+      <h2>Comité Editorial PulsoSano</h2>
+      <p>
+        El Comité Editorial es el órgano responsable de las decisiones editoriales
+        del medio. Sus funciones incluyen:
+      </p>
+      <ul>
+        <li>Selección y revisión periódica del catálogo de fuentes autorizadas.</li>
+        <li>Definición y actualización del prompt editorial que rige la redacción asistida por IA.</li>
+        <li>Revisión muestral de artículos publicados para garantizar el cumplimiento de las reglas YMYL.</li>
+        <li>Atención de solicitudes de corrección y derecho de réplica.</li>
+        <li>Aprobación de cualquier cambio sustantivo a la metodología editorial.</li>
+      </ul>
+
+      <h2>Composición del comité</h2>
+      <p>
+        El comité está integrado por profesionales con formación en comunicación
+        científica, salud pública y periodismo médico. Por motivos de seguridad
+        editorial y para evitar acoso profesional, mantenemos la composición
+        nominal del comité reservada y publicamos únicamente los roles y los
+        canales de contacto institucionales.
+      </p>
+      <p>
+        Para contactos profesionales (médicos, investigadores, instituciones
+        sanitarias), el comité atiende a través de los canales institucionales
+        listados al final de esta página.
+      </p>
+
+      <h2>Roles activos</h2>
+      <ul>
+        <li>
+          <strong>Coordinación editorial</strong> — responsable de la planificación
+          editorial, el cumplimiento de la metodología y la calidad final del producto.
+        </li>
+        <li>
+          <strong>Curaduría de fuentes</strong> — revisión trimestral del catálogo
+          de fuentes RSS, evaluación de su confiabilidad y actualización del listado activo.
+        </li>
+        <li>
+          <strong>Revisión de calidad</strong> — auditoría muestral semanal de los
+          artículos publicados para verificar adherencia a las reglas E-E-A-T.
+        </li>
+        <li>
+          <strong>Política médica</strong> — supervisión del contenido sensible
+          (YMYL), aplicación de disclaimers, validación de cifras y atribuciones.
+        </li>
+        <li>
+          <strong>Atención a lectores</strong> — gestión de correcciones, sugerencias
+          y reportes de error en un plazo máximo de 5 días hábiles.
+        </li>
+      </ul>
+
+      <h2>Declaración de independencia editorial</h2>
+      <p>
+        El Comité Editorial de PulsoSano declara y se compromete a:
+      </p>
+      <ul>
+        <li>
+          <strong>No aceptar contraprestación</strong> económica, en especie o
+          de cualquier otra forma, por parte de farmacéuticas, laboratorios,
+          clínicas privadas, aseguradoras, proveedores de servicios médicos,
+          fabricantes de dispositivos médicos, distribuidores de suplementos
+          ni de cualquier actor con interés comercial en la salud.
+        </li>
+        <li>
+          <strong>No publicar contenido patrocinado</strong> ni publirreportajes.
+          Si en el futuro PulsoSano introdujera formatos patrocinados, serían
+          etiquetados de forma explícita y separados visualmente del contenido editorial.
+        </li>
+        <li>
+          <strong>Mantener separación estricta</strong> entre el flujo editorial
+          y el sistema de publicidad (Google AdSense), que opera de forma
+          automática sin influencia sobre qué se publica.
+        </li>
+        <li>
+          <strong>Rechazar presiones externas</strong> de cualquier fuente,
+          incluidas redes sociales, marcas o grupos de interés, sobre la
+          publicación, modificación o retirada de contenido. Solo procede la
+          retirada o modificación por error de hecho verificable.
+        </li>
+        <li>
+          <strong>Cumplir el código de conducta</strong> descrito en nuestra
+          <a href="/metodologia">metodología editorial</a>.
+        </li>
+      </ul>
+
+      <h2>Conflictos de interés</h2>
+      <p>
+        Cualquier miembro del comité con un conflicto de interés potencial en
+        un tema específico (relación con un investigador citado, vinculación
+        con una institución mencionada, etc.) se abstiene de participar en las
+        decisiones editoriales sobre ese tema. Esta política aplica también a
+        decisiones sobre incorporación o retiro de fuentes del catálogo.
+      </p>
+
+      <h2>Cómo contactar al comité editorial</h2>
+      <p>
+        Para asuntos editoriales (correcciones, sugerencias de fuentes, derecho
+        de réplica, consultas profesionales):
+      </p>
+      <ul>
+        <li><strong>Correcciones</strong>: <a href="mailto:correcciones@pulsosano.com">correcciones@pulsosano.com</a></li>
+        <li><strong>Editorial general</strong>: <a href="mailto:editorial@pulsosano.com">editorial@pulsosano.com</a></li>
+        <li><strong>Contacto general / lectores</strong>: <a href="/contacto">página de contacto</a></li>
+      </ul>
+      <p>
+        Plazo de respuesta editorial: máximo 5 días hábiles para correcciones,
+        10 días para consultas generales.
+      </p>
+
+      <h2>Transparencia operativa</h2>
+      <p>
+        PulsoSano publica su <a href="/metodologia">metodología editorial completa</a>,
+        su <a href="/sobre#financiacion">modelo de financiación</a> y su
+        <a href="/privacidad">política de privacidad</a> para que cualquier lector
+        pueda evaluar la procedencia, los métodos y los incentivos del medio.
+      </p>
+    </div>
+  </section>
+</Base>

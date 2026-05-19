@@ -1,0 +1,203 @@
+---
+import Base from '../layouts/Base.astro';
+import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
+
+const siteUrl = import.meta.env.SITE_URL || 'https://pulsosano.com';
+
+const policyLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Metodología editorial — PulsoSano',
+  url: `${siteUrl}/metodologia`,
+  isPartOf: { '@type': 'WebSite', name: 'PulsoSano', url: siteUrl },
+  mainEntity: {
+    '@type': 'NewsMediaOrganization',
+    name: 'PulsoSano',
+    url: siteUrl,
+    publishingPrinciples: `${siteUrl}/metodologia`,
+    ethicsPolicy: `${siteUrl}/metodologia#etica`,
+    diversityPolicy: `${siteUrl}/metodologia#diversidad`,
+    correctionsPolicy: `${siteUrl}/metodologia#correcciones`,
+    actionableFeedbackPolicy: `${siteUrl}/contacto`,
+  },
+};
+---
+<Base title="Metodología editorial — PulsoSano"
+      description="Cómo seleccionamos fuentes, redactamos artículos, aplicamos validación YMYL E-E-A-T y corregimos errores. Política completa de PulsoSano.">
+
+  <script type="application/ld+json" set:html={JSON.stringify(policyLd)} />
+
+  <section class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-ink-500 mb-4" aria-label="breadcrumb">
+      <a href="/" class="hover:text-brand-600">Inicio</a> <span class="mx-1">/</span> Metodología
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold text-ink-900">Metodología editorial</h1>
+    <p class="mt-3 text-lg text-ink-700">
+      Este documento describe cómo seleccionamos fuentes, redactamos cada nota,
+      validamos su contenido y corregimos errores. Es la guía oficial que rige
+      la producción editorial de PulsoSano y se aplica a cada artículo publicado.
+    </p>
+
+    <MedicalDisclaimer variant="box" />
+
+    <div class="prose-medical mt-6">
+
+      <h2 id="seleccion">1. Selección de fuentes</h2>
+      <p>
+        Trabajamos exclusivamente con tres tipos de fuentes verificadas:
+      </p>
+      <ol>
+        <li>
+          <strong>Revistas científicas peer-review</strong> (revisión por pares):
+          Nature Medicine, BMJ Open, PLOS Medicine.
+        </li>
+        <li>
+          <strong>Organismos sanitarios oficiales</strong>:
+          Organización Mundial de la Salud (OMS), Organización Panamericana de la
+          Salud (OPS/PAHO), MedlinePlus del National Institutes of Health (NIH) de
+          Estados Unidos, Centros para el Control y Prevención de Enfermedades (CDC).
+        </li>
+        <li>
+          <strong>Agencias de noticias médicas y secciones de salud de medios reconocidos</strong>:
+          STAT News, Reuters Health, BBC Health, The New York Times Health,
+          Diario Médico, Cuídate Plus, El Mundo Salud, ScienceDaily, PsyPost,
+          ScienceAlert, 20Minutos Salud, Healthline.
+        </li>
+      </ol>
+      <p>
+        No publicamos contenido procedente de blogs personales, sitios de medicina
+        alternativa sin respaldo científico, foros de pacientes, redes sociales,
+        ni testimonios individuales sin verificación independiente.
+      </p>
+
+      <h2 id="redaccion">2. Redacción de cada artículo</h2>
+      <p>
+        Cada dos horas, un sistema automatizado revisa los feeds RSS de las
+        fuentes autorizadas, selecciona las noticias más relevantes según
+        criterios de interés público, novedad e impacto, y produce un resumen
+        en español neutro mediante un modelo de inteligencia artificial
+        (Claude Haiku 4.5 de Anthropic) operando bajo un prompt editorial
+        estricto y supervisado por el comité editorial.
+      </p>
+      <p>
+        El prompt editorial impide:
+      </p>
+      <ul>
+        <li>Copiar texto literal de la fuente original.</li>
+        <li>Inventar cifras, fechas, autores o hallazgos.</li>
+        <li>Prescribir dosis, tratamientos o terapias individuales.</li>
+        <li>Usar lenguaje afirmativo absoluto ("cura X", "100% efectivo", "milagroso").</li>
+        <li>Emitir recomendaciones personales que sustituyan la consulta médica.</li>
+      </ul>
+
+      <h2 id="validacion">3. Validación automática previa a publicación</h2>
+      <p>
+        Antes de que un artículo se publique, pasa por validadores automáticos
+        que verifican el cumplimiento de las reglas E-E-A-T:
+      </p>
+      <ul>
+        <li><strong>Filtro léxico</strong>: lista de patrones prohibidos (imperativos médicos, promesas de cura, dosis específicas).</li>
+        <li><strong>Detector de cifras sin contexto</strong>: cifras médicas (porcentajes, dosis, valores de laboratorio) deben aparecer junto a la cita del estudio que las respalda.</li>
+        <li><strong>Anti-plagio</strong>: similitud Jaccard contra el resumen RSS de la fuente original ≤ 0,40. Si supera este umbral, el artículo se descarta y se reintenta.</li>
+        <li><strong>Cita obligatoria</strong>: cada artículo enlaza la fuente primaria con atributos <code>rel="nofollow noopener"</code>.</li>
+        <li><strong>Disclaimer</strong>: cada artículo cierra recordando consultar con un profesional sanitario.</li>
+      </ul>
+      <p>
+        Si un artículo no cumple los validadores en dos intentos, se descarta
+        y se marca la noticia como no publicable.
+      </p>
+
+      <h2 id="etica">4. Principios éticos</h2>
+      <ul>
+        <li>
+          <strong>Lenguaje informativo y diferido</strong>: usamos siempre frases
+          como "según el estudio…", "los investigadores observaron…",
+          "los autores concluyen…", nunca afirmaciones absolutas en primera persona.
+        </li>
+        <li>
+          <strong>Independencia editorial</strong>: el contenido editorial se
+          decide sin influencia de anunciantes. AdSense opera de forma
+          automática y desacoplada del flujo editorial.
+        </li>
+        <li>
+          <strong>Transparencia</strong>: cada artículo lleva fecha de publicación,
+          categoría y enlace a la fuente. Las correcciones se anotan con fecha.
+        </li>
+        <li>
+          <strong>Sin patrocinios ocultos</strong>: no publicamos contenido patrocinado,
+          publirreportajes ni notas pagadas. Si esto cambiara, sería etiquetado
+          explícitamente como "Contenido patrocinado".
+        </li>
+        <li>
+          <strong>Salud pública sobre clics</strong>: rechazamos titulares
+          sensacionalistas y contenido viral sin respaldo. Preferimos un titular
+          menos atractivo y verificable a uno llamativo y dudoso.
+        </li>
+      </ul>
+
+      <h2 id="diversidad">5. Diversidad de fuentes y enfoque</h2>
+      <p>
+        Buscamos representar voces y estudios de diversas regiones: Estados Unidos,
+        Reino Unido, España, Latinoamérica y organismos internacionales. Cuando
+        un estudio reporta una población específica (edad, sexo, etnia, condición
+        previa), el artículo lo explicita para no generalizar inadecuadamente.
+      </p>
+      <p>
+        No publicamos artículos que generalicen resultados desde una población
+        muy específica a la población general sin contexto.
+      </p>
+
+      <h2 id="correcciones">6. Política de correcciones</h2>
+      <p>
+        Si un lector detecta un error de hecho, una traducción incorrecta, una
+        cifra mal reportada o una atribución equivocada, lo investigamos y, si
+        procede, corregimos el artículo en un plazo máximo de <strong>5 días hábiles</strong>.
+      </p>
+      <p>Cuando corregimos un artículo:</p>
+      <ul>
+        <li>Mantenemos la URL original (no la borramos).</li>
+        <li>Añadimos al final del artículo una nota indicando la fecha y la naturaleza de la corrección.</li>
+        <li>Si el error fue grave (cifra principal, atribución, dosis), añadimos un aviso visible en la cabecera del artículo.</li>
+        <li>Si la noticia ya no se sostiene tras la corrección (por ejemplo, retracción del estudio fuente), añadimos una nota explicando la retracción y enlazando a la fuente actualizada.</li>
+      </ul>
+      <p>
+        Para reportar un error: <a href="/contacto">contacto</a> o
+        <a href="mailto:correcciones@pulsosano.com">correcciones@pulsosano.com</a>.
+      </p>
+
+      <h2 id="ymyl">7. Cumplimiento YMYL</h2>
+      <p>
+        Por tratarse de un sitio de salud, PulsoSano opera bajo los lineamientos
+        que Google clasifica como YMYL (Your Money or Your Life): contenido que
+        puede afectar la salud, seguridad financiera o estabilidad de las personas
+        y por lo tanto exige el más alto estándar editorial.
+      </p>
+      <p>Esto se traduce en prácticas verificables:</p>
+      <ul>
+        <li>Cada artículo cita una fuente primaria autorizada.</li>
+        <li>Disclaimers explícitos en cada artículo y página de categoría.</li>
+        <li>Página dedicada de <a href="/aviso-medico">aviso médico</a> con limitaciones del contenido.</li>
+        <li>Comité editorial visible con declaración de independencia.</li>
+        <li>Política de correcciones pública y aplicada.</li>
+        <li>Datos estructurados <code>MedicalScholarlyArticle</code> cuando el contenido proviene de investigación clínica.</li>
+      </ul>
+
+      <h2 id="tecnologia">8. Uso de inteligencia artificial</h2>
+      <p>
+        Reconocemos explícitamente que usamos un modelo de inteligencia artificial
+        (Claude Haiku 4.5 de Anthropic) para asistir la redacción. El modelo opera
+        bajo un prompt editorial estricto, supervisado por el comité editorial, y
+        no toma decisiones autónomas sobre qué publicar.
+      </p>
+      <p>
+        La IA es una herramienta de redacción asistida; la responsabilidad editorial
+        recae en el comité editorial de PulsoSano. El flujo no es "IA sin supervisión":
+        cada artículo pasa por validadores automáticos y revisión muestral periódica.
+      </p>
+
+      <h2 id="actualizacion">Última actualización</h2>
+      <p>Este documento se actualizó por última vez el 19 de mayo de 2026. Las próximas revisiones serán anunciadas en el footer del sitio.</p>
+    </div>
+  </section>
+</Base>
