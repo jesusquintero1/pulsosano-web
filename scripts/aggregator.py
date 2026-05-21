@@ -332,6 +332,28 @@ Resumen / extracto original:
 Recuerda: responde SOLO con el JSON pedido, sin texto antes ni después."""
 
 
+def _clamp(s: str, max_len: int) -> str:
+    """Trunca s a max_len caracteres respetando el limite del schema Zod.
+
+    Si excede, corta en la ultima palabra completa antes del limite y
+    agrega elipsis. Garantiza que el resultado tenga <= max_len chars.
+    """
+    s = (s or "").strip()
+    if len(s) <= max_len:
+        return s
+    # Reservar 1 char para la elipsis
+    cut = s[: max_len - 1].rstrip()
+    # Intentar cortar en el ultimo espacio dentro del rango
+    last_space = cut.rfind(" ")
+    if last_space > max_len * 0.6:  # solo si no perdemos demasiado
+        cut = cut[:last_space].rstrip()
+    # Quitar puntuacion final repetida antes de la elipsis
+    cut = cut.rstrip(",;:.- ")
+    result = cut + "…"
+    # Sanity: asegurar limite estricto
+    return result[:max_len]
+
+
 def write_article(data: dict, *, source_name: str, source_url: str,
                   fecha_iso: str, image: Optional[str]) -> Path:
     titulo = data["titulo"].strip()
@@ -358,13 +380,23 @@ def write_article(data: dict, *, source_name: str, source_url: str,
     def yq(s: str) -> str:
         return '"' + str(s).replace('"', "'").replace("\\", "\\\\") + '"'
 
+    # Clamp DURO a los limites del schema Zod (src/content/config.ts):
+    #   titulo:        min 5,  max 140
+    #   resumen:       min 20, max 400
+    #   porQueImporta: min 10, max 400
+    # Sin esto, si Claude excede los limites (ya paso), el build de Astro
+    # falla con InvalidContentEntryDataError y se rompe el deploy.
+    titulo = _clamp(titulo, 140)
+    resumen = _clamp(data["resumen"], 400)
+    porque = _clamp(data.get("porQueImporta") or "", 400) if data.get("porQueImporta") else ""
+
     front_lines = [
         "---",
         f"titulo: {yq(titulo)}",
-        f"resumen: {yq(data['resumen'].strip())}",
+        f"resumen: {yq(resumen)}",
     ]
-    if data.get("porQueImporta"):
-        front_lines.append(f"porQueImporta: {yq(data['porQueImporta'].strip())}")
+    if porque:
+        front_lines.append(f"porQueImporta: {yq(porque)}")
     front_lines.extend([
         f"categoria: {yq(data['categoria'])}",
         "fuente:",
