@@ -111,9 +111,3 @@ jobs:
         env:
           SITE_URL: https://pulsosano.com
         run: python scripts/indexnow_submit.py || true
-
-      - name: Ping Google sitemap
-        if: github.event_name != 'push'
-        run: |
-          curl -s "https://www.google.com/ping?sitemap=https://pulsosano.com/sitemap-index.xml" || true
-          curl -s "https://www.google.com/ping?sitemap=https://pulsosano.com/news-sitemap.xml" || true
