@@ -89,9 +89,13 @@ Hay **3 procesos independientes** que se sincronizan vía git:
   usan `modelo_premium` (`claude-sonnet-4-6`); el resto, `modelo` (`claude-haiku-4-5`).
   Marca el SYSTEM_PROMPT con `cache_control: ephemeral`.
 - **Texto fuente completo** (`fetch_fulltext: true`): `fetch_article_text()` descarga
-  y extrae el cuerpo del artículo original (recorte a `fulltext_max_chars`) y lo pasa
-  al modelo en vez del solo-resumen RSS → más calidad y anti-alucinación. Fallback
-  silencioso al resumen RSS si la fuente bloquea (403/429) o es JS-only (0 `<p>`).
+  y extrae el cuerpo del artículo original y lo pasa al modelo en vez del solo-resumen
+  RSS → más calidad y anti-alucinación. Fallback silencioso al resumen si la fuente
+  bloquea (403/429) o es JS-only (0 `<p>`).
+- **Optimización de tokens** (calidad por token): `fulltext_max_chars: 4000` con recorte
+  inteligente **inicio 70% + final 30%** (preserva intro/métodos Y conclusiones/limitaciones).
+  `fulltext_skip_if_summary_chars: 1400` salta el fetch si el resumen RSS ya es rico
+  (abstracts de journals). Telemetría `[tokens]` por run (input/output/cache + tok/artículo).
 - **SYSTEM_PROMPT re-baselined 2026-06-25** (anti-invención + E-E-A-T + 600-850 palabras).
   Sigue congelado: cualquier cambio invalida el prompt cache de Anthropic.
 - Valida con `check_compliance()`: regex `FORBIDDEN_PATTERNS`, cifras médicas sin

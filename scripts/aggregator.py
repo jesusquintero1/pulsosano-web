@@ -333,16 +333,28 @@ def fetch_article_text(url: str, headers: dict, max_chars: int, verbose: bool = 
         if len(text) < 200:  # extracción demasiado pobre: no aporta sobre el resumen
             return ""
         if len(text) > max_chars:
-            cut = text[:max_chars]
-            sp = cut.rfind(" ")
-            text = (cut[:sp] if sp > max_chars * 0.6 else cut).rstrip() + "…"
+            # Recorte inteligente: 70% del inicio (contexto/métodos) + 30% del final
+            # (conclusiones/limitaciones, donde está el valor E-E-A-T). Mejor calidad
+            # por token que truncar solo el inicio.
+            head_n = int(max_chars * 0.7)
+            tail_n = max_chars - head_n
+            head = text[:head_n]
+            hsp = head.rfind(" ")
+            if hsp > head_n * 0.6:
+                head = head[:hsp]
+            tail = text[-tail_n:]
+            tsp = tail.find(" ")
+            if 0 <= tsp < tail_n * 0.4:
+                tail = tail[tsp + 1:]
+            text = head.rstrip() + "\n\n[…]\n\n" + tail.lstrip()
         return text
     except Exception as e:
         log(f"    [fulltext] no disponible ({type(e).__name__}); uso resumen RSS", verbose=verbose)
         return ""
 
 
-def call_anthropic(client: Anthropic, model: str, user_prompt: str, verbose: bool) -> dict:
+def call_anthropic(client: Anthropic, model: str, user_prompt: str, verbose: bool,
+                   usage_acc: Optional[dict] = None) -> dict:
     last_err: Optional[Exception] = None
     for attempt in range(3):
         try:
@@ -359,6 +371,14 @@ def call_anthropic(client: Anthropic, model: str, user_prompt: str, verbose: boo
                 ],
                 messages=[{"role": "user", "content": user_prompt}],
             )
+            # Telemetría de tokens (se facturan aunque falle el parseo posterior).
+            if usage_acc is not None and getattr(resp, "usage", None):
+                u = resp.usage
+                usage_acc["calls"] = usage_acc.get("calls", 0) + 1
+                usage_acc["input"] = usage_acc.get("input", 0) + (getattr(u, "input_tokens", 0) or 0)
+                usage_acc["output"] = usage_acc.get("output", 0) + (getattr(u, "output_tokens", 0) or 0)
+                usage_acc["cache_write"] = usage_acc.get("cache_write", 0) + (getattr(u, "cache_creation_input_tokens", 0) or 0)
+                usage_acc["cache_read"] = usage_acc.get("cache_read", 0) + (getattr(u, "cache_read_input_tokens", 0) or 0)
             raw = "".join(
                 block.text for block in resp.content if getattr(block, "type", None) == "text"
             ).strip()
@@ -562,7 +582,8 @@ def run(args: argparse.Namespace) -> int:
     model_premium = cfg.get("modelo_premium", model)
     peso_premium_min = int(cfg.get("peso_premium_min", 99))  # 99 = nunca, salvo config
     fetch_fulltext = bool(cfg.get("fetch_fulltext", False))
-    fulltext_max_chars = int(cfg.get("fulltext_max_chars", 6000))
+    fulltext_max_chars = int(cfg.get("fulltext_max_chars", 4000))
+    fulltext_skip_if_summary = int(cfg.get("fulltext_skip_if_summary_chars", 0))
     user_agent = cfg.get("user_agent", "Mozilla/5.0 PulsoSano/1.0")
 
     state = load_state()
@@ -651,6 +672,8 @@ def run(args: argparse.Namespace) -> int:
 
     written = 0
     api_errors = 0
+    usage = {}
+    fetched = 0
     for i, c in enumerate(candidates, 1):
         try:
             # Ruteo de modelo por autoridad de la fuente: las de peso alto
@@ -658,11 +681,16 @@ def run(args: argparse.Namespace) -> int:
             modelo_usado = model_premium if c["peso"] >= peso_premium_min else model
 
             # Texto completo de la fuente (mayor calidad / menos alucinación).
+            # Optimización de tokens: si el resumen RSS ya es suficientemente rico
+            # (p.ej. abstracts estructurados de journals), saltamos el fetch — no
+            # aporta sobre lo que ya tenemos y ahorra tokens de entrada + una descarga.
             # Si falla, fulltext="" y el prompt cae al resumen RSS.
             fulltext = ""
-            if fetch_fulltext:
+            if fetch_fulltext and len(c["summary"]) < (fulltext_skip_if_summary or 10**9):
                 fulltext = fetch_article_text(c["source_url"], headers,
                                               fulltext_max_chars, verbose=args.verbose)
+                if fulltext:
+                    fetched += 1
 
             marca = "★" if modelo_usado == model_premium else " "
             ft_tag = f"+texto({len(fulltext)}c)" if fulltext else "solo-resumen"
@@ -680,7 +708,8 @@ def run(args: argparse.Namespace) -> int:
             # Generación con validación de compliance.
             data = None
             for compliance_attempt in range(2):
-                candidate = call_anthropic(client, modelo_usado, user_prompt, verbose=args.verbose)
+                candidate = call_anthropic(client, modelo_usado, user_prompt,
+                                           verbose=args.verbose, usage_acc=usage)
                 ok, problems = check_compliance(candidate, c["summary"])
                 if ok:
                     data = candidate
@@ -713,6 +742,19 @@ def run(args: argparse.Namespace) -> int:
     save_state(state)
 
     print(f"[ok] {written} artículo(s) escritos. Total histórico: {state['stats']['total_processed']}.")
+
+    # Telemetría de tokens — visibilidad para optimizar costo. cache_read se
+    # factura a 0.1x y cache_write a 1.25x; un cache_read alto = prompt cache
+    # acertando (bueno). fetched = cuántos artículos usaron texto fuente completo.
+    if usage:
+        calls = usage.get("calls", 0)
+        inp = usage.get("input", 0); out = usage.get("output", 0)
+        cw = usage.get("cache_write", 0); cr = usage.get("cache_read", 0)
+        billed_in = inp + cw + cr
+        per_art = (billed_in + out) // max(written, 1)
+        print(f"[tokens] {calls} llamadas | entrada: {inp} fresh + {cr} cache-read + {cw} cache-write "
+              f"| salida: {out} | fulltext usado: {fetched}/{len(candidates)} "
+              f"| ~{per_art} tok/artículo")
 
     # Alerta: hubo candidatos pero NINGUNO se pudo generar por errores de
     # generación (típicamente saldo de API agotado o caída de Anthropic).
