@@ -25,7 +25,7 @@ function slugCat(c: string) {
     .replace(/^-+|-+$/g, '');
 }
 
-const SITE_URL = (import.meta.env.SITE_URL || 'https://saludlatam.com').replace(/\/$/, '');
+const SITE_URL = (import.meta.env.SITE_URL || 'https://pulsosano.com').replace(/\/$/, '');
 const url = SITE_URL + '/noticia/' + entry.slug + '/';
 const catSlug = slugCat(d.categoria);
 
@@ -88,14 +88,24 @@ const articleLd = {
   },
   author: [{
     '@type': 'Organization',
-    name: 'PulsoSano Editorial',
-    url: SITE_URL + '/sobre',
+    name: 'Comité Editorial PulsoSano',
+    url: SITE_URL + '/equipo-editorial',
   }],
+  // E-E-A-T: revisión editorial humana sobre el borrador asistido por IA.
+  reviewedBy: {
+    '@type': 'Organization',
+    name: 'Comité Editorial PulsoSano',
+    url: SITE_URL + '/equipo-editorial',
+  },
   publisher: {
     '@type': 'NewsMediaOrganization',
     name: 'PulsoSano',
     url: SITE_URL,
     logo: { '@type': 'ImageObject', url: SITE_URL + '/og-default.png', width: 1200, height: 630 },
+    publishingPrinciples: SITE_URL + '/metodologia',
+    ethicsPolicy: SITE_URL + '/metodologia#etica',
+    correctionsPolicy: SITE_URL + '/metodologia#correcciones',
+    diversityPolicy: SITE_URL + '/metodologia#diversidad',
   },
   citation: {
     '@type': 'CreativeWork',
@@ -160,6 +170,17 @@ const shareUrl = encodeURIComponent(url);
       </div>
       <h1 class="text-3xl md:text-5xl font-bold text-ink-900 leading-[1.1] tracking-tight" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">{d.titulo}</h1>
       <p class="mt-5 text-lg md:text-xl text-ink-700 leading-relaxed max-w-3xl" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">{d.resumen}</p>
+
+      <!-- Byline E-E-A-T: autoría editorial + revisión humana, enlazadas a las páginas de transparencia. -->
+      <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-600 border-t border-ink-100 pt-4 max-w-3xl">
+        <span>
+          Por <a href="/equipo-editorial" rel="author" class="font-semibold text-ink-900 underline-offset-2 hover:text-brand-700 hover:underline">Comité Editorial PulsoSano</a>
+        </span>
+        <span class="text-ink-300" aria-hidden="true">·</span>
+        <span>
+          Revisado según nuestra <a href="/metodologia" class="text-brand-700 underline-offset-2 hover:underline">metodología editorial</a>
+        </span>
+      </div>
     </header>
 
     {d.imagen && (
@@ -260,10 +281,15 @@ const shareUrl = encodeURIComponent(url);
               <dd class="text-ink-900">{readingMin} min</dd>
             </div>
             <div>
-              <dt class="text-xs text-ink-500">Reescrito por</dt>
-              <dd class="text-ink-900">PulsoSano + IA editorial</dd>
+              <dt class="text-xs text-ink-500">Redacción</dt>
+              <dd class="text-ink-900">Borrador asistido por IA bajo prompt editorial</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-ink-500">Revisión editorial</dt>
+              <dd class="text-ink-900">Comité Editorial PulsoSano</dd>
             </div>
           </dl>
+          <a href="/metodologia" class="inline-block mt-3 text-brand-700 text-sm underline underline-offset-2">Cómo trabajamos →</a>
         </section>
 
         <!-- TARJETA: Fuente original -->
