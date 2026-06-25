@@ -210,7 +210,7 @@ src/
     sobre.astro privacidad.astro contacto.astro aviso-medico.astro 404.astro
     rss.xml.js news-sitemap.xml.js
   content/
-    config.ts                      Zod schema (titulo, resumen, categoria enum, fuente, fecha, tags, imagen)
+    config.ts                      Zod schema (titulo, resumen, categoria enum, fuente, fecha, tags, imagen, faqs[], entidades[])
     noticias/*.md
 scripts/
   aggregator.py                    SYSTEM_PROMPT congelado, validadores compliance, prompt cache ephemeral
@@ -247,6 +247,13 @@ Búsquedas frecuentes que pueden hacerse (no las repitas analizando, ya están):
 - `max-snippet:-1`, `max-image-preview:large` para CTR alto en SERP.
 - `NewsMediaOrganization` Schema con `ethicsPolicy` + `correctionsPolicy`.
 - `WebSite` con `SearchAction` → habilita Sitelinks Search Box en SERP.
+- **`FAQPage` JSON-LD + sección visible** por artículo (campo `faqs`, solo nuevos):
+  captura "Otras preguntas"/rich results. La sección visible debe coincidir con el LD.
+- **Entidades médicas** (`entidades`): `about` con `@type` MedicalCondition/Drug/etc.
+  y `sameAs` a Wikipedia ES → Knowledge Graph. El modelo omite el enlace si no es canónico.
+- **Enlazado interno profundo** en `[...slug].astro`: 6 relacionadas misma categoría +
+  4 por tag cross-categoría ("Temas relacionados") + "Lo más reciente" en aside.
+- Byline E-E-A-T (`reviewedBy` + autor → `/equipo-editorial`, `publishingPrinciples`).
 
 ## DNS / Seguridad (Cloudflare)
 

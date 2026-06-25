@@ -66,7 +66,7 @@ CATEGORIAS_VALIDAS = [
 
 
 # IMPORTANT: este SYSTEM_PROMPT está congelado para que la cache de Anthropic acierte.
-# Re-baselined 2026-06-25 (E-E-A-T + anti-invención + texto fuente completo).
+# Re-baselined 2026-06-25 (E-E-A-T + anti-invención + texto fuente + faqs/entidades SEO).
 # No editar sin tener consciencia de la invalidación del prompt cache.
 SYSTEM_PROMPT = """Eres editor médico senior y traductor especializado en divulgación de salud BASADA EN
 EVIDENCIA para el público latinoamericano (español neutro). Produces contenido ORIGINAL
@@ -139,8 +139,26 @@ exacta:
   "categoria": "Una de las 9 permitidas",
   "porQueImporta": "1-2 frases sobre la relevancia concreta para el lector latinoamericano.",
   "cuerpo": "Artículo en markdown de 600-850 palabras. Usa ## para 4-5 secciones: contexto, qué se hizo/halló, qué significa en general (NO consejo individual), limitaciones del estudio o la información, y cierre. Atribuye cada dato a la fuente. Cierra recordando consultar a un profesional sanitario. NO uses tablas ni HTML.",
-  "tags": ["3-6", "palabras", "clave", "lowercase", "sin-tildes"]
+  "tags": ["3-6", "palabras", "clave", "lowercase", "sin-tildes"],
+  "faqs": [
+    {"pregunta": "Pregunta real que un lector buscaría en Google sobre este tema (lenguaje natural).",
+     "respuesta": "Respuesta de 1-3 frases, informativa y diferida, RESPONDIBLE solo con el material de la fuente. Aplica las mismas reglas de compliance (sin dosis, sin imperativos médicos, sin promesas de cura)."}
+  ],
+  "entidades": [
+    {"nombre": "Concepto médico canónico del artículo (enfermedad, fármaco, organismo, procedimiento).",
+     "tipo": "Uno de: MedicalCondition, Drug, MedicalProcedure, AnatomicalStructure, Organization, Thing.",
+     "wikipedia": "URL EXACTA en español https://es.wikipedia.org/wiki/... SOLO si estás muy seguro. Ante la duda, OMITE el campo o la entidad."}
+  ]
 }
+
+Sobre "faqs": incluye 3-4 preguntas frecuentes y útiles que la gente realmente busca
+(qué es, por qué ocurre, a quién afecta, qué sigue). Deben poder responderse con el
+material; si no hay base, genera menos preguntas o ninguna. NUNCA inventes respuestas.
+
+Sobre "entidades": incluye 1-3 conceptos médicos centrales. El enlace de Wikipedia es
+OPCIONAL y solo para conceptos canónicos inequívocos; ante la menor duda, omítelo. Es
+preferible una entidad sin enlace que un enlace equivocado. Si no hay entidades claras,
+devuelve [].
 
 No agregues texto antes ni después del JSON. No envuelvas el JSON en fences."""
 
@@ -245,11 +263,16 @@ def jaccard_similarity(a: str, b: str) -> float:
 def check_compliance(data: dict, source_summary: str) -> tuple[bool, list[str]]:
     """Devuelve (es_válido, lista_de_problemas)."""
     problems: list[str] = []
+    faq_text = " ".join(
+        f"{q.get('pregunta','')} {q.get('respuesta','')}"
+        for q in (data.get("faqs") or []) if isinstance(q, dict)
+    )
     body_full = " ".join([
         data.get("titulo", ""),
         data.get("resumen", ""),
         data.get("porQueImporta", ""),
         data.get("cuerpo", ""),
+        faq_text,
     ])
 
     # 1) Frases prohibidas
@@ -470,6 +493,48 @@ def write_article(data: dict, *, source_name: str, source_url: str,
     ])
     for t in tags_clean:
         front_lines.append(f"  - {yq(t)}")
+
+    # FAQ (SEO rich results). Clamp a los límites del schema Zod (pregunta<=200,
+    # respuesta<=700). Solo se emite la clave si hay al menos una FAQ válida.
+    faqs_clean = []
+    for q in (data.get("faqs") or []):
+        if not isinstance(q, dict):
+            continue
+        preg = _clamp(str(q.get("pregunta", "")).strip(), 200)
+        resp = _clamp(str(q.get("respuesta", "")).strip(), 700)
+        if len(preg) >= 5 and len(resp) >= 10:
+            faqs_clean.append((preg, resp))
+        if len(faqs_clean) >= 5:
+            break
+    if faqs_clean:
+        front_lines.append("faqs:")
+        for preg, resp in faqs_clean:
+            front_lines.append(f"  - pregunta: {yq(preg)}")
+            front_lines.append(f"    respuesta: {yq(resp)}")
+
+    # Entidades médicas (Knowledge Graph). wikipedia solo si es URL http(s) válida.
+    ents_clean = []
+    for e in (data.get("entidades") or []):
+        if not isinstance(e, dict):
+            continue
+        nombre = _clamp(str(e.get("nombre", "")).strip(), 120)
+        if len(nombre) < 2:
+            continue
+        tipo = _clamp(str(e.get("tipo", "")).strip(), 60)
+        wiki = str(e.get("wikipedia", "")).strip()
+        wiki = wiki if wiki.startswith(("http://", "https://")) else ""
+        ents_clean.append((nombre, tipo, wiki))
+        if len(ents_clean) >= 3:
+            break
+    if ents_clean:
+        front_lines.append("entidades:")
+        for nombre, tipo, wiki in ents_clean:
+            front_lines.append(f"  - nombre: {yq(nombre)}")
+            if tipo:
+                front_lines.append(f"    tipo: {yq(tipo)}")
+            if wiki:
+                front_lines.append(f"    wikipedia: {yq(wiki)}")
+
     if image:
         front_lines.append(f"imagen: {yq(image)}")
     front_lines.append(f'autorIA: {yq(modelo)}')

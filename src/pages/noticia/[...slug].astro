@@ -32,10 +32,36 @@ const catSlug = slugCat(d.categoria);
 const fechaTxt = new Date(d.fecha).toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' });
 const fechaIso = new Date(d.fecha).toISOString();
 
+const ts = (n: any) => new Date(n.data.fecha).getTime();
+
+// Misma categoría (recirculación principal) — 6 para más enlaces internos.
 const relacionadas = todas
   .filter((n: any) => n.slug !== entry.slug && n.data.categoria === d.categoria)
-  .sort((a: any, b: any) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
-  .slice(0, 3);
+  .sort((a: any, b: any) => ts(b) - ts(a))
+  .slice(0, 6);
+
+// Relacionadas por TAG en OTRAS categorías: teje el grafo interno cruzado,
+// reparte PageRank y abre rutas de navegación que suben páginas/sesión.
+const tagSet = new Set((d.tags || []).map((t: string) => t.toLowerCase()));
+const yaListadas = new Set(relacionadas.map((n: any) => n.slug));
+const porTags = tagSet.size === 0 ? [] : todas
+  .filter((n: any) =>
+    n.slug !== entry.slug &&
+    !yaListadas.has(n.slug) &&
+    n.data.categoria !== d.categoria &&
+    (n.data.tags || []).some((t: string) => tagSet.has(t.toLowerCase())))
+  .sort((a: any, b: any) => ts(b) - ts(a))
+  .slice(0, 4);
+
+// Lo más reciente del sitio (aside) — recirculación adicional y frescura.
+const recientes = todas
+  .filter((n: any) => n.slug !== entry.slug)
+  .sort((a: any, b: any) => ts(b) - ts(a))
+  .slice(0, 5);
+
+// SEO: FAQ y entidades (campos opcionales; los artículos históricos no los traen).
+const faqs = (d.faqs || []) as { pregunta: string; respuesta: string }[];
+const entidades = (d.entidades || []) as { nombre: string; tipo?: string; wikipedia?: string }[];
 
 // Tiempo de lectura estimado: ~225 palabras por minuto (es).
 const bodyText: string = (entry.body || '') as string;
@@ -116,15 +142,34 @@ const articleLd = {
   keywords: (d.tags || []).join(', '),
   articleSection: d.categoria,
   wordCount: wordCount,
-  about: isResearch
-    ? { '@type': 'MedicalCondition', name: d.categoria }
-    : { '@type': 'Thing', name: d.categoria },
+  // about/mentions: entidades médicas con sameAs a Wikipedia → Knowledge Graph.
+  // Si no hay entidades (artículos históricos), cae al comportamiento previo.
+  about: entidades.length > 0
+    ? entidades.map((e) => ({
+        '@type': e.tipo || (isResearch ? 'MedicalCondition' : 'Thing'),
+        name: e.nombre,
+        ...(e.wikipedia ? { sameAs: e.wikipedia } : {}),
+      }))
+    : (isResearch
+        ? { '@type': 'MedicalCondition', name: d.categoria }
+        : { '@type': 'Thing', name: d.categoria }),
   // Speakable: indica a asistentes de voz qué partes leer.
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', 'header p', '.prose-medical p:first-of-type'],
   },
 };
+
+// FAQPage: captura "Otras preguntas" y rich results en el SERP. Solo si hay FAQs.
+const faqLd = faqs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.pregunta,
+    acceptedAnswer: { '@type': 'Answer', text: f.respuesta },
+  })),
+} : null;
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -145,7 +190,7 @@ const shareUrl = encodeURIComponent(url);
   image={d.imagen}
   canonical={url}
   type="article"
-  jsonLd={[articleLd, breadcrumbLd]}
+  jsonLd={faqLd ? [articleLd, breadcrumbLd, faqLd] : [articleLd, breadcrumbLd]}
   publishedTime={fechaIso}
   modifiedTime={fechaIso}
   articleSection={d.categoria}
@@ -163,8 +208,8 @@ const shareUrl = encodeURIComponent(url);
 
     <header class="mb-8 max-w-4xl">
       <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-        <span class="inline-flex px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 font-medium">{d.categoria}</span>
-        <time class="text-ink-500" datetime={fechaIso}>{fechaTxt}</time>
+        <a href={'/categoria/' + catSlug + '/'} class="inline-flex px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 font-medium hover:bg-brand-100">{d.categoria}</a>
+        <span class="text-ink-500">Publicado el <time datetime={fechaIso}>{fechaTxt}</time></span>
         <span class="text-ink-300">·</span>
         <span class="text-ink-500">{readingMin} min de lectura</span>
       </div>
@@ -208,6 +253,25 @@ const shareUrl = encodeURIComponent(url);
 
         <!-- AdSlot in-article — formato fluido (mejor RPM en mobile) -->
         <AdSlot slot="6000000002" layout="in-article" variant="fluid" format="fluid" lazy={true} />
+
+        {faqs.length > 0 && (
+          <section class="mt-12" aria-labelledby="faq-titulo">
+            <h2 id="faq-titulo" class="text-2xl font-bold text-ink-900 mb-5" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">
+              Preguntas frecuentes
+            </h2>
+            <div class="divide-y divide-ink-100 border-y border-ink-100">
+              {faqs.map((f) => (
+                <details class="group py-1">
+                  <summary class="flex items-start justify-between gap-3 cursor-pointer list-none py-3 font-medium text-ink-900 hover:text-brand-700">
+                    <span>{f.pregunta}</span>
+                    <span class="text-brand-500 shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                  </summary>
+                  <p class="pb-4 text-ink-700 leading-relaxed">{f.respuesta}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section class="mt-10 p-5 border border-ink-100 rounded-lg bg-ink-100/40">
           <p class="text-sm text-ink-700">
@@ -323,6 +387,36 @@ const shareUrl = encodeURIComponent(url);
           <a href="/aviso-medico" class="inline-block mt-2 text-brand-700 text-sm underline">Más información</a>
         </section>
 
+        {entidades.length > 0 && (
+          <section class="marginalia border border-ink-100 rounded-lg p-5 bg-white">
+            <p class="marginalia-title">Temas tratados</p>
+            <ul class="space-y-1.5 text-sm">
+              {entidades.map((e) => (
+                <li>
+                  {e.wikipedia
+                    ? <a href={e.wikipedia} target="_blank" rel="noopener nofollow" class="text-brand-700 hover:underline">{e.nombre}</a>
+                    : <span class="text-ink-800">{e.nombre}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {recientes.length > 0 && (
+          <section class="marginalia border border-ink-100 rounded-lg p-5 bg-white">
+            <p class="marginalia-title">Lo más reciente</p>
+            <ul class="space-y-2 text-sm">
+              {recientes.map((p: any) => (
+                <li>
+                  <a href={'/noticia/' + p.slug + '/'} class="text-ink-700 hover:text-brand-700 hover:underline leading-snug block">
+                    {p.data.titulo}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         <!-- AdSlot vertical 300x600 — visible solo en lg+, sticky -->
         <div class="hidden lg:block">
           <AdSlot slot="6000000003" variant="vertical" format="auto" lazy={true} />
@@ -347,6 +441,23 @@ const shareUrl = encodeURIComponent(url);
           />
         ))}
       </div>
+    </section>
+  )}
+
+  {porTags.length > 0 && (
+    <section class="max-w-6xl mx-auto px-4 pb-16 mt-4">
+      <h2 class="text-xl font-bold text-ink-900 mb-5">Temas relacionados</h2>
+      <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+        {porTags.map((p: any) => (
+          <li class="flex items-baseline gap-2">
+            <span class="text-brand-500 shrink-0" aria-hidden="true">›</span>
+            <a href={'/noticia/' + p.slug + '/'} class="text-ink-700 hover:text-brand-700 hover:underline leading-snug">
+              {p.data.titulo}
+              <span class="text-ink-400 text-xs ml-1">· {p.data.categoria}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
   )}
 </Base>

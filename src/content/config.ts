@@ -27,6 +27,18 @@ const noticias = defineCollection({
     tags: z.array(z.string()).default([]),
     imagen: z.string().url().optional(),
     autorIA: z.string().default('claude-haiku-4-5'),
+    // SEO: FAQ para rich results / "Otras preguntas" (artículos nuevos). Opcional:
+    // los 1.170 históricos no lo tienen y deben seguir validando.
+    faqs: z.array(z.object({
+      pregunta: z.string().min(5).max(200),
+      respuesta: z.string().min(10).max(700),
+    })).default([]),
+    // SEO: entidades médicas canónicas para el Knowledge Graph (sameAs a Wikipedia).
+    entidades: z.array(z.object({
+      nombre: z.string().min(2).max(120),
+      tipo: z.string().max(60).optional(),
+      wikipedia: z.string().url().optional(),
+    })).default([]),
   }),
 });
 
