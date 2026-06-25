@@ -66,10 +66,20 @@ CATEGORIAS_VALIDAS = [
 
 
 # IMPORTANT: este SYSTEM_PROMPT está congelado para que la cache de Anthropic acierte.
+# Re-baselined 2026-06-25 (E-E-A-T + anti-invención + texto fuente completo).
 # No editar sin tener consciencia de la invalidación del prompt cache.
-SYSTEM_PROMPT = """Eres editor médico y traductor especializado en divulgación de salud para el público
-latinoamericano. Tu trabajo es producir contenido ORIGINAL en español a partir del
-titular y resumen de una fuente médica autorizada, sin copiar texto literal.
+SYSTEM_PROMPT = """Eres editor médico senior y traductor especializado en divulgación de salud BASADA EN
+EVIDENCIA para el público latinoamericano (español neutro). Produces contenido ORIGINAL
+a partir del material de una fuente médica autorizada, sin copiar texto literal.
+
+PRINCIPIO ANTI-INVENCIÓN (el más importante de todos):
+- Usa ÚNICAMENTE información contenida en el material de la fuente que se te entrega
+  (titular, resumen y, cuando esté disponible, el texto completo del artículo).
+- NUNCA inventes cifras, fechas, porcentajes, nombres de autores, instituciones,
+  resultados ni conclusiones que no aparezcan en el material. Si un dato no está, NO lo
+  incluyas. Es preferible un artículo más corto y veraz que uno completo e inventado.
+- Atribuye cada afirmación relevante a su origen: "según el estudio...",
+  "los autores observaron...", "el organismo informó...".
 
 REGLAS CRÍTICAS DE COMPLIANCE (no negociables — incumplirlas bloquea AdSense):
 
@@ -83,8 +93,15 @@ REGLAS CRÍTICAS DE COMPLIANCE (no negociables — incumplirlas bloquea AdSense)
    dentro del cuerpo (no solo al final) un recordatorio de consultar con un médico
    antes de aplicarlo.
 4. NUNCA traduzcas palabra-por-palabra. Reescribe siempre con tus propias palabras.
-5. Si la fuente menciona estadísticas, conserva las cifras exactas.
+5. Si la fuente menciona estadísticas, conserva las cifras exactas con su contexto.
 6. Cita la fuente original con enlace nofollow.
+
+CALIDAD EDITORIAL (para destacar en buscadores y aportar valor real al lector):
+- Lead: las primeras 2 frases deben responder qué pasó y por qué importa.
+- Sé específico cuando el material lo permita: tipo de estudio, población, tamaño
+  muestral (n), institución o revista, y limitaciones declaradas.
+- Explica el contexto para un lector no experto sin simplificar en exceso.
+- Evita relleno, generalidades vacías y clichés. Cada párrafo debe aportar información.
 
 Categoriza usando EXACTAMENTE una de estas 9 etiquetas. Lee TODAS las definiciones
 antes de decidir; "Estilo de Vida Saludable" NO es cajón de sastre:
@@ -117,12 +134,12 @@ Formato de salida — SIEMPRE responde con un objeto JSON válido con esta estru
 exacta:
 
 {
-  "titulo": "Titular en español, informativo, sin clickbait, máximo 90 caracteres",
-  "resumen": "Resumen original de 2-3 frases (max 280 caracteres). Qué y por qué.",
+  "titulo": "Titular en español, informativo y específico, sin clickbait, máximo 90 caracteres",
+  "resumen": "Resumen original de 2-3 frases (max 280 caracteres): qué se halló y por qué importa.",
   "categoria": "Una de las 9 permitidas",
-  "porQueImporta": "1-2 frases sobre relevancia para el lector latinoamericano.",
-  "cuerpo": "Artículo en markdown de 500-700 palabras. Usa ## para 4 secciones: contexto, hallazgos, qué significa en general (NO consejo individual), limitaciones del estudio. Cierra con un párrafo recordando consultar a un profesional sanitario. NO uses tablas ni HTML.",
-  "tags": ["3-5", "palabras", "clave", "lowercase", "sin-tildes"]
+  "porQueImporta": "1-2 frases sobre la relevancia concreta para el lector latinoamericano.",
+  "cuerpo": "Artículo en markdown de 600-850 palabras. Usa ## para 4-5 secciones: contexto, qué se hizo/halló, qué significa en general (NO consejo individual), limitaciones del estudio o la información, y cierre. Atribuye cada dato a la fuente. Cierra recordando consultar a un profesional sanitario. NO uses tablas ni HTML.",
+  "tags": ["3-6", "palabras", "clave", "lowercase", "sin-tildes"]
 }
 
 No agregues texto antes ni después del JSON. No envuelvas el JSON en fences."""
@@ -267,13 +284,48 @@ def clean_text(html: str) -> str:
     return text.strip()
 
 
+def fetch_article_text(url: str, headers: dict, max_chars: int, verbose: bool = False) -> str:
+    """Descarga el artículo de la fuente y extrae el cuerpo principal en texto plano.
+
+    Recorta a max_chars (en límite de palabra) para acotar el costo en tokens.
+    Devuelve "" ante cualquier fallo: el llamador hace fallback al resumen RSS.
+    Esto es lo que permite que el modelo escriba desde sustancia real y no desde un
+    stub de 1500 caracteres — clave para calidad y anti-alucinación.
+    """
+    try:
+        r = requests.get(url, headers=headers, timeout=15)
+        if r.status_code != 200 or "html" not in r.headers.get("content-type", ""):
+            return ""
+        soup = BeautifulSoup(r.content, "html.parser")
+        # Quitar ruido estructural que no es el artículo.
+        for tag in soup(["script", "style", "nav", "header", "footer", "aside",
+                         "form", "figure", "figcaption", "noscript", "iframe"]):
+            tag.decompose()
+        # Preferir el contenedor semántico del artículo si existe.
+        container = (soup.find("article") or soup.find("main")
+                     or soup.find(attrs={"role": "main"}) or soup.body or soup)
+        paras = [clean_text(p.get_text(" ", strip=True)) for p in container.find_all("p")]
+        paras = [p for p in paras if len(p) >= 40]  # descarta pies/menús/avisos cortos
+        text = "\n\n".join(paras).strip()
+        if len(text) < 200:  # extracción demasiado pobre: no aporta sobre el resumen
+            return ""
+        if len(text) > max_chars:
+            cut = text[:max_chars]
+            sp = cut.rfind(" ")
+            text = (cut[:sp] if sp > max_chars * 0.6 else cut).rstrip() + "…"
+        return text
+    except Exception as e:
+        log(f"    [fulltext] no disponible ({type(e).__name__}); uso resumen RSS", verbose=verbose)
+        return ""
+
+
 def call_anthropic(client: Anthropic, model: str, user_prompt: str, verbose: bool) -> dict:
     last_err: Optional[Exception] = None
     for attempt in range(3):
         try:
             resp = client.messages.create(
                 model=model,
-                max_tokens=2200,
+                max_tokens=3000,
                 temperature=0.4,
                 system=[
                     {
@@ -315,7 +367,18 @@ def call_anthropic(client: Anthropic, model: str, user_prompt: str, verbose: boo
 
 
 def make_user_prompt(*, source_name: str, source_url: str, lang: str,
-                     title: str, summary: str) -> str:
+                     title: str, summary: str, fulltext: str = "") -> str:
+    if fulltext:
+        material = f"""Texto completo del artículo original (BASA tu reescritura ÚNICAMENTE en este
+material; no agregues datos que no estén aquí):
+\"\"\"
+{fulltext}
+\"\"\""""
+    else:
+        material = f"""Resumen / extracto original (es el ÚNICO material disponible; no inventes datos
+que no estén aquí; si es escaso, escribe un artículo más breve pero veraz):
+{summary}"""
+
     return f"""Reescribe la siguiente noticia médica para el público latinoamericano en español neutro,
 siguiendo TODAS las reglas del system prompt.
 
@@ -326,8 +389,7 @@ Idioma original: {lang}
 Titular original:
 {title}
 
-Resumen / extracto original:
-{summary}
+{material}
 
 Recuerda: responde SOLO con el JSON pedido, sin texto antes ni después."""
 
@@ -355,7 +417,8 @@ def _clamp(s: str, max_len: int) -> str:
 
 
 def write_article(data: dict, *, source_name: str, source_url: str,
-                  fecha_iso: str, image: Optional[str]) -> Path:
+                  fecha_iso: str, image: Optional[str],
+                  modelo: str = "claude-haiku-4-5") -> Path:
     titulo = data["titulo"].strip()
     slug = slugify(titulo, lowercase=True, max_length=80, word_boundary=True, save_order=True)
     if not slug:
@@ -409,7 +472,7 @@ def write_article(data: dict, *, source_name: str, source_url: str,
         front_lines.append(f"  - {yq(t)}")
     if image:
         front_lines.append(f"imagen: {yq(image)}")
-    front_lines.append('autorIA: "claude-haiku-4-5"')
+    front_lines.append(f'autorIA: {yq(modelo)}')
     front_lines.append("---")
     front_lines.append("")
     front_lines.append(data["cuerpo"].strip())
@@ -431,6 +494,10 @@ def run(args: argparse.Namespace) -> int:
     max_total = args.limit or int(cfg.get("max_noticias_por_run", 12))
     max_por_fuente = int(cfg.get("max_por_fuente", 2))
     model = cfg.get("modelo", "claude-haiku-4-5")
+    model_premium = cfg.get("modelo_premium", model)
+    peso_premium_min = int(cfg.get("peso_premium_min", 99))  # 99 = nunca, salvo config
+    fetch_fulltext = bool(cfg.get("fetch_fulltext", False))
+    fulltext_max_chars = int(cfg.get("fulltext_max_chars", 6000))
     user_agent = cfg.get("user_agent", "Mozilla/5.0 PulsoSano/1.0")
 
     state = load_state()
@@ -439,7 +506,11 @@ def run(args: argparse.Namespace) -> int:
     CONTENT_DIR.mkdir(parents=True, exist_ok=True)
     client = None if args.dry_run else Anthropic(api_key=api_key)
 
-    headers = {"User-Agent": user_agent}
+    headers = {
+        "User-Agent": user_agent,
+        "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*",
+        "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+    }
     candidates = []
 
     for fuente in sources_cfg.get("fuentes", []):
@@ -517,19 +588,34 @@ def run(args: argparse.Namespace) -> int:
     api_errors = 0
     for i, c in enumerate(candidates, 1):
         try:
-            print(f"[{i}/{len(candidates)}] {c['source_name']}: {c['title'][:80]}")
+            # Ruteo de modelo por autoridad de la fuente: las de peso alto
+            # (peer-review, agencias) usan el modelo premium; el resto, el base.
+            modelo_usado = model_premium if c["peso"] >= peso_premium_min else model
+
+            # Texto completo de la fuente (mayor calidad / menos alucinación).
+            # Si falla, fulltext="" y el prompt cae al resumen RSS.
+            fulltext = ""
+            if fetch_fulltext:
+                fulltext = fetch_article_text(c["source_url"], headers,
+                                              fulltext_max_chars, verbose=args.verbose)
+
+            marca = "★" if modelo_usado == model_premium else " "
+            ft_tag = f"+texto({len(fulltext)}c)" if fulltext else "solo-resumen"
+            print(f"[{i}/{len(candidates)}] {marca}{c['source_name']}: {c['title'][:70]} [{ft_tag}]")
+
             user_prompt = make_user_prompt(
                 source_name=c["source_name"],
                 source_url=c["source_url"],
                 lang=c["lang"],
                 title=c["title"],
                 summary=c["summary"],
+                fulltext=fulltext,
             )
 
             # Generación con validación de compliance.
             data = None
             for compliance_attempt in range(2):
-                candidate = call_anthropic(client, model, user_prompt, verbose=args.verbose)
+                candidate = call_anthropic(client, modelo_usado, user_prompt, verbose=args.verbose)
                 ok, problems = check_compliance(candidate, c["summary"])
                 if ok:
                     data = candidate
@@ -546,6 +632,7 @@ def run(args: argparse.Namespace) -> int:
                 source_url=c["source_url"],
                 fecha_iso=c["fecha_iso"],
                 image=c["image"],
+                modelo=modelo_usado,
             )
             print(f"    -> {path.relative_to(ROOT)}")
             processed_hashes.add(c["hash"])

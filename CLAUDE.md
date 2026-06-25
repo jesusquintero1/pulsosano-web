@@ -83,14 +83,22 @@ Hay **3 procesos independientes** que se sincronizan vía git:
 - Slugs de categoría: `[áéíóúñ] → ascii`, luego `[^a-z0-9]+ → -`.
 
 **Pieza 2 — Aggregator Python (`scripts/aggregator.py`)**
-- Lee `scripts/sources.yml` (22 fuentes RSS activas), dedupe via SHA256 del URL en
+- Lee `scripts/sources.yml` (35 fuentes RSS activas), dedupe via SHA256 del URL en
   `scripts/state/processed.json` (commiteado por el bot del CI).
-- Envía cada candidato a `claude-haiku-4-5` con un **SYSTEM_PROMPT congelado**
-  (cualquier cambio invalida prompt cache de Anthropic → +50% costo). Marca el
-  system prompt con `cache_control: ephemeral`.
+- **Modelo tiered** (config `sources.yml`): fuentes peso ≥ `peso_premium_min` (5)
+  usan `modelo_premium` (`claude-sonnet-4-6`); el resto, `modelo` (`claude-haiku-4-5`).
+  Marca el SYSTEM_PROMPT con `cache_control: ephemeral`.
+- **Texto fuente completo** (`fetch_fulltext: true`): `fetch_article_text()` descarga
+  y extrae el cuerpo del artículo original (recorte a `fulltext_max_chars`) y lo pasa
+  al modelo en vez del solo-resumen RSS → más calidad y anti-alucinación. Fallback
+  silencioso al resumen RSS si la fuente bloquea (403/429) o es JS-only (0 `<p>`).
+- **SYSTEM_PROMPT re-baselined 2026-06-25** (anti-invención + E-E-A-T + 600-850 palabras).
+  Sigue congelado: cualquier cambio invalida el prompt cache de Anthropic.
 - Valida con `check_compliance()`: regex `FORBIDDEN_PATTERNS`, cifras médicas sin
   contexto de estudio, similitud Jaccard ≤ 0.40 con el resumen RSS (anti-plagio).
 - Si la validación falla 2 veces, marca la noticia como procesada y la salta.
+- Si 0 artículos escritos habiendo candidatos que fallaron → `exit 3` (CI falla en rojo,
+  evita el `success` en falso del incidente de saldo API agotado may-jun 2026).
 - Escribe Markdown con frontmatter Zod-compatible en `src/content/noticias/<slug>.md`.
 
 **Pieza 3 — Deploy Cloudflare (`wrangler.jsonc` + `redirect/wrangler.jsonc`)**
@@ -115,7 +123,8 @@ Hay **3 procesos independientes** que se sincronizan vía git:
    (`slugify`, etc.) **dentro** de la función, no en el frontmatter superior.
 6. **`SYSTEM_PROMPT` en `aggregator.py` está congelado.** Cualquier cambio (incluso
    un espacio) invalida el prompt cache de Anthropic, lo que sube el costo ~3x
-   los siguientes 5 minutos. NO editarlo sin tener consciencia.
+   los siguientes 5 minutos. NO editarlo sin tener consciencia. Re-baselined a
+   propósito el 2026-06-25 (E-E-A-T + anti-invención); desde ahí, congelado de nuevo.
 7. **NUNCA usar `output: 'server'` ni `@astrojs/cloudflare`** — rompe Workers Static
    Assets. Solo `static`.
 8. **NUNCA usar Cloudflare Pages** — siempre Workers (`wrangler deploy`). Pages
@@ -150,16 +159,21 @@ nichos. Estas reglas están codificadas en `SYSTEM_PROMPT`:
 
 ## RSS sources (`scripts/sources.yml`)
 
-22 fuentes activas, peso 5 = autoridad máxima:
-- **Peer-review (5):** Nature Medicine, BMJ Open, PLOS Medicine
-- **Agencias (5):** WHO, OPS/PAHO (es+en), MedlinePlus (NIH), CDC Newsroom
-- **Periodismo médico (4-5):** STAT News, Diario Médico, Reuters Health, BBC Health, NYT Health
-- **Divulgación (3-4):** ScienceDaily (3 secciones), Cuídate Plus, El Mundo Salud, Healthline, PsyPost, ScienceAlert
+35 fuentes activas, peso 5 = autoridad máxima:
+- **Peer-review (5):** Nature Medicine, BMJ Open, PLOS Medicine, JAMA, PLOS Global Public Health
+- **Agencias (5):** WHO, OPS/PAHO (es+en), MedlinePlus (NIH), CDC Newsroom, FDA, ECDC (Europa)
+- **Periodismo médico (4-5):** STAT News, Diario Médico, Reuters Health, BBC Health, NYT Health,
+  KFF Health News, MedPage Today, Medscape, ONU Noticias Salud, The Conversation, EFE Salud, Gaceta Médica
+- **Divulgación (3-4):** ScienceDaily (5 secciones: Health, Nutrition, Mind&Brain, Cáncer, Infecciosas),
+  Cuídate Plus, El Mundo Salud, Healthline, PsyPost, ScienceAlert, ConSalud.es
 - **Generalista (2):** 20Minutos Salud
 
-**Inactivas (bot bloqueado por user-agent):** Harvard Health, Mayo Clinic,
-Cleveland Clinic, Medical News Today, The Lancet, Infosalus, EFE Salud.
-Marcadas `activa: false` con fecha. Reintentar trimestralmente.
+Expansión global verificada el 2026-06-25. **EFE Salud reactivada** (200 OK con
+headers Accept completos).
+
+**Inactivas (anti-bot 403/404, no es el user-agent):** Harvard Health, Mayo Clinic,
+Cleveland Clinic, Medical News Today, The Lancet, NEJM, JAMA-fulltext, Infosalus.
+Marcadas `activa: false` con fecha. Reintentar trimestralmente (probadas alt-URLs jun-2026).
 
 ## Categorías permitidas (NO agregar ni renombrar)
 

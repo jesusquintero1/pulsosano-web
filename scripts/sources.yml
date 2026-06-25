@@ -1,7 +1,11 @@
 config:
-  max_noticias_por_run: 18
+  max_noticias_por_run: 12          # cap por run; ~30-40/día sostenido con 35 fuentes
   max_por_fuente: 2
-  modelo: "claude-haiku-4-5"
+  modelo: "claude-haiku-4-5"        # modelo base (fuentes peso < peso_premium_min)
+  modelo_premium: "claude-sonnet-4-6"  # fuentes de máxima autoridad (peer-review, agencias)
+  peso_premium_min: 5               # peso >= 5 -> usa modelo_premium
+  fetch_fulltext: true              # descargar texto completo de la fuente (calidad + anti-alucinación)
+  fulltext_max_chars: 6000          # recorte para acotar tokens de entrada
   user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 # Fuentes verificadas el 2026-05-18 (segunda ronda con peer-review + LatAm).
@@ -148,6 +152,88 @@ fuentes:
     peso: 2
     activa: true
 
+  # === EXPANSIÓN GLOBAL — verificadas vivas el 2026-06-25 ===
+  # Peer-review / agencias (peso 5 -> modelo premium)
+  - nombre: "JAMA (Current Issue)"
+    url: "https://jamanetwork.com/rss/site_3/67.xml"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  - nombre: "PLOS Global Public Health"
+    url: "https://journals.plos.org/globalpublichealth/feed/atom"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  - nombre: "FDA — Comunicados de prensa"
+    url: "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  - nombre: "ECDC (Centro Europeo para Control de Enfermedades)"
+    url: "https://www.ecdc.europa.eu/en/taxonomy/term/2942/feed"
+    idioma: "en"
+    peso: 5
+    activa: true
+
+  # Periodismo médico / divulgación (peso 4)
+  - nombre: "KFF Health News"
+    url: "https://kffhealthnews.org/feed/"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "MedPage Today"
+    url: "https://www.medpagetoday.com/rss/headlines.xml"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "ONU Noticias — Salud"
+    url: "https://news.un.org/feed/subscribe/en/news/topic/health/feed/rss.xml"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "The Conversation — Salud (Global)"
+    url: "https://theconversation.com/global/health/articles.atom"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "Medscape News"
+    url: "https://www.medscape.com/cx/rssfeeds/2700.xml"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "Gaceta Médica"
+    url: "https://gacetamedica.com/feed/"
+    idioma: "es"
+    peso: 4
+    activa: true
+
+  - nombre: "ScienceDaily — Cáncer"
+    url: "https://www.sciencedaily.com/rss/health_medicine/cancer.xml"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  - nombre: "ScienceDaily — Enfermedades infecciosas"
+    url: "https://www.sciencedaily.com/rss/health_medicine/infectious_diseases.xml"
+    idioma: "en"
+    peso: 4
+    activa: true
+
+  # Divulgación seria en español (peso 3)
+  - nombre: "ConSalud.es"
+    url: "https://www.consalud.es/rss"
+    idioma: "es"
+    peso: 3
+    activa: true
+
   # === INACTIVAS — bloqueadas al user-agent del bot ===
   - nombre: "Harvard Health Blog"
     url: "https://www.health.harvard.edu/blog/feed"
@@ -189,4 +275,4 @@ fuentes:
     url: "https://efesalud.com/feed/"
     idioma: "es"
     peso: 5
-    activa: false   # 429 rate-limit (2026-05-18)
+    activa: true    # reactivada 2026-06-25 (200 OK con headers completos)
