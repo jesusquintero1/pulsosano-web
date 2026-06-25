@@ -514,6 +514,7 @@ def run(args: argparse.Namespace) -> int:
         return 0
 
     written = 0
+    api_errors = 0
     for i, c in enumerate(candidates, 1):
         try:
             print(f"[{i}/{len(candidates)}] {c['source_name']}: {c['title'][:80]}")
@@ -551,6 +552,7 @@ def run(args: argparse.Namespace) -> int:
             written += 1
         except Exception as e:
             print(f"    [error] {e}", file=sys.stderr)
+            api_errors += 1
 
     state["processed_urls"] = list(processed_hashes)
     state.setdefault("stats", {})
@@ -559,6 +561,20 @@ def run(args: argparse.Namespace) -> int:
     save_state(state)
 
     print(f"[ok] {written} artículo(s) escritos. Total histórico: {state['stats']['total_processed']}.")
+
+    # Alerta: hubo candidatos pero NINGUNO se pudo generar por errores de
+    # generación (típicamente saldo de API agotado o caída de Anthropic).
+    # Salir con código != 0 hace que el run de CI falle visiblemente, en vez
+    # de reportar `success` en falso mientras el sitio se congela. El caso
+    # legítimo de "0 candidatos nuevos" sale antes (return 0) y no llega aquí.
+    if written == 0 and api_errors > 0:
+        print(
+            f"[fallo] 0 artículos escritos pero {api_errors} fallo(s) de generación. "
+            "Posible saldo de API agotado o caída del proveedor. Revisa los [error] arriba.",
+            file=sys.stderr,
+        )
+        return 3
+
     return 0
 
 
