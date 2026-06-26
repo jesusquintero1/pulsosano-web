@@ -185,13 +185,18 @@ const HREFLANGS = [
         <script is:inline define:vars={{ ADSENSE }}>
           (function () {
             window.adsbygoogle = window.adsbygoogle || [];
-            window.adsbygoogle.pauseAdRequests = 1;
+            // Monetización: servir SIEMPRE (no pausar). Sin consentimiento explícito
+            // se sirven anuncios NO personalizados (permitidos sin consent); al aceptar
+            // en el banner se suben a personalizados. La audiencia es LatAm: gatear todo
+            // tras un clic perdería la mayoría de las impresiones.
+            // Nota EEA/UK: activar el mensaje de consentimiento GDPR en el dashboard de
+            // AdSense (Privacidad y mensajes) para cumplimiento estricto en Europa.
+            var npa = 1;
             try {
-              var consent = localStorage.getItem('slm_consent');
-              if (consent === 'rejected') {
-                window.adsbygoogle.requestNonPersonalizedAds = 1;
-              }
+              if (localStorage.getItem('slm_consent') === 'accepted') npa = 0;
             } catch (e) {}
+            window.adsbygoogle.requestNonPersonalizedAds = npa;
+            window.adsbygoogle.pauseAdRequests = 0;
             window.adsbygoogle.push({
               google_ad_client: ADSENSE,
               enable_page_level_ads: true,

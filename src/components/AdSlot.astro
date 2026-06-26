@@ -20,6 +20,14 @@ const {
 const ADSENSE = import.meta.env.PUBLIC_ADSENSE_CLIENT || '';
 const active = ADSENSE && !ADSENSE.includes('__PENDIENTE__');
 
+// Los slots 60000000xx son placeholders (no son ad units reales de AdSense).
+// Emitir un <ins> con un slot falso produce una unidad rota que no rinde. Hasta
+// que existan ad units reales, NO renderizamos unidades manuales y dejamos que
+// Auto Ads (activado en el dashboard tras la aprobación) coloque los anuncios.
+// Para activar una unidad manual: crea el ad unit en AdSense y pon su slot real.
+const isRealSlot = !!slot && !/^6000000/.test(slot);
+const renderUnit = active && isRealSlot;
+
 const sizeByVariant: Record<string, string> = {
   horizontal: 'min-height:90px;',
   vertical:   'min-height:600px; max-width:300px; margin:0 auto;',
@@ -30,28 +38,27 @@ const sizeByVariant: Record<string, string> = {
 const insStyle = `display:block; text-align:center; ${sizeByVariant[variant] || sizeByVariant.horizontal}`;
 const loadingAttr = lazy ? 'lazy' : undefined;
 ---
-<aside class={`my-8 ${className}`} aria-label="Publicidad">
-  {active ? (
-    <>
-      <p class="text-[10px] uppercase tracking-widest text-ink-500 mb-1 text-center">Publicidad</p>
-      <ins class="adsbygoogle block"
-        style={insStyle}
-        data-ad-client={ADSENSE}
-        data-ad-slot={slot}
-        data-ad-format={format}
-        data-full-width-responsive="true"
-        data-adsbygoogle-status={loadingAttr ? undefined : undefined}
-        data-ad-layout={layout === 'in-article' ? 'in-article' : (layout === 'in-feed' ? 'in-feed' : undefined)}>
-      </ins>
-      <script is:inline>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </>
-  ) : (
+{renderUnit ? (
+  <aside class={`my-8 ${className}`} aria-label="Publicidad">
+    <p class="text-[10px] uppercase tracking-widest text-ink-500 mb-1 text-center">Publicidad</p>
+    <ins class="adsbygoogle block"
+      style={insStyle}
+      data-ad-client={ADSENSE}
+      data-ad-slot={slot}
+      data-ad-format={format}
+      data-full-width-responsive="true"
+      data-ad-layout={layout === 'in-article' ? 'in-article' : (layout === 'in-feed' ? 'in-feed' : undefined)}>
+    </ins>
+    <script is:inline>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </aside>
+) : (!active ? (
+  <aside class={`my-8 ${className}`} aria-label="Publicidad">
     <div class={`border-2 border-dashed border-ink-300 rounded-lg p-6 text-center bg-ink-100/50 ${variant === 'vertical' ? 'min-h-[600px] max-w-[300px] mx-auto flex flex-col items-center justify-center' : variant === 'square' ? 'min-h-[250px] max-w-[300px] mx-auto' : ''}`}>
       <p class="text-xs uppercase tracking-widest text-ink-500 mb-1">Espacio reservado para publicidad</p>
       <p class="text-sm text-ink-700">AdSense aún no configurado (placeholder __PENDIENTE__).</p>
       <p class="text-[10px] text-ink-500 mt-2">variante: {variant}</p>
     </div>
-  )}
-</aside>
+  </aside>
+) : null)}
