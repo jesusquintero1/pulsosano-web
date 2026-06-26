@@ -585,6 +585,11 @@ def run(args: argparse.Namespace) -> int:
     fulltext_max_chars = int(cfg.get("fulltext_max_chars", 4000))
     fulltext_skip_if_summary = int(cfg.get("fulltext_skip_if_summary_chars", 0))
     user_agent = cfg.get("user_agent", "Mozilla/5.0 PulsoSano/1.0")
+    # Temas prioritarios: boost de SELECCIÓN (data-driven desde Google Search Console).
+    # NO afecta el SYSTEM_PROMPT ni la generación — solo qué candidatos se eligen.
+    temas_cfg = cfg.get("temas_prioritarios", {}) or {}
+    temas_keywords = [k.lower() for k in (temas_cfg.get("keywords") or [])]
+    temas_reserva_frac = float(temas_cfg.get("reserva_frac", 0.0))
 
     state = load_state()
     processed_hashes = set(state.get("processed_urls", []))
@@ -657,17 +662,37 @@ def run(args: argparse.Namespace) -> int:
         print("[ok] No hay candidatos nuevos.")
         return 0
 
-    candidates.sort(key=lambda c: (-c["peso"], c["fecha_iso"]), reverse=False)
-    candidates.sort(key=lambda c: c["peso"], reverse=True)
-    candidates = candidates[: max_total * 2]
-    random.shuffle(candidates)
-    candidates = candidates[:max_total]
+    candidates.sort(key=lambda c: (c["peso"], c["fecha_iso"]), reverse=True)
+
+    # Boost por temas prioritarios: reserva una fracción de los slots para
+    # candidatos cuyo título/resumen matcheen las keywords (p.ej. GLP-1, que ya
+    # rankea página 1 en GSC). Los reservados van al frente -> sobreviven el corte.
+    # Si no hay candidatos prioritarios en este run, cae al comportamiento normal.
+    def _es_prioritario(c):
+        if not temas_keywords:
+            return False
+        txt = (c["title"] + " " + c["summary"]).lower()
+        return any(kw in txt for kw in temas_keywords)
+
+    pool = candidates[: max_total * 3]
+    random.shuffle(pool)
+    prioritarios = [c for c in pool if _es_prioritario(c)]
+    resto = [c for c in pool if not _es_prioritario(c)]
+    n_reserva = min(len(prioritarios), round(max_total * temas_reserva_frac)) if temas_keywords else 0
+    candidates = (prioritarios[:n_reserva] + resto + prioritarios[n_reserva:])[:max_total]
+    random.shuffle(candidates)  # orden de procesamiento (no afecta la selección)
+    for c in candidates:
+        c["prioritario"] = _es_prioritario(c)
+    if n_reserva:
+        print(f"[boost] {n_reserva} slot(s) reservado(s) a temas prioritarios "
+              f"({len(prioritarios)} candidato(s) prioritario(s) encontrado(s))")
 
     print(f"[plan] Se procesarán {len(candidates)} noticia(s) (max_total={max_total})")
 
     if args.dry_run:
         for c in candidates:
-            print(f"  - [{c['source_name']}] {c['title'][:90]}")
+            mark = "⚡" if c.get("prioritario") else " "
+            print(f"  - {mark}[{c['source_name']}] {c['title'][:90]}")
         return 0
 
     written = 0
@@ -693,8 +718,9 @@ def run(args: argparse.Namespace) -> int:
                     fetched += 1
 
             marca = "★" if modelo_usado == model_premium else " "
+            pri = "⚡" if c.get("prioritario") else ""
             ft_tag = f"+texto({len(fulltext)}c)" if fulltext else "solo-resumen"
-            print(f"[{i}/{len(candidates)}] {marca}{c['source_name']}: {c['title'][:70]} [{ft_tag}]")
+            print(f"[{i}/{len(candidates)}] {marca}{pri}{c['source_name']}: {c['title'][:70]} [{ft_tag}]")
 
             user_prompt = make_user_prompt(
                 source_name=c["source_name"],

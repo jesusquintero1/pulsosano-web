@@ -7,6 +7,29 @@ config:
   fetch_fulltext: true              # descargar texto completo de la fuente (calidad + anti-alucinación)
   fulltext_max_chars: 4000          # recorte para acotar tokens (lead/abstract va al inicio)
   fulltext_skip_if_summary_chars: 1400  # si el resumen RSS ya es rico, no fetchear (ahorra tokens)
+  # Temas prioritarios — boost de SELECCIÓN (data-driven Google Search Console 2026-06-26).
+  # El cluster GLP-1/pérdida de peso ya rankea página 1 (pos 6-9, CTR alto) y es de los
+  # de mayor volumen+RPM en salud. Reforzarlo para subir a top-3. NO toca el SYSTEM_PROMPT.
+  temas_prioritarios:
+    reserva_frac: 0.4               # hasta 40% de los slots/run a estos temas (si hay candidatos)
+    keywords:
+      - "glp-1"
+      - "glp1"
+      - "semaglutida"
+      - "semaglutide"
+      - "tirzepatida"
+      - "tirzepatide"
+      - "ozempic"
+      - "wegovy"
+      - "mounjaro"
+      - "zepbound"
+      - "liraglutida"
+      - "pérdida de peso"
+      - "perdida de peso"
+      - "weight loss"
+      - "obesidad"
+      - "obesity"
+      - "adelgaz"
   user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 # Fuentes verificadas el 2026-05-18 (segunda ronda con peer-review + LatAm).
