@@ -1,5 +1,5 @@
 config:
-  max_noticias_por_run: 12          # cap por run; ~30-40/día sostenido con 35 fuentes
+  max_noticias_por_run: 5           # cap por run; con cron 12h = ~10/día (recorte costos API 2026-06-26)
   max_por_fuente: 2
   modelo: "claude-haiku-4-5"        # modelo base (fuentes peso < peso_premium_min)
   modelo_premium: "claude-sonnet-4-6"  # fuentes de máxima autoridad (peer-review, agencias)

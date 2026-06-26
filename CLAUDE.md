@@ -10,7 +10,7 @@ neutro para LatAm, monetizado con Google AdSense. Nicho YMYL (Your Money Your Li
 - **Producción:** https://pulsosano.com (HTTPS · Cloudflare Workers)
 - **Defensa marca:** https://pulsosano.org → 301 a `.com` (preserva path + query)
 - **Repo:** https://github.com/jesusquintero1/pulsosano-web
-- **CI/CD:** GitHub Actions cron `0 */2 * * *` (12 deploys/día)
+- **CI/CD:** GitHub Actions cron `0 */12 * * *` (2 deploys/día — recorte costos API 2026-06-26, antes 2h/12×)
 
 ## Common commands
 

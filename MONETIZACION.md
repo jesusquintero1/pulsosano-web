@@ -18,7 +18,7 @@ En cuanto la cuenta pase a "Listo", **sin tocar nada**:
 1. **Los anuncios empiezan a servirse solos.** El script de AdSense ya está en cada
    página, `pauseAdRequests = 0` (no se ahogan) y `enable_page_level_ads: true` pide
    activar **Auto Ads por código**. Google coloca los anuncios automáticamente.
-2. **El contenido sigue publicándose** cada 2h (cron GitHub Actions) → más páginas =
+2. **El contenido sigue publicándose** cada 12h (cron GitHub Actions) → más páginas =
    más inventario de anuncios, sin intervención.
 3. **Los deploys siguen automáticos** (CI) → cada artículo nuevo queda monetizado.
 4. **ads.txt ya verificado** con el pub ID real.

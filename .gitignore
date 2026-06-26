@@ -8,5 +8,9 @@ dist/
 .vscode/
 .idea/
 
+# Python bytecode del agregador
+__pycache__/
+*.pyc
+
 # Estado local del agregador (lo commitea el bot del CI con write permission)
 # scripts/state/processed.json se NO se ignora — el CI lo necesita persistente
