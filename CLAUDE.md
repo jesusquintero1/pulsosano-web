@@ -278,10 +278,11 @@ Ya completado:
 Pendiente (orden cronológico):
 - **Día 7-10:** crear publicación en Google Publisher Center cuando haya ≥1000
   artículos (rechaza por "insufficient content" antes).
-- **Día 30+:** solicitar AdSense (ver `public/ads.txt` con placeholder).
-  Cuando Google dé `ca-pub-XXXXXXXXXXXXXXXX`, actualizarlo en:
-  - GitHub Secret `PUBLIC_ADSENSE_CLIENT`
-  - `public/ads.txt` (sin prefijo `ca-`)
+- **AdSense:** pub ID `ca-pub-8849534484285084` ya configurado (secret + ads.txt +
+  script en cada página). Cuenta **en revisión** ("Preparando"). La monetización está
+  **armada para auto-activarse al aprobar, sin código ni deploy** — ver
+  [`MONETIZACION.md`](MONETIZACION.md) para el estado completo y el único toggle que
+  vive en el dashboard de Google.
 - **Mes 6+:** considerar clonar el stack a Portugués (Brasil) — mismo código,
   traducir SYSTEM_PROMPT, cambiar feeds RSS. Stack reutilizable al 90%.
 
@@ -292,4 +293,4 @@ Pendiente (orden cronológico):
 | `ANTHROPIC_API_KEY` | console.anthropic.com (reutilizada de AutomatizacionLatAm) |
 | `CLOUDFLARE_API_TOKEN` | Plantilla "Edit Cloudflare Workers" |
 | `CLOUDFLARE_ACCOUNT_ID` | Dashboard de Cloudflare |
-| `PUBLIC_ADSENSE_CLIENT` | Pendiente — se añade tras aprobación AdSense (Día 30+) |
+| `PUBLIC_ADSENSE_CLIENT` | `ca-pub-8849534484285084` (configurado; cuenta en revisión) |
