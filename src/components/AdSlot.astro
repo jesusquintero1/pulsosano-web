@@ -20,12 +20,11 @@ const {
 const ADSENSE = import.meta.env.PUBLIC_ADSENSE_CLIENT || '';
 const active = ADSENSE && !ADSENSE.includes('__PENDIENTE__');
 
-// Los slots 60000000xx son placeholders (no son ad units reales de AdSense).
-// Emitir un <ins> con un slot falso produce una unidad rota que no rinde. Hasta
-// que existan ad units reales, NO renderizamos unidades manuales y dejamos que
-// Auto Ads (activado en el dashboard tras la aprobación) coloque los anuncios.
-// Para activar una unidad manual: crea el ad unit en AdSense y pon su slot real.
-const isRealSlot = !!slot && !/^6000000/.test(slot);
+// Slot real = string de dígitos no vacío (el data-ad-slot de 10 dígitos que da
+// AdSense). Vacío ('' desde src/adSlots.ts, sin configurar) -> NO renderizamos
+// unidad manual; Auto Ads coloca los anuncios. Esto evita <ins> rotos que no
+// rinden. Para activar una unidad: pon su slot real en src/adSlots.ts.
+const isRealSlot = /^\d{6,}$/.test(slot);
 const renderUnit = active && isRealSlot;
 
 const sizeByVariant: Record<string, string> = {

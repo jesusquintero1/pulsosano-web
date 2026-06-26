@@ -5,6 +5,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
 import { CATEGORIAS } from '../../content/config';
+import { AD_SLOTS } from '../../adSlots';
 
 export async function getStaticPaths() {
   function slugify(c: string) {
@@ -69,7 +70,7 @@ const itemListLd = items.length > 0 ? {
               fecha={p.data.fecha}
               imagen={p.data.imagen}
             />
-            {i === 5 && <div class="sm:col-span-2 lg:col-span-3"><AdSlot slot="3333333333" /></div>}
+            {i === 5 && <div class="sm:col-span-2 lg:col-span-3"><AdSlot slot={AD_SLOTS.categoryGrid} /></div>}
           </>
         ))}
       </div>

@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import MedicalDisclaimer from '../../components/MedicalDisclaimer.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import { AD_SLOTS } from '../../adSlots';
 
 export async function getStaticPaths() {
   const todas = await getCollection('noticias');
@@ -243,7 +244,7 @@ const shareUrl = encodeURIComponent(url);
       <!-- COLUMNA PRINCIPAL -->
       <div>
         <!-- AdSlot top — arriba del fold, formato horizontal -->
-        <AdSlot slot="6000000001" variant="horizontal" format="auto" lazy={false} />
+        <AdSlot slot={AD_SLOTS.articleTop} variant="horizontal" format="auto" lazy={false} />
 
         <MedicalDisclaimer variant="box" />
 
@@ -252,7 +253,7 @@ const shareUrl = encodeURIComponent(url);
         </div>
 
         <!-- AdSlot in-article — formato fluido (mejor RPM en mobile) -->
-        <AdSlot slot="6000000002" layout="in-article" variant="fluid" format="fluid" lazy={true} />
+        <AdSlot slot={AD_SLOTS.articleInline} layout="in-article" variant="fluid" format="fluid" lazy={true} />
 
         {faqs.length > 0 && (
           <section class="mt-12" aria-labelledby="faq-titulo">
@@ -419,7 +420,7 @@ const shareUrl = encodeURIComponent(url);
 
         <!-- AdSlot vertical 300x600 — visible solo en lg+, sticky -->
         <div class="hidden lg:block">
-          <AdSlot slot="6000000003" variant="vertical" format="auto" lazy={true} />
+          <AdSlot slot={AD_SLOTS.articleSidebar} variant="vertical" format="auto" lazy={true} />
         </div>
 
       </aside>

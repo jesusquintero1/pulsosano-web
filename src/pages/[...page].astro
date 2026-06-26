@@ -5,6 +5,7 @@ import ArticleCard from '../components/ArticleCard.astro';
 import AdSlot from '../components/AdSlot.astro';
 import MedicalDisclaimer from '../components/MedicalDisclaimer.astro';
 import { CATEGORIAS } from '../content/config';
+import { AD_SLOTS } from '../adSlots';
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const todas = await getCollection('noticias');
@@ -101,7 +102,7 @@ const nextUrl = page.url.next ? new URL(page.url.next, SITE_URL).toString() : nu
       </>
     )}
 
-    <AdSlot slot="1111111111" />
+    <AdSlot slot={AD_SLOTS.homeTop} />
 
     {rest.length > 0 && (
       <>
@@ -131,7 +132,7 @@ const nextUrl = page.url.next ? new URL(page.url.next, SITE_URL).toString() : nu
       ) : <span></span>}
     </nav>
 
-    <AdSlot slot="2222222222" />
+    <AdSlot slot={AD_SLOTS.homeMid} />
 
     <section class="mt-16">
       <h2 class="text-2xl font-bold text-ink-900 mb-6">Explora por tema</h2>
