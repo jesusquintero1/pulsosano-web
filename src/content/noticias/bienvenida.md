@@ -9,6 +9,7 @@ fuente:
 fecha: 2026-05-18
 tags: ["bienvenida", "metodologia", "divulgacion"]
 autorIA: "editorial"
+noindex: true
 ---
 
 ## Qué es PulsoSano

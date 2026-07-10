@@ -27,6 +27,9 @@ const noticias = defineCollection({
     tags: z.array(z.string()).default([]),
     imagen: z.string().url().optional(),
     autorIA: z.string().default('claude-haiku-4-5'),
+    // Poda de calidad: excluye el artículo de sitemaps/RSS y emite meta robots
+    // noindex. Para artículos débiles/off-topic/duplicados (rescate calidad 2026-07).
+    noindex: z.boolean().default(false),
     // SEO: FAQ para rich results / "Otras preguntas" (artículos nuevos). Opcional:
     // los 1.170 históricos no lo tienen y deben seguir validando.
     faqs: z.array(z.object({

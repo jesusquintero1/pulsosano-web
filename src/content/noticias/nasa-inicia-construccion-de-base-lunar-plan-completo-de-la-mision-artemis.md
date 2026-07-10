@@ -15,6 +15,7 @@ tags:
   - "investigacion-cientifica"
 imagen: "https://www.sciencealert.com/images/2026/05/Moon-base-render-1.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la misión lunar

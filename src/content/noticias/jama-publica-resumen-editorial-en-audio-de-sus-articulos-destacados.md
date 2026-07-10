@@ -25,6 +25,7 @@ entidades:
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/JAMA_(revista)"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## ¿De qué se trata este recurso?

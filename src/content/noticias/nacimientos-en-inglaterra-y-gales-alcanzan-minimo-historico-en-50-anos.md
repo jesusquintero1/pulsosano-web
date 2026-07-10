@@ -15,6 +15,7 @@ tags:
   - "tendencias-poblacionales"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c6ea/live/3b9f4af0-59d4-11f1-b682-cf91850925ea.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto demográfico

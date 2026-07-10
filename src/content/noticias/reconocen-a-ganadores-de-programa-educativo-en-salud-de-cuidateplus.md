@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://cuidateplus.marca.com/sites/default/files/styles/ratio_16_9/public/2026-05/ix-programa-educativo.jpg.webp?itok=BpZJpE4a"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del programa

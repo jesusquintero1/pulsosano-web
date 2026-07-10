@@ -190,6 +190,7 @@ const shareUrl = encodeURIComponent(url);
   description={d.resumen}
   image={d.imagen}
   canonical={url}
+  noindex={d.noindex === true}
   type="article"
   jsonLd={faqLd ? [articleLd, breadcrumbLd, faqLd] : [articleLd, breadcrumbLd]}
   publishedTime={fechaIso}

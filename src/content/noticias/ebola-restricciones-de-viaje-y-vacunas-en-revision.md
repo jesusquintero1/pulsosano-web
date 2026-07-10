@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/unnamed-10-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto actual de la enfermedad por ébola

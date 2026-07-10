@@ -19,6 +19,7 @@ export async function GET(context) {
 
   const cutoff = Date.now() - NEWS_WINDOW_MS;
   const items = (await getCollection('noticias'))
+    .filter((n) => n.data.noindex !== true)
     .filter((n) => new Date(n.data.fecha).getTime() >= cutoff)
     .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
     .slice(0, 1000);

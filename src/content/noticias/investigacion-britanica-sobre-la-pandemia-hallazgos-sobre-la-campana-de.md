@@ -15,6 +15,7 @@ tags:
   - "pandemia"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2bda/live/d088bf20-5723-11f0-82f9-ffcaa67a8d94.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

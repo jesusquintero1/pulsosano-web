@@ -15,6 +15,7 @@ tags:
   - "nicotina"
 imagen: "https://static01.nyt.com/images/2026/05/13/multimedia/13dc-danker-hlbp/13dc-danker-hlbp-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la controversia

@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/0198252a1fe5c4871b24d9684759025e4aca2962.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del caso

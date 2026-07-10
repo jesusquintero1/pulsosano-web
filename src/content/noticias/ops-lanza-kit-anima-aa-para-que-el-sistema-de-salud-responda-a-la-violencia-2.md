@@ -15,6 +15,7 @@ tags:
   - "violencia-sexual"
   - "anima-aa"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una brecha urgente en los sistemas de salud de las Américas

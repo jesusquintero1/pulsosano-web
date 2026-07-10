@@ -15,6 +15,7 @@ tags:
   - "barreras-acceso"
 imagen: "https://ichef.bbci.co.uk/images/ic/240x135/p0m1r8h6.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

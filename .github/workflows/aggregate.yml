@@ -2,9 +2,10 @@ name: Agregador de noticias
 
 on:
   schedule:
-    # Cada 12 horas (00:00 y 12:00 UTC). 2 runs/día — recorte de costos API
-    # 2026-06-26: el sitio ya superó 1000 artículos, no necesita 144/día.
-    - cron: '0 */12 * * *'
+    # 1 run/día (06:00 UTC). Rescate de calidad 2026-07-09: Google desindexó ~50%
+    # y AdSense rechazó por "contenido de poco valor". Menos volumen, más calidad;
+    # el corpus (1366 art.) ya sobra — el problema es diferenciación, no cantidad.
+    - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       limit:

@@ -14,6 +14,7 @@ tags:
   - "asambleas-internacionales"
   - "sistemas-de-salud"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la Asamblea Mundial

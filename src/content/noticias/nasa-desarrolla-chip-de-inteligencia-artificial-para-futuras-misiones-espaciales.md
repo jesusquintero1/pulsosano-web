@@ -15,6 +15,7 @@ tags:
   - "exploracion-espacial"
 imagen: "https://www.sciencealert.com/images/2026/05/nasa-processor-1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la innovación espacial

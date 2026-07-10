@@ -15,6 +15,7 @@ tags:
   - "virus"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2026/05/26/6a15adcd689821-67282519.r_d.1408-1710-8329.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Origen del descubrimiento

@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Eli_Lilly_and_Company"
 imagen: "https://www.statnews.com/wp-content/uploads/2021/03/Pharmalot_ComingGoing_STILL-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto

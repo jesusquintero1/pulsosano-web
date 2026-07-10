@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9e38/live/2dd6cba0-4a1b-11f1-a7ce-b934bcb15ff4.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad

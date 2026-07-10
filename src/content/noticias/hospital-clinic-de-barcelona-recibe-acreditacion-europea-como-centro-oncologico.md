@@ -15,6 +15,7 @@ tags:
   - "innovacion-medica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/campus_clinic_0k.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del reconocimiento

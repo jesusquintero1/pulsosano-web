@@ -15,6 +15,7 @@ tags:
   - "salud-masculina"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2023/06/03/hombre-ordenador.r_d.869-227.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es la andropausia

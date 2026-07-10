@@ -14,6 +14,7 @@ tags:
   - "vitamina-d3"
   - "inmunidad"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

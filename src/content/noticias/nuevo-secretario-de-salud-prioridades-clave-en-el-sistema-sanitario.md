@@ -15,6 +15,7 @@ tags:
   - "sistemas-de-salud"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d571/live/55dbf1d0-5041-11f1-acce-79302838e29f.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto político y sanitario

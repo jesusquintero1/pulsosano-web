@@ -14,6 +14,7 @@ tags:
   - "cdc"
   - "educacion-sanitaria"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la campaña

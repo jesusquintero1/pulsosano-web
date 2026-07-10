@@ -12,6 +12,7 @@ function escape(str) {
 export async function GET(context) {
   const SITE = (import.meta.env.SITE_URL || context.site?.toString() || 'https://pulsosano.com').replace(/\/$/, '');
   const items = (await getCollection('noticias'))
+    .filter((n) => n.data.noindex !== true)
     .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
     .slice(0, 50);
 

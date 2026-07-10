@@ -15,6 +15,7 @@ tags:
   - "politica-sanitaria"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-03/fatima-matute-javier-barbancho.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la situación laboral

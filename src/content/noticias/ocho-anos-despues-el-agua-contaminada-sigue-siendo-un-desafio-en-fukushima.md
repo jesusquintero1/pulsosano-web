@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

@@ -15,6 +15,7 @@ tags:
   - "descubrimiento-espacial"
 imagen: "https://www.sciencealert.com/images/2026/05/artists-impression-of-exoplanet-LHS-3844b.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

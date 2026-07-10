@@ -15,6 +15,7 @@ tags:
   - "organizaciones-cientificas"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/isabel_belinchon.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Cambio de liderazgo en la Academia Española de Dermatología

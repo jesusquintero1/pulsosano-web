@@ -15,6 +15,7 @@ tags:
   - "proteccion-visual"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/22/6a1010d5d5ed94-00905571.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del evento

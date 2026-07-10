@@ -15,6 +15,7 @@ tags:
   - "historia-medica"
 imagen: "https://www.sciencealert.com/images/2026/05/plain-of-jars.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

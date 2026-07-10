@@ -15,6 +15,7 @@ tags:
   - "enfermedades-infecciosas"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a28c/live/532e8af0-4ca5-11f1-a52e-37ef6facf99b.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote
