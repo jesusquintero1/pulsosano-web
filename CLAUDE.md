@@ -94,10 +94,13 @@ Hay **3 procesos independientes** que se sincronizan vía git:
   bloquea (403/429) o es JS-only (0 `<p>`).
 - **Optimización de tokens** (calidad por token): `fulltext_max_chars: 4000` con recorte
   inteligente **inicio 70% + final 30%** (preserva intro/métodos Y conclusiones/limitaciones).
-  `fulltext_skip_if_summary_chars: 1400` salta el fetch si el resumen RSS ya es rico
+  `fulltext_skip_if_summary_chars: 2500` salta el fetch si el resumen RSS ya es rico
   (abstracts de journals). Telemetría `[tokens]` por run (input/output/cache + tok/artículo).
-- **SYSTEM_PROMPT re-baselined 2026-06-25** (anti-invención + E-E-A-T + 600-850 palabras).
-  Sigue congelado: cualquier cambio invalida el prompt cache de Anthropic.
+- **SYSTEM_PROMPT re-baselined 2026-07-09** (rescate calidad anti "poco valor"):
+  cuerpo 900-1200 palabras con 6 secciones (incl. "Qué significa para América Latina"),
+  tabla GFM opcional, 4-6 FAQs; `fulltext_max_chars` 4000→7000 y `max_tokens` 3000→4500.
+  Anterior baseline 2026-06-25 (600-850 pal.). Sigue congelado: cualquier cambio invalida
+  el prompt cache de Anthropic.
 - Valida con `check_compliance()`: regex `FORBIDDEN_PATTERNS`, cifras médicas sin
   contexto de estudio, similitud Jaccard ≤ 0.40 con el resumen RSS (anti-plagio).
 - Si la validación falla 2 veces, marca la noticia como procesada y la salta.

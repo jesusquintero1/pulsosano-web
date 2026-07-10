@@ -5,8 +5,8 @@ config:
   modelo_premium: "claude-sonnet-4-6"  # fuentes de máxima autoridad (peer-review, agencias)
   peso_premium_min: 5               # peso >= 5 -> usa modelo_premium
   fetch_fulltext: true              # descargar texto completo de la fuente (calidad + anti-alucinación)
-  fulltext_max_chars: 4000          # recorte para acotar tokens (lead/abstract va al inicio)
-  fulltext_skip_if_summary_chars: 1400  # si el resumen RSS ya es rico, no fetchear (ahorra tokens)
+  fulltext_max_chars: 7000          # + material fuente = artículos más largos SIN inventar (rescate calidad 2026-07). Coste bajo con 3/día.
+  fulltext_skip_if_summary_chars: 2500  # solo saltar el fetch si el resumen ya es muy rico (abstracts largos)
   # Temas prioritarios — boost de SELECCIÓN (data-driven Google Search Console 2026-06-26).
   # El cluster GLP-1/pérdida de peso ya rankea página 1 (pos 6-9, CTR alto) y es de los
   # de mayor volumen+RPM en salud. Reforzarlo para subir a top-3. NO toca el SYSTEM_PROMPT.

@@ -77,7 +77,11 @@ PRINCIPIO ANTI-INVENCIÓN (el más importante de todos):
   (titular, resumen y, cuando esté disponible, el texto completo del artículo).
 - NUNCA inventes cifras, fechas, porcentajes, nombres de autores, instituciones,
   resultados ni conclusiones que no aparezcan en el material. Si un dato no está, NO lo
-  incluyas. Es preferible un artículo más corto y veraz que uno completo e inventado.
+  incluyas. La veracidad SIEMPRE gana a la extensión: nunca rellenes ni fabriques para
+  alcanzar la longitud objetivo. Si el material no da para el objetivo, entrega un
+  artículo más corto pero veraz. Alcanza la extensión desarrollando a fondo lo que SÍ
+  dice la fuente —su contexto, metodología, matices e implicaciones—, no agregando datos
+  nuevos.
 - Atribuye cada afirmación relevante a su origen: "según el estudio...",
   "los autores observaron...", "el organismo informó...".
 
@@ -138,7 +142,7 @@ exacta:
   "resumen": "Resumen original de 2-3 frases (max 280 caracteres): qué se halló y por qué importa.",
   "categoria": "Una de las 9 permitidas",
   "porQueImporta": "1-2 frases sobre la relevancia concreta para el lector latinoamericano.",
-  "cuerpo": "Artículo en markdown de 600-850 palabras. Usa ## para 4-5 secciones: contexto, qué se hizo/halló, qué significa en general (NO consejo individual), limitaciones del estudio o la información, y cierre. Atribuye cada dato a la fuente. Cierra recordando consultar a un profesional sanitario. NO uses tablas ni HTML.",
+  "cuerpo": "Artículo ORIGINAL en markdown de 900-1200 palabras, con valor propio que la fuente no ofrece (explicación experta, contexto y síntesis). Usa ## para 6 secciones bien desarrolladas, cada una con varios párrafos sustanciales: (1) Contexto y antecedentes del tema para un lector no experto; (2) Qué se hizo o halló, en detalle (tipo de estudio, tamaño muestral n, institución o revista y metodología si constan en el material); (3) Qué significan los resultados en términos generales (NO consejo individual); (4) 'Qué significa para América Latina': relevancia regional cualitativa (acceso, prevalencia, sistemas de salud) SIN inventar cifras ni datos no respaldados —si no tienes base regional en el material, ofrece una reflexión general; (5) Limitaciones del estudio o de la información y qué falta por confirmar; (6) Cierre que recuerda consultar a un profesional sanitario. Atribuye cada dato a la fuente ('según el estudio…'). Puedes incluir UNA tabla markdown (GFM) comparativa o de resumen SOLO si los datos de la fuente la justifican; nunca inventes filas. No uses HTML.",
   "tags": ["3-6", "palabras", "clave", "lowercase", "sin-tildes"],
   "faqs": [
     {"pregunta": "Pregunta real que un lector buscaría en Google sobre este tema (lenguaje natural).",
@@ -151,7 +155,7 @@ exacta:
   ]
 }
 
-Sobre "faqs": incluye 3-4 preguntas frecuentes y útiles que la gente realmente busca
+Sobre "faqs": incluye 4-6 preguntas frecuentes y útiles que la gente realmente busca
 (qué es, por qué ocurre, a quién afecta, qué sigue). Deben poder responderse con el
 material; si no hay base, genera menos preguntas o ninguna. NUNCA inventes respuestas.
 
@@ -360,7 +364,7 @@ def call_anthropic(client: Anthropic, model: str, user_prompt: str, verbose: boo
         try:
             resp = client.messages.create(
                 model=model,
-                max_tokens=3000,
+                max_tokens=4500,
                 temperature=0.4,
                 system=[
                     {
