@@ -1,12 +1,12 @@
 ---
 const nav = [
   { label: 'Inicio', href: '/' },
-  { label: 'Investigación', href: '/categoria/investigacion-clinica' },
-  { label: 'Avances', href: '/categoria/avances-medicos' },
-  { label: 'Nutrición', href: '/categoria/nutricion-y-dieta' },
-  { label: 'Salud Mental', href: '/categoria/salud-mental' },
-  { label: 'Fitness', href: '/categoria/fitness-y-ejercicio' },
-  { label: 'Estilo de Vida', href: '/categoria/estilo-de-vida-saludable' },
+  { label: 'Investigación', href: '/categoria/investigacion-clinica/' },
+  { label: 'Avances', href: '/categoria/avances-medicos/' },
+  { label: 'Nutrición', href: '/categoria/nutricion-y-dieta/' },
+  { label: 'Salud Mental', href: '/categoria/salud-mental/' },
+  { label: 'Fitness', href: '/categoria/fitness-y-ejercicio/' },
+  { label: 'Estilo de Vida', href: '/categoria/estilo-de-vida-saludable/' },
 ];
 const path = Astro.url.pathname;
 ---
@@ -26,7 +26,7 @@ const path = Astro.url.pathname;
 
     <nav class="hidden lg:flex items-center gap-1 text-sm">
       {nav.map((item) => {
-        const active = path === item.href || (item.href !== '/' && path.startsWith(item.href));
+        const active = path === item.href || (item.href !== '/' && path.startsWith(item.href.replace(/\/$/, '')));
         return (
           <a href={item.href}
              class={`px-3 py-2 rounded-md font-medium transition ${active ? 'bg-brand-50 text-brand-700' : 'text-ink-700 hover:bg-ink-100'}`}>

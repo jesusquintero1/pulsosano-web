@@ -1,13 +1,25 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "pulsosano-web",
+  // Worker mínimo: sirve ./dist y expone /api/newsletter (ver worker/index.js).
+  "main": "./worker/index.js",
   "compatibility_date": "2026-05-17",
-  "workers_dev": true,
+  // Sin subdominio workers.dev: evita una copia duplicada del sitio fuera del dominio.
+  "workers_dev": false,
   "preview_urls": false,
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Solo /api/* pasa por el Worker; todo lo demás se sirve directo desde assets.
+    "run_worker_first": ["/api/*"]
   },
+  // El id se resuelve en CI (paso "Resolver KV de newsletter"): crea el namespace
+  // `pulsosano-newsletter` si no existe y sustituye el marcador antes del deploy.
+  // Para deploy manual: sustituir el marcador por el id real (wrangler kv namespace list).
+  "kv_namespaces": [
+    { "binding": "NEWSLETTER", "id": "__KV_NEWSLETTER_ID__" }
+  ],
   "routes": [
     { "pattern": "pulsosano.com", "custom_domain": true },
     { "pattern": "www.pulsosano.com", "custom_domain": true }

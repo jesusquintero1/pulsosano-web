@@ -14,7 +14,9 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry, todas } = Astro.props as any;
+const { entry, todas: todasRaw } = Astro.props as any;
+// Recirculación solo hacia artículos indexables (poda de calidad).
+const todas = (todasRaw as any[]).filter((n: any) => n.data.noindex !== true);
 const { Content } = await entry.render();
 const d = entry.data;
 
@@ -116,23 +118,23 @@ const articleLd = {
   author: [{
     '@type': 'Organization',
     name: 'Comité Editorial PulsoSano',
-    url: SITE_URL + '/equipo-editorial',
+    url: SITE_URL + '/equipo-editorial/',
   }],
   // E-E-A-T: revisión editorial humana sobre el borrador asistido por IA.
   reviewedBy: {
     '@type': 'Organization',
     name: 'Comité Editorial PulsoSano',
-    url: SITE_URL + '/equipo-editorial',
+    url: SITE_URL + '/equipo-editorial/',
   },
   publisher: {
     '@type': 'NewsMediaOrganization',
     name: 'PulsoSano',
     url: SITE_URL,
     logo: { '@type': 'ImageObject', url: SITE_URL + '/og-default.png', width: 1200, height: 630 },
-    publishingPrinciples: SITE_URL + '/metodologia',
-    ethicsPolicy: SITE_URL + '/metodologia#etica',
-    correctionsPolicy: SITE_URL + '/metodologia#correcciones',
-    diversityPolicy: SITE_URL + '/metodologia#diversidad',
+    publishingPrinciples: SITE_URL + '/metodologia/',
+    ethicsPolicy: SITE_URL + '/metodologia/#etica',
+    correctionsPolicy: SITE_URL + '/metodologia/#correcciones',
+    diversityPolicy: SITE_URL + '/metodologia/#diversidad',
   },
   citation: {
     '@type': 'CreativeWork',
@@ -221,11 +223,11 @@ const shareUrl = encodeURIComponent(url);
       <!-- Byline E-E-A-T: autoría editorial + revisión humana, enlazadas a las páginas de transparencia. -->
       <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-600 border-t border-ink-100 pt-4 max-w-3xl">
         <span>
-          Por <a href="/equipo-editorial" rel="author" class="font-semibold text-ink-900 underline-offset-2 hover:text-brand-700 hover:underline">Comité Editorial PulsoSano</a>
+          Por <a href="/equipo-editorial/" rel="author" class="font-semibold text-ink-900 underline-offset-2 hover:text-brand-700 hover:underline">Comité Editorial PulsoSano</a>
         </span>
         <span class="text-ink-300" aria-hidden="true">·</span>
         <span>
-          Revisado según nuestra <a href="/metodologia" class="text-brand-700 underline-offset-2 hover:underline">metodología editorial</a>
+          Revisado según nuestra <a href="/metodologia/" class="text-brand-700 underline-offset-2 hover:underline">metodología editorial</a>
         </span>
       </div>
     </header>
@@ -355,7 +357,7 @@ const shareUrl = encodeURIComponent(url);
               <dd class="text-ink-900">Comité Editorial PulsoSano</dd>
             </div>
           </dl>
-          <a href="/metodologia" class="inline-block mt-3 text-brand-700 text-sm underline underline-offset-2">Cómo trabajamos →</a>
+          <a href="/metodologia/" class="inline-block mt-3 text-brand-700 text-sm underline underline-offset-2">Cómo trabajamos →</a>
         </section>
 
         <!-- TARJETA: Fuente original -->
@@ -386,7 +388,7 @@ const shareUrl = encodeURIComponent(url);
             con un profesional sanitario calificado. Antes de tomar decisiones sobre tu salud,
             consulta con tu médico.
           </p>
-          <a href="/aviso-medico" class="inline-block mt-2 text-brand-700 text-sm underline">Más información</a>
+          <a href="/aviso-medico/" class="inline-block mt-2 text-brand-700 text-sm underline">Más información</a>
         </section>
 
         {entidades.length > 0 && (

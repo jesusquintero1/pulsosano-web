@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
@@ -65,9 +64,10 @@ const organizationLd = {
     'Salud', 'Medicina', 'Investigación Clínica', 'Nutrición',
     'Salud Mental', 'Medicina Preventiva', 'Salud Pública',
   ],
-  ethicsPolicy: SITE_URL + '/sobre',
-  diversityPolicy: SITE_URL + '/sobre',
-  correctionsPolicy: SITE_URL + '/contacto',
+  publishingPrinciples: SITE_URL + '/metodologia/',
+  ethicsPolicy: SITE_URL + '/metodologia/#etica',
+  diversityPolicy: SITE_URL + '/metodologia/#diversidad',
+  correctionsPolicy: SITE_URL + '/metodologia/#correcciones',
   sameAs: [],
 };
 
@@ -77,11 +77,6 @@ const websiteLd = {
   name: SITE_NAME,
   url: SITE_URL,
   inLanguage: 'es',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: SITE_URL + '/?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
 };
 
 // hreflang LatAm: declaramos las variantes regionales del español
@@ -105,8 +100,8 @@ const HREFLANGS = [
       ? <meta name="robots" content="noindex, nofollow" />
       : <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     }
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow" />
+    {!noindex && <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />}
+    {!noindex && <meta name="bingbot" content="index, follow" />}
 
     <link rel="canonical" href={url} />
     {prevUrl && <link rel="prev" href={prevUrl} />}
@@ -154,7 +149,7 @@ const HREFLANGS = [
 
     {/* Favicon + PWA manifest */}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo-square.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#10b981" />
     <meta name="application-name" content={SITE_NAME} />
@@ -197,10 +192,8 @@ const HREFLANGS = [
             } catch (e) {}
             window.adsbygoogle.requestNonPersonalizedAds = npa;
             window.adsbygoogle.pauseAdRequests = 0;
-            window.adsbygoogle.push({
-              google_ad_client: ADSENSE,
-              enable_page_level_ads: true,
-            });
+            // Auto Ads se activa por el parámetro ?client= del script (abajo). Repetir
+            // enable_page_level_ads aquí duplicaba la inicialización y lanzaba error.
           })();
         </script>
         <script is:inline async src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE} crossorigin="anonymous"></script>
@@ -214,7 +207,6 @@ const HREFLANGS = [
       <script type="application/ld+json" set:html={JSON.stringify(obj)} />
     ))}
 
-    <ViewTransitions />
   </head>
   <body class="min-h-screen flex flex-col bg-white text-ink-900 antialiased">
     <Header />

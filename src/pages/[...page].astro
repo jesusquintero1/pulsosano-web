@@ -8,7 +8,9 @@ import { CATEGORIAS } from '../content/config';
 import { AD_SLOTS } from '../adSlots';
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
-  const todas = await getCollection('noticias');
+  // Solo artículos indexables: los podados por calidad (noindex) siguen accesibles
+  // por URL pero no se listan (el sitio visible es el catálogo de calidad).
+  const todas = (await getCollection('noticias')).filter((n) => n.data.noindex !== true);
   const ordenadas = todas.sort(
     (a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()
   );
@@ -29,7 +31,7 @@ function slugCat(c: string) {
     .replace(/^-+|-+$/g, '');
 }
 
-const SITE_URL = (import.meta.env.SITE_URL || 'https://saludlatam.com').replace(/\/$/, '');
+const SITE_URL = (import.meta.env.SITE_URL || 'https://pulsosano.com').replace(/\/$/, '');
 
 const itemListLd = {
   '@context': 'https://schema.org',
@@ -61,7 +63,7 @@ const nextUrl = page.url.next ? new URL(page.url.next, SITE_URL).toString() : nu
       </h1>
       <p class="mt-5 text-lg md:text-xl text-ink-700 max-w-3xl leading-relaxed" style="font-family:'Source Serif Pro', ui-serif, Georgia, serif;">
         Resúmenes diarios de la investigación médica internacional, redactados a partir de
-        instituciones reconocidas (NIH, OMS, Mayo Clinic, Harvard Health y más). Citamos
+        instituciones reconocidas (OMS, OPS, NIH, Nature Medicine, BMJ, FDA y más). Citamos
         siempre la fuente original.
       </p>
       <MedicalDisclaimer variant="box" />

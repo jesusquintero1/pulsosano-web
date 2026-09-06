@@ -24,10 +24,10 @@ export async function getStaticPaths() {
 const { categoria } = Astro.props as { categoria: string };
 const todas = await getCollection('noticias');
 const items = todas
-  .filter((n) => n.data.categoria === categoria)
+  .filter((n) => n.data.categoria === categoria && n.data.noindex !== true)
   .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime());
 
-const SITE_URL = (import.meta.env.SITE_URL || 'https://saludlatam.com').replace(/\/$/, '');
+const SITE_URL = (import.meta.env.SITE_URL || 'https://pulsosano.com').replace(/\/$/, '');
 
 const itemListLd = items.length > 0 ? {
   '@context': 'https://schema.org',

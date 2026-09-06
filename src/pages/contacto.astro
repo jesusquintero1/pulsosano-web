@@ -1,12 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
-const endpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
 
 const contactLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contacto — PulsoSano',
-  url: 'https://pulsosano.com/contacto',
+  url: 'https://pulsosano.com/contacto/',
   mainEntity: {
     '@type': 'NewsMediaOrganization',
     name: 'PulsoSano',
@@ -15,13 +14,13 @@ const contactLd = {
       {
         '@type': 'ContactPoint',
         contactType: 'editorial',
-        email: 'editorial@pulsosano.com',
+        email: 'contacto@pulsosano.com',
         availableLanguage: ['Spanish'],
       },
       {
         '@type': 'ContactPoint',
         contactType: 'corrections',
-        email: 'correcciones@pulsosano.com',
+        email: 'contacto@pulsosano.com',
         availableLanguage: ['Spanish'],
       },
       {
@@ -57,80 +56,37 @@ const contactLd = {
       emergencia, comunícate con los servicios de urgencia de tu país.
     </div>
 
-    <h2 class="mt-8 text-xl font-semibold text-ink-900">Canales directos</h2>
-    <p class="mt-2 text-sm text-ink-600">Para una respuesta más rápida, escribe directamente al canal que corresponda:</p>
+    <h2 class="mt-8 text-xl font-semibold text-ink-900">Cómo escribirnos</h2>
+    <p class="mt-2 text-sm text-ink-600">
+      Un solo buzón atiende todos los asuntos. Para que lleguemos antes a tu mensaje,
+      empieza el asunto con la etiqueta que corresponda:
+    </p>
 
     <div class="mt-4 overflow-hidden border border-ink-200 rounded-lg">
       <table class="w-full text-sm">
-        <thead class="bg-ink-50">
+        <thead class="bg-ink-100">
           <tr>
             <th class="px-4 py-2 text-left font-semibold text-ink-900">Asunto</th>
-            <th class="px-4 py-2 text-left font-semibold text-ink-900">Email</th>
+            <th class="px-4 py-2 text-left font-semibold text-ink-900">Etiqueta en el asunto</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-ink-100">
-          <tr>
-            <td class="px-4 py-2.5 text-ink-700">General / lectores</td>
-            <td class="px-4 py-2.5">
-              <a href="mailto:contacto@pulsosano.com" class="text-brand-700 hover:underline">contacto@pulsosano.com</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2.5 text-ink-700">Correcciones de contenido</td>
-            <td class="px-4 py-2.5">
-              <a href="mailto:correcciones@pulsosano.com" class="text-brand-700 hover:underline">correcciones@pulsosano.com</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2.5 text-ink-700">Asuntos editoriales profesionales</td>
-            <td class="px-4 py-2.5">
-              <a href="mailto:editorial@pulsosano.com" class="text-brand-700 hover:underline">editorial@pulsosano.com</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2.5 text-ink-700">Privacidad / asuntos legales</td>
-            <td class="px-4 py-2.5">
-              <a href="mailto:privacidad@pulsosano.com" class="text-brand-700 hover:underline">privacidad@pulsosano.com</a>
-            </td>
-          </tr>
+          <tr><td class="px-4 py-2.5 text-ink-700">Corrección de contenido</td><td class="px-4 py-2.5 font-mono text-xs">[CORRECCIÓN]</td></tr>
+          <tr><td class="px-4 py-2.5 text-ink-700">Sugerencia de tema o fuente</td><td class="px-4 py-2.5 font-mono text-xs">[SUGERENCIA]</td></tr>
+          <tr><td class="px-4 py-2.5 text-ink-700">Privacidad / asuntos legales</td><td class="px-4 py-2.5 font-mono text-xs">[PRIVACIDAD]</td></tr>
+          <tr><td class="px-4 py-2.5 text-ink-700">Publicidad / patrocinio de newsletter</td><td class="px-4 py-2.5 font-mono text-xs">[PUBLICIDAD]</td></tr>
+          <tr><td class="px-4 py-2.5 text-ink-700">Consulta profesional o institucional</td><td class="px-4 py-2.5 font-mono text-xs">[EDITORIAL]</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h2 class="mt-10 text-xl font-semibold text-ink-900">Formulario</h2>
-    <p class="mt-2 text-sm text-ink-600">Si prefieres, también puedes escribirnos mediante este formulario:</p>
-
-    <form action={endpoint || 'mailto:contacto@pulsosano.com'} method="POST" class="mt-4 space-y-4" enctype={endpoint ? 'application/x-www-form-urlencoded' : 'text/plain'}>
-      <div>
-        <label for="nombre" class="block text-sm font-medium text-ink-900 mb-1">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required
-          class="w-full px-3 py-2 border border-ink-200 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500" />
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-medium text-ink-900 mb-1">Correo electrónico</label>
-        <input type="email" id="email" name="email" required
-          class="w-full px-3 py-2 border border-ink-200 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500" />
-      </div>
-      <div>
-        <label for="asunto" class="block text-sm font-medium text-ink-900 mb-1">Asunto</label>
-        <select id="asunto" name="asunto" class="w-full px-3 py-2 border border-ink-200 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500">
-          <option>Corrección editorial</option>
-          <option>Sugerencia de tema</option>
-          <option>Asunto legal / privacidad</option>
-          <option>Consulta profesional</option>
-          <option>Publicidad / AdSense</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <div>
-        <label for="mensaje" class="block text-sm font-medium text-ink-900 mb-1">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required
-          class="w-full px-3 py-2 border border-ink-200 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
-      </div>
-      <button type="submit" class="px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-md transition">
-        Enviar mensaje
-      </button>
-    </form>
+    <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-3">
+      <a href="mailto:contacto@pulsosano.com?subject=%5BCORRECCI%C3%93N%5D%20"
+         class="inline-flex justify-center px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-md transition">
+        Escribir a contacto@pulsosano.com
+      </a>
+      <span class="text-sm text-ink-600">o copia la dirección: <strong class="text-ink-900 select-all">contacto@pulsosano.com</strong></span>
+    </div>
 
     <p class="mt-8 text-xs text-ink-500">
       Tiempos de respuesta: <strong>correcciones</strong> hasta 5 días hábiles ·

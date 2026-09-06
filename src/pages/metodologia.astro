@@ -8,17 +8,17 @@ const policyLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   name: 'Metodología editorial — PulsoSano',
-  url: `${siteUrl}/metodologia`,
+  url: `${siteUrl}/metodologia/`,
   isPartOf: { '@type': 'WebSite', name: 'PulsoSano', url: siteUrl },
   mainEntity: {
     '@type': 'NewsMediaOrganization',
     name: 'PulsoSano',
     url: siteUrl,
-    publishingPrinciples: `${siteUrl}/metodologia`,
-    ethicsPolicy: `${siteUrl}/metodologia#etica`,
-    diversityPolicy: `${siteUrl}/metodologia#diversidad`,
-    correctionsPolicy: `${siteUrl}/metodologia#correcciones`,
-    actionableFeedbackPolicy: `${siteUrl}/contacto`,
+    publishingPrinciples: `${siteUrl}/metodologia/`,
+    ethicsPolicy: `${siteUrl}/metodologia/#etica`,
+    diversityPolicy: `${siteUrl}/metodologia/#diversidad`,
+    correctionsPolicy: `${siteUrl}/metodologia/#correcciones`,
+    actionableFeedbackPolicy: `${siteUrl}/contacto/`,
   },
 };
 ---
@@ -73,12 +73,16 @@ const policyLd = {
 
       <h2 id="redaccion">2. Redacción de cada artículo</h2>
       <p>
-        Cada dos horas, un sistema automatizado revisa los feeds RSS de las
+        Cada día, un sistema automatizado revisa los feeds RSS de las
         fuentes autorizadas, selecciona las noticias más relevantes según
         criterios de interés público, novedad e impacto, y produce un resumen
-        en español neutro mediante un modelo de inteligencia artificial
-        (Claude Haiku 4.5 de Anthropic) operando bajo un prompt editorial
-        estricto y supervisado por el comité editorial.
+        en español neutro mediante modelos de inteligencia artificial de Anthropic
+        (Claude Sonnet 4.6 para las fuentes de máxima autoridad y Claude Haiku 4.5
+        para el resto), operando bajo un prompt editorial estricto y supervisado
+        por el comité editorial. Cada artículo parte del texto completo de la
+        fuente, no solo de su resumen, y apunta a 900-1.200 palabras con contexto
+        propio, una sección de relevancia para América Latina, limitaciones del
+        estudio y preguntas frecuentes.
       </p>
       <p>
         El prompt editorial impide:
@@ -106,6 +110,15 @@ const policyLd = {
       <p>
         Si un artículo no cumple los validadores en dos intentos, se descarta
         y se marca la noticia como no publicable.
+      </p>
+      <h3 id="poda">Poda de calidad del archivo</h3>
+      <p>
+        En septiembre de 2026 elevamos el estándar mínimo de cada artículo (extensión,
+        contexto propio y preguntas frecuentes). Los artículos anteriores que no lo
+        alcanzan se retiraron de la portada, de las categorías y de los buscadores,
+        aunque permanecen accesibles por su URL original para no romper enlaces. Los
+        artículos duplicados (misma noticia publicada dos veces) se tratan igual,
+        conservando solo la primera versión.
       </p>
 
       <h2 id="etica">4. Principios éticos</h2>
@@ -162,8 +175,8 @@ const policyLd = {
         <li>Si la noticia ya no se sostiene tras la corrección (por ejemplo, retracción del estudio fuente), añadimos una nota explicando la retracción y enlazando a la fuente actualizada.</li>
       </ul>
       <p>
-        Para reportar un error: <a href="/contacto">contacto</a> o
-        <a href="mailto:correcciones@pulsosano.com">correcciones@pulsosano.com</a>.
+        Para reportar un error: <a href="/contacto/">contacto</a> o
+        <a href="mailto:contacto@pulsosano.com">contacto@pulsosano.com</a>.
       </p>
 
       <h2 id="ymyl">7. Cumplimiento YMYL</h2>
@@ -177,7 +190,7 @@ const policyLd = {
       <ul>
         <li>Cada artículo cita una fuente primaria autorizada.</li>
         <li>Disclaimers explícitos en cada artículo y página de categoría.</li>
-        <li>Página dedicada de <a href="/aviso-medico">aviso médico</a> con limitaciones del contenido.</li>
+        <li>Página dedicada de <a href="/aviso-medico/">aviso médico</a> con limitaciones del contenido.</li>
         <li>Comité editorial visible con declaración de independencia.</li>
         <li>Política de correcciones pública y aplicada.</li>
         <li>Datos estructurados <code>MedicalScholarlyArticle</code> cuando el contenido proviene de investigación clínica.</li>
@@ -185,8 +198,9 @@ const policyLd = {
 
       <h2 id="tecnologia">8. Uso de inteligencia artificial</h2>
       <p>
-        Reconocemos explícitamente que usamos un modelo de inteligencia artificial
-        (Claude Haiku 4.5 de Anthropic) para asistir la redacción. El modelo opera
+        Reconocemos explícitamente que usamos modelos de inteligencia artificial
+        de Anthropic (Claude Sonnet 4.6 y Claude Haiku 4.5) para asistir la
+        redacción. El modelo opera
         bajo un prompt editorial estricto, supervisado por el comité editorial, y
         no toma decisiones autónomas sobre qué publicar.
       </p>
@@ -197,7 +211,7 @@ const policyLd = {
       </p>
 
       <h2 id="actualizacion">Última actualización</h2>
-      <p>Este documento se actualizó por última vez el 19 de mayo de 2026. Las próximas revisiones serán anunciadas en el footer del sitio.</p>
+      <p>Este documento se actualizó por última vez el 5 de septiembre de 2026. Las próximas revisiones serán anunciadas en el footer del sitio.</p>
     </div>
   </section>
 </Base>

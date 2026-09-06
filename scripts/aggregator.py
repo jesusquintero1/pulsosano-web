@@ -33,7 +33,10 @@ from typing import Any, Optional
 import feedparser
 import requests
 import yaml
-from bs4 import BeautifulSoup
+import warnings
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
+
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 from dateutil import parser as dateparser
 from dotenv import load_dotenv
 from slugify import slugify
@@ -51,6 +54,9 @@ STATE_DIR = SCRIPTS_DIR / "state"
 STATE_FILE = STATE_DIR / "processed.json"
 CONTENT_DIR = ROOT / "src" / "content" / "noticias"
 SOURCES_FILE = SCRIPTS_DIR / "sources.yml"
+
+# Ventana máxima de antigüedad aceptada para la fecha del RSS (días).
+FECHA_MAX_DIAS = 21
 
 CATEGORIAS_VALIDAS = [
     "Investigación Clínica",
@@ -195,6 +201,25 @@ def save_state(state: dict) -> None:
 
 def url_hash(url: str) -> str:
     return hashlib.sha256(url.strip().lower().encode("utf-8")).hexdigest()
+
+
+_FUENTE_URL_RX = re.compile(r'^  url: "(.*?)"\s*$', re.MULTILINE)
+
+
+def published_source_hashes() -> set:
+    """Hashes de las URLs fuente de todos los artículos ya escritos en CONTENT_DIR."""
+    hashes = set()
+    if not CONTENT_DIR.exists():
+        return hashes
+    for md in CONTENT_DIR.glob("*.md"):
+        try:
+            head = md.read_text(encoding="utf-8")[:4000]
+        except Exception:
+            continue
+        m = _FUENTE_URL_RX.search(head)
+        if m:
+            hashes.add(url_hash(m.group(1)))
+    return hashes
 
 
 def extract_image(entry: Any) -> Optional[str]:
@@ -365,7 +390,9 @@ def call_anthropic(client: Anthropic, model: str, user_prompt: str, verbose: boo
             resp = client.messages.create(
                 model=model,
                 max_tokens=4500,
-                temperature=0.4,
+                # SDK anthropic>=1.x eliminó `temperature` como argumento; los modelos
+                # usados (Haiku 4.5 / Sonnet 4.6) aún lo aceptan vía extra_body.
+                extra_body={"temperature": 0.4},
                 system=[
                     {
                         "type": "text",
@@ -597,6 +624,9 @@ def run(args: argparse.Namespace) -> int:
 
     state = load_state()
     processed_hashes = set(state.get("processed_urls", []))
+    # Segunda barrera anti-duplicados: URLs fuente ya presentes en el contenido
+    # publicado. processed.json se desincronizó en el pasado (31 URLs repetidas).
+    processed_hashes |= published_source_hashes()
 
     CONTENT_DIR.mkdir(parents=True, exist_ok=True)
     client = None if args.dry_run else Anthropic(api_key=api_key)
@@ -641,11 +671,18 @@ def run(args: argparse.Namespace) -> int:
             summary = clean_text(summary_html)
             if not title or not summary or len(summary) < 60:
                 continue
+            now_utc = datetime.now(timezone.utc)
             try:
                 pub = entry.get("published") or entry.get("updated") or ""
-                fecha_dt = dateparser.parse(pub) if pub else datetime.now(timezone.utc)
+                fecha_dt = dateparser.parse(pub) if pub else now_utc
             except Exception:
-                fecha_dt = datetime.now(timezone.utc)
+                fecha_dt = now_utc
+            if fecha_dt.tzinfo is None:
+                fecha_dt = fecha_dt.replace(tzinfo=timezone.utc)
+            # Fechas fuera de ventana (feeds que reciclan items antiguos, o relojes
+            # futuros) enterraban el artículo en la paginación y falseaban datePublished.
+            if (now_utc - fecha_dt).days > FECHA_MAX_DIAS or fecha_dt > now_utc:
+                fecha_dt = now_utc
             image = extract_image(entry)
 
             candidates.append({

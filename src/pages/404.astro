@@ -5,6 +5,7 @@ import ArticleCard from '../components/ArticleCard.astro';
 import { CATEGORIAS } from '../content/config';
 
 const recientes = (await getCollection('noticias'))
+  .filter((n) => n.data.noindex !== true)
   .sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime())
   .slice(0, 6);
 

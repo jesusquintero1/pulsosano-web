@@ -10,7 +10,9 @@ neutro para LatAm, monetizado con Google AdSense. Nicho YMYL (Your Money Your Li
 - **Producción:** https://pulsosano.com (HTTPS · Cloudflare Workers)
 - **Defensa marca:** https://pulsosano.org → 301 a `.com` (preserva path + query)
 - **Repo:** https://github.com/jesusquintero1/pulsosano-web
-- **CI/CD:** GitHub Actions cron `0 */12 * * *` (2 deploys/día — recorte costos API 2026-06-26, antes 2h/12×)
+- **CI/CD:** GitHub Actions cron `0 6 * * *` (1 run/día desde el rescate de calidad 2026-07-09; antes 12h)
+- **Newsletter propia:** `POST /api/newsletter` (Worker `worker/index.js`) guarda altas en KV
+  `pulsosano-newsletter` (binding `NEWSLETTER`). Exportar: `npx wrangler@4 kv key list --binding NEWSLETTER --prefix sub:`.
 
 ## Common commands
 
@@ -29,6 +31,8 @@ py scripts/aggregator.py                       # corrida normal (usa max_noticia
 py scripts/indexnow_submit.py                  # submit todas las URLs al endpoint indexnow
 
 # Deploy manual (solo si hay urgencia — normalmente GitHub Actions lo hace)
+# OJO: wrangler.jsonc lleva el marcador __KV_NEWSLETTER_ID__ que el CI sustituye.
+# Para deploy manual, sustituirlo por el id real: npx wrangler@4 kv namespace list
 npx wrangler@4 deploy                          # principal
 npx wrangler@4 deploy --config redirect/wrangler.jsonc  # worker redirect
 
@@ -110,7 +114,9 @@ Hay **3 procesos independientes** que se sincronizan vía git:
 
 **Pieza 3 — Deploy Cloudflare (`wrangler.jsonc` + `redirect/wrangler.jsonc`)**
 - Son **DOS Workers separados**:
-  - `pulsosano-web` (raíz): static assets `./dist/`, custom domains `pulsosano.com` y `www.pulsosano.com`.
+  - `pulsosano-web` (raíz): `main: worker/index.js` + static assets `./dist/`
+    (`run_worker_first: ["/api/*"]`, el resto va directo a assets), KV `NEWSLETTER`,
+    custom domains `pulsosano.com` y `www.pulsosano.com`. `workers_dev: false`.
   - `pulsosano-redirect` (`redirect/`): worker JS de 1 función que hace `Response.redirect(target, 301)`. Custom domains `pulsosano.org` y `www.pulsosano.org`.
 - El workflow ejecuta `wrangler deploy` dos veces con `workingDirectory` distinto.
 
@@ -149,6 +155,19 @@ Hay **3 procesos independientes** que se sincronizan vía git:
 14. **Verificación CAA en Windows**: `Resolve-DnsName -Type CAA` NO existe en
     Windows DNS client. Usar Cloudflare DNS-over-HTTPS:
     `Invoke-RestMethod "https://cloudflare-dns.com/dns-query?name=X&type=CAA" -Headers @{Accept='application/dns-json'}`.
+15. **SDK `anthropic` FIJADA a `>=1,<2`.** La 1.x (ago-2026) eliminó `temperature`/
+    `top_p`/`top_k` como argumentos de `messages.create()`; con `>=0.34.0` sin tope el
+    CI instaló 1.x y el agregador falló 16 días seguidos (21-ago → 5-sep 2026) sin
+    publicar nada. `temperature` va ahora en `extra_body`. Antes de subir a 2.x, leer
+    el CHANGELOG de la SDK.
+16. **NO usar `ViewTransitions`/`ClientRouter`.** La navegación SPA impedía que
+    AdSense Auto Ads y los scripts inline (cookies, newsletter) se ejecutaran a partir
+    del segundo clic. Cada página es una carga completa a propósito.
+17. **Enlaces internos SIEMPRE con barra final** (`/sobre/`, `/categoria/x/`).
+    `trailingSlash: 'always'`; sin la barra, Cloudflare responde 307 en cada clic.
+18. **Poda de calidad = `noindex: true`** en frontmatter. Excluye del sitemap, RSS,
+    news-sitemap, portada, categorías, relacionados y emite meta `noindex`. La URL
+    sigue viva. Umbral vigente: < 600 palabras o duplicado por URL fuente (2026-09-05).
 
 ## YMYL E-E-A-T (reglas editoriales obligatorias)
 
@@ -267,8 +286,27 @@ Búsquedas frecuentes que pueden hacerse (no las repitas analizando, ya están):
 Configurado en la zona `pulsosano.com`:
 - **CAA** × 6 (visible: 4 + 2 wildcards): letsencrypt.org, pki.goog, sectigo.com,
   digicert.com (+ comodoca.com y ssl.com añadidos automáticamente por CF).
-- **SPF**: `v=spf1 -all` (no enviamos email).
+- **Email Routing** activo (MX `route1/2/3.mx.cloudflare.net`). SPF:
+  `v=spf1 include:_spf.mx.cloudflare.net ~all`.
+- **Única regla de reenvío:** `contacto@pulsosano.com` → Gmail del propietario.
+  Por eso el sitio publica **un solo buzón**. Si se crean los alias `correcciones@`,
+  `editorial@` o `privacidad@` en el dashboard, se pueden volver a exponer.
 - **DMARC**: `v=DMARC1; p=reject; rua=mailto:jdqf19992025@gmail.com`.
+
+## Saneamiento 2026-09-05 (auditoría completa)
+
+- CI roto 16 días por SDK 1.x → fijada `anthropic>=1,<2`, `temperature` en `extra_body`.
+- Agregador: fecha del RSS acotada a 21 días (antes entraban items de 2019); segunda
+  barrera anti-duplicados leyendo las URLs fuente ya publicadas en `src/content`.
+- Corpus: 40 fechas corregidas (fecha de alta en git), 21 duplicados y 1.087 artículos
+  < 600 palabras marcados `noindex`. Visibles: ~290 (todos con FAQs/900+ palabras
+  o expandidos a mano) + 3/día nuevos.
+- Frontend: sin View Transitions, Auto Ads sin doble init, `googlebot`/`X-Robots-Tag`
+  ya no contradicen `noindex`, sitemap con `lastmod` real por artículo, sin
+  `SearchAction` falso, enlaces con barra final, textos institucionales al día
+  (cron diario, modelos reales, fuentes reales), buzón único operativo.
+- Newsletter propia con Worker + KV; formulario de contacto sustituido por buzón
+  directo (el `mailto:` con POST no funcionaba).
 
 ## Estado actual del roadmap (snapshot 2026-05-19)
 

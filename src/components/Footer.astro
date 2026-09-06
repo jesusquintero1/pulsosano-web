@@ -1,6 +1,5 @@
 ---
 const year = new Date().getFullYear();
-const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
 ---
 <footer class="bg-ink-900 text-ink-300 mt-16">
   <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-10">
@@ -18,11 +17,15 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
     <div>
       <h3 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Secciones</h3>
       <ul class="space-y-2 text-sm">
-        <li><a href="/categoria/investigacion-clinica" class="hover:text-brand-500">Investigación Clínica</a></li>
-        <li><a href="/categoria/avances-medicos" class="hover:text-brand-500">Avances Médicos</a></li>
-        <li><a href="/categoria/nutricion-y-dieta" class="hover:text-brand-500">Nutrición y Dieta</a></li>
-        <li><a href="/categoria/salud-mental" class="hover:text-brand-500">Salud Mental</a></li>
-        <li><a href="/categoria/medicina-preventiva" class="hover:text-brand-500">Medicina Preventiva</a></li>
+        <li><a href="/categoria/investigacion-clinica/" class="hover:text-brand-500">Investigación Clínica</a></li>
+        <li><a href="/categoria/avances-medicos/" class="hover:text-brand-500">Avances Médicos</a></li>
+        <li><a href="/categoria/nutricion-y-dieta/" class="hover:text-brand-500">Nutrición y Dieta</a></li>
+        <li><a href="/categoria/salud-mental/" class="hover:text-brand-500">Salud Mental</a></li>
+        <li><a href="/categoria/fitness-y-ejercicio/" class="hover:text-brand-500">Fitness y Ejercicio</a></li>
+        <li><a href="/categoria/medicina-preventiva/" class="hover:text-brand-500">Medicina Preventiva</a></li>
+        <li><a href="/categoria/enfermedades-y-tratamientos/" class="hover:text-brand-500">Enfermedades y Tratamientos</a></li>
+        <li><a href="/categoria/estilo-de-vida-saludable/" class="hover:text-brand-500">Estilo de Vida Saludable</a></li>
+        <li><a href="/categoria/salud-publica-y-politica/" class="hover:text-brand-500">Salud Pública y Política</a></li>
         <li><a href="/rss.xml" class="hover:text-brand-500">RSS</a></li>
       </ul>
     </div>
@@ -30,16 +33,51 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
     <div>
       <h3 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Newsletter</h3>
       <p class="text-sm mb-3">Recibe lo más relevante de la semana en tu correo.</p>
-      <form action={newsletterEndpoint || '#'} method="POST" class="flex flex-col gap-2">
-        <input type="email" name="email" required placeholder="tu@correo.com"
+      <form id="ps-newsletter" action="/api/newsletter" method="POST" class="flex flex-col gap-2" novalidate>
+        <label for="ps-newsletter-email" class="sr-only">Correo electrónico</label>
+        <input type="email" id="ps-newsletter-email" name="email" required placeholder="tu@correo.com" autocomplete="email"
           class="px-3 py-2 rounded-md bg-ink-700 border border-ink-500 text-white placeholder:text-ink-300 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+        <!-- Honeypot anti-bots: los humanos no lo ven ni lo rellenan. -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
+          style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
         <button type="submit" class="px-3 py-2 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-md transition">
           Suscribirme
         </button>
+        <p id="ps-newsletter-msg" class="text-xs text-ink-300 min-h-[1rem]" role="status" aria-live="polite"></p>
       </form>
-      {!newsletterEndpoint && (
-        <p class="text-xs text-ink-500 mt-2">Endpoint pendiente (Formspree).</p>
-      )}
+      <p class="text-[11px] text-ink-500 mt-1">
+        Sin spam. Puedes darte de baja cuando quieras escribiendo a contacto@pulsosano.com.
+        Más detalles en la <a href="/privacidad/" class="underline hover:text-brand-500">política de privacidad</a>.
+      </p>
+      <script is:inline>
+        (function () {
+          var f = document.getElementById('ps-newsletter');
+          var msg = document.getElementById('ps-newsletter-msg');
+          if (!f || !msg) return;
+          f.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var fd = new FormData(f);
+            var email = String(fd.get('email') || '').trim();
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+              msg.textContent = 'Escribe un correo válido.';
+              return;
+            }
+            msg.textContent = 'Enviando…';
+            fetch(f.action, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: email, website: fd.get('website') || '', source: location.pathname }),
+            }).then(function (r) {
+              return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; });
+            }).then(function (res) {
+              msg.textContent = res.ok ? (res.j.message || '¡Listo! Quedaste suscrito.') : (res.j.error || 'No se pudo registrar. Intenta de nuevo.');
+              if (res.ok) f.reset();
+            }).catch(function () {
+              msg.textContent = 'Sin conexión. Intenta más tarde.';
+            });
+          });
+        })();
+      </script>
     </div>
   </div>
 
@@ -47,12 +85,12 @@ const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT || '';
     <div class="max-w-6xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between text-xs gap-3">
       <p>© {year} PulsoSano. Todos los derechos reservados.</p>
       <nav class="flex flex-wrap gap-4">
-        <a href="/sobre" class="hover:text-brand-500">Sobre</a>
-        <a href="/metodologia" class="hover:text-brand-500">Metodología</a>
-        <a href="/equipo-editorial" class="hover:text-brand-500">Equipo editorial</a>
-        <a href="/aviso-medico" class="hover:text-brand-500">Aviso médico</a>
-        <a href="/privacidad" class="hover:text-brand-500">Privacidad</a>
-        <a href="/contacto" class="hover:text-brand-500">Contacto</a>
+        <a href="/sobre/" class="hover:text-brand-500">Sobre</a>
+        <a href="/metodologia/" class="hover:text-brand-500">Metodología</a>
+        <a href="/equipo-editorial/" class="hover:text-brand-500">Equipo editorial</a>
+        <a href="/aviso-medico/" class="hover:text-brand-500">Aviso médico</a>
+        <a href="/privacidad/" class="hover:text-brand-500">Privacidad</a>
+        <a href="/contacto/" class="hover:text-brand-500">Contacto</a>
       </nav>
     </div>
   </div>

@@ -1,64 +1,66 @@
-# Monetización — estado y activación
+# Monetización — estado y plan (actualizado 2026-09-05)
 
-Fuente de verdad del estado de monetización de PulsoSano. Resumen: **el sistema está
-configurado para activarse SOLO al aprobarse AdSense, sin cambios de código ni deploys.**
+Fuente de verdad del estado de monetización de PulsoSano. Complementa
+[`RESCATE-CALIDAD.md`](RESCATE-CALIDAD.md).
 
-## Estado actual (2026-06-26)
+## Estado
 
-- AdSense: **en revisión** ("Preparando"). Ingresos = $0 hasta aprobación.
-- Pub ID configurado en todos lados: `ca-pub-8849534484285084`
-  - GitHub Secret `PUBLIC_ADSENSE_CLIENT` ✅
-  - `public/ads.txt` ✅ (`google.com, pub-8849534484285084, DIRECT, f08c47fec0942fa0`)
-  - Meta `google-adsense-account` + script `adsbygoogle.js` en cada página ✅
+- **AdSense:** cuenta creada, pub ID `ca-pub-8849534484285084` en secret, `ads.txt`,
+  meta y script en cada página. Última revisión: **rechazada por "contenido de poco
+  valor"** (julio 2026). Hay que **re-solicitar revisión** tras el saneamiento de
+  2026-09-05 (ver checklist abajo).
+- **Newsletter propia:** operativa. `POST /api/newsletter` → KV `pulsosano-newsletter`.
+  Es el segundo activo monetizable (patrocinios, tráfico recurrente sin depender de
+  Google). Exportar lista: `npx wrangler@4 kv key list --binding NEWSLETTER --prefix sub:`.
+- **Ingresos actuales:** $0.
 
-## Qué pasa AUTOMÁTICAMENTE cuando Google apruebe (cero intervención)
+## Lo que ya quedó armado en código (2026-09-05)
 
-En cuanto la cuenta pase a "Listo", **sin tocar nada**:
+| Palanca | Estado |
+|---|---|
+| Auto Ads por `?client=` en el script (sin doble init) | ✅ |
+| Anuncios no personalizados por defecto; personalizados al aceptar cookies | ✅ |
+| Sin navegación SPA (cada página carga completa → cada vista cuenta) | ✅ |
+| 6 posiciones de unidades manuales listas en `src/adSlots.ts` (vacías) | ✅ |
+| Páginas de confianza: Sobre, Metodología, Equipo, Aviso médico, Privacidad, Contacto | ✅ |
+| Buzón de contacto operativo (`contacto@`) | ✅ |
+| Sitio visible = ~290 artículos de 900+ palabras con FAQs; 1.202 finos en `noindex` | ✅ |
+| Sitemap con `lastmod` real, sin páginas contradictorias | ✅ |
 
-1. **Los anuncios empiezan a servirse solos.** El script de AdSense ya está en cada
-   página, `pauseAdRequests = 0` (no se ahogan) y `enable_page_level_ads: true` pide
-   activar **Auto Ads por código**. Google coloca los anuncios automáticamente.
-2. **El contenido sigue publicándose** cada 12h (cron GitHub Actions) → más páginas =
-   más inventario de anuncios, sin intervención.
-3. **Los deploys siguen automáticos** (CI) → cada artículo nuevo queda monetizado.
-4. **ads.txt ya verificado** con el pub ID real.
+## Checklist para re-solicitar AdSense (hacer en este orden)
 
-> No se requiere ningún cambio de código, commit ni deploy del propietario tras la
-> aprobación. El sistema ya está "armado".
+1. **Esperar 2-3 semanas** desde el deploy del 2026-09-05 para que Google re-rastree
+   (verificar en GSC → Indexación que las URLs `noindex` salen y las nuevas entran).
+2. Comprobar en GSC que las impresiones diarias dejan de caer.
+3. En el dashboard de AdSense → **Privacidad y mensajes** → activar el mensaje de
+   consentimiento GDPR de Google (cubre tráfico de España/UE; el banner propio del
+   sitio no es un CMP certificado).
+4. AdSense → Sitios → pulsosano.com → **Solicitar revisión**.
+5. Si aprueban: en 24-48 h deben verse anuncios. Si no, AdSense → Anuncios → Por sitio
+   → activar **Auto Ads** (toggle único).
+6. Después de aprobado: crear las 6 unidades manuales y pegar sus IDs en
+   `src/adSlots.ts` (mejor RPM que solo Auto Ads).
 
-## El ÚNICO punto que vive en Google (no automatizable por código)
+**Riesgo:** un segundo rechazo endurece la siguiente revisión. No re-solicitar antes
+del paso 2.
 
-Auto Ads se controla desde el dashboard de AdSense y **no existe API pública** para
-activarlo. Dos escenarios:
+## Plan de ingresos por etapas
 
-- **Caso común:** en las aprobaciones nuevas, Auto Ads suele venir **activado por
-  defecto** → los anuncios aparecen solos (gracias también al flag del código).
-- **Si no aparecieran tras ~24-48h de aprobado:** ir a AdSense → Anuncios → "Por
-  sitio" → `pulsosano.com` → activar **Auto Ads**. Es un toggle de 30 segundos, una
-  sola vez. No requiere tocar el repo.
+| Etapa | Fuente | Requisito |
+|---|---|---|
+| 1 | AdSense (display + in-article) | Aprobación (checklist arriba) |
+| 2 | Patrocinio de newsletter | ≥ 1.000 suscriptores; envío semanal (pendiente elegir herramienta de envío: Cloudflare Email Service o Brevo/Resend con la lista exportada de KV) |
+| 3 | Contenido evergreen de alto RPM (guías GLP-1/obesidad, salud mental) | Ya hay 6 artículos expandidos; seguir el plan de `RESCATE-CALIDAD.md` |
+| 4 | Clon en portugués (Brasil) | Stack reutilizable ~90 %; solo tras estabilizar 1-3 |
 
-## Opcional — más ingresos (NO requerido)
+## Riesgos operativos que NO se automatizan por código
 
-Auto Ads funciona solo, pero las unidades manuales en posiciones premium suelen rendir
-más. Para activarlas: crear 6 ad units en AdSense y pegar sus slot IDs reales en
-[`src/adSlots.ts`](src/adSlots.ts) (un solo archivo, autodocumentado) → commit. Las
-unidades se encienden solas; mientras los slots estén vacíos, Auto Ads las cubre.
-
-## El único riesgo recurrente a la automatización: créditos de Anthropic
-
-El contenido se genera con la API de Anthropic. Si el saldo se agota, el pipeline deja
-de producir artículos (pasó may-jun 2026). **No es automatizable por código** (es
-facturación en console.anthropic.com).
-
-- **Acción única recomendada:** activar **auto-reload de créditos** en la consola de
-  Anthropic. Con eso, el contenido nunca se detiene sin intervención.
-- **Red de seguridad ya implementada:** si un run genera 0 artículos por error de API,
-  el CI **falla en rojo** (exit 3) y GitHub **envía un email** al propietario. No hay
-  fallos silenciosos.
-
-## Resumen en una línea
-
-Todo lo automatizable ya está armado: al aprobarse AdSense, los anuncios se sirven
-solos. Lo único fuera de mi alcance: el toggle de Auto Ads (si Google no lo deja por
-defecto) y el auto-reload de créditos — ambos, acciones únicas de 30 segundos en sus
-dashboards.
+- **Créditos de Anthropic.** Si se agotan, el pipeline se detiene (pasó may-jun 2026).
+  Activar auto-reload en console.anthropic.com. El CI falla en rojo (exit 3) y GitHub
+  avisa por email.
+- **Cambios de la SDK.** Ya pasó (ago-2026, 16 días sin publicar). La versión está
+  fijada a `>=1,<2`; revisar el CHANGELOG antes de subir de mayor.
+- **Feeds que bloquean IPs de GitHub** (Gaceta Médica 403, EFE Salud 429 intermitentes).
+  No rompen el run; solo reducen candidatos.
+- **Correo.** Solo existe la regla `contacto@` en Cloudflare Email Routing. Si se
+  quieren más buzones, crearlos ahí antes de publicarlos.
