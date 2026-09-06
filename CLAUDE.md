@@ -111,6 +111,11 @@ Hay **3 procesos independientes** que se sincronizan vía git:
 - Si 0 artículos escritos habiendo candidatos que fallaron → `exit 3` (CI falla en rojo,
   evita el `success` en falso del incidente de saldo API agotado may-jun 2026).
 - Escribe Markdown con frontmatter Zod-compatible en `src/content/noticias/<slug>.md`.
+- **Imágenes propias** (`scripts/gen_image.py`, Pillow + fuentes OFL en
+  `scripts/assets/fonts/`): tarjeta 1200×630 por artículo en
+  `public/img/noticias/<slug>.jpg`, color por categoría y motivo determinista por
+  slug. El agregador la genera al escribir cada artículo (`imagen: "/img/noticias/..."`).
+  NO volver a hotlinkear imágenes del RSS. Regenerar todo: `py scripts/gen_image.py --all --force`.
 
 **Pieza 3 — Deploy Cloudflare (`wrangler.jsonc` + `redirect/wrangler.jsonc`)**
 - Son **DOS Workers separados**:

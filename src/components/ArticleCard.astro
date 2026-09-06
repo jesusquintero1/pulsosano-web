@@ -17,12 +17,12 @@ const isFeatured = variant === 'featured';
 const isCompact = variant === 'compact';
 ---
 <article class={`group bg-white border border-ink-100 rounded-xl overflow-hidden hover:shadow-md transition ${isFeatured ? 'md:flex md:flex-row' : ''}`}>
-  <a href={href} class={`block ${isFeatured ? 'md:w-1/2' : ''} ${isCompact ? 'aspect-[16/9]' : 'aspect-[16/9]'} bg-ink-100 overflow-hidden`}>
+  <a href={href} class={`block ${isFeatured ? 'md:w-1/2' : ''} aspect-[1200/630] bg-ink-100 overflow-hidden`}>
     <img
       src={img}
       alt={titulo}
       width={isFeatured ? 800 : 600}
-      height={isFeatured ? 450 : 338}
+      height={isFeatured ? 420 : 315}
       loading="lazy"
       decoding="async"
       referrerpolicy="no-referrer"

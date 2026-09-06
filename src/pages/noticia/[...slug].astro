@@ -30,6 +30,8 @@ function slugCat(c: string) {
 
 const SITE_URL = (import.meta.env.SITE_URL || 'https://pulsosano.com').replace(/\/$/, '');
 const url = SITE_URL + '/noticia/' + entry.slug + '/';
+// La imagen puede ser ruta local (/img/noticias/...) o URL absoluta (histórico).
+const imagenAbs: string | undefined = d.imagen ? (d.imagen.startsWith('/') ? SITE_URL + d.imagen : d.imagen) : undefined;
 const catSlug = slugCat(d.categoria);
 
 const fechaTxt = new Date(d.fecha).toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -111,7 +113,7 @@ const articleLd = {
   mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   image: {
     '@type': 'ImageObject',
-    url: d.imagen || (SITE_URL + '/og-default.png'),
+    url: imagenAbs || (SITE_URL + '/og-default.png'),
     width: 1200,
     height: 630,
   },
@@ -190,7 +192,7 @@ const shareUrl = encodeURIComponent(url);
 <Base
   title={d.titulo.length > 60 ? d.titulo : d.titulo + ' — PulsoSano'}
   description={d.resumen}
-  image={d.imagen}
+  image={imagenAbs}
   canonical={url}
   noindex={d.noindex === true}
   type="article"
@@ -235,7 +237,7 @@ const shareUrl = encodeURIComponent(url);
     {d.imagen && (
       <figure class="my-8 max-w-5xl">
         <img src={d.imagen} alt={d.titulo}
-          width="1200" height="675" loading="eager" decoding="async"
+          width="1200" height="630" loading="eager" decoding="async"
           referrerpolicy="no-referrer"
           class="w-full h-auto rounded-lg border border-ink-100"
           onerror="this.onerror=null;this.src='/og-default.png';" />

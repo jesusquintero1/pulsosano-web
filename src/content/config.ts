@@ -25,7 +25,11 @@ const noticias = defineCollection({
     }),
     fecha: z.coerce.date(),
     tags: z.array(z.string()).default([]),
-    imagen: z.string().url().optional(),
+    // URL absoluta (histórico, hotlink) o ruta local "/img/noticias/<slug>.jpg"
+    // (tarjeta propia generada por scripts/gen_image.py).
+    imagen: z.string().refine((s) => /^https?:\/\//.test(s) || s.startsWith('/'), {
+      message: 'imagen debe ser URL absoluta o ruta que empiece por /',
+    }).optional(),
     autorIA: z.string().default('claude-haiku-4-5'),
     // Poda de calidad: excluye el artículo de sitemaps/RSS y emite meta robots
     // noindex. Para artículos débiles/off-topic/duplicados (rescate calidad 2026-07).

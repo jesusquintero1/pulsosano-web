@@ -70,7 +70,7 @@ jobs:
         run: |
           git config user.name "pulsosano-bot"
           git config user.email "bot@pulsosano.com"
-          git add src/content/noticias/ scripts/state/processed.json || true
+          git add src/content/noticias/ scripts/state/processed.json public/img/noticias/ || true
           if ! git diff --cached --quiet; then
             git commit -m "feat(noticias): agregar nuevas noticias automáticas $(date -u +%Y-%m-%dT%H:%M)"
             # El propietario puede haber pusheado entre el checkout y este push.

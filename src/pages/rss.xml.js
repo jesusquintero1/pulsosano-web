@@ -19,13 +19,16 @@ export async function GET(context) {
   const itemsXml = items.map((entry) => {
     const link = `${SITE}/noticia/${entry.slug}/`;
     const pub = new Date(entry.data.fecha).toUTCString();
+    const img = entry.data.imagen ? (entry.data.imagen.startsWith('/') ? SITE + entry.data.imagen : entry.data.imagen) : '';
+    const enclosure = img && img.startsWith(SITE) ? `
+      <enclosure url="${escape(img)}" type="image/jpeg" length="0" />` : '';
     return `    <item>
       <title>${escape(entry.data.titulo)}</title>
       <link>${link}</link>
       <guid isPermaLink="true">${link}</guid>
       <pubDate>${pub}</pubDate>
       <category>${escape(entry.data.categoria)}</category>
-      <description>${escape(entry.data.resumen)}</description>
+      <description>${escape(entry.data.resumen)}</description>${enclosure}
     </item>`;
   }).join('\n');
 

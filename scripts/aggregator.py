@@ -42,6 +42,13 @@ from dotenv import load_dotenv
 from slugify import slugify
 
 try:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from gen_image import generate_card  # tarjetas editoriales propias (Pillow)
+except Exception as _e:  # sin Pillow/fuentes: el artículo sale sin imagen (og-default)
+    generate_card = None
+    print(f"[warn] gen_image no disponible ({_e}); artículos sin tarjeta propia")
+
+try:
     from anthropic import Anthropic
 except ImportError:
     print("[fatal] anthropic SDK no instalado. Ejecuta: pip install -r scripts/requirements.txt")
@@ -586,6 +593,16 @@ def write_article(data: dict, *, source_name: str, source_url: str,
             if wiki:
                 front_lines.append(f"    wikipedia: {yq(wiki)}")
 
+    # Imagen: tarjeta propia (sin hotlink a terceros). Si el generador no está
+    # disponible, no se escribe imagen (las plantillas usan og-default.png).
+    if generate_card is not None:
+        try:
+            image = generate_card(target.stem, titulo, data["categoria"], source_name)
+        except Exception as e:
+            print(f"    [warn] tarjeta no generada: {e}", file=sys.stderr)
+            image = None
+    else:
+        image = None
     if image:
         front_lines.append(f"imagen: {yq(image)}")
     front_lines.append(f'autorIA: {yq(modelo)}')
