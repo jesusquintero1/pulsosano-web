@@ -15,6 +15,7 @@ tags:
   - "investigacion-celular"
 imagen: "https://www.sciencealert.com/images/2026/05/macrophages-eating.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El papel de los macrófagos en la defensa inmunitaria

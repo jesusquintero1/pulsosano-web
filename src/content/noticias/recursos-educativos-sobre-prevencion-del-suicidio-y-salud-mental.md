@@ -14,6 +14,7 @@ tags:
   - "bienestar-emocional"
   - "recursos-clinicos"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la prevención del suicidio

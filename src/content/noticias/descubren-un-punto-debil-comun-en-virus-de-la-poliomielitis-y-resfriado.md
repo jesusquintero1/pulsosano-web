@@ -14,6 +14,7 @@ tags:
   - "antivirales"
   - "poliomielitis"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una familia de virus con múltiples rostros

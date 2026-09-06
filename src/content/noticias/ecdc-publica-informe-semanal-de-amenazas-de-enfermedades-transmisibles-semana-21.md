@@ -25,6 +25,7 @@ entidades:
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Centro_Europeo_para_la_Prevenci%C3%B3n_y_el_Control_de_las_Enfermedades"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto: ¿Qué es el informe semanal del ECDC?

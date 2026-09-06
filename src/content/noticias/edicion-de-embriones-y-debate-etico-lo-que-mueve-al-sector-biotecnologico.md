@@ -30,6 +30,7 @@ entidades:
     tipo: "Organization"
 imagen: "https://www.statnews.com/wp-content/uploads/2022/10/GettyImages-73453618-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un momento de tensión en la biotecnología

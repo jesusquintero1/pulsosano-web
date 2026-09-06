@@ -15,6 +15,7 @@ tags:
   - "avance-medico"
 imagen: "https://www.sciencealert.com/images/2026/05/DoctorDrawingUpDoseOfVaccine.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad

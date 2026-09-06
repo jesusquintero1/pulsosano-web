@@ -33,6 +33,7 @@ entidades:
   - nombre: "Equipos Médicos de Emergencia"
     tipo: "MedicalProcedure"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una emergencia sanitaria de gran escala

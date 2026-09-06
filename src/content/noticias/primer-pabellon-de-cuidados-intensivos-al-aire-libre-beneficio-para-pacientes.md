@@ -15,6 +15,7 @@ tags:
   - "innovacion-medica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9eb9/live/1917de30-5901-11f1-89a3-d1f559421220.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Repensando el entorno de cuidados intensivos

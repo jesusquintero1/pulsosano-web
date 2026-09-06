@@ -14,6 +14,7 @@ tags:
   - "casco"
   - "lesiones-trafico"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: un problema de salud pública

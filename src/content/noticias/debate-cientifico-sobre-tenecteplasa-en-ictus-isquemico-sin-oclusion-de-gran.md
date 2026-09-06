@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Accidente_cerebrovascular"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto: un debate en torno al ensayo OPTION

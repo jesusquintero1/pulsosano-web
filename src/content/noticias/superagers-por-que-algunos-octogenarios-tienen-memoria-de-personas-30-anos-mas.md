@@ -14,6 +14,7 @@ tags:
   - "alzheimer"
   - "investigacion-cognitiva"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Quiénes son los SuperAgers

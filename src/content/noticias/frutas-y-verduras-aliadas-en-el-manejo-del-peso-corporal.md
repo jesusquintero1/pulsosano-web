@@ -14,6 +14,7 @@ tags:
   - "habitos-saludables"
   - "prevencion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el desafío del peso corporal en la región

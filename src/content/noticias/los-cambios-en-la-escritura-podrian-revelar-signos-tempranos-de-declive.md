@@ -15,6 +15,7 @@ tags:
   - "salud-cerebral"
 imagen: "https://www.sciencealert.com/images/2026/05/PersonWriting.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La escritura como ventana al cerebro

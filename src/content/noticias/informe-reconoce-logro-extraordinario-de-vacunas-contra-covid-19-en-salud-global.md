@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e6af/live/0b7ceb50-39a1-11f1-818c-6f173b5082f5.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del despliegue global

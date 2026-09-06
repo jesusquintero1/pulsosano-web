@@ -14,6 +14,7 @@ tags:
   - "salud-digestiva"
   - "investigacion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el desafío de los microplásticos

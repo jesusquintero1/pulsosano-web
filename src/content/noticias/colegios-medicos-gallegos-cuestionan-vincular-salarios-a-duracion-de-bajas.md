@@ -15,6 +15,7 @@ tags:
   - "gestion-sanitaria"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2024-11/Sede%20de%20la%20Consejer%C3%ADa%20de%20Sanidad%20de%20Galicia%20y%20del%20Sergas%20en%20Santiago%20de%20Compostela.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la política sanitaria

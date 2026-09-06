@@ -15,6 +15,7 @@ tags:
   - "terapia-innovadora"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/20/6a0df9f966cf65-99523211.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad

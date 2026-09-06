@@ -15,6 +15,7 @@ tags:
   - "investigacion-del-sueno"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Morning-Mood-Stocksy_txpd6d279b5FjG400_Medium_4229117-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El papel de los sueños en nuestra salud emocional

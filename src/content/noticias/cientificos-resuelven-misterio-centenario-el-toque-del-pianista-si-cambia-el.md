@@ -14,6 +14,7 @@ tags:
   - "percepcion-sensorial"
   - "investigacion-musical"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El debate que atravesó un siglo

@@ -14,6 +14,7 @@ tags:
   - "investigacion"
   - "salud-metabolica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El mito del metabolismo arruinado

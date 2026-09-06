@@ -15,6 +15,7 @@ tags:
   - "neurobiologia"
 imagen: "https://www.sciencealert.com/images/2026/05/hand-art.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El misterio de la preferencia manual

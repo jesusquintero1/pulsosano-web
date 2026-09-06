@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d8d3/live/f8b494b0-4e8f-11f1-b092-4797e4fbbf94.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la situación

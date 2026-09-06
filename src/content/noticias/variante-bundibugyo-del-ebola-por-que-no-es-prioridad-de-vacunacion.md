@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/22/6a100d4cb78fa8-09670131.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote de Bundibugyo

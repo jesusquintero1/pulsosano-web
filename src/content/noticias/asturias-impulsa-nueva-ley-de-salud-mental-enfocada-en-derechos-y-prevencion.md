@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/rueda-asturias.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la iniciativa legislativa

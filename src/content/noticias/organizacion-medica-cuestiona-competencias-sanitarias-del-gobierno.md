@@ -15,6 +15,7 @@ tags:
   - "etica-profesional"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2021-10/tomas%20cobo.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la disputa

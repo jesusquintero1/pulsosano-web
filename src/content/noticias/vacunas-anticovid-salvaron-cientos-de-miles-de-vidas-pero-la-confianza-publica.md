@@ -15,6 +15,7 @@ tags:
   - "inmunizacion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cc1c/live/c1be81a0-39a9-11f1-879d-1b2f5c3919b8.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El impacto documentado de la inmunización

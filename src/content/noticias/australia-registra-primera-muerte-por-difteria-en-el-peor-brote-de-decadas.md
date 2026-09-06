@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0abc/live/4ec8aee0-58d1-11f1-90e2-edf2febf1e9d.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

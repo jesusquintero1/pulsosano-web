@@ -15,6 +15,7 @@ tags:
   - "demencia"
 imagen: "https://www.sciencealert.com/images/2026/05/Mature-woman-who-cannot-sleep-.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El vínculo entre sueño y deterioro cognitivo

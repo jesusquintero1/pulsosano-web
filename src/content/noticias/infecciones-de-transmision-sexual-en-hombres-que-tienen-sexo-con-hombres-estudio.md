@@ -14,6 +14,7 @@ tags:
   - "epidemiologia"
   - "hombres-que-tienen-sexo-con-ho"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/RdEWC8iWJFg/eu-food-agency-must-release-glyphosate-studies-court-idUSKCN1QO0WP"
-fecha: 2019-03-07T11:12:01+00:00
+fecha: 2026-05-21T04:16:48Z
 tags:
   - "glifosato"
   - "regulacion-europea"
@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto regulatorio

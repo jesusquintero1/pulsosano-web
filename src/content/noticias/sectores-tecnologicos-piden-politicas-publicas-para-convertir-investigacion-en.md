@@ -15,6 +15,7 @@ tags:
   - "desarrollo-empresarial"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/comparecencia_conjunta_congresofoto2.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El desafío de convertir investigación en innovación

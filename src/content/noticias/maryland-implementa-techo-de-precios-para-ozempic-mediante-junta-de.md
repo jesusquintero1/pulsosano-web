@@ -15,6 +15,7 @@ tags:
   - "acceso-medicinas"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/05/GettyImages-1482904302-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una respuesta a los precios de medicamentos

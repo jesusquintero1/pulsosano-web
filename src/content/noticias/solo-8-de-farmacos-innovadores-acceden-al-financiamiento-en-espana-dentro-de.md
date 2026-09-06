@@ -15,6 +15,7 @@ tags:
   - "politica-salud"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2022-05/ensayos%20clinicos.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto regulatorio europeo

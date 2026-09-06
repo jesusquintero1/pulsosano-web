@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=761264"
-fecha: 2025-10-31T04:00:00+00:00
+fecha: 2026-05-22T09:41:48Z
 tags:
   - "salmonella"
   - "suplementos"
@@ -14,6 +14,7 @@ tags:
   - "seguridad-alimentaria"
   - "brote-infeccioso"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

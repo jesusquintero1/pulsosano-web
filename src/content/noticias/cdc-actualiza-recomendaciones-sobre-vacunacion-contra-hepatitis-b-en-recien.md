@@ -6,7 +6,7 @@ categoria: "Medicina Preventiva"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=762306"
-fecha: 2025-12-16T05:00:00+00:00
+fecha: 2026-05-21T12:52:16Z
 tags:
   - "hepatitis-b"
   - "vacunacion-infantil"

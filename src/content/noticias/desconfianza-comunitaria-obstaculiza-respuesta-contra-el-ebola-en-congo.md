@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/PjBvTvYTVvo/battle-against-ebola-being-lost-amid-militarized-response-msf-says-idUSKCN1QO1F1"
-fecha: 2019-03-07T16:02:59+00:00
+fecha: 2026-05-20T20:27:58Z
 tags:
   - "ebola"
   - "salud-publica"
@@ -15,6 +15,7 @@ tags:
   - "congo"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la crisis

@@ -14,6 +14,7 @@ tags:
   - "desarrollo-infantil"
   - "guias-nutricionales"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la importancia de la nutrición en la infancia

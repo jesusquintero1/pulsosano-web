@@ -15,6 +15,7 @@ tags:
   - "desarrollo-cerebral"
 imagen: "https://www.sciencealert.com/images/2026/05/NewFathers.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

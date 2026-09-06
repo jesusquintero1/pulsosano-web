@@ -15,6 +15,7 @@ tags:
   - "medicina-molecular"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/belen-perez-%28DENTRO%29LUIS-CAMACHO.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el desafío diagnóstico en errores metabólicos congénitos

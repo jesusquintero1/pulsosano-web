@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760254"
-fecha: 2025-09-18T15:58:00+00:00
+fecha: 2026-05-23T06:41:25Z
 tags:
   - "tabaquismo"
   - "salud-publica"
@@ -14,6 +14,7 @@ tags:
   - "advocacy"
   - "cdc"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de su contribución

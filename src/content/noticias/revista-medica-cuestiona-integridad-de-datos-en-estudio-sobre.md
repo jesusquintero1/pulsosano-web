@@ -28,6 +28,7 @@ entidades:
     tipo: "Thing"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/quimio-y-tiempo-imagen-generada-por-ia.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una revista científica pone en duda sus propios datos

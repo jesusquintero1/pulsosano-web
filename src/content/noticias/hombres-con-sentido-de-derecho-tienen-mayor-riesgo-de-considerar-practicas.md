@@ -15,6 +15,7 @@ tags:
   - "abuso-sexual"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/05/devious-dark-triad-man-in-bed.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

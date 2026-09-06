@@ -15,6 +15,7 @@ tags:
   - "frutas"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Mango-Avocado-Stocksy_txpb4cf9384dVG400_Medium_1843318-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f19c/live/319fb710-547a-11f1-9e5e-41ceb78553de.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

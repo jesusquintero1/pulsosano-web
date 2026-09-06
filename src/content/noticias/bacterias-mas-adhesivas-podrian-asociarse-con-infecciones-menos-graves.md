@@ -15,6 +15,7 @@ tags:
   - "virulencia"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/02/19/69970063343902-86042062.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

@@ -15,6 +15,7 @@ tags:
   - "conflicto-laboral"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/concentracion-medicos-huelga-ante-ministerio-20-mayo-efe.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la movilización

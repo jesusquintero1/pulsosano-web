@@ -14,6 +14,7 @@ tags:
   - "sistemas-salud"
   - "terapia-genica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: una enfermedad con solución pero sin alcance

@@ -15,6 +15,7 @@ tags:
   - "salud-digestiva"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/20/6a0e2bda991005-26847093.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: un problema silencioso en atletas de élite

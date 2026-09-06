@@ -15,6 +15,7 @@ tags:
   - "ensayo-clinico"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/news-reduce_breast_density-header-1296x728-1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la densidad mamaria como factor de riesgo

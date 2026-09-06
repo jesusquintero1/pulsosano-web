@@ -31,6 +31,7 @@ entidades:
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un brote que llega en un momento crítico

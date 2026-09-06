@@ -15,6 +15,7 @@ tags:
   - "epidemiologia"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8fff/live/dd1436d0-54fb-11f1-8285-a5e1daabf896.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

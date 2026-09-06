@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "sustancias"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El kratom y su disponibilidad creciente

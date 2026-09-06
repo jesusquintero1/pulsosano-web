@@ -15,6 +15,7 @@ tags:
   - "acceso-a-salud"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/03/GettyImages-2263005758-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del programa piloto

@@ -15,6 +15,7 @@ tags:
   - "farmacologia"
 imagen: "https://static01.nyt.com/images/2026/05/21/science/21ci-obesity-drug/21ci-obesity-drug-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

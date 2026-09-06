@@ -36,6 +36,7 @@ entidades:
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Violencia_de_g%C3%A9nero"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto: desigualdades persistentes en la salud de las mujeres centroamericanas

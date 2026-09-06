@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "https://www.sciencealert.com/images/2026/01/diabetes_coffee_genes_header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

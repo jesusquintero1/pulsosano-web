@@ -14,6 +14,7 @@ tags:
   - "factores-riesgo"
   - "epidemiologia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El alcance global de la enfermedad renal crónica

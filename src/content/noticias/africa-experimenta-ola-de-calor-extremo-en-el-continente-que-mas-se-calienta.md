@@ -15,6 +15,7 @@ tags:
   - "temperatura-extrema"
 imagen: "https://www.sciencealert.com/images/2026/05/aerial-view-of-france.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del fenómeno

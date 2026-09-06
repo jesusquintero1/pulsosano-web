@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://static01.nyt.com/images/2026/05/14/multimedia/14DC-hantavirus-01-qkzl/14DC-hantavirus-01-qkzl-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: un virus poco conocido pero presente

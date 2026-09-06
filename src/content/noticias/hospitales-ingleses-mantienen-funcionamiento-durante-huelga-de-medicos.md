@@ -15,6 +15,7 @@ tags:
   - "conflicto-laboral"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6538/live/e8a44600-3356-11f1-9d5c-8ba507d7dbde.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la disputa laboral

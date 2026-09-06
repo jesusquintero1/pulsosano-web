@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://www.sciencealert.com/images/2026/05/painting.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto: pasatiempos y salud cerebral

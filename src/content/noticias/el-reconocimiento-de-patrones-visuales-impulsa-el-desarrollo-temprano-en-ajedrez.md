@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "https://www.psypost.org/wp-content/uploads/2025/01/old-man-grandfather-playing-chess-with-granddaughter.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

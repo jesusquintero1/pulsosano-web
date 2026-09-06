@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Obesidad"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/ayuno.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un ensayo clínico pone a prueba el ayuno intermitente a largo plazo

@@ -14,6 +14,7 @@ tags:
   - "investigacion-clinica"
   - "duracion-estudios"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de los ensayos descentralizados

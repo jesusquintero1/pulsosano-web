@@ -15,6 +15,7 @@ tags:
   - "eficiencia-hospitalaria"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/magnetica-resonancia.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: una guía que envejeció

@@ -15,6 +15,7 @@ tags:
   - "bienestar"
 imagen: "https://www.psypost.org/wp-content/uploads/2023/10/meditation-brain.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: ¿Qué sabemos sobre meditación y el cerebro?

@@ -15,6 +15,7 @@ tags:
   - "bienestar-emocional"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/55c8/live/e36066f0-4ee1-11f1-bd52-e755d604ece4.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es el trastorno disfórico premenstrual?

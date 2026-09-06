@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/22/6a105ea22ef4f0-08263871.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es la alergia al sol

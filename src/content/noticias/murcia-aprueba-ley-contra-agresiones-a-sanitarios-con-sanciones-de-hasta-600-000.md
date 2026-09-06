@@ -15,6 +15,7 @@ tags:
   - "regulacion-medica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/img_4904_0.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la violencia contra sanitarios

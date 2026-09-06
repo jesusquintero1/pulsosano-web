@@ -15,6 +15,7 @@ tags:
   - "salud-mental"
 imagen: "https://www.psypost.org/wp-content/uploads/2025/03/DNA-1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

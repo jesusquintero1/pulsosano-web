@@ -15,6 +15,7 @@ tags:
   - "salud-cerebral"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/neurooncologo_espanol_josep_dalmau.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

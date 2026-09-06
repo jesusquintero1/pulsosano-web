@@ -15,6 +15,7 @@ tags:
   - "monitoreo-sueno"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Sleep-apps-GettyImages-2259854744-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la obsesión por medir el sueño

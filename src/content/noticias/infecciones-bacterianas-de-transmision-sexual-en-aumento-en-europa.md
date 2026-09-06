@@ -15,6 +15,7 @@ tags:
   - "epidemiologia"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2022-04/Gonorrea.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la situación

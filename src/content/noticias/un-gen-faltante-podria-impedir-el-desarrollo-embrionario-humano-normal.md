@@ -15,6 +15,7 @@ tags:
   - "biologia-molecular"
 imagen: "https://www.sciencealert.com/images/2026/06/early-embryo.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del desarrollo embrionario temprano

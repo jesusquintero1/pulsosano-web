@@ -15,6 +15,7 @@ tags:
   - "politica-sanitaria"
 imagen: "https://static01.nyt.com/images/2026/05/18/multimedia/00biz-insurers-htcm/00biz-insurers-htcm-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto de la autorización previa

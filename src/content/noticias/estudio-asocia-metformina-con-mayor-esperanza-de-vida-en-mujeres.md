@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2023/07/20/pexels-andrea-piacquadio-3768131-v3.r_d.1856-1354.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

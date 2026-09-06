@@ -14,6 +14,7 @@ tags:
   - "oms"
   - "enfermedades-infecciosas"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: una enfermedad olvidada pero devastadora

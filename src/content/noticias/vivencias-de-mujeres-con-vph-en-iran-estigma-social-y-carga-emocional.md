@@ -14,6 +14,7 @@ tags:
   - "experiencias-pacientes"
   - "iran"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

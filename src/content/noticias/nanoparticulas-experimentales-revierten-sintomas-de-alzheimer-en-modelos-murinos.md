@@ -14,6 +14,7 @@ tags:
   - "investigacion-clinica"
   - "barrera-hematoencefalica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

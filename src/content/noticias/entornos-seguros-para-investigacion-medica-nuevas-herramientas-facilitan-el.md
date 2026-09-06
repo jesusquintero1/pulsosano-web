@@ -14,6 +14,7 @@ tags:
   - "entornos-seguros"
   - "herramientas-cientificas"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el dilema de la seguridad y el acceso

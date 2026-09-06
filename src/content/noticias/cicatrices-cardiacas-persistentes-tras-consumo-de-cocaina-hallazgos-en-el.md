@@ -15,6 +15,7 @@ tags:
   - "sistema-conduccion"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/28/6a17df31c893c7-17729775.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

@@ -15,6 +15,7 @@ tags:
   - "facturas-medicas"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/AP23201662486783-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la Ley de Protección contra Sorpresas

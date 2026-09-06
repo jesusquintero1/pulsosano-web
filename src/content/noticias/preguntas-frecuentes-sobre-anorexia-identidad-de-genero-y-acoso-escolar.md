@@ -15,6 +15,7 @@ tags:
   - "medicacion"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2025/05/14/consultorio-de-psicologia.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las consultas más frecuentes

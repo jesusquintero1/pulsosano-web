@@ -15,6 +15,7 @@ tags:
   - "habitos-saludables"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/01/69f46e4b2ec9b6-17377041.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la piel como reflejo de la salud interna

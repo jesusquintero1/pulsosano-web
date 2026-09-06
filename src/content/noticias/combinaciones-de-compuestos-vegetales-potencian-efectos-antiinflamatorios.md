@@ -14,6 +14,7 @@ tags:
   - "investigacion-celular"
   - "salud-preventiva"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El problema de la inflamación silenciosa

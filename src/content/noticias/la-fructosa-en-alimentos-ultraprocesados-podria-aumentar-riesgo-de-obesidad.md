@@ -15,6 +15,7 @@ tags:
   - "salud-metabolica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Fructose-Metabolic-Stocksy_txpea04e80cglG400_Medium_6330693-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

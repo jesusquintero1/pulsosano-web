@@ -15,6 +15,7 @@ tags:
   - "vigilancia-sanitaria"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ff64/live/547a9890-536c-11f1-89a3-d1f559421220.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote actual

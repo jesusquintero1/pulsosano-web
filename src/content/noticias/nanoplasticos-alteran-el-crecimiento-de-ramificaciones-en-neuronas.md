@@ -15,6 +15,7 @@ tags:
   - "investigacion-celular"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/02/neurons-2.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: una amenaza microscópica invisible

@@ -31,6 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Departamento_de_Salud_y_Servicios_Humanos_de_los_Estados_Unidos"
 imagen: "https://www.statnews.com/wp-content/uploads/2023/05/AP23123535683142-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un conflicto que llega al Congreso

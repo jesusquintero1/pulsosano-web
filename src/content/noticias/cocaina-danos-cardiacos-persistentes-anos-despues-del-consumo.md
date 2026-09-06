@@ -15,6 +15,7 @@ tags:
   - "investigacion-medica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/27/6a16bde5ab7d39-65275113.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

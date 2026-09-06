@@ -15,6 +15,7 @@ tags:
   - "longevidad"
 imagen: "https://www.sciencealert.com/images/2025/12/Young-persons-hand-holding-elderly-persons-hand.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

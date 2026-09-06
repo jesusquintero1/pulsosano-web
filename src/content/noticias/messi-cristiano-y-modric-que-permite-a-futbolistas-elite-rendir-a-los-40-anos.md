@@ -33,6 +33,7 @@ entidades:
     tipo: "Thing"
 imagen: "https://efesalud.com/wp-content/uploads/2026/06/8023590609001miniw-1.webp"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un Mundial histórico con protagonistas veteranos

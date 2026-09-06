@@ -14,6 +14,7 @@ tags:
   - "vectores-virales"
   - "oncologia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La terapia génica y sus riesgos potenciales

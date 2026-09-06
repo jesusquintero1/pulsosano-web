@@ -15,6 +15,7 @@ tags:
   - "viajes-internacionales"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/af91/live/3f1a7440-4e29-11f1-b55d-0f258dce1735.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

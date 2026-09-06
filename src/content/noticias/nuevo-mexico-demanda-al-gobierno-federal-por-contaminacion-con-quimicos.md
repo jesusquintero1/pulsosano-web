@@ -15,6 +15,7 @@ tags:
   - "demanda-legal"
 imagen: "https://static01.nyt.com/images/2026/05/12/multimedia/00sci-pfas-newmexico-02-vhjc/00sci-pfas-newmexico-02-vhjc-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El problema de los químicos persistentes

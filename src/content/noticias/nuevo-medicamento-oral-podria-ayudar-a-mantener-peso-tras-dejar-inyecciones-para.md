@@ -15,6 +15,7 @@ tags:
   - "salud-metabolica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d8b3/live/55c5d990-4d53-11f1-a556-3191549e7ed9.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del tratamiento de la obesidad

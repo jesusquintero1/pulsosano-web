@@ -15,6 +15,7 @@ tags:
   - "transparencia"
 imagen: "https://static01.nyt.com/images/2026/06/25/multimedia/25dc-rfk-cdc-emails-photo-hlgm/25dc-rfk-cdc-emails-photo-hlgm-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto institucional

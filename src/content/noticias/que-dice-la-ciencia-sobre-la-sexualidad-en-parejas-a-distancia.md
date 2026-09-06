@@ -15,6 +15,7 @@ tags:
   - "bienestar-emocional"
 imagen: "https://www.psypost.org/wp-content/uploads/2022/04/woman-hand-clutching-bed.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las relaciones a distancia

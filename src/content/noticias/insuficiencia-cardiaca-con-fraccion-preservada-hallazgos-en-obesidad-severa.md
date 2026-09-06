@@ -33,6 +33,7 @@ entidades:
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/Cardiomiocito"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un tipo de insuficiencia cardíaca poco comprendida

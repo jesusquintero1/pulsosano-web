@@ -30,6 +30,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Investigaci%C3%B3n_cl%C3%ADnica"
 imagen: "https://efesalud.com/wp-content/uploads/2026/06/MEXICO-SALUD.webp"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## México en la mira del mapa farmacéutico regional

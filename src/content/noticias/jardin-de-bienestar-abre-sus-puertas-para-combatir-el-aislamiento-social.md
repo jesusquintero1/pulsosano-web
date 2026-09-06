@@ -15,6 +15,7 @@ tags:
   - "iniciativas-publicas"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dc39/live/2c6fb5d0-38e9-11f1-af88-bb55454ebba2.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El desafío del aislamiento en la sociedad moderna

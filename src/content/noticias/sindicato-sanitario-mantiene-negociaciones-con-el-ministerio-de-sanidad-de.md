@@ -31,6 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Sistema_Nacional_de_Salud_(España)"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/csif.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto: ¿Qué está en juego?

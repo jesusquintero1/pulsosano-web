@@ -15,6 +15,7 @@ tags:
   - "biomecanica"
 imagen: "https://www.sciencealert.com/images/2026/05/Sue-T-rex.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico

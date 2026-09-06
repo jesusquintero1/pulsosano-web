@@ -15,6 +15,7 @@ tags:
   - "legislacion"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/hemiciclo-congreso-diputados-foto-congreso.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto legislativo

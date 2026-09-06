@@ -35,6 +35,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_rara"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/vacuna-pfizer-2.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una tecnología que demostró su valor y ahora apunta más lejos

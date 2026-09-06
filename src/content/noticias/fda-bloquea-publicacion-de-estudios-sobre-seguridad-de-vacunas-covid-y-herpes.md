@@ -15,6 +15,7 @@ tags:
   - "farmacovigilancia"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Vaccine-Safety-GettyImages-2260643489-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la decisión regulatoria

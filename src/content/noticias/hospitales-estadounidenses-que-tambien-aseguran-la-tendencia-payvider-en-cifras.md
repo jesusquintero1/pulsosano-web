@@ -33,6 +33,7 @@ entidades:
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/JAMA_(revista)"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## ¿Qué es el modelo 'payvider'?

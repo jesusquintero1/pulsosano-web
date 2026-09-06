@@ -15,6 +15,7 @@ tags:
   - "medicamentos"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/03/AdobeStock_505235750_Editorial_Use_Only-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la inversión en GLP-1

@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Cardiovascular-Disease-Stocksy_txp00d01d6cWvG400_Medium_308410-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad

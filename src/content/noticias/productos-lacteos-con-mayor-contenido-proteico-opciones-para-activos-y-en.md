@@ -15,6 +15,7 @@ tags:
   - "alimentacion-saludable"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/19/6a0c780177c062-59010944.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La proteína en la alimentación moderna

@@ -14,6 +14,7 @@ tags:
   - "salud-infantil"
   - "prevencion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es la infección por E. coli

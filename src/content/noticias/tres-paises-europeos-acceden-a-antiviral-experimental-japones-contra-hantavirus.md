@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/13/6a0409ca02b5b9-64932292.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad

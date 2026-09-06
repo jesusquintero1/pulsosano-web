@@ -15,6 +15,7 @@ tags:
   - "salud-digestiva"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Aspirin-Cancer-GettyImages-2262138883-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

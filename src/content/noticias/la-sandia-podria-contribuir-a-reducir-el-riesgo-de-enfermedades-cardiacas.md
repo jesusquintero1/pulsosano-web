@@ -15,6 +15,7 @@ tags:
   - "licopeno"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/watermelon-melon-1296x728-header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: un fruto común con potencial protector

@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Sociedad_Espa%C3%B1ola_de_Neumolog%C3%ADa_y_Cirug%C3%ADa_Tor%C3%A1cica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/hospital_toledo.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un reconocimiento a la innovación en diagnóstico oncológico

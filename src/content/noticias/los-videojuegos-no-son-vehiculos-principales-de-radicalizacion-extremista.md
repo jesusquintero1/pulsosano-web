@@ -15,6 +15,7 @@ tags:
   - "salud-mental-digital"
 imagen: "https://www.psypost.org/wp-content/uploads/2025/09/gamer.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Preocupaciones sobre radicalización en línea

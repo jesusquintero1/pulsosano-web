@@ -15,6 +15,7 @@ tags:
   - "collarin"
 imagen: "https://cuidateplus.marca.com/sites/default/files/styles/ratio_16_9/public/2026-05/alex-marquez.jpg.webp?itok=IZuCByNQ"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las lesiones cervicales

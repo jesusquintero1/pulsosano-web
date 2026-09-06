@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/RABjn4vJPis/u-s-bolsters-beagle-brigade-to-sniff-out-deadly-hog-virus-idUSKCN1QN2AE"
-fecha: 2019-03-06T23:57:44+00:00
+fecha: 2026-05-21T09:56:38Z
 tags:
   - "bioseguridad"
   - "peste-porcina-africana"

@@ -15,6 +15,7 @@ tags:
   - "negociacion-colectiva"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ebad/live/9502b470-59d3-11f1-a86d-8bf9558fa476.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la disputa laboral

@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/05/plus-sized-models.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un cuarto de siglo bajo la lupa

@@ -15,6 +15,7 @@ tags:
   - "interpretacion-sintomas"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2020/07/26/piel-de-gallina.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Interpretando las señales del cuerpo

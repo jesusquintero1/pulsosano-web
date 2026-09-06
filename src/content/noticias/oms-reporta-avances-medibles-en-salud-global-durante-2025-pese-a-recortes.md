@@ -14,6 +14,7 @@ tags:
   - "emergencias-sanitarias"
   - "objetivos-desarrollo-sostenibl"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un año de transición para la salud global

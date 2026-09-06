@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/aa2d/live/a7a1a150-4d0c-11f1-ac78-2112837ce2aa.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las promesas sanitarias

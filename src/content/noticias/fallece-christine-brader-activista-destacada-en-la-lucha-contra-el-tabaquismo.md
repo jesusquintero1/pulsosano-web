@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760006"
-fecha: 2025-08-04T16:06:00+00:00
+fecha: 2026-05-23T11:25:01Z
 tags:
   - "tabaquismo"
   - "salud-publica"
@@ -14,6 +14,7 @@ tags:
   - "campanas-antitabaco"
   - "cdc"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la lucha antitabaco

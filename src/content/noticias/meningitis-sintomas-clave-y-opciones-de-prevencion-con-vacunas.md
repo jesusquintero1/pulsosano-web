@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b66e/live/35af95b0-22c4-11f1-934f-036468834728.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es la meningitis?

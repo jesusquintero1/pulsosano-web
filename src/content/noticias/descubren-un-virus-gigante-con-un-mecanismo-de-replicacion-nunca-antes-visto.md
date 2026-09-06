@@ -15,6 +15,7 @@ tags:
   - "descubrimiento-cientifico"
 imagen: "https://www.sciencealert.com/images/2026/05/VirusGraphic.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una nueva perspectiva sobre los virus

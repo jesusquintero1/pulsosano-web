@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2025/03/14/gettyimages-2156388262.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El ambiente ocular durante el sueño

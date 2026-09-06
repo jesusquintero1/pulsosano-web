@@ -15,6 +15,7 @@ tags:
   - "mortalidad"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/05/woman-with-doctor.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

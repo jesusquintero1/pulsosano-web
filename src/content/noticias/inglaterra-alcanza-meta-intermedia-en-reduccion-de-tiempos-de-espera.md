@@ -15,6 +15,7 @@ tags:
   - "acceso-a-servicios"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e27e/live/46846e70-4f78-11f1-9bf8-a147799c023a.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las listas de espera hospitalarias

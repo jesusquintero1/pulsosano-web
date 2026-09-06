@@ -15,6 +15,7 @@ tags:
   - "factores-protectores"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/58fa/live/7bf481d0-329a-11f1-8cba-9df81803c83c.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

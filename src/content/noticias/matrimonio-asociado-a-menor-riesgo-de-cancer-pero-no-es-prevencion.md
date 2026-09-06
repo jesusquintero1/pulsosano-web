@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Married-cancer-GettyImages-1214981193-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

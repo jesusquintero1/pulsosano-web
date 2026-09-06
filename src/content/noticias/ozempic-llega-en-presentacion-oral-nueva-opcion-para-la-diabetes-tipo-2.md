@@ -15,6 +15,7 @@ tags:
   - "tratamiento-diabetes"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Ozempic_Pill_for_Type2_Diabetes-header-1296x728-2.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una nueva opción terapéutica

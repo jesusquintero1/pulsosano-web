@@ -15,6 +15,7 @@ tags:
   - "derechos-pacientes"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/gimnasia-ritmica-foto-marca.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del caso

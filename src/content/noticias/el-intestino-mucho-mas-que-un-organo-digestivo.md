@@ -15,6 +15,7 @@ tags:
   - "emociones"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a196/live/74eb1540-5a6b-11f1-89a3-d1f559421220.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El intestino como centro de comunicación

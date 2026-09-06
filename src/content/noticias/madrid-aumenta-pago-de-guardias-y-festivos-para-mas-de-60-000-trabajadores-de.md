@@ -28,6 +28,7 @@ entidades:
     tipo: "Thing"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/medicos-en-quirofano-foto-dm.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un acuerdo salarial para el sector sanitario madrileño

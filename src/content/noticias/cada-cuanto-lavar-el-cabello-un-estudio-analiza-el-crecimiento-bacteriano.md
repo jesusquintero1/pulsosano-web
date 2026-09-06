@@ -15,6 +15,7 @@ tags:
   - "salud-dermatologica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2024/09/13/lavar-pelo.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del debate

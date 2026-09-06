@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "medicamentos-biologicos"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la designación

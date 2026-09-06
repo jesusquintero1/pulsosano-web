@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bb69/live/870fd830-cc83-11f0-9fb5-5f3a3703a365.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las recomendaciones actuales

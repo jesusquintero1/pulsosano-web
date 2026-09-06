@@ -15,6 +15,7 @@ tags:
   - "ideologia"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/05/first-amendment-free-speech.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

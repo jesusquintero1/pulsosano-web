@@ -15,6 +15,7 @@ tags:
   - "politica-sanitaria"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/2025-12-18_asamblea_facme_73_grande.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

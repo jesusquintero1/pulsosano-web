@@ -15,6 +15,7 @@ tags:
   - "relaciones"
 imagen: "https://www.psypost.org/wp-content/uploads/2024/05/woman-using-dating-app.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La paradoja de la elección en el amor digital

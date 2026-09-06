@@ -15,6 +15,7 @@ tags:
   - "envejecimiento"
 imagen: "https://www.sciencealert.com/images/2025/11/Shot-of-an-unrecognizable-person-taking-tablets-at-home.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

@@ -14,6 +14,7 @@ tags:
   - "envejecimiento"
   - "neurociencia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

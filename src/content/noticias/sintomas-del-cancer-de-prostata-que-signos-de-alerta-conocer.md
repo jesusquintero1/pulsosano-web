@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/91dc/live/68492b60-5aa7-11f1-b277-cd187c78657d.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Prevalencia y contexto

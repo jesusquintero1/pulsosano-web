@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://www.sciencealert.com/images/2025/12/Medical-lab-technician-holding-sample-blood-.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

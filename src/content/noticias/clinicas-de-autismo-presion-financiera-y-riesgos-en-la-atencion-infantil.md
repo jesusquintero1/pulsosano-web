@@ -15,6 +15,7 @@ tags:
   - "atencion-infantil"
 imagen: "https://static01.nyt.com/images/2026/04/27/multimedia/00aba-therapy-stillpromo/00aba-therapy-stillpromo-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del crecimiento acelerado

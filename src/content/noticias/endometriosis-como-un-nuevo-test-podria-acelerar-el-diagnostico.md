@@ -15,6 +15,7 @@ tags:
   - "innovacion-medica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/24fb/live/57237cb0-59a7-11f1-b682-cf91850925ea.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es la endometriosis y su impacto actual

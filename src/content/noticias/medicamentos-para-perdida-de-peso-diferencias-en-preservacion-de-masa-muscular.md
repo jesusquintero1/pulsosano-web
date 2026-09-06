@@ -15,6 +15,7 @@ tags:
   - "perdida-peso"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Ozempic-Body-GettyImages-2148794384-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: medicamentos GLP-1 y la pérdida de peso

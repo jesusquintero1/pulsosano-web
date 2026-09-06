@@ -34,6 +34,7 @@ entidades:
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Clostridium_botulinum"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una alerta que pone en guardia a los cuidadores

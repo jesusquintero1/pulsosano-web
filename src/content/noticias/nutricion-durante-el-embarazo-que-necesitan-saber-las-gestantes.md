@@ -14,6 +14,7 @@ tags:
   - "desarrollo-fetal"
   - "micronutrientes"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: por qué la nutrición importa en el embarazo

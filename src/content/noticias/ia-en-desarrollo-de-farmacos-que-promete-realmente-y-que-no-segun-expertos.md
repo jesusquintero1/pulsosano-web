@@ -15,6 +15,7 @@ tags:
   - "innovacion-medica"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/F0432320-Bispecific_T_cell_engager_protein_illustration-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto del entusiasmo alrededor de la IA en medicina

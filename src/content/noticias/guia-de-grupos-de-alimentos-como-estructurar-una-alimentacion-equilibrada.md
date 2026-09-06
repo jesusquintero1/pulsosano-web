@@ -14,6 +14,7 @@ tags:
   - "salud-nutricional"
   - "habitos-alimentarios"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué son los grupos de alimentos

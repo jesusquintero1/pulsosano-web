@@ -14,6 +14,7 @@ tags:
   - "investigacion-clinica"
   - "demencia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la búsqueda de nuevas dianas terapéuticas

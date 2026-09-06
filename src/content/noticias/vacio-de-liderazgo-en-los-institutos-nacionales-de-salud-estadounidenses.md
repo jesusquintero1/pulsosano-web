@@ -15,6 +15,7 @@ tags:
   - "brotes-epidemiologicos"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/09/20190371158_c548350aea_o-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la crisis de liderazgo

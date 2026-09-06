@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Tick-Bites-Person-Dog-Hiking-Forest-Stream-1296x728-header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un problema creciente de salud pública

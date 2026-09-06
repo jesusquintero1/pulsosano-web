@@ -14,6 +14,7 @@ tags:
   - "anomia"
   - "ensayo-clinico"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El desafío de la anomia post-ictus

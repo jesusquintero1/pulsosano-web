@@ -15,6 +15,7 @@ tags:
   - "oncologia"
 imagen: "https://www.statnews.com/wp-content/uploads/2024/10/Poorly_differentiated_non-small_cell_carcinoma_NOS_with_a_massive_host_inflammatory_response_-_Case_267_8597445839-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

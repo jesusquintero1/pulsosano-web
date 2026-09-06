@@ -14,6 +14,7 @@ tags:
   - "suplementacion"
   - "atp"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: más que un suplemento deportivo

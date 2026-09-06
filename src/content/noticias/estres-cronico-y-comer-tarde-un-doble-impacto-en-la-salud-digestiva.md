@@ -14,6 +14,7 @@ tags:
   - "horarios-comida"
   - "investigacion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto: estrés y digestión

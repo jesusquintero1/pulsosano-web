@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/7pxe5Yp_dvQ/china-reports-new-african-swine-fever-outbreak-in-guangxi-region-idUSKCN1QO13N"
-fecha: 2019-03-07T10:25:52+00:00
+fecha: 2026-05-20T23:20:54Z
 tags:
   - "fiebre-porcina-africana"
   - "china"
@@ -15,6 +15,7 @@ tags:
   - "ganaderia"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad

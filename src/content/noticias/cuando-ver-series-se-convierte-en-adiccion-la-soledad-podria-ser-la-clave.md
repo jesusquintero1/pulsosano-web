@@ -15,6 +15,7 @@ tags:
   - "bienestar-emocional"
 imagen: "https://www.psypost.org/wp-content/uploads/2024/11/woman-watching-television-tv.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

@@ -34,6 +34,7 @@ entidades:
     tipo: "MedicalProcedure"
 imagen: "https://efesalud.com/wp-content/uploads/2026/07/foto-cursos-1.webp"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un cambio de paradigma en el tratamiento de la calvicie

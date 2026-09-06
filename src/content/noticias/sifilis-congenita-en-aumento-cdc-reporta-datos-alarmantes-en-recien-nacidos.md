@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760286"
-fecha: 2025-09-24T04:00:00+00:00
+fecha: 2026-05-23T03:50:27Z
 tags:
   - "sifilis-congenita"
   - "salud-publica"
@@ -14,6 +14,7 @@ tags:
   - "infecciones-transmision-sexual"
   - "prevencion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la tendencia preocupante

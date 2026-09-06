@@ -15,6 +15,7 @@ tags:
   - "evidencia-clinica"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/AdobeStock_1898568139_Editorial_Use_Only-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del debate

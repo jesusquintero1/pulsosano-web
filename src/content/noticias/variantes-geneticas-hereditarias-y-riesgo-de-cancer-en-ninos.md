@@ -14,6 +14,7 @@ tags:
   - "pruebas-geneticas"
   - "riesgo-cancer"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

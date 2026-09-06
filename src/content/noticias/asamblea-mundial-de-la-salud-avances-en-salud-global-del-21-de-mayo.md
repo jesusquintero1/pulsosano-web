@@ -14,6 +14,7 @@ tags:
   - "politica-sanitaria"
   - "cooperacion-internacional"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la Asamblea

@@ -15,6 +15,7 @@ tags:
   - "envejecimiento"
 imagen: "https://www.sciencealert.com/images/2026/04/Hand-with-pink-fingernails-tipping-two-supplement-capsules-into-palm.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El mercado de suplementos antiedad en expansión

@@ -6,7 +6,7 @@ categoria: "Medicina Preventiva"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/vWBtKOfk8-Y/fda-finds-asbestos-in-three-claires-cosmetics-products-idUSKCN1QM2DD"
-fecha: 2019-03-07T02:51:15+00:00
+fecha: 2026-05-21T04:16:48Z
 tags:
   - "asbesto"
   - "cosmeticos"
@@ -15,6 +15,7 @@ tags:
   - "contaminacion"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

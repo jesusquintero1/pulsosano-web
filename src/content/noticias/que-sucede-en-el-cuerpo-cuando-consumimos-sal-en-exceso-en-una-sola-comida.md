@@ -15,6 +15,7 @@ tags:
   - "dieta"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8bf1/live/53e4fc70-5044-11f1-89a3-d1f559421220.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el problema del sodio en la dieta moderna

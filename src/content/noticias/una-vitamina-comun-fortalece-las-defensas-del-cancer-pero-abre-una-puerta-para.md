@@ -15,6 +15,7 @@ tags:
   - "terapia"
 imagen: "https://www.sciencealert.com/images/2026/05/CancerCell.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la carrera entre el cáncer y el sistema inmunológico

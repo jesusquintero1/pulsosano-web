@@ -15,6 +15,7 @@ tags:
   - "salud-cerebral"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/22/6a10c8804bdaa5-34584509.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad de Alzheimer

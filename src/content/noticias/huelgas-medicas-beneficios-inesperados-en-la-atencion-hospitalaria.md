@@ -15,6 +15,7 @@ tags:
   - "calidad-atencion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5e71/live/33e4db60-374a-11f1-8a34-6b2c37f4bef9.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las huelgas médicas

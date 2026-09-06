@@ -6,7 +6,7 @@ categoria: "Investigación Clínica"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/nn2r_QjQjbc/seniors-increasingly-breaking-bones-while-walking-dogs-idUSKCN1QO2C3"
-fecha: 2019-03-07T18:22:23+00:00
+fecha: 2026-05-20T12:32:50Z
 tags:
   - "adultos-mayores"
   - "fracturas-oseas"
@@ -15,6 +15,7 @@ tags:
   - "seguridad"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

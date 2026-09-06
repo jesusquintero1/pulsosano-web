@@ -15,6 +15,7 @@ tags:
   - "chipre"
 imagen: "https://static01.nyt.com/images/2026/05/20/multimedia/20sci-pigeons-hpbf/20sci-pigeons-hpbf-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico de una relación antigua

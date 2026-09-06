@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "vigilancia-epidemiologica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto: clima y enfermedad infecciosa

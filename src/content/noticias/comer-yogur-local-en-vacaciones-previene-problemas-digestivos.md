@@ -15,6 +15,7 @@ tags:
   - "microbiota"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/98fc/live/318b12d0-5518-11f1-89a3-d1f559421220.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El origen del consejo

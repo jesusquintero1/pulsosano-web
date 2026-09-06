@@ -15,6 +15,7 @@ tags:
   - "politica-sanitaria"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/09/GettyImages-1227710420-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la designación

@@ -15,6 +15,7 @@ tags:
   - "epidemiologia"
 imagen: "https://static01.nyt.com/images/2026/05/22/multimedia/22int-ebola-south-sudan-promo-hftl/22int-ebola-south-sudan-promo-hftl-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de vulnerabilidad en Akobo

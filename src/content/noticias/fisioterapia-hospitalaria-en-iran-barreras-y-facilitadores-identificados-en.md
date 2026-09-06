@@ -30,6 +30,7 @@ entidades:
   - nombre: "Marco de Dominios Teóricos"
     tipo: "Thing"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## La fisioterapia hospitalaria y su papel en la recuperación del paciente

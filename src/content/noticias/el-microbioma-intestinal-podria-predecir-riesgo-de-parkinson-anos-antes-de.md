@@ -14,6 +14,7 @@ tags:
   - "investigacion-clinica"
   - "neurologia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el microbioma y las enfermedades neurodegenerativas

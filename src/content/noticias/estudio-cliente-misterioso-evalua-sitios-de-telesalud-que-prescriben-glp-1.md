@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Telemedicina"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/02/AdobeStock_1666420778-1024x576.jpeg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un nuevo tipo de auditoría para la telesalud

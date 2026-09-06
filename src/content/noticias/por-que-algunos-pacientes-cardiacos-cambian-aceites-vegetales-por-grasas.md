@@ -15,6 +15,7 @@ tags:
   - "rehabilitacion-cardiaca"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/AdobeStock_1933838136-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto actual

@@ -15,6 +15,7 @@ tags:
   - "descanso"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2024/01/30/quinoa-con-aguacate-2.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El vínculo entre alimentación nocturna y sueño

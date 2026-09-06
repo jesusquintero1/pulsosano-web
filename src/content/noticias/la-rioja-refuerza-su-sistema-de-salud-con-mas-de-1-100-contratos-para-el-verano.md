@@ -28,6 +28,7 @@ entidades:
     tipo: "Thing"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/medicos-batas_1.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un sistema de salud que se prepara para el verano

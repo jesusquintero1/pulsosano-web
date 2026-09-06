@@ -15,6 +15,7 @@ tags:
   - "crisis-salud"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2023-12/burnout_enfermera.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la crisis en enfermería

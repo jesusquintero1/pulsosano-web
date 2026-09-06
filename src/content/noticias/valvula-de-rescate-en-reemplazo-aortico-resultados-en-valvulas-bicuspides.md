@@ -14,6 +14,7 @@ tags:
   - "estenosis-aortica"
   - "procedimientos-cardiacos"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del procedimiento

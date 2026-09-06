@@ -15,6 +15,7 @@ tags:
   - "sanidad-regional"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/foto_cargo_ok.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la designación

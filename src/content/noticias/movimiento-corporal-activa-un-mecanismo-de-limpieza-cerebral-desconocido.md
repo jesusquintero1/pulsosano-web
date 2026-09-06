@@ -14,6 +14,7 @@ tags:
   - "actividad-fisica"
   - "salud-cerebral"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el cerebro y su sistema de limpieza

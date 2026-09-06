@@ -14,6 +14,7 @@ tags:
   - "prevencion"
   - "salud-infantil"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: por qué las lesiones de rodilla son frecuentes en niños

@@ -14,6 +14,7 @@ tags:
   - "monocitos"
   - "salud-mental"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La depresión y el desafío del diagnóstico temprano

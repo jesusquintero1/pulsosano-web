@@ -15,6 +15,7 @@ tags:
   - "emergencias-cardiovasculares"
 imagen: "https://www.sciencealert.com/images/2026/05/FemaleHeartAttacks.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

@@ -14,6 +14,7 @@ tags:
   - "investigacion-celular"
   - "deteccion-enfermedades"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El código azucarado de las células

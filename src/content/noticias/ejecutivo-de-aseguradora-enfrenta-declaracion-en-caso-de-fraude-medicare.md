@@ -15,6 +15,7 @@ tags:
   - "adultos-mayores"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/04/AP22298642063261-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la acusación

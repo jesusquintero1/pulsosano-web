@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760008"
-fecha: 2025-08-05T10:45:00+00:00
+fecha: 2026-05-23T13:51:47Z
 tags:
   - "salud-mental-adolescentes"
   - "consumo-sustancias"
@@ -14,6 +14,7 @@ tags:
   - "campana-educativa"
   - "bienestar-juvenil"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la iniciativa

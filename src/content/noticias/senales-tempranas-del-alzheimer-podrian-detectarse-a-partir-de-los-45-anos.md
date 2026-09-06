@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://www.sciencealert.com/images/2026/02/NeuronsInANetworkBrightOrange.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La ventana de la mediana edad

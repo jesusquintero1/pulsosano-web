@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "https://www.statnews.com/wp-content/uploads/2020/08/AP_20148562175954-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

@@ -15,6 +15,7 @@ tags:
   - "adaptacion-biologica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/03/30/69ca46e642b551-64915417.webp"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El reloj biológico y el cambio de hora

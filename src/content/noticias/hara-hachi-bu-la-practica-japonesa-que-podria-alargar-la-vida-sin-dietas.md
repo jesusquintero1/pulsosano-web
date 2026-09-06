@@ -14,6 +14,7 @@ tags:
   - "nutricion"
   - "habitos-saludables"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es hara hachi bu

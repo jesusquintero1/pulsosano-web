@@ -15,6 +15,7 @@ tags:
   - "vigilancia-epidemiologica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/barco-hantavirus.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la situación

@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760273"
-fecha: 2025-09-23T15:29:00+00:00
+fecha: 2026-05-23T03:50:27Z
 tags:
   - "resistencia-antimicrobiana"
   - "bacterias-resistentes"
@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "cdc"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la resistencia bacteriana

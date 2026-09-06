@@ -15,6 +15,7 @@ tags:
   - "innovacion-medica"
 imagen: "https://www.statnews.com/wp-content/uploads/2024/12/AdobeStock_835071542-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del desarrollo

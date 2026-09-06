@@ -15,6 +15,7 @@ tags:
   - "huelga"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-03/manifestacion-sevilla-sma-efe.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del conflicto

@@ -15,6 +15,7 @@ tags:
   - "emergencias-medicas"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/24/6a12e0321e0bb2-14042444.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la emergencia cardiovascular

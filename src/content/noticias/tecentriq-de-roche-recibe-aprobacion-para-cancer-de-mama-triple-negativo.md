@@ -6,7 +6,7 @@ categoria: "Avances Médicos"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/3oK5Tmm87J4/roches-tecentriq-wins-u-s-approval-for-aggressive-breast-cancer-idUSKCN1QP20C"
-fecha: 2019-03-08T17:58:33+00:00
+fecha: 2026-05-18T19:49:59Z
 tags:
   - "cancer-de-mama"
   - "inmunoterapia"
@@ -15,6 +15,7 @@ tags:
   - "oncologia"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del cáncer de mama triple negativo

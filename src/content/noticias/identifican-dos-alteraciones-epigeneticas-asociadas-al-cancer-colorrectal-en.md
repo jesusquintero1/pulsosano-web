@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/ico-idibell_foto_ok.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

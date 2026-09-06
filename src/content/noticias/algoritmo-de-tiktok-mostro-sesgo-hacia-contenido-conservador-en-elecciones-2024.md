@@ -15,6 +15,7 @@ tags:
   - "sesgo-digital"
 imagen: "https://www.psypost.org/wp-content/uploads/2025/01/tiktok.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: algoritmos y polarización política

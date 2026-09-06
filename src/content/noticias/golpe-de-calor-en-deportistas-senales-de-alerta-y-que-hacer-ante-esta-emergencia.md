@@ -15,6 +15,7 @@ tags:
   - "sintomas-alerta"
 imagen: "https://cuidateplus.marca.com/sites/default/files/styles/ratio_16_9/public/2026-05/sinner-calor.jpg.webp?itok=2b0wG6vd"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: una emergencia silenciosa en el deporte

@@ -15,6 +15,7 @@ tags:
   - "rendimiento"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/05/man-swearing.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

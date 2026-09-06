@@ -30,6 +30,7 @@ entidades:
   - nombre: "Mayo Clinic"
     tipo: "Organization"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## ¿Qué es el parto prematuro y por qué es relevante?

@@ -14,6 +14,7 @@ tags:
   - "mapeo-cerebral"
   - "investigacion-basica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El misterio del olfato finalmente revelado

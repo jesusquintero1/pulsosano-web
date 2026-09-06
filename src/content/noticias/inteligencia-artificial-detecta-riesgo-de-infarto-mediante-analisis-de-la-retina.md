@@ -15,6 +15,7 @@ tags:
   - "diagnostico-temprano"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/retinoscopia.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un desafío de salud pública

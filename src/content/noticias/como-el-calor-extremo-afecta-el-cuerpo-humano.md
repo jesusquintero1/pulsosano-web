@@ -15,6 +15,7 @@ tags:
   - "salud-estival"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/31b0/live/3ac64500-4c12-11f0-9800-55e1c62425e5.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Cómo el calor impacta el cuerpo

@@ -15,6 +15,7 @@ tags:
   - "neurociencia"
 imagen: "https://www.psypost.org/wp-content/uploads/2024/08/neurons-2.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El cerebro no comienza como una pizarra en blanco

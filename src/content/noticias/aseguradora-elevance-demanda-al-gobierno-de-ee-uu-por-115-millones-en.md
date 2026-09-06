@@ -31,6 +31,7 @@ entidades:
     tipo: "Organization"
 imagen: "https://www.statnews.com/wp-content/uploads/2024/07/AP22298642058521-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una demanda millonaria contra el regulador federal de salud

@@ -15,6 +15,7 @@ tags:
   - "toma-de-decisiones"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/22/6a1063b2d1e3e0-41726810.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es el sesgo de confirmación

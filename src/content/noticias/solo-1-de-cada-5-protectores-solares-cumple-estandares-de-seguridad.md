@@ -15,6 +15,7 @@ tags:
   - "salud-dermatologica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Sunscreens-Safety-Stocksy_txpc8421895JXH400_Medium_2569270-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: ¿Qué reveló el análisis?

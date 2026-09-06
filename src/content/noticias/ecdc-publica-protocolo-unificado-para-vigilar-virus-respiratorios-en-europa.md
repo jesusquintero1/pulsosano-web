@@ -15,6 +15,7 @@ tags:
   - "vsr"
   - "salud-publica"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un paso hacia la vigilancia respiratoria unificada

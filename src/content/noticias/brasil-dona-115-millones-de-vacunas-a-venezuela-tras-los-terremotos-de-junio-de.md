@@ -36,6 +36,7 @@ entidades:
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_BCG"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto: vacunas y desastres naturales

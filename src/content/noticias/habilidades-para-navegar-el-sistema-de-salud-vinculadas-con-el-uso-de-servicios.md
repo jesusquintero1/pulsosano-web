@@ -14,6 +14,7 @@ tags:
   - "enfermedades-cronicas"
   - "investigacion-clinica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

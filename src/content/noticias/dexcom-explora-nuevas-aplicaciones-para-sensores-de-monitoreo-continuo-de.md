@@ -15,6 +15,7 @@ tags:
   - "salud-digital"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/08/dexcom-stelo-photography-hl-workingout-resting-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la tecnología de monitoreo continuo

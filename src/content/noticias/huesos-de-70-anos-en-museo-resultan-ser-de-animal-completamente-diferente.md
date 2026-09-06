@@ -15,6 +15,7 @@ tags:
   - "correccion-historica"
 imagen: "https://www.sciencealert.com/images/2026/01/not-a-mammoth.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

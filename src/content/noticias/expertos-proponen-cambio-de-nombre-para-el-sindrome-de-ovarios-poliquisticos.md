@@ -15,6 +15,7 @@ tags:
   - "salud-reproductiva"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0d4c/live/5c47a330-536f-11f1-b319-63ed6ac90e5f.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del cambio propuesto

@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Artritis_reumatoide"
 imagen: "https://www.statnews.com/wp-content/uploads/2015/11/PHARMALOT_LITTLE-copy-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un fallo judicial con repercusiones en el debate sobre precios de medicamentos

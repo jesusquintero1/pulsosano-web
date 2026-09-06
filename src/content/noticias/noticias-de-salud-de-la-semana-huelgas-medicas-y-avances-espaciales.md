@@ -15,6 +15,7 @@ tags:
   - "noticias-salud"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ede7/live/53554ba0-3421-11f1-aa50-fd39c44a0779.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las noticias semanales

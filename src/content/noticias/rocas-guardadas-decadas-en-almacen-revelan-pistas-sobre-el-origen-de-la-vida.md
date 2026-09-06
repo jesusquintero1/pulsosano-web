@@ -15,6 +15,7 @@ tags:
   - "paleontologia"
 imagen: "https://www.sciencealert.com/images/2026/05/Rock-cores-in-warehouse.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El misterio de los orígenes de la vida compleja

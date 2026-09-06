@@ -15,6 +15,7 @@ tags:
   - "acceso-medicamentos"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/JLP06411-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La biotecnología en encrucijada

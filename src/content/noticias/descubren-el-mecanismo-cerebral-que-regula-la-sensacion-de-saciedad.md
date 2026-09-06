@@ -14,6 +14,7 @@ tags:
   - "obesidad"
   - "neurociencia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Más allá del control voluntario del apetito

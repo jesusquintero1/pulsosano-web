@@ -15,6 +15,7 @@ tags:
   - "reino-unido"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a815/live/7b753f80-4d50-11f1-9077-cb5f00d3274a.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la crisis de mortalidad por alcohol

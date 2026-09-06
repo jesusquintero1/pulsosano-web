@@ -15,6 +15,7 @@ tags:
   - "deteccion-temprana"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3bd4/live/21f02320-5526-11f1-8b8c-6d33e1d5abb6.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El problema invisible

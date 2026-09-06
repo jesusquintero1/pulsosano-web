@@ -15,6 +15,7 @@ tags:
   - "brotes-infecciosos"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/ministra-sanidad-ministro-interior-javier-barbancho.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la crisis sanitaria

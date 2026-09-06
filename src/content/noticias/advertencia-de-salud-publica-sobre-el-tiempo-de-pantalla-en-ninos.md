@@ -15,6 +15,7 @@ tags:
   - "bienestar"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/04/GettyImages-2259774311-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la advertencia

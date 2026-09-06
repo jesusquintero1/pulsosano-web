@@ -34,6 +34,7 @@ entidades:
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/SARS-CoV-2"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un panorama respiratorio tranquilo en Europa

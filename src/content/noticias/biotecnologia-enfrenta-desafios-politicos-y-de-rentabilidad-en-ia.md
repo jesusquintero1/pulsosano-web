@@ -15,6 +15,7 @@ tags:
   - "competencia-global"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/06/DSC03794-2-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la conferencia

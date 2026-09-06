@@ -15,6 +15,7 @@ tags:
   - "investigacion-neurologica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/dibujo_cerebro_1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la mielina y su rol en la salud neuronal

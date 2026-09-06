@@ -14,6 +14,7 @@ tags:
   - "atencion-medica"
   - "seguridad-sanitaria"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una década sin avances

@@ -15,6 +15,7 @@ tags:
   - "etiopia"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/901d/live/9a4ff710-4a35-11f1-a70d-c72ff4101914.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del caso

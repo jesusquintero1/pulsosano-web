@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Sistema_Nacional_de_Salud_(Espa%C3%B1a)"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/cribado_ok.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un paso legislativo hacia la equidad en la detección temprana

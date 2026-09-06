@@ -15,6 +15,7 @@ tags:
   - "dispositivos-portatiles"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/08/AdobeStock_375197467-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una nueva generación de monitores portátiles

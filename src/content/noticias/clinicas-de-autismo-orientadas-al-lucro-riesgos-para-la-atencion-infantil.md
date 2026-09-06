@@ -14,6 +14,7 @@ tags:
   - "calidad-asistencial"
   - "terapias"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La expansión de una industria terapéutica

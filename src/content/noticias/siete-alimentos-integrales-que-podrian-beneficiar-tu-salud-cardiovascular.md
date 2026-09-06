@@ -14,6 +14,7 @@ tags:
   - "fibra"
   - "alimentacion-saludable"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué son los granos integrales?

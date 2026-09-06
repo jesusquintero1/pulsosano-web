@@ -15,6 +15,7 @@ tags:
   - "artralgia"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Brie-Hyde-1-1296x728-header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un caso de confusión diagnóstica

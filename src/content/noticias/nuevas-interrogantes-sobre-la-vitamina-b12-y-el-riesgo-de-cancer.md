@@ -14,6 +14,7 @@ tags:
   - "nutricion"
   - "investigacion-clinica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El rol tradicional de la vitamina B12

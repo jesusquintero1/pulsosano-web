@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://static01.nyt.com/images/2026/05/18/multimedia/18int-congo-ebola-1-kgbm/18int-congo-ebola-1-kgbm-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

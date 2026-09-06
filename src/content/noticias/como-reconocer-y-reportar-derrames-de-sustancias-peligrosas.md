@@ -14,6 +14,7 @@ tags:
   - "sustancias-peligrosas"
   - "proteccion-comunitaria"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de los derrames químicos

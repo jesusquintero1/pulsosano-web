@@ -14,6 +14,7 @@ tags:
   - "piel"
   - "urgencia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué son las infecciones necrotizantes de la piel?

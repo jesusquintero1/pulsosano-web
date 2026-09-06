@@ -14,6 +14,7 @@ tags:
   - "salud-mental-profesionales"
   - "investigacion-cualitativa"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El sufrimiento invisible de los profesionales sanitarios

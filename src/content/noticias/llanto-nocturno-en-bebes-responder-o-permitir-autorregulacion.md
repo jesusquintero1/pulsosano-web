@@ -15,6 +15,7 @@ tags:
   - "pediatria"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2026/04/22/69e8e5dc605d86-79549253.r_d.839-1781-6400.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del debate sobre el llanto nocturno

@@ -15,6 +15,7 @@ tags:
   - "espacios-verdes"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/04/11/69da0b1861f8d3-72466729.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: plantas y bienestar en espacios cerrados

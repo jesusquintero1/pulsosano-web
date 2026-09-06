@@ -14,6 +14,7 @@ tags:
   - "cortisol"
   - "investigacion-sensorial"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El infrasonido en nuestro entorno

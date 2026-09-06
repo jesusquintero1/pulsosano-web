@@ -15,6 +15,7 @@ tags:
   - "salud-respiratoria"
 imagen: "https://www.sciencealert.com/images/2026/05/CurlyHairedManSnoringOnBluePillow.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

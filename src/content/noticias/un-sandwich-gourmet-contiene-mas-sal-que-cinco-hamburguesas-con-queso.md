@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7632/live/437a1180-4eb0-11f1-a4e8-2309d38aa073.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

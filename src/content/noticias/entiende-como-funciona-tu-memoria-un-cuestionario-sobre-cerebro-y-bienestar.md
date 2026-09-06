@@ -15,6 +15,7 @@ tags:
   - "bienestar-mental"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/27/6a16fdad8719f6-58324608.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La memoria en la vida cotidiana

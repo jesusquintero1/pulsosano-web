@@ -15,6 +15,7 @@ tags:
   - "acceso-sanitario"
 imagen: "https://www.statnews.com/wp-content/uploads/2023/11/AdobeStock_330733321-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de los cambios fiscales

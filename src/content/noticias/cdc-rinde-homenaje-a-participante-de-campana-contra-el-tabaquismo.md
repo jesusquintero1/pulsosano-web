@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760576"
-fecha: 2025-09-30T04:00:00+00:00
+fecha: 2026-05-22T16:33:24Z
 tags:
   - "tabaquismo"
   - "campana-salud-publica"

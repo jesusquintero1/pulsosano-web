@@ -15,6 +15,7 @@ tags:
   - "hombres-jovenes"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-02/vph.jpg_1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la medida

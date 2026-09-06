@@ -15,6 +15,7 @@ tags:
   - "liderazgo-organizacional"
 imagen: "https://static01.nyt.com/images/2026/05/28/business/28BIZ-KFF-ALTMAN-top/28BIZ-KFF-ALTMAN-top-mediumSquareAt3X.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto institucional

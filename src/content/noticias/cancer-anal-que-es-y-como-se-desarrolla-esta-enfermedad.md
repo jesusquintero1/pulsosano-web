@@ -15,6 +15,7 @@ tags:
   - "salud-digestiva"
 imagen: "https://medlineplus.gov/images/nih.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es el cáncer anal?

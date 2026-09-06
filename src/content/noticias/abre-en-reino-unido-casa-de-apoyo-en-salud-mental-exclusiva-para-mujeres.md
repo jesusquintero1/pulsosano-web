@@ -15,6 +15,7 @@ tags:
   - "alternativas-hospitalizacion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/50ef/live/a7f3fc90-4eb8-11f1-b55d-0f258dce1735.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la iniciativa

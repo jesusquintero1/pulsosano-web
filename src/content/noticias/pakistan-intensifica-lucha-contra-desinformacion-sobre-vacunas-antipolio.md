@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/24a7crtt6YM/as-polio-goal-nears-pakistan-pushes-against-vaccine-misinformation-idUSKCN1QP1RV"
-fecha: 2019-03-08T15:39:16+00:00
+fecha: 2026-05-18T21:20:28Z
 tags:
   - "poliomielitis"
   - "desinformacion-vacunas"
@@ -15,6 +15,7 @@ tags:
   - "inmunizacion"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la erradicación de la poliomielitis

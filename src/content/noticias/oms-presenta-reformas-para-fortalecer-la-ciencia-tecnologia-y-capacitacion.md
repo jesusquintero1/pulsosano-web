@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/SfU7Y-C29tA/who-chief-unveils-reforms-with-more-science-apps-and-an-academy-idUSKCN1QN27T"
-fecha: 2019-03-08T09:10:43+00:00
+fecha: 2026-05-19T16:55:09Z
 tags:
   - "oms"
   - "reforma-sanitaria"
@@ -15,6 +15,7 @@ tags:
   - "capacitacion-profesional"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las reformas

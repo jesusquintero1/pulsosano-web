@@ -15,6 +15,7 @@ tags:
   - "acceso-medicamentos"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/medical-marijuana-growing-1296x728-header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la reclasificación

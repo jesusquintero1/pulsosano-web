@@ -15,6 +15,7 @@ tags:
   - "capacitacion"
 imagen: "https://medlineplus.gov/images/videocamera.gif"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

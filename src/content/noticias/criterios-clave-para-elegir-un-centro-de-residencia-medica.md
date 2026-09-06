@@ -15,6 +15,7 @@ tags:
   - "especializacion"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-03/hospital-lapaz.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la decisión

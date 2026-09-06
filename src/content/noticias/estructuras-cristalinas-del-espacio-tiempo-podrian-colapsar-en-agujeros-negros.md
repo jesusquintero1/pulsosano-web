@@ -15,6 +15,7 @@ tags:
   - "investigacion-fundamental"
 imagen: "https://www.sciencealert.com/images/2026/05/crystal-collapse.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: ¿Qué son los cristales de espacio-tiempo?

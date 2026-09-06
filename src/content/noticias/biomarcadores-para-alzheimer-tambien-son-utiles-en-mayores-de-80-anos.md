@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Biomarcador"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/anciano_ok.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un cambio de perspectiva en el diagnóstico del Alzheimer

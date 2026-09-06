@@ -15,6 +15,7 @@ tags:
   - "desarrollo-personal"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/25/6a145ab688bd61-20329290.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: ¿Qué es la verdadera seguridad en uno mismo?

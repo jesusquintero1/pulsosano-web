@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://medlineplus.gov/images/videocamera.gif"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es el ozono a nivel del suelo

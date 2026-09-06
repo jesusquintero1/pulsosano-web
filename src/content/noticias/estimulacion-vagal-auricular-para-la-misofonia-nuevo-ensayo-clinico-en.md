@@ -14,6 +14,7 @@ tags:
   - "ensayo-clinico"
   - "trastorno-auditivo"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es la misofonía y por qué es un problema de salud?

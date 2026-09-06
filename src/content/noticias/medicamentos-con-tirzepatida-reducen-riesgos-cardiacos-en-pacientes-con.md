@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Tirzepatide-Risk-GettyImages-2267012309-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

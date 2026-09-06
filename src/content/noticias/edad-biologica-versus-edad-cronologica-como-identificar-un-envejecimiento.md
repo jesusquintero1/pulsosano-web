@@ -15,6 +15,7 @@ tags:
   - "salud-preventiva"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/20/6a0d59ef6f1897-64777512.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: más allá de los años en el calendario

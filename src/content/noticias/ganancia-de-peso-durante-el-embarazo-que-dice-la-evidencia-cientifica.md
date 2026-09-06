@@ -14,6 +14,7 @@ tags:
   - "salud-materna"
   - "cdc"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: por qué importa el peso en el embarazo

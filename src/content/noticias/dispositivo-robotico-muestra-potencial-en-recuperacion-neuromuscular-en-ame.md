@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/neuronas.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

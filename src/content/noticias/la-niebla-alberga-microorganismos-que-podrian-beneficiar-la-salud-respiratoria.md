@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "https://www.sciencealert.com/images/2026/05/LookingUpThroughFogFilledForest.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La niebla como ecosistema vivo

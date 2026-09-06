@@ -14,6 +14,7 @@ tags:
   - "psicosocial"
   - "cuidado-integral"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: una brecha en la investigación sobre demencia

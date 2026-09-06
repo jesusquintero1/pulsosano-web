@@ -14,6 +14,7 @@ tags:
   - "juventud"
   - "adiccion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una nueva amenaza en expansión

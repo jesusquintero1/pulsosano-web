@@ -15,6 +15,7 @@ tags:
   - "investigacion-oncologica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/22/6a10c564d5c8b9-98732391.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Las mitocondrias y la inmunidad

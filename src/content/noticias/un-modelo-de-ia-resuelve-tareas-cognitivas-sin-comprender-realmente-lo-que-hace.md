@@ -14,6 +14,7 @@ tags:
   - "investigacion"
   - "neurociencia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El debate sobre la unidad de la mente

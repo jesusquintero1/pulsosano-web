@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "australia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la detección de fibrilación auricular

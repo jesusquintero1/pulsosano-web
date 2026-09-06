@@ -15,6 +15,7 @@ tags:
   - "posparto"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a1d6/live/5c17cf60-4894-11f1-891e-47c72be732a7.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la inequidad tarifaria

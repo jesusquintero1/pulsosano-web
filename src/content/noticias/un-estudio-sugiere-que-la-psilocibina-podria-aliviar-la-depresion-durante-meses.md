@@ -15,6 +15,7 @@ tags:
   - "tratamiento-innovador"
 imagen: "https://www.sciencealert.com/images/2026/05/psilocybin-eases-depression.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

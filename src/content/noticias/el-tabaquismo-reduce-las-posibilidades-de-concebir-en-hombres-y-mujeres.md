@@ -15,6 +15,7 @@ tags:
   - "dejar-de-fumar"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2021/08/26/el-estres-provocado-por-el-aumento-de-la-poblacion-puede-causar-un-descenso-de-la-fertilidad-humana.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: más allá de pulmones y corazón

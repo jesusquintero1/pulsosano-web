@@ -15,6 +15,7 @@ tags:
   - "profesionales-salud"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/mario_padilla_delange.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la migración de profesionales sanitarios

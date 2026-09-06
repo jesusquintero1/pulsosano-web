@@ -15,6 +15,7 @@ tags:
   - "emergencia-medica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fe17/live/a3996890-4b8c-11f0-8efc-193ffd471116.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: dos condiciones relacionadas con el calor

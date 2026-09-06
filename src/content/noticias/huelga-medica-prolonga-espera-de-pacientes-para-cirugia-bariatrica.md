@@ -15,6 +15,7 @@ tags:
   - "sistemas-salud"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8ba4/live/60a6aa40-3333-11f1-8873-2d60fc58e0b0.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la crisis quirúrgica

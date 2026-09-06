@@ -15,6 +15,7 @@ tags:
   - "derechos-trabajadores"
 imagen: "https://static01.nyt.com/images/2026/05/28/science/28sci-workplace-genes/28sci-workplace-genes-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El auge de las puntuaciones de riesgo poligénico

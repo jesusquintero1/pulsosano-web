@@ -15,6 +15,7 @@ tags:
   - "legislacion-espana"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2025-09/protestas-estatuto-marco-di-lolli.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto normativo

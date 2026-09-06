@@ -15,6 +15,7 @@ tags:
   - "diagnostico"
 imagen: "https://medlineplus.gov/images/nih.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del trastorno

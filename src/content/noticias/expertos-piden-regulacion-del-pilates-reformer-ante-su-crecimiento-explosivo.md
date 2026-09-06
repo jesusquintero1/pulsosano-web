@@ -15,6 +15,7 @@ tags:
   - "bienestar"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7657/live/382b7450-44b4-11f1-ac78-2112837ce2aa.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El auge del Pilates Reformer

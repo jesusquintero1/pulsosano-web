@@ -14,6 +14,7 @@ tags:
   - "investigacion-clinica"
   - "medicina-anti-envejecimiento"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Replanteando el papel de las células senescentes

@@ -14,6 +14,7 @@ tags:
   - "covid-19"
   - "intervenciones-psicoeducativas"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

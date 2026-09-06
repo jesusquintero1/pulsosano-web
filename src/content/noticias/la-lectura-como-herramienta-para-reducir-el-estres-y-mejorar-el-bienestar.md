@@ -15,6 +15,7 @@ tags:
   - "habitos-saludables"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/04/30/69f304080ab577-51746604.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la lectura como práctica de bienestar

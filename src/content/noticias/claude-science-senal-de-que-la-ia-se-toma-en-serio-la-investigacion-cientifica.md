@@ -28,6 +28,7 @@ entidades:
     tipo: "Organization"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/06/AIPrognosis_Wordpress_Anthropic-1024x576.png"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un giro hacia la ciencia real

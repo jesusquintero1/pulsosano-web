@@ -15,6 +15,7 @@ tags:
   - "educacion-sanitaria"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/preparing-healthy-food-1296x728-header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El problema de los alimentos ultraprocesados

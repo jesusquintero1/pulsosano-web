@@ -14,6 +14,7 @@ tags:
   - "balance-energetico"
   - "salud-metabolica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: ¿Qué son las calorías?

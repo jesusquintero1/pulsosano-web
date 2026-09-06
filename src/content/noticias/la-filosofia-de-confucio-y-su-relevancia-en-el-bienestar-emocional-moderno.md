@@ -15,6 +15,7 @@ tags:
   - "autoexamen"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/03/22/69c037622b7636-66271111.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico y relevancia actual

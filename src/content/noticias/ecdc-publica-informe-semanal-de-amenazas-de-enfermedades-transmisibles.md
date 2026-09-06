@@ -29,6 +29,7 @@ entidades:
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_infecciosa"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## ¿Qué es el informe semanal del ECDC?

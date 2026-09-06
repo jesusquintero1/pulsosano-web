@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/ARN_mensajero"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/02/AdobeStock_569992414-1024x576.jpeg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un nuevo actor en el mercado del eccema

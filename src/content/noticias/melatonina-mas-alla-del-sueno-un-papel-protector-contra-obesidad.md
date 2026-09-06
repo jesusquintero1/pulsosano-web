@@ -15,6 +15,7 @@ tags:
   - "investigacion-celular"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/26/6a157876188894-79311827.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: más allá de la hormona del sueño

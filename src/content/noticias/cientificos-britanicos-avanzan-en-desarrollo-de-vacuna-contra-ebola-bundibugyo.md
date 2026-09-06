@@ -15,6 +15,7 @@ tags:
   - "virus"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/61c5/live/41f2fd20-55d3-11f1-9a5f-8f70d4bfa4fc.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la amenaza

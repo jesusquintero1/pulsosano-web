@@ -14,6 +14,7 @@ tags:
   - "nutricion"
   - "metabolismo"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el papel de la leucina en la salud celular

@@ -28,6 +28,7 @@ entidades:
     tipo: "Thing"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/06/SR_41_STILL-2-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un evento que toma el pulso a la industria biotecnológica

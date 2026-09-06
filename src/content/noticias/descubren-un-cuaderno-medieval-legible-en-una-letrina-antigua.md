@@ -15,6 +15,7 @@ tags:
   - "saneamiento-medieval"
 imagen: "https://www.sciencealert.com/images/2026/05/notebook-page.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico y arqueológico

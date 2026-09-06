@@ -14,6 +14,7 @@ tags:
   - "servicios-emergencia"
   - "cuidado-ninos"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La importancia de reconocer emergencias pediátricas

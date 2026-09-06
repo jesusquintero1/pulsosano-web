@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "https://www.sciencealert.com/images/2025/12/young-person-drinking-water-from-a-glass.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El problema de los microplásticos en el agua

@@ -15,6 +15,7 @@ tags:
   - "salud-metabolica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Menopause-Plant-Forward-GettyImages-2070976893-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el desafío del peso en la menopausia

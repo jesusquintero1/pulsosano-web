@@ -15,6 +15,7 @@ tags:
   - "vertebrados"
 imagen: "https://www.psypost.org/wp-content/uploads/2022/12/thalamus-hypothalamus-and-pineal-gland-in-the-brain.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El origen evolutivo de la visión humana

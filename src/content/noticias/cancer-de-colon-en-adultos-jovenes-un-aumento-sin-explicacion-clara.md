@@ -14,6 +14,7 @@ tags:
   - "epidemiologia"
   - "salud-preventiva"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un patrón inesperado

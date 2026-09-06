@@ -15,6 +15,7 @@ tags:
   - "salud-integral"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Nicole-Kidman-GettyImages-2266122862-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es una doula de muerte

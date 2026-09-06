@@ -15,6 +15,7 @@ tags:
   - "espana"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2022/09/02/un-estudio-en-ratones-muestra-que-una-terapia-combinada-detiene-la-progresion-de-cancer-de-pulmon-de-celulas-pequenas.r_d.679-369.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

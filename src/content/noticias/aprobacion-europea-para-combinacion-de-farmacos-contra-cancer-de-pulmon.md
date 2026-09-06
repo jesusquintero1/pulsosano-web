@@ -6,7 +6,7 @@ categoria: "Avances Médicos"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/GVcNj3yx2u4/roche-gets-european-approval-for-tecentriq-combo-vs-lung-cancer-idUSKCN1QP0JJ"
-fecha: 2019-03-08T06:20:59+00:00
+fecha: 2026-05-19T20:01:23Z
 tags:
   - "cancer-de-pulmon"
   - "aprobacion-regulatoria"
@@ -15,6 +15,7 @@ tags:
   - "europa"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del tratamiento del cáncer de pulmón

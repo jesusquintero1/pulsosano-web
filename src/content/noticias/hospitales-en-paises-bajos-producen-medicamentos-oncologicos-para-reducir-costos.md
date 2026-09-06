@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/B5tsVOezTUM/dutch-join-backlash-at-expensive-drugs-by-making-their-own-idUSKCN1QP0M4"
-fecha: 2019-03-08T07:17:31+00:00
+fecha: 2026-05-19T20:01:23Z
 tags:
   - "medicamentos-oncologicos"
   - "costos-sanitarios"
@@ -15,6 +15,7 @@ tags:
   - "politica-sanitaria"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La crisis de precios en oncología

@@ -15,6 +15,7 @@ tags:
   - "felicidad"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6359/live/3fa2db50-44ab-11f1-b55d-0f258dce1735.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

@@ -34,6 +34,7 @@ entidades:
     tipo: "Drug"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2021-12/esclerosis%20multiple.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto: dos fármacos, una misma diana terapéutica

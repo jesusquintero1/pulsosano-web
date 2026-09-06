@@ -14,6 +14,7 @@ tags:
   - "neurologia"
   - "terapia-lenguaje"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la enfermedad

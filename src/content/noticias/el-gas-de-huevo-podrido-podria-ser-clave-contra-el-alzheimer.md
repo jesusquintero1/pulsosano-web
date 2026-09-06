@@ -14,6 +14,7 @@ tags:
   - "proteina-cse"
   - "investigacion-cerebral"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un gas inesperado en el cerebro

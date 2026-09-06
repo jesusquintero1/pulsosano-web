@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760190"
-fecha: 2025-09-05T16:46:00+00:00
+fecha: 2026-05-23T06:41:25Z
 tags:
   - "salmonella"
   - "brote-alimentario"
@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "entrega-domicilio"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

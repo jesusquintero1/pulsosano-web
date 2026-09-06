@@ -14,6 +14,7 @@ tags:
   - "proteccion-consumidor"
   - "acceso-salud"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la protección al paciente

@@ -15,6 +15,7 @@ tags:
   - "administracion-publica"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/diamantas-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de un nombramiento inesperado

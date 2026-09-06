@@ -15,6 +15,7 @@ tags:
   - "politica-sanitaria"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/consejo_gobierno_asturias.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la medida

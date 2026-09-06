@@ -15,6 +15,7 @@ tags:
   - "historia-medica"
 imagen: "https://static01.nyt.com/images/2026/05/28/multimedia/28xp-rsv-gbmf/28xp-rsv-gbmf-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico de un ensayo olvidado

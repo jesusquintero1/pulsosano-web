@@ -15,6 +15,7 @@ tags:
   - "enfermedades-infecciosas"
 imagen: "https://static01.nyt.com/images/2026/05/22/multimedia/22xp-bangladesh-measles-lhkv/22xp-bangladesh-measles-lhkv-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

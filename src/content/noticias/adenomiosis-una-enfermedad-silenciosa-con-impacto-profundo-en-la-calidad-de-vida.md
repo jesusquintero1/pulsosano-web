@@ -15,6 +15,7 @@ tags:
   - "mujeres"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f115/live/ec680ba0-544e-11f1-bc99-1d37de959855.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es la adenomiosis

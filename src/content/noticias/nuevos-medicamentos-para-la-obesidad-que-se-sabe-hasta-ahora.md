@@ -28,6 +28,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Obesidad"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/obesidad_1.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Nota importante para el lector

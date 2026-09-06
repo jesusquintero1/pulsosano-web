@@ -14,6 +14,7 @@ tags:
   - "paises-bajos-ingresos"
   - "politica-publica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto global de la alimentación escolar

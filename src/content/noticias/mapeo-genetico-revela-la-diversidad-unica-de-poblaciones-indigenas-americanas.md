@@ -14,6 +14,7 @@ tags:
   - "seleccion-natural"
   - "medicina-personalizada"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico y científico

@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/diseno_sin_titulo_10.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la iniciativa

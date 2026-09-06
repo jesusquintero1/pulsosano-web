@@ -30,6 +30,7 @@ entidades:
     tipo: "Organization"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/medico-manifestacion-bilbao-efe.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un conflicto que no encuentra salida

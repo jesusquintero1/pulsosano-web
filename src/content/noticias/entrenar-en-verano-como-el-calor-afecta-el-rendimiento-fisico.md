@@ -15,6 +15,7 @@ tags:
   - "fisiologia-del-ejercicio"
 imagen: "https://cuidateplus.marca.com/sites/default/files/styles/ratio_16_9/public/2026-06/jose-ruiz%20%284%29.jpg.webp?itok=7KQ-Wz3b"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Cómo el calor modifica la fisiología del ejercicio

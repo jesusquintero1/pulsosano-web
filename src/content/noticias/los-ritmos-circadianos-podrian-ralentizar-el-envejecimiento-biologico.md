@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "https://www.sciencealert.com/images/2026/05/man-old-young-face.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

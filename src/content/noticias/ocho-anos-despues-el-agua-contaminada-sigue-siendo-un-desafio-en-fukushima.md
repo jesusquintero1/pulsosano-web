@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/YBJObsU3wb0/eight-years-on-water-woes-threaten-fukushima-cleanup-idUSKCN1QP0MA"
-fecha: 2019-03-08T13:33:07+00:00
+fecha: 2026-05-18T21:20:28Z
 tags:
   - "fukushima"
   - "agua-contaminada"

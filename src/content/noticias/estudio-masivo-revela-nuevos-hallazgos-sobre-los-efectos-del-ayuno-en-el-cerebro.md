@@ -15,6 +15,7 @@ tags:
   - "salud-cognitiva"
 imagen: "https://www.sciencealert.com/images/2025/11/Empty-plate-with-cutlery.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

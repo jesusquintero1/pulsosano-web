@@ -15,6 +15,7 @@ tags:
   - "adaptacion"
 imagen: "https://www.sciencealert.com/images/2026/05/Side-Profile-of-a-woman-with-dark-hair-on-a-warm-background.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un problema de salud desigual

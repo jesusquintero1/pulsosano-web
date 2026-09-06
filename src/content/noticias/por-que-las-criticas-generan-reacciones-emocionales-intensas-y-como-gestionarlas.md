@@ -15,6 +15,7 @@ tags:
   - "comunicacion"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/13/6a047f242d1667-73469682.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la vulnerabilidad ante la crítica

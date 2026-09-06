@@ -14,6 +14,7 @@ tags:
   - "comunicacion-medica"
   - "atencion-emergencias"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la atención en urgencias

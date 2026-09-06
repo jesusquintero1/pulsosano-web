@@ -15,6 +15,7 @@ tags:
   - "viajes-internacionales"
 imagen: "https://static01.nyt.com/images/2026/05/14/multimedia/14dc-hantavirus-quarantine-qphg/14dc-hantavirus-quarantine-qphg-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

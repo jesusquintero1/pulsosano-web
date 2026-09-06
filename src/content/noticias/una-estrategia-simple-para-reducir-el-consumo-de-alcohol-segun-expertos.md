@@ -15,6 +15,7 @@ tags:
   - "reduccion-consumo"
 imagen: "https://www.sciencealert.com/images/2025/11/person-filling-beer-glass-.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

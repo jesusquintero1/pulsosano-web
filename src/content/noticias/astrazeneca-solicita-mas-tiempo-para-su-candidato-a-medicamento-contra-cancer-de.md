@@ -15,6 +15,7 @@ tags:
   - "regulacion-farmaceutica"
 imagen: "https://www.statnews.com/wp-content/uploads/2015/11/PHARMALOT_LITTLE-copy-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto regulatorio

@@ -6,7 +6,7 @@ categoria: "Investigación Clínica"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/fegy_QLk01U/beer-first-or-wine-either-way-might-not-be-fine-idUSKCN1QO2BJ"
-fecha: 2019-03-07T18:15:50+00:00
+fecha: 2026-05-20T20:27:58Z
 tags:
   - "resaca"
   - "alcohol"
@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la creencia popular

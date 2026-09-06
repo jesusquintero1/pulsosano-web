@@ -15,6 +15,7 @@ tags:
   - "fuerza-fisica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/wall-push-up-1296x728-header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es el ejercicio excéntrico

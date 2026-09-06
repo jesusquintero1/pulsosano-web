@@ -15,6 +15,7 @@ tags:
   - "negociacion-sanitaria"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2022-11/concentracion_hoy_en_la_sede_del_ics_medicos_de_cataluna.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la medida

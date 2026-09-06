@@ -15,6 +15,7 @@ tags:
   - "aislamiento"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/hospital-gomez-ulla-_sergio-enriquez.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del caso

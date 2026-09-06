@@ -15,6 +15,7 @@ tags:
   - "regulacion"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/s3___bgmp-arc_arc-feeds_generic-photos_to-arc_ryanabortion5met-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la demanda

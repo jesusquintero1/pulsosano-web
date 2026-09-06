@@ -15,6 +15,7 @@ tags:
   - "oncologia"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/26/6a1570169c5864-72493898.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Una revolución en inmunología del cáncer

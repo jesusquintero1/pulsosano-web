@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2025/10/16/68f10e12ec12e.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la urgencia del diagnóstico temprano

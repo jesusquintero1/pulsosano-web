@@ -14,6 +14,7 @@ tags:
   - "salud-infantil"
   - "contagio"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es el herpes labial?

@@ -15,6 +15,7 @@ tags:
   - "urgencias"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-04/manifestacion_hoy_mc_foto.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la protesta

@@ -14,6 +14,7 @@ tags:
   - "procedimientos-dentales"
   - "evolucion-humana"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico de la medicina antigua

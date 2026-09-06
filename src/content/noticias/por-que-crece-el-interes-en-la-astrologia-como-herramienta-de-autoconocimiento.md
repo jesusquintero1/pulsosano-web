@@ -15,6 +15,7 @@ tags:
   - "espiritualidad"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/15/6a06de7155f520-55143265.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El resurgimiento de la astrología en la actualidad

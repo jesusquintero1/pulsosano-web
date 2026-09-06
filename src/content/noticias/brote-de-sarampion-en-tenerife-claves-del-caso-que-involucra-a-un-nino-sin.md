@@ -34,6 +34,7 @@ entidades:
     tipo: "Organization"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/mujer-con-sarampion-cordon-press.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un brote que pone el foco en la vacunación

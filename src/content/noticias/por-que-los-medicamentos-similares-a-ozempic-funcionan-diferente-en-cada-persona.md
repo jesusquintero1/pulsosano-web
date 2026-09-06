@@ -15,6 +15,7 @@ tags:
   - "obesidad"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2025/02/25/una-mujer-se-inyecta-ozempic-con-una-pluma-precargada.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: variabilidad en la respuesta a medicamentos

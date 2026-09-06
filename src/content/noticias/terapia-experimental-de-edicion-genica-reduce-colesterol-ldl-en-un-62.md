@@ -15,6 +15,7 @@ tags:
   - "terapia-innovadora"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2024-07/ldl_muestra_sangre.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

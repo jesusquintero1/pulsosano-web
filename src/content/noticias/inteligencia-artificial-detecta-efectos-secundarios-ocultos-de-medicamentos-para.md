@@ -14,6 +14,7 @@ tags:
   - "glp-1"
   - "redes-sociales"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Vigilancia de medicamentos en la era digital

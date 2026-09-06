@@ -15,6 +15,7 @@ tags:
   - "financiamiento-salud"
 imagen: "https://static01.nyt.com/images/2026/05/20/multimedia/20dc-ebola-response-wjcg/20dc-ebola-response-wjcg-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la vigilancia de enfermedades en África

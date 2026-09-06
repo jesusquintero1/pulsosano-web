@@ -15,6 +15,7 @@ tags:
   - "medios-digitales"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/05/man-viewing-adult-content.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

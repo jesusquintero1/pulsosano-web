@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f9b6/live/e5da45c0-477c-11f1-b55d-0f258dce1735.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es el hantavirus?

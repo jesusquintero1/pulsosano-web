@@ -14,6 +14,7 @@ tags:
   - "investigacion-clinica"
   - "tratamiento"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El enigma del dolor que no cesa

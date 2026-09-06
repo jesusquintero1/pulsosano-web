@@ -14,6 +14,7 @@ tags:
   - "razonamiento-diagnostico"
   - "tecnologia-sanitaria"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El dilema de la tecnología en la educación médica

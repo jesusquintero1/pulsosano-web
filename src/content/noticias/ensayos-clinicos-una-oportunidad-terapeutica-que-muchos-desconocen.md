@@ -15,6 +15,7 @@ tags:
   - "salud-latinoamericana"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/quimioterapia-en-hospital.-shutterstock.gif"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: una puerta abierta a la innovación

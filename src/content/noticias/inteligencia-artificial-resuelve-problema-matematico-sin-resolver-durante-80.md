@@ -15,6 +15,7 @@ tags:
   - "innovacion-tecnologica"
 imagen: "https://www.sciencealert.com/images/2026/05/math-solutions-on-board.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto del descubrimiento

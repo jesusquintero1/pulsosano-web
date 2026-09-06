@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/TP53"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/06/D6UM5V23UHPBFYX73VT3BEWFMU-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un científico que dedicó su vida a las familias con cáncer hereditario

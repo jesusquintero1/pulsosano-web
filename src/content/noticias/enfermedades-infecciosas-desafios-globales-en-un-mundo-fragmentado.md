@@ -14,6 +14,7 @@ tags:
   - "cooperacion-internacional"
   - "fragmentacion-sistemas-salud"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto global de las enfermedades infecciosas

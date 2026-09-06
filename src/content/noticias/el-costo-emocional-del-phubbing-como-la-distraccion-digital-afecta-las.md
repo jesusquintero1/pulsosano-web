@@ -15,6 +15,7 @@ tags:
   - "mindfulness"
 imagen: "https://www.psypost.org/wp-content/uploads/2023/12/annoyed-woman-while-man-is-talking-on-the-phone-phubbing.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un fenómeno cada vez más común

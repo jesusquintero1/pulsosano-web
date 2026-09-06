@@ -6,7 +6,7 @@ categoria: "Investigación Clínica"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/26WmrdDEj_8/long-term-obesity-tied-to-higher-dementia-risk-in-healthy-older-adults-idUSKCN1QO2L7"
-fecha: 2019-03-07T21:01:37+00:00
+fecha: 2026-05-19T23:12:05Z
 tags:
   - "obesidad"
   - "demencia"
@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

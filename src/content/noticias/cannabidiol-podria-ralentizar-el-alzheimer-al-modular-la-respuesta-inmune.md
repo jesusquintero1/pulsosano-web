@@ -14,6 +14,7 @@ tags:
   - "investigacion-cerebral"
   - "neuroproteccion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La inflamación cerebral y el Alzheimer

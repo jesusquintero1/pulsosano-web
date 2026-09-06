@@ -15,6 +15,7 @@ tags:
   - "investigacion-medica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/efef/live/f79080f0-4de8-11f1-9cc8-93479330ab4b.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El desafío actual en la búsqueda de tratamientos neurológicos

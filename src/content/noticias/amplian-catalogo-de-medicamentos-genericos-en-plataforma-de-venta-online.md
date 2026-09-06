@@ -15,6 +15,7 @@ tags:
   - "plataformas-digitales"
 imagen: "https://static01.nyt.com/images/2026/05/18/multimedia/18biz-trump-drugs-qphb/18biz-trump-drugs-qphb-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la iniciativa

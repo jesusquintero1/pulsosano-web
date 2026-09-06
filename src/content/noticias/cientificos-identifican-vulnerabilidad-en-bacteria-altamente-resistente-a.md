@@ -15,6 +15,7 @@ tags:
   - "nuevos-tratamientos"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2017/02/27/430788.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

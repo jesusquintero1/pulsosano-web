@@ -15,6 +15,7 @@ tags:
   - "salud-metabolica"
 imagen: "https://www.sciencealert.com/images/2025/12/Feet-on-a-scale-with-fitness-equipment-in-the-background.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

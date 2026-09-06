@@ -15,6 +15,7 @@ tags:
   - "aislamiento"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/51c0/live/d770dde0-23bf-11f1-934f-036468834728.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de las políticas de aislamiento

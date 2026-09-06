@@ -15,6 +15,7 @@ tags:
   - "tratamiento"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Weight-Surgeries-GettyImages-1475243347-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un cambio en el panorama del tratamiento de la obesidad

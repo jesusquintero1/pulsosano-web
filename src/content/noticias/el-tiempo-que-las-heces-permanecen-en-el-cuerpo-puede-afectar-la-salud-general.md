@@ -15,6 +15,7 @@ tags:
   - "investigacion-clinica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/04/Poop-health-Stocksy_txpd6d279b5FjG400_Medium_1030107-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El viaje de las heces en el cuerpo

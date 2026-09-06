@@ -15,6 +15,7 @@ tags:
   - "cuidado-piel"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Office-Air-Stocksy_txpe8db1788V6H400_Medium_4657583-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El fenómeno viral de la "teoría del aire de oficina"

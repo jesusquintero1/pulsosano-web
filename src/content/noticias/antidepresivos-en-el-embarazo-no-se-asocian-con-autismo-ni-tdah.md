@@ -15,6 +15,7 @@ tags:
   - "salud-perinatal"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/antidepressant_use_pregnancy_autism_ADHD_children-header-1296x728-1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

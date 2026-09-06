@@ -15,6 +15,7 @@ tags:
   - "tratamiento"
 imagen: "https://www.sciencealert.com/images/2026/05/WeightScales-1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del hallazgo

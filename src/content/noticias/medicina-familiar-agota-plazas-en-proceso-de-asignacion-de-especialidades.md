@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-04/adjudicacion_plazas_eir_2026.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del proceso de adjudicación

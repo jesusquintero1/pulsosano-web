@@ -14,6 +14,7 @@ tags:
   - "desarrollo-infantil"
   - "regulacion-tecnologica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El cambio en la función de las redes sociales

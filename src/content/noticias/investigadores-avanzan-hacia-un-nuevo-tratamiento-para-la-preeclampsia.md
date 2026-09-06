@@ -15,6 +15,7 @@ tags:
   - "salud-reproductiva"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1b12/live/b01847a0-52dc-11f1-b682-cf91850925ea.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la preeclampsia

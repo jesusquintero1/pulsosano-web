@@ -34,6 +34,7 @@ entidades:
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/C%C3%A9rvix"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## ¿Qué se considera un parto prematuro?

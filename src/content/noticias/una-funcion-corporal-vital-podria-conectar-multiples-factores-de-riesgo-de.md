@@ -15,6 +15,7 @@ tags:
   - "prevencion"
 imagen: "https://www.sciencealert.com/images/2026/05/glow-sleep.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La complejidad de la demencia

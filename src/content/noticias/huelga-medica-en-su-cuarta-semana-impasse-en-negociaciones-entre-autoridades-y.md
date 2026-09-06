@@ -15,6 +15,7 @@ tags:
   - "acceso-sanitario"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/concentracion_medicos_hospital_clinico._foto_johanna_aznar_2.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del conflicto

@@ -14,6 +14,7 @@ tags:
   - "apoe"
   - "prevencion-cognitiva"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: genética y nutrición en la salud cerebral

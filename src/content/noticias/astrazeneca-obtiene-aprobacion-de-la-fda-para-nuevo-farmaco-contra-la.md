@@ -15,6 +15,7 @@ tags:
   - "salud-cardiovascular"
 imagen: "https://www.statnews.com/wp-content/uploads/2023/06/AP22041326384203-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la aprobación

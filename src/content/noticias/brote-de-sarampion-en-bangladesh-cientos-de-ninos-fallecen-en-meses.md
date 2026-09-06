@@ -15,6 +15,7 @@ tags:
   - "salud-infantil"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5cba/live/604452f0-5967-11f1-8e96-b3dc9dcf44fd.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la crisis sanitaria

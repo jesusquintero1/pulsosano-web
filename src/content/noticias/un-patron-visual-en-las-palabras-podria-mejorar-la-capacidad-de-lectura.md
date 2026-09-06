@@ -15,6 +15,7 @@ tags:
   - "procesamiento-cerebral"
 imagen: "https://www.sciencealert.com/images/2026/02/BrownEyesStaringAtYouFromBehindShakspere.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

@@ -14,6 +14,7 @@ tags:
   - "medicamentos"
   - "geriatria"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: un cambio en los patrones de consumo

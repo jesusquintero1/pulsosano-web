@@ -14,6 +14,7 @@ tags:
   - "adolescentes"
   - "salud-neurologica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El cerebro: centro de control del cuerpo

@@ -15,6 +15,7 @@ tags:
   - "inflamacion"
 imagen: "https://www.psypost.org/wp-content/uploads/2026/05/pills.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

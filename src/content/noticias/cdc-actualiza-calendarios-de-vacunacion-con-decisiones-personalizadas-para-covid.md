@@ -6,7 +6,7 @@ categoria: "Medicina Preventiva"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=760575"
-fecha: 2025-10-06T10:03:00+00:00
+fecha: 2026-05-22T19:58:56Z
 tags:
   - "vacunacion"
   - "covid-19"
@@ -14,6 +14,7 @@ tags:
   - "calendario-inmunizacion"
   - "salud-infantil"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la actualización

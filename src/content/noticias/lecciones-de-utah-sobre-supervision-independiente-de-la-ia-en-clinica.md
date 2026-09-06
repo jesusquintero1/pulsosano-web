@@ -14,6 +14,7 @@ tags:
   - "tecnologia-medica"
   - "politica-salud"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La necesidad de marcos de supervisión

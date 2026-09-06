@@ -14,6 +14,7 @@ tags:
   - "trastorno-funcional"
   - "sintomas-abdominales"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es el síndrome del intestino irritable?

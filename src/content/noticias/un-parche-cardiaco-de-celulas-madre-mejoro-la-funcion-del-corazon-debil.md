@@ -15,6 +15,7 @@ tags:
   - "ensayo-clinico"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/01/Herzpflaster_300dpi_Querformat-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la insuficiencia cardíaca avanzada

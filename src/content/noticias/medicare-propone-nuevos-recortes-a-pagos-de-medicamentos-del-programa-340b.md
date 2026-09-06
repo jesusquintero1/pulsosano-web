@@ -31,6 +31,7 @@ entidades:
     tipo: "Thing"
 imagen: "https://www.statnews.com/wp-content/uploads/2023/08/AdobeStock_385917483-1024x576.jpeg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un programa de descuentos bajo presión

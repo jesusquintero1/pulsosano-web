@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=763166"
-fecha: 2025-12-10T05:00:00+00:00
+fecha: 2026-05-21T16:44:29Z
 tags:
   - "botulismo-infantil"
   - "seguridad-alimentaria"
@@ -14,6 +14,7 @@ tags:
   - "formula-infantil"
   - "salud-publica"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

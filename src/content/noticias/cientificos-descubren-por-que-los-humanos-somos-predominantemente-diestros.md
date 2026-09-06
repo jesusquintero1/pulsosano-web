@@ -14,6 +14,7 @@ tags:
   - "bipedestacion"
   - "desarrollo-cerebral"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto evolutivo de la preferencia manual

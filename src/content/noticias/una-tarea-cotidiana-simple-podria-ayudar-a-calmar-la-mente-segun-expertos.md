@@ -15,6 +15,7 @@ tags:
   - "estres"
 imagen: "https://www.sciencealert.com/images/2026/05/Brain-In-Blue-And-White-Tones-.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La búsqueda de calma en la vida moderna

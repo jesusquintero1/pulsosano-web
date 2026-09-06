@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Vigilancia_epidemiol%C3%B3gica"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un espacio de coordinación para la salud respiratoria en Europa

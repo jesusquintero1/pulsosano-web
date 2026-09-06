@@ -6,7 +6,7 @@ categoria: "Investigación Clínica"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/vD3LB70OHOQ/hip-exercises-may-improve-walking-pain-with-knee-arthritis-idUSKCN1QP1VW"
-fecha: 2019-03-08T16:28:11+00:00
+fecha: 2026-05-18T19:49:59Z
 tags:
   - "artrosis-rodilla"
   - "ejercicios-cadera"
@@ -15,6 +15,7 @@ tags:
   - "actividad-fisica"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la artrosis de rodilla

@@ -14,6 +14,7 @@ tags:
   - "neurociencia"
   - "demencia"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El papel oculto de las mitocondrias

@@ -14,6 +14,7 @@ tags:
   - "investigacion-celular"
   - "obesidad"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Lo que creíamos saber sobre las grasas

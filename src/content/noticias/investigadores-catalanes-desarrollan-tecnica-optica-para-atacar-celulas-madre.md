@@ -15,6 +15,7 @@ tags:
   - "luz-activada"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/19/6a0ca955ca68d8-58747232.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

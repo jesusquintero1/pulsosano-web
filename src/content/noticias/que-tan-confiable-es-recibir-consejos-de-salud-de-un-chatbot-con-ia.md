@@ -15,6 +15,7 @@ tags:
   - "informacion-sanitaria"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dbcd/live/93df4d00-3a6c-11f1-9368-ddaac8cf7f1d.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El auge de los asistentes digitales en salud

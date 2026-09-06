@@ -14,6 +14,7 @@ tags:
   - "servicios-urgencia"
   - "prevencion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la brecha de información en emergencias

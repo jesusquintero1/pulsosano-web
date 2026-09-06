@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/FOP_05202026_Wordpress_Featured_Image-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la práctica

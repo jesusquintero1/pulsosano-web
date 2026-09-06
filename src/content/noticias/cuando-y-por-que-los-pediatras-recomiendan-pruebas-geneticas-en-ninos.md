@@ -6,7 +6,7 @@ categoria: "Medicina Preventiva"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/eyDKjz-Tj5I/pediatricians-explain-the-how-and-why-of-genetic-testing-in-children-idUSKCN1QP1WA"
-fecha: 2019-03-08T16:32:45+00:00
+fecha: 2026-05-18T19:38:27Z
 tags:
   - "pruebas-geneticas"
   - "desarrollo-infantil"
@@ -15,6 +15,7 @@ tags:
   - "retrasos-del-desarrollo"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: cuándo surge la pregunta sobre pruebas genéticas

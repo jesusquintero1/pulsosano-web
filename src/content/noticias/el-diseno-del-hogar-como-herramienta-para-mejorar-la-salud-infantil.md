@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "prevencion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la vivienda como factor de salud

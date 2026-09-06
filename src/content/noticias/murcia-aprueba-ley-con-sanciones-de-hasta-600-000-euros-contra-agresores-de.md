@@ -15,6 +15,7 @@ tags:
   - "murcia"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-03/agresiones-a-medicos.-foto-generada-por-ia.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la iniciativa legislativa

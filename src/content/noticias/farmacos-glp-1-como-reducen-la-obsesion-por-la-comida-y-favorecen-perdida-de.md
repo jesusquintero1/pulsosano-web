@@ -15,6 +15,7 @@ tags:
   - "investigacion"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/GLP-1-Drugs-Stocksy_txpadac966dWQH400_Medium_3140880-Header.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: ¿Qué es el "ruido alimentario"?

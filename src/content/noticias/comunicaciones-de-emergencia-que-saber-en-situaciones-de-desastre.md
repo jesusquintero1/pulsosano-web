@@ -28,6 +28,7 @@ entidades:
   - nombre: "Preparación ante desastres"
     tipo: "Thing"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Contexto: comunicaciones en situaciones de emergencia

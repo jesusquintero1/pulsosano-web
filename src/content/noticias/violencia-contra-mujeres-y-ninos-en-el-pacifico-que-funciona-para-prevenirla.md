@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Revisi%C3%B3n_sistem%C3%A1tica"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una región con altas tasas de violencia y creciente liderazgo en prevención

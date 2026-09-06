@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/5R8h1MwogS4/without-vaccine-hundreds-of-children-die-in-madagascar-measles-outbreak-idUSKCN1QP0MK"
-fecha: 2019-03-08T13:13:18+00:00
+fecha: 2026-05-19T16:55:09Z
 tags:
   - "sarampion"
   - "vacunacion"
@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

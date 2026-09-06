@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
 imagen: "https://www.statnews.com/wp-content/uploads/2015/11/PHARMALOT_LITTLE-copy-1024x576.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Una IA diseñada para la ciencia farmacéutica

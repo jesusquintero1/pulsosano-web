@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/AndrillonLaure_STAT_VitalistBay-41-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la competencia global por extender la vida saludable

@@ -15,6 +15,7 @@ tags:
   - "burbujas-digitales"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2025/12/11/693acb3e293bf4-58954515.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El fenómeno de la burbuja digital

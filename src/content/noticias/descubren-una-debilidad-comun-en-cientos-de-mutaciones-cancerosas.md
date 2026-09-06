@@ -14,6 +14,7 @@ tags:
   - "terapia-dirigida"
   - "biologia-celular"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: El desafío de las mutaciones múltiples

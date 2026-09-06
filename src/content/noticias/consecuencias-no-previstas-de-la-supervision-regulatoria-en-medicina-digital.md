@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "telemedicina"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto regulatorio en medicina digital

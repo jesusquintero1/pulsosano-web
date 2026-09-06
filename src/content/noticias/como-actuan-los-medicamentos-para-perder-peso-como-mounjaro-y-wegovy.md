@@ -15,6 +15,7 @@ tags:
   - "tratamiento-farmacologico"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8acf/live/3d322ee0-8c86-11ef-8537-35d6ce5671fe.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

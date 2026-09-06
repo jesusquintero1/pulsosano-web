@@ -15,6 +15,7 @@ tags:
   - "humo"
 imagen: "https://static01.nyt.com/images/2026/05/13/multimedia/00-PALI-HIGH-stillpromo/00-PALI-HIGH-top-bmqt-mediumSquareAt3X.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El desafío de la contaminación por humo de incendios

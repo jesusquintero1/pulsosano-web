@@ -15,6 +15,7 @@ tags:
   - "autoconciencia"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/02/69f6432673ba05-10731067.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: la importancia de evaluar el bienestar

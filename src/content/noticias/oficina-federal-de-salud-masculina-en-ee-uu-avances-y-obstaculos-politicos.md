@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://www.statnews.com/wp-content/uploads/2025/07/Screenshot-2025-07-16-at-7.55.09 AM-1024x576.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto político y sanitario

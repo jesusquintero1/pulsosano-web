@@ -15,6 +15,7 @@ tags:
   - "incertidumbre"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2026/05/18/6a0af6234fea53-25930350.r_d.1300-539-11741.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El pensamiento de Nussbaum sobre las emociones

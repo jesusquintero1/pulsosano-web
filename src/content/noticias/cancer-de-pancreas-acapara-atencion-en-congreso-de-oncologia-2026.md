@@ -15,6 +15,7 @@ tags:
   - "biotecnologia"
 imagen: "https://www.statnews.com/wp-content/uploads/2021/10/AdobeStock_103266206-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un desafío oncológico persistente

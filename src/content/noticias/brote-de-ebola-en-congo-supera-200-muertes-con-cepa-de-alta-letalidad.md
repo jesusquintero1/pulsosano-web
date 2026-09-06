@@ -15,6 +15,7 @@ tags:
   - "virus"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/7224816177f7cdc91b9a48e70090a8f4c8d91f54.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del brote

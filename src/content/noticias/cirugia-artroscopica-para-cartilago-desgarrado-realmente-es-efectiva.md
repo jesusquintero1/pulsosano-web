@@ -6,7 +6,7 @@ categoria: "Investigación Clínica"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/yYEpNu8Ey7o/knee-surgery-for-torn-cartilage-may-not-be-worthwhile-idUSKCN1QO2IF"
-fecha: 2019-03-07T21:23:14+00:00
+fecha: 2026-05-20T16:59:49Z
 tags:
   - "cirugia-artroscopica"
   - "rodilla"
@@ -15,6 +15,7 @@ tags:
   - "tratamiento-conservador"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

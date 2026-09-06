@@ -6,7 +6,7 @@ categoria: "Avances Médicos"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/q05Cd-YYSSc/allergan-depression-treatment-fails-studies-shares-slip-idUSKCN1QN2RA"
-fecha: 2019-03-06T23:27:51+00:00
+fecha: 2026-05-21T16:44:29Z
 tags:
   - "depresion"
   - "ensayos-clinicos"
@@ -15,6 +15,7 @@ tags:
   - "salud-mental"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del desarrollo

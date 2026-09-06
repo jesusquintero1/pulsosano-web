@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "pediatria"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es la vigilancia del desarrollo infantil

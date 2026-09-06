@@ -15,6 +15,7 @@ tags:
   - "deteccion-temprana"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fc72/live/409bda40-4f80-11f1-ab27-43506702cb42.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

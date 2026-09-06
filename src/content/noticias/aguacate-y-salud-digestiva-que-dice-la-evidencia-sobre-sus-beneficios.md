@@ -15,6 +15,7 @@ tags:
   - "nutricion"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2024/07/14/partiendo-un-aguacate.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Composición nutricional del aguacate

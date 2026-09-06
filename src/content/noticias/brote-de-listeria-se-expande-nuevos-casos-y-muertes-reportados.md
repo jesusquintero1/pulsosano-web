@@ -6,7 +6,7 @@ categoria: "Salud Pública y Política"
 fuente:
   nombre: "CDC Newsroom"
   url: "https://tools.cdc.gov/podcasts/download.asp?m=132608&c=763161"
-fecha: 2025-09-26T04:00:00+00:00
+fecha: 2026-05-22T23:10:31Z
 tags:
   - "listeria"
   - "brote-alimentario"

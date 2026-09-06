@@ -15,6 +15,7 @@ tags:
   - "farmacologia"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2022-03/obesidad-hipertension.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del estudio

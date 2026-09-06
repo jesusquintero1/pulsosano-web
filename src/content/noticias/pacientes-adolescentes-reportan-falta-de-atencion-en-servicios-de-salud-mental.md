@@ -15,6 +15,7 @@ tags:
   - "comunicacion-clinica"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4b07/live/5feb8980-2920-11f1-a79a-77e93010d956.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

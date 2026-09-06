@@ -15,6 +15,7 @@ tags:
   - "medicina-regenerativa"
 imagen: "https://www.sciencealert.com/images/2026/05/InsulinProducingCellsInPancreas.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la diabetes tipo 1

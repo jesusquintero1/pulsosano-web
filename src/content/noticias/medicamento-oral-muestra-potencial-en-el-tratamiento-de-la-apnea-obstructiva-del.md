@@ -15,6 +15,7 @@ tags:
   - "tratamiento-innovador"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/23/6a11c8f33f2f82-33688144.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

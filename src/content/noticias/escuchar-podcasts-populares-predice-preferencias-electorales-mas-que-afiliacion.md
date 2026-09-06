@@ -15,6 +15,7 @@ tags:
   - "influencia-social"
 imagen: "https://www.psypost.org/wp-content/uploads/2024/12/joe-rogan.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La evolución de las plataformas digitales

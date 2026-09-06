@@ -6,7 +6,7 @@ categoria: "Investigación Clínica"
 fuente:
   nombre: "Reuters Health"
   url: "http://feeds.reuters.com/~r/reuters/healthNews/~3/2hipJ4XIPVE/aerobic-exercise-eases-depression-even-in-chronically-ill-idUSKCN1QN2UI"
-fecha: 2019-03-06T23:46:41+00:00
+fecha: 2026-05-21T12:52:16Z
 tags:
   - "ejercicio-aerobico"
   - "depresion"
@@ -15,6 +15,7 @@ tags:
   - "actividad-fisica"
 imagen: "http://feeds.feedburner.com/~ff/reuters/healthNews?d=yIl2AUoC8zA"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del problema

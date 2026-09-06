@@ -14,6 +14,7 @@ tags:
   - "equidad-sanitaria"
   - "reconocimiento-global"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto global de la atención primaria

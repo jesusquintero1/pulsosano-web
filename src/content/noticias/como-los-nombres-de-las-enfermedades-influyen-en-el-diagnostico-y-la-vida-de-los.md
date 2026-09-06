@@ -14,6 +14,7 @@ tags:
   - "investigacion-clinica"
   - "equidad-sanitaria"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El poder del lenguaje en medicina

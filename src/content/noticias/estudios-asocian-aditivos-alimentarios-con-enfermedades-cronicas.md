@@ -15,6 +15,7 @@ tags:
   - "salud-publica"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2025/09/08/68be9f820a278.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la investigación

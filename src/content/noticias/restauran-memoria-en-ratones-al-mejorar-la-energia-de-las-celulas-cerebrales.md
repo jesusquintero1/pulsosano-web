@@ -14,6 +14,7 @@ tags:
   - "demencia"
   - "energia-celular"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: el papel de las mitocondrias en el cerebro

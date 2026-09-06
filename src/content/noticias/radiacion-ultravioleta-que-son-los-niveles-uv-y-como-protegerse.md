@@ -15,6 +15,7 @@ tags:
   - "indice-uv"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a8a0/live/1f4e29c0-58e4-11f1-aa85-913b08133db5.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué es la radiación ultravioleta?

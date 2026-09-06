@@ -15,6 +15,7 @@ tags:
   - "metabolismo"
 imagen: "https://cuidateplus.marca.com/sites/default/files/styles/ratio_16_9/public/2026-05/Patrivera-cardio.jpg.webp?itok=fAGGvUbU"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del entrenamiento cardiovascular

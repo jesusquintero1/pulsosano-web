@@ -15,6 +15,7 @@ tags:
   - "regulacion-publicitaria"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cb31/live/60aa58e0-4ec0-11f1-ac78-2112837ce2aa.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la prevención del cáncer de piel

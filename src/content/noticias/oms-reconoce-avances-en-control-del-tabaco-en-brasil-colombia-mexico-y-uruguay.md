@@ -14,6 +14,7 @@ tags:
   - "oms"
   - "america-latina"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto de la lucha antitabaco en América Latina

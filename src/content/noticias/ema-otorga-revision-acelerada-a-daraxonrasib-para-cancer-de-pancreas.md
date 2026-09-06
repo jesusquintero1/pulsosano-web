@@ -34,6 +34,7 @@ entidades:
     tipo: "Drug"
 imagen: "https://statics-diariomedico.uecdn.es/cms/2024-05/cancer_pancreas_web.jpg"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## Un procedimiento reservado para fármacos prioritarios

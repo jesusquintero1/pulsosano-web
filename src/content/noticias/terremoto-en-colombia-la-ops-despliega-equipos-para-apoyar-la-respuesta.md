@@ -33,6 +33,7 @@ entidades:
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Terremoto"
 autorIA: "claude-sonnet-4-6"
+noindex: true
 ---
 
 ## El terremoto y su impacto inicial en el sistema de salud colombiano

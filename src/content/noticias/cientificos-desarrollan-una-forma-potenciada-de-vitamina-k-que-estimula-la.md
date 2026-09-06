@@ -14,6 +14,7 @@ tags:
   - "parkinson"
   - "investigacion-cerebral"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del descubrimiento

@@ -15,6 +15,7 @@ tags:
   - "salud-mental"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/11/6a01aca4159071-31248930.png"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La paradoja de permanecer en relaciones insatisfactorias

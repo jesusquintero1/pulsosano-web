@@ -15,6 +15,7 @@ tags:
   - "innovacion-sanitaria"
 imagen: "https://www.statnews.com/wp-content/uploads/2026/05/AdobeStock_537307051_Editorial_Use_Only-1024x576.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: La IA en los sistemas de salud

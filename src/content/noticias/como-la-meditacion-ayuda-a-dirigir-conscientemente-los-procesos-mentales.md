@@ -15,6 +15,7 @@ tags:
   - "bienestar"
 imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2026/05/20/6a0d6de6783672-22314434.jpeg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El funcionamiento continuo de la mente

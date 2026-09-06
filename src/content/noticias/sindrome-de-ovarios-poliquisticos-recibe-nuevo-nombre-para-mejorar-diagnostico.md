@@ -15,6 +15,7 @@ tags:
   - "nomenclatura-medica"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/New_Name_PCOS-header-1296x728-1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto del cambio de nomenclatura

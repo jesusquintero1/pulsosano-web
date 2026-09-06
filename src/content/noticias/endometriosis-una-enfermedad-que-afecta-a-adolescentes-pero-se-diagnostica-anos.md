@@ -15,6 +15,7 @@ tags:
   - "dolor-pelvico"
 imagen: "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f468/live/90d1c6e0-59d1-11f1-b682-cf91850925ea.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Qué es la endometriosis y cuándo comienza

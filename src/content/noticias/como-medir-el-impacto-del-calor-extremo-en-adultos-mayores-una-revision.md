@@ -14,6 +14,7 @@ tags:
   - "cambio-climatico"
   - "registros-sanitarios"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## El contexto: olas de calor y vulnerabilidad

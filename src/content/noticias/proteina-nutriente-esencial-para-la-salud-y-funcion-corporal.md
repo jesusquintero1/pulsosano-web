@@ -14,6 +14,7 @@ tags:
   - "dieta-equilibrada"
   - "salud-nutricional"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## ¿Qué son las proteínas y por qué el cuerpo las necesita?

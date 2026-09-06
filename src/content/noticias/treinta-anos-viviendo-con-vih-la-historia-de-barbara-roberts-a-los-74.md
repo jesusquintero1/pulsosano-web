@@ -15,6 +15,7 @@ tags:
   - "diagnostico-temprano"
 imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/news-Aging_with_HIV-header-1296x728-1.jpg"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: Un diagnóstico que cambió todo

@@ -14,6 +14,7 @@ tags:
   - "investigacion-molecular"
   - "nutricion"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto histórico

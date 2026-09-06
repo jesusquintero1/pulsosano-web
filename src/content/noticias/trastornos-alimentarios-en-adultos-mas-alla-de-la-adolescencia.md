@@ -15,6 +15,7 @@ tags:
   - "diagnostico-temprano"
 imagen: "https://cuidateplus.marca.com/sites/default/files/styles/ratio_16_9/public/2026-05/tca-adultos.jpg.webp?itok=kKKDSSv6"
 autorIA: "claude-haiku-4-5"
+noindex: true
 ---
 
 ## Contexto: un problema más allá de la adolescencia
