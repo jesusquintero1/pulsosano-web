@@ -33,6 +33,7 @@ entidades:
   - nombre: "Organización Mundial de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud"
+imagen: "/img/noticias/oms-publica-primeras-guias-integrales-para-el-manejo-clinico-de-filovirus.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

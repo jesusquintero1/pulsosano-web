@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Multimorbilidad"
     tipo: "MedicalCondition"
+imagen: "/img/noticias/60-de-pacientes-tribales-con-enfermedades-cardiacas-en-india-no-toman-sus.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

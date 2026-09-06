@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Insuficiencia_card%C3%ADaca"
   - nombre: "Trombectomía mecánica"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/insuficiencia-cardiaca-tras-ictus-incidencia-y-pronostico-en-oclusion-de-gran.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

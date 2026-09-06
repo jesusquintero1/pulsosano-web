@@ -14,6 +14,7 @@ tags:
   - "tratamiento-obesidad"
   - "farmacos-glp-1"
   - "metabolismo"
+imagen: "/img/noticias/cirugias-bariatricas-disminuyen-a-medida-que-crecen-los-medicamentos-glp-1.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

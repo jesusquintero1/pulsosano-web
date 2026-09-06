@@ -33,6 +33,7 @@ entidades:
   - nombre: "Estudio de cohorte"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Estudio_de_cohorte"
+imagen: "/img/noticias/cardiopatia-congenita-materna-y-desarrollo-infantil-hallazgos-de-un-gran-estudio.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

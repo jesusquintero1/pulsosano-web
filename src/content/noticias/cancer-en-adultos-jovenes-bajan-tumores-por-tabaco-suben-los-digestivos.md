@@ -33,7 +33,7 @@ entidades:
   - nombre: "Tabaquismo"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Tabaquismo"
-imagen: "https://efesalud.com/wp-content/uploads/2023/05/jovenes-tabaco.jpg"
+imagen: "/img/noticias/cancer-en-adultos-jovenes-bajan-tumores-por-tabaco-suben-los-digestivos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,6 +35,7 @@ entidades:
   - nombre: "Años de vida ajustados por discapacidad"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Año_de_vida_ajustado_por_discapacidad"
+imagen: "/img/noticias/dos-de-cada-cinco-personas-en-las-americas-viven-con-un-trastorno-neurologico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

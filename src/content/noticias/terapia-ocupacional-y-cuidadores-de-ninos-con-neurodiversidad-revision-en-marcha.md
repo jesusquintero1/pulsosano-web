@@ -35,6 +35,7 @@ entidades:
   - nombre: "Terapia ocupacional"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Terapia_ocupacional"
+imagen: "/img/noticias/terapia-ocupacional-y-cuidadores-de-ninos-con-neurodiversidad-revision-en-marcha.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

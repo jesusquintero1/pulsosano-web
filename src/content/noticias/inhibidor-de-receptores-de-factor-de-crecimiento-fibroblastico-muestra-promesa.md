@@ -13,6 +13,7 @@ tags:
   - "inhibidor-fgfr"
   - "ensayo-clinico"
   - "oncologia"
+imagen: "/img/noticias/inhibidor-de-receptores-de-factor-de-crecimiento-fibroblastico-muestra-promesa.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

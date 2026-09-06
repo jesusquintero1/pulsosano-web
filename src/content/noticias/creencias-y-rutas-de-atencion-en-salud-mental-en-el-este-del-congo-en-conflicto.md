@@ -33,6 +33,7 @@ entidades:
   - nombre: "República Democrática del Congo"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Rep%C3%BAblica_Democr%C3%A1tica_del_Congo"
+imagen: "/img/noticias/creencias-y-rutas-de-atencion-en-salud-mental-en-el-este-del-congo-en-conflicto.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

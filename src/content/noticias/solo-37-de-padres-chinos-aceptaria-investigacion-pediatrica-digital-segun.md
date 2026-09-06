@@ -30,6 +30,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "BMJ Open"
     tipo: "Organization"
+imagen: "/img/noticias/solo-37-de-padres-chinos-aceptaria-investigacion-pediatrica-digital-segun.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

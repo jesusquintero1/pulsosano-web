@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Sarcopenia"
   - nombre: "Fuerza de agarre"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/perdida-muscular-fuerza-de-agarre-y-velocidad-al-caminar-podrian-vincularse-al.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

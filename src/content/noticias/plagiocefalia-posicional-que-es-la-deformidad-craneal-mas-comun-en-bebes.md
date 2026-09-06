@@ -14,7 +14,7 @@ tags:
   - "neonatologia"
   - "deformidad-craneal"
   - "salud-infantil"
-imagen: "https://efesalud.com/wp-content/uploads/2026/06/seNeo-ilustraciones-divulgativas-1024x863.webp"
+imagen: "/img/noticias/plagiocefalia-posicional-que-es-la-deformidad-craneal-mas-comun-en-bebes.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

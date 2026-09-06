@@ -33,6 +33,7 @@ entidades:
   - nombre: "Organización Panamericana de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Panamericana_de_la_Salud"
+imagen: "/img/noticias/seis-organismos-internacionales-firman-declaracion-para-reforzar-una-sola-salud.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

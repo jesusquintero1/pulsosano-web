@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Insuficiencia_card%C3%ADaca"
   - nombre: "Clasificación Killip"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/sindrome-coronario-agudo-en-etiopia-uno-de-cada-tres-pacientes-sufre-evento.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

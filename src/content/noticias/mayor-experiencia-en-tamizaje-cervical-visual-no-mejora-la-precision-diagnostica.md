@@ -34,6 +34,7 @@ entidades:
   - nombre: "Cáncer de cuello uterino"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/C%C3%A1ncer_de_cuello_uterino"
+imagen: "/img/noticias/mayor-experiencia-en-tamizaje-cervical-visual-no-mejora-la-precision-diagnostica.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

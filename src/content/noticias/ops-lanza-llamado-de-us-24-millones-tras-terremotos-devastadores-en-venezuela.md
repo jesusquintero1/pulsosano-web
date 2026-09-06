@@ -30,6 +30,7 @@ entidades:
   - nombre: "Terremoto"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Terremoto"
+imagen: "/img/noticias/ops-lanza-llamado-de-us-24-millones-tras-terremotos-devastadores-en-venezuela.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

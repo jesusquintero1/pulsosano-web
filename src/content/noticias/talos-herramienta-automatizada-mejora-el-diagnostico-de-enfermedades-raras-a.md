@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Secuenciaci%C3%B3n_de_nueva_generaci%C3%B3n"
   - nombre: "Trastorno mendeliano"
     tipo: "MedicalCondition"
+imagen: "/img/noticias/talos-herramienta-automatizada-mejora-el-diagnostico-de-enfermedades-raras-a.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

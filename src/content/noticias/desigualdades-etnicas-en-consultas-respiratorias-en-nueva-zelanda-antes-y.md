@@ -33,6 +33,7 @@ entidades:
   - nombre: "COVID-19"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/COVID-19"
+imagen: "/img/noticias/desigualdades-etnicas-en-consultas-respiratorias-en-nueva-zelanda-antes-y.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

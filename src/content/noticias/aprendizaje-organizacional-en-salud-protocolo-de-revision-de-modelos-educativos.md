@@ -30,6 +30,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "LILACS"
     tipo: "Organization"
+imagen: "/img/noticias/aprendizaje-organizacional-en-salud-protocolo-de-revision-de-modelos-educativos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

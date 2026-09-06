@@ -33,6 +33,7 @@ entidades:
   - nombre: "Salud mental"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Salud_mental"
+imagen: "/img/noticias/prevencion-del-suicidio-en-hombres-por-que-las-estrategias-actuales-no-son.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

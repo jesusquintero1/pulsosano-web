@@ -30,6 +30,7 @@ entidades:
   - nombre: "Enfermedades no transmisibles"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_no_transmisible"
+imagen: "/img/noticias/barreras-al-consumo-de-fibra-dietetica-en-mujeres-del-sur-de-india-estudio.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

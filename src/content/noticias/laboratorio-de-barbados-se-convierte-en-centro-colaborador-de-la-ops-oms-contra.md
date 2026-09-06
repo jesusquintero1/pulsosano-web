@@ -14,6 +14,7 @@ tags:
   - "vigilancia-epidemiologica"
   - "salud-publica"
   - "barbados"
+imagen: "/img/noticias/laboratorio-de-barbados-se-convierte-en-centro-colaborador-de-la-ops-oms-contra.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

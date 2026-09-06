@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Seguro_de_salud"
   - nombre: "Política sanitaria"
     tipo: "Thing"
+imagen: "/img/noticias/dividir-los-grandes-conglomerados-de-salud-reduciria-el-costo-del-seguro-medico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

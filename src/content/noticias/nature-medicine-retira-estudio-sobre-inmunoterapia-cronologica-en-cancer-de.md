@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Nature Medicine"
     tipo: "Organization"
+imagen: "/img/noticias/nature-medicine-retira-estudio-sobre-inmunoterapia-cronologica-en-cancer-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

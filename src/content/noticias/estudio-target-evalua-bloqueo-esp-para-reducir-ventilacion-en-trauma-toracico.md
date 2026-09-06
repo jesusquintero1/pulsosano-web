@@ -34,6 +34,7 @@ entidades:
   - nombre: "Ventilación mecánica"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Ventilaci%C3%B3n_mec%C3%A1nica"
+imagen: "/img/noticias/estudio-target-evalua-bloqueo-esp-para-reducir-ventilacion-en-trauma-toracico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

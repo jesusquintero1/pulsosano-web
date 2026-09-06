@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Ensayo_cl%C3%ADnico_aleatorizado"
   - nombre: "London School of Hygiene & Tropical Medicine"
     tipo: "Organization"
+imagen: "/img/noticias/correccion-editorial-en-estudio-sobre-vih-y-salud-sexual-para-jovenes-en-nature.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

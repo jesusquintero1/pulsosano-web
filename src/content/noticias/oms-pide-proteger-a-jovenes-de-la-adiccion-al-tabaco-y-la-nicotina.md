@@ -33,6 +33,7 @@ entidades:
   - nombre: "Cigarrillo electrónico"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Cigarrillo_electr%C3%B3nico"
+imagen: "/img/noticias/oms-pide-proteger-a-jovenes-de-la-adiccion-al-tabaco-y-la-nicotina.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

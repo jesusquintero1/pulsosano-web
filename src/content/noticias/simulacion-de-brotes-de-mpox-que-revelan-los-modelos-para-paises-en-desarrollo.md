@@ -31,6 +31,7 @@ entidades:
     tipo: "Thing"
   - nombre: "Rastreo de contactos"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/simulacion-de-brotes-de-mpox-que-revelan-los-modelos-para-paises-en-desarrollo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

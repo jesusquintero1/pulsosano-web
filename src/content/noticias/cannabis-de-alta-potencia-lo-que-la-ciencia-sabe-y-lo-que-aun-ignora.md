@@ -14,6 +14,7 @@ tags:
   - "salud-mental"
   - "adiccion"
   - "investigacion"
+imagen: "/img/noticias/cannabis-de-alta-potencia-lo-que-la-ciencia-sabe-y-lo-que-aun-ignora.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

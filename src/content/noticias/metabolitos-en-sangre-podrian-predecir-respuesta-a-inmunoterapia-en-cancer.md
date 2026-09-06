@@ -14,6 +14,7 @@ tags:
   - "histidina"
   - "biomarcadores"
   - "microbiota"
+imagen: "/img/noticias/metabolitos-en-sangre-podrian-predecir-respuesta-a-inmunoterapia-en-cancer.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

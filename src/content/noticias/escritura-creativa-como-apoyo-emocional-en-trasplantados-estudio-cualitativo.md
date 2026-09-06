@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Centre hospitalier de l'Université de Montréal"
     tipo: "Organization"
+imagen: "/img/noticias/escritura-creativa-como-apoyo-emocional-en-trasplantados-estudio-cualitativo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

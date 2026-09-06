@@ -35,6 +35,7 @@ entidades:
   - nombre: "Vacuna antirrábica"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_antirr%C3%A1bica"
+imagen: "/img/noticias/brasil-dona-10000-dosis-de-vacuna-antirrabica-a-haiti-para-frenar-brote.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -14,7 +14,7 @@ tags:
   - "salud-osea"
   - "deteccion-temprana"
   - "espalda"
-imagen: "https://efesalud.com/wp-content/uploads/2026/06/victor-castillo-meseguer-quironsalud-murcia.webp"
+imagen: "/img/noticias/escoliosis-que-es-como-detectarla-y-cuando-consultar-al-medico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

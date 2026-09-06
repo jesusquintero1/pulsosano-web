@@ -29,6 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Modelo_de_lenguaje_grande"
   - nombre: "Inteligencia artificial en medicina"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/ia-medica-con-altas-calificaciones-pero-fallas-ocultas-que-revelan-las-pruebas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

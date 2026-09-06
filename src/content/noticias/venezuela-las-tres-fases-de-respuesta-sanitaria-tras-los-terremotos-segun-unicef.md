@@ -14,7 +14,7 @@ tags:
   - "unicef"
   - "desastres-naturales"
   - "salud-publica"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/foto_venezuela.jpg"
+imagen: "/img/noticias/venezuela-las-tres-fases-de-respuesta-sanitaria-tras-los-terremotos-segun-unicef.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

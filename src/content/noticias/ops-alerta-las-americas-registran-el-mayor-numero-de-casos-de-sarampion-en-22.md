@@ -35,6 +35,7 @@ entidades:
   - nombre: "Vacuna contra el sarampión"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_triple_v%C3%ADrica"
+imagen: "/img/noticias/ops-alerta-las-americas-registran-el-mayor-numero-de-casos-de-sarampion-en-22.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

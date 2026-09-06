@@ -35,6 +35,7 @@ entidades:
   - nombre: "Vacuna contra el virus del papiloma humano"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_contra_el_virus_del_papiloma_humano"
+imagen: "/img/noticias/vacunacion-infantil-repunta-en-las-americas-pero-sarampion-sigue-amenazando.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

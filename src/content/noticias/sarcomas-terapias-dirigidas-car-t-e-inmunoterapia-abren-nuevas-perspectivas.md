@@ -35,7 +35,7 @@ entidades:
   - nombre: "Inmunoterapia contra el cáncer"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Inmunoterapia_contra_el_c%C3%A1ncer"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/sarcoma_foto_ok.jpg"
+imagen: "/img/noticias/sarcomas-terapias-dirigidas-car-t-e-inmunoterapia-abren-nuevas-perspectivas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

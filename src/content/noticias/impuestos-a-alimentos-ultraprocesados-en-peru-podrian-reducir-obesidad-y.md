@@ -33,6 +33,7 @@ entidades:
     tipo: "MedicalCondition"
   - nombre: "Transferencia condicionada de efectivo"
     tipo: "Thing"
+imagen: "/img/noticias/impuestos-a-alimentos-ultraprocesados-en-peru-podrian-reducir-obesidad-y.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

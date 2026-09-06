@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Conjugado_anticuerpo-f%C3%A1rmaco"
   - nombre: "PMEL"
     tipo: "Thing"
+imagen: "/img/noticias/nuevo-conjugado-anticuerpo-farmaco-muestra-respuestas-en-melanoma-uveal.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

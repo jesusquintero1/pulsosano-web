@@ -33,7 +33,7 @@ entidades:
     tipo: "Thing"
   - nombre: "Children's Hospital of Philadelphia"
     tipo: "Organization"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/GettyImages-1016374280-1024x576.jpg"
+imagen: "/img/noticias/lesiones-graves-por-e-bikes-y-patinetes-electricos-en-ninos-una-alerta-creciente.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

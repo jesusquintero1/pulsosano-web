@@ -33,6 +33,7 @@ entidades:
   - nombre: "Inmunidad de rebaño"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Inmunidad_de_grupo"
+imagen: "/img/noticias/conflictos-armados-y-sarampion-como-la-guerra-destruye-la-vacunacion-masiva.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

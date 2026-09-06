@@ -26,6 +26,7 @@ entidades:
   - nombre: "JAMA (Journal of the American Medical Association)"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/JAMA_(revista)"
+imagen: "/img/noticias/jama-publica-su-resumen-editorial-de-los-articulos-destacados-del-2-de-julio-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

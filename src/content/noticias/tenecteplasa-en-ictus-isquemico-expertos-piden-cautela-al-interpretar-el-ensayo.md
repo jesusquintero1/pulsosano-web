@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Tenecteplasa"
   - nombre: "Tomografía computarizada de perfusión"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/tenecteplasa-en-ictus-isquemico-expertos-piden-cautela-al-interpretar-el-ensayo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

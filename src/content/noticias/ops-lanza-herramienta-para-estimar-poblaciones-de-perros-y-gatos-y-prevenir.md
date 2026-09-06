@@ -35,6 +35,7 @@ entidades:
   - nombre: "Zoonosis"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Zoonosis"
+imagen: "/img/noticias/ops-lanza-herramienta-para-estimar-poblaciones-de-perros-y-gatos-y-prevenir.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

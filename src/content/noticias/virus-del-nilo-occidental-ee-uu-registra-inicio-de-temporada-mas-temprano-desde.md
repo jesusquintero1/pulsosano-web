@@ -33,6 +33,7 @@ entidades:
   - nombre: "Encefalitis"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Encefalitis"
+imagen: "/img/noticias/virus-del-nilo-occidental-ee-uu-registra-inicio-de-temporada-mas-temprano-desde.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

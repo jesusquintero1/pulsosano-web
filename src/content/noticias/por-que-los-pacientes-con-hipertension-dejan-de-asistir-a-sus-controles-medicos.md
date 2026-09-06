@@ -33,6 +33,7 @@ entidades:
   - nombre: "Revisión sistemática"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Revisión_sistemática"
+imagen: "/img/noticias/por-que-los-pacientes-con-hipertension-dejan-de-asistir-a-sus-controles-medicos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

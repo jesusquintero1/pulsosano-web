@@ -30,7 +30,7 @@ entidades:
   - nombre: "Ensayo clínico"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Ensayo_cl%C3%ADnico"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/ok-mujer_1.jpg"
+imagen: "/img/noticias/la-ema-prioriza-la-salud-de-la-mujer-en-el-desarrollo-de-nuevos-medicamentos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

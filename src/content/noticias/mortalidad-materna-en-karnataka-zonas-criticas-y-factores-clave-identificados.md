@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Atenci%C3%B3n_prenatal"
   - nombre: "Autocorrelación espacial"
     tipo: "Thing"
+imagen: "/img/noticias/mortalidad-materna-en-karnataka-zonas-criticas-y-factores-clave-identificados.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

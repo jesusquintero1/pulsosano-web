@@ -27,7 +27,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Registro civil"
     tipo: "Organization"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2022-11/muertos_residencias_alberto_di_lolli.jpg"
+imagen: "/img/noticias/certificado-de-defuncion-electronico-una-reforma-pendiente-con-costos-reales.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

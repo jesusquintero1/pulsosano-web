@@ -35,6 +35,7 @@ entidades:
   - nombre: "SARS-CoV-2"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/SARS-CoV-2"
+imagen: "/img/noticias/erviss-el-sistema-europeo-que-vigila-influenza-rsv-y-covid-19-en-tiempo-real.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

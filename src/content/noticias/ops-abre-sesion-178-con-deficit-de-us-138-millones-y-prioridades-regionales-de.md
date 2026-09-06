@@ -33,6 +33,7 @@ entidades:
   - nombre: "Reglamento Sanitario Internacional"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Reglamento_Sanitario_Internacional"
+imagen: "/img/noticias/ops-abre-sesion-178-con-deficit-de-us-138-millones-y-prioridades-regionales-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

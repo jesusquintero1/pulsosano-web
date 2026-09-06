@@ -29,6 +29,7 @@ entidades:
   - nombre: "Ligamento"
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/Ligamento"
+imagen: "/img/noticias/separacion-de-hombro-que-es-y-por-que-ocurre-segun-expertos-del-nih.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

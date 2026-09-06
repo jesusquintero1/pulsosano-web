@@ -34,6 +34,7 @@ entidades:
   - nombre: "Depresión"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Depresión"
+imagen: "/img/noticias/conflicto-trabajo-familia-se-asocia-con-depresion-y-burnout-segun-metaanalisis.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

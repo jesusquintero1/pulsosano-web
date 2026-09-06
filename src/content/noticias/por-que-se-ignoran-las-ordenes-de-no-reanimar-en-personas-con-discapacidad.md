@@ -30,6 +30,7 @@ entidades:
   - nombre: "Discapacidad intelectual"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Discapacidad_intelectual"
+imagen: "/img/noticias/por-que-se-ignoran-las-ordenes-de-no-reanimar-en-personas-con-discapacidad.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

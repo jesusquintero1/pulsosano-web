@@ -33,6 +33,7 @@ entidades:
   - nombre: "Administración de Alimentos y Medicamentos de los Estados Unidos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Administraci%C3%B3n_de_Alimentos_y_Medicamentos"
+imagen: "/img/noticias/fda-aprueba-el-primer-tratamiento-para-la-hepatitis-delta-cronica.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

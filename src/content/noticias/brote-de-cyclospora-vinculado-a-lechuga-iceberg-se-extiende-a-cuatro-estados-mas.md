@@ -32,6 +32,7 @@ entidades:
   - nombre: "Centros para el Control y la Prevención de Enfermedades"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Centros_para_el_Control_y_la_Prevenci%C3%B3n_de_Enfermedades"
+imagen: "/img/noticias/brote-de-cyclospora-vinculado-a-lechuga-iceberg-se-extiende-a-cuatro-estados-mas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Hantavirus"
   - nombre: "Virus de Andes"
     tipo: "Thing"
+imagen: "/img/noticias/ebola-y-hantavirus-enfermedades-que-comienzan-como-gripe-pero-avanzan.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

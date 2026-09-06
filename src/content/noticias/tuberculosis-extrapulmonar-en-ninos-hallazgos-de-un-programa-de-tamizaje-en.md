@@ -32,6 +32,7 @@ entidades:
   - nombre: "Tuberculosis"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Tuberculosis"
+imagen: "/img/noticias/tuberculosis-extrapulmonar-en-ninos-hallazgos-de-un-programa-de-tamizaje-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

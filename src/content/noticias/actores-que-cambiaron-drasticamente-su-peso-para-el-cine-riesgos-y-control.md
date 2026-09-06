@@ -30,7 +30,7 @@ entidades:
   - nombre: "Índice de masa corporal"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal"
-imagen: "https://efesalud.com/wp-content/uploads/2026/07/BRIDGET-JONES.webp"
+imagen: "/img/noticias/actores-que-cambiaron-drasticamente-su-peso-para-el-cine-riesgos-y-control.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

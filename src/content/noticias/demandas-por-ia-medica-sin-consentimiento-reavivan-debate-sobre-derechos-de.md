@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Inteligencia_artificial_en_medicina"
   - nombre: "Expediente clínico electrónico"
     tipo: "Thing"
+imagen: "/img/noticias/demandas-por-ia-medica-sin-consentimiento-reavivan-debate-sobre-derechos-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

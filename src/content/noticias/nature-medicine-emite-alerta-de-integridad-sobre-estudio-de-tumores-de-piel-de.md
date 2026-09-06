@@ -33,6 +33,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Ras_(prote%C3%ADna)"
   - nombre: "Nature Medicine"
     tipo: "Organization"
+imagen: "/img/noticias/nature-medicine-emite-alerta-de-integridad-sobre-estudio-de-tumores-de-piel-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Diabetes_mellitus"
   - nombre: "EuroQol-5D"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/hipertension-y-diabetes-en-adultos-mayores-de-africa-prevalencia-atencion-y.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -33,6 +33,7 @@ entidades:
   - nombre: "Fentanilo"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Fentanilo"
+imagen: "/img/noticias/muertes-por-sobredosis-en-ee-uu-caen-por-tercer-ano-consecutivo-segun-cdc.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

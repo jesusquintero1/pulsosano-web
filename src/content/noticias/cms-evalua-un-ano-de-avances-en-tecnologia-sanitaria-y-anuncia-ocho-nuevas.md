@@ -30,7 +30,7 @@ entidades:
   - nombre: "Medicare"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Medicare_(Estados_Unidos)"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/GettyImages-2227086977-1024x576.jpg"
+imagen: "/img/noticias/cms-evalua-un-ano-de-avances-en-tecnologia-sanitaria-y-anuncia-ocho-nuevas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

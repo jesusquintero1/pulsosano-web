@@ -29,7 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_por_el_virus_del_%C3%89bola"
   - nombre: "República Democrática del Congo"
     tipo: "Organization"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/ebola-virus.jpg"
+imagen: "/img/noticias/brote-de-ebola-en-el-congo-supera-mil-casos-y-amenaza-con-llegar-a-sudan-del-sur.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

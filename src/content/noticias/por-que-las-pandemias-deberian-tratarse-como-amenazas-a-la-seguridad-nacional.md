@@ -31,7 +31,7 @@ entidades:
   - nombre: "Organización Mundial de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/AP21302624606356-1024x576.jpg"
+imagen: "/img/noticias/por-que-las-pandemias-deberian-tratarse-como-amenazas-a-la-seguridad-nacional.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

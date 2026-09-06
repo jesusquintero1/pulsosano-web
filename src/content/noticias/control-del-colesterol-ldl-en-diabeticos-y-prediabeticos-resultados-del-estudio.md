@@ -33,6 +33,7 @@ entidades:
   - nombre: "Dislipidemia"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Dislipidemia"
+imagen: "/img/noticias/control-del-colesterol-ldl-en-diabeticos-y-prediabeticos-resultados-del-estudio.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

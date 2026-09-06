@@ -29,7 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Tecnolog%C3%ADa_vestible"
   - nombre: "Monitorización cardíaca"
     tipo: "MedicalProcedure"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-08/smartwatch_1.jpg"
+imagen: "/img/noticias/wearables-y-salud-los-expertos-advierten-que-el-reloj-no-reemplaza-al-medico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

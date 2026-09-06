@@ -28,6 +28,7 @@ entidades:
   - nombre: "Agencia de Protección Ambiental de los Estados Unidos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Agencia_de_Protecci%C3%B3n_Ambiental_de_los_Estados_Unidos"
+imagen: "/img/noticias/control-de-plagas-en-el-hogar-que-saber-sobre-el-uso-seguro-de-pesticidas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

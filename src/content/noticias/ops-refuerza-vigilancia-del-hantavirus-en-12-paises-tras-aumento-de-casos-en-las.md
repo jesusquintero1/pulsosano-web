@@ -33,6 +33,7 @@ entidades:
   - nombre: "Organización Panamericana de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Panamericana_de_la_Salud"
+imagen: "/img/noticias/ops-refuerza-vigilancia-del-hantavirus-en-12-paises-tras-aumento-de-casos-en-las.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

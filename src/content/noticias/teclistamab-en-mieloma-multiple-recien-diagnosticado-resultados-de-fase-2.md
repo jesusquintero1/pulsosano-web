@@ -14,6 +14,7 @@ tags:
   - "bispecific-antibody"
   - "trasplante-de-celulas-madre"
   - "enfermedad-residual-minima"
+imagen: "/img/noticias/teclistamab-en-mieloma-multiple-recien-diagnosticado-resultados-de-fase-2.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

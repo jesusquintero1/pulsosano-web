@@ -31,6 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Inflammaging"
   - nombre: "Geroscience"
     tipo: "Thing"
+imagen: "/img/noticias/nuevos-biomarcadores-del-envejecimiento-inmune-para-ensayos-clinicos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

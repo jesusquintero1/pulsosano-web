@@ -33,6 +33,7 @@ entidades:
     tipo: "MedicalCondition"
   - nombre: "Año de vida ajustado por calidad (QALY)"
     tipo: "Thing"
+imagen: "/img/noticias/pirfenidona-para-dano-pulmonar-por-radioterapia-es-costo-efectiva.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

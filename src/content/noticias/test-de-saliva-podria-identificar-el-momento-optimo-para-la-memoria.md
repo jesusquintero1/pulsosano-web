@@ -30,7 +30,7 @@ entidades:
   - nombre: "Biomarcador"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Biomarcador"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/memoria_para_test_de_saliva_2_ok.jpg"
+imagen: "/img/noticias/test-de-saliva-podria-identificar-el-momento-optimo-para-la-memoria.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

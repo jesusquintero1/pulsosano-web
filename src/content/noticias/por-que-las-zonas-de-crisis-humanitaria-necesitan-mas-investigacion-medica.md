@@ -35,6 +35,7 @@ entidades:
   - nombre: "Desnutrición"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Desnutrici%C3%B3n"
+imagen: "/img/noticias/por-que-las-zonas-de-crisis-humanitaria-necesitan-mas-investigacion-medica.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

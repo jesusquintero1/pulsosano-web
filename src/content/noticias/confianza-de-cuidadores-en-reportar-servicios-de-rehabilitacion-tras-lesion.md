@@ -13,6 +13,7 @@ tags:
   - "cuidadores"
   - "investigacion-cualitativa"
   - "medicion-clinica"
+imagen: "/img/noticias/confianza-de-cuidadores-en-reportar-servicios-de-rehabilitacion-tras-lesion.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

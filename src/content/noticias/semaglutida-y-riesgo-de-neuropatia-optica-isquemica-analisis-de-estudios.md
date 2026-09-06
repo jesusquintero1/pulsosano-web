@@ -13,6 +13,7 @@ tags:
   - "neuropatia-optica"
   - "metaanalisis"
   - "seguridad-medicamentos"
+imagen: "/img/noticias/semaglutida-y-riesgo-de-neuropatia-optica-isquemica-analisis-de-estudios.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

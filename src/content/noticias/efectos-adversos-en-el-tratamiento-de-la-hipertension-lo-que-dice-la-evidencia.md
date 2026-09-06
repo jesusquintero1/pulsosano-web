@@ -32,6 +32,7 @@ entidades:
   - nombre: "Enfermedad cardiovascular"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_cardiovascular"
+imagen: "/img/noticias/efectos-adversos-en-el-tratamiento-de-la-hipertension-lo-que-dice-la-evidencia.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

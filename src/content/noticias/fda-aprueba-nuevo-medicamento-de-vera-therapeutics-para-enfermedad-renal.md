@@ -30,7 +30,7 @@ entidades:
   - nombre: "Administración de Alimentos y Medicamentos de los Estados Unidos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Administraci%C3%B3n_de_Alimentos_y_Medicamentos"
-imagen: "https://www.statnews.com/wp-content/uploads/2022/12/AdobeStock_61891029-1024x576.jpeg"
+imagen: "/img/noticias/fda-aprueba-nuevo-medicamento-de-vera-therapeutics-para-enfermedad-renal.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

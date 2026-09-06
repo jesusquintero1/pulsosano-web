@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_contra_la_hepatitis_B"
   - nombre: "Hesitación vacunal"
     tipo: "Thing"
+imagen: "/img/noticias/vacuna-contra-hepatitis-b-solo-65-de-adultos-urbanos-en-vietnam-la-aceptaria.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

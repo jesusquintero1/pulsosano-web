@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Obesidad_infantil"
   - nombre: "Modelo de ecuaciones estructurales"
     tipo: "Thing"
+imagen: "/img/noticias/imc-parental-y-peso-infantil-herencia-genetica-o-influencia-directa.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

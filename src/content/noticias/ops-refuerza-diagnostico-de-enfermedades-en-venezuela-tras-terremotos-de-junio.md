@@ -34,6 +34,7 @@ entidades:
   - nombre: "Vigilancia epidemiológica"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Vigilancia_epidemiol%C3%B3gica"
+imagen: "/img/noticias/ops-refuerza-diagnostico-de-enfermedades-en-venezuela-tras-terremotos-de-junio.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,7 +35,7 @@ entidades:
   - nombre: "Dengue"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Dengue"
-imagen: "https://efesalud.com/wp-content/uploads/2026/07/repelente-mosquitos.webp"
+imagen: "/img/noticias/repelente-de-mosquitos-como-elegir-el-mas-adecuado-segun-tu-destino-y-edad.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

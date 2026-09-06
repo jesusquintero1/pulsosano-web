@@ -35,7 +35,7 @@ entidades:
   - nombre: "Medicina física y rehabilitación"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Medicina_f%C3%ADsica_y_rehabilitaci%C3%B3n"
-imagen: "https://efesalud.com/wp-content/uploads/2023/01/Vida-sedentaria-deporte.jpg"
+imagen: "/img/noticias/calor-extremo-y-sedentarismo-por-que-el-verano-puede-arruinar-tu-rutina-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

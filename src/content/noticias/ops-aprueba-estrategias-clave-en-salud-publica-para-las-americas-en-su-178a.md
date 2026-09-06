@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Resistencia_a_los_antimicrobianos"
   - nombre: "Enfermedades arbovirales"
     tipo: "MedicalCondition"
+imagen: "/img/noticias/ops-aprueba-estrategias-clave-en-salud-publica-para-las-americas-en-su-178a.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

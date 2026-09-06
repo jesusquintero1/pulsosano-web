@@ -35,6 +35,7 @@ entidades:
   - nombre: "Infecciones de transmisión sexual"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Infecci%C3%B3n_de_transmisi%C3%B3n_sexual"
+imagen: "/img/noticias/migrantes-venezolanas-en-trabajo-sexual-en-peru-enfrentan-barreras-en-salud.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,6 +35,7 @@ entidades:
   - nombre: "Organización Mundial de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud"
+imagen: "/img/noticias/oms-hasta-el-45-del-riesgo-de-demencia-podria-prevenirse-con-nuevas-directrices.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

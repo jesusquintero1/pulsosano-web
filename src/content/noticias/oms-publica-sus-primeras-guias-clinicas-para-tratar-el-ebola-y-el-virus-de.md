@@ -33,6 +33,7 @@ entidades:
   - nombre: "Virus de Marburgo"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Virus_de_Marburgo"
+imagen: "/img/noticias/oms-publica-sus-primeras-guias-clinicas-para-tratar-el-ebola-y-el-virus-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

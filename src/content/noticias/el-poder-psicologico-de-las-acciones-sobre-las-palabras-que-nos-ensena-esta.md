@@ -13,7 +13,7 @@ tags:
   - "influencia-interpersonal"
   - "credibilidad"
   - "aprendizaje-observacional"
-imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2014/01/24/156291.r_d.447-143.jpg"
+imagen: "/img/noticias/el-poder-psicologico-de-las-acciones-sobre-las-palabras-que-nos-ensena-esta.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

@@ -31,6 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Fiabilidad_(psicometr%C3%ADa)"
   - nombre: "BMJ Open"
     tipo: "Organization"
+imagen: "/img/noticias/actualizacion-de-guias-para-medir-confiabilidad-en-salud-que-cambia-y-por-que.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

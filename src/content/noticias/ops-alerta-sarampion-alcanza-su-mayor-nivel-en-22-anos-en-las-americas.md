@@ -35,6 +35,7 @@ entidades:
   - nombre: "Vacuna contra el sarampión"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_contra_el_sarampi%C3%B3n"
+imagen: "/img/noticias/ops-alerta-sarampion-alcanza-su-mayor-nivel-en-22-anos-en-las-americas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

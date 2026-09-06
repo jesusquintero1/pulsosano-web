@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "inmunizacion"
   - "inteligencia-artificial"
+imagen: "/img/noticias/ops-publica-guia-para-combatir-la-desinformacion-sobre-vacunas-en-periodistas-y.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

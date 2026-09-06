@@ -33,6 +33,7 @@ entidades:
   - nombre: "Derecho a la salud"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Derecho_a_la_salud"
+imagen: "/img/noticias/racismo-estructural-y-salud-por-que-los-roma-en-rumania-viven-7-anos-menos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

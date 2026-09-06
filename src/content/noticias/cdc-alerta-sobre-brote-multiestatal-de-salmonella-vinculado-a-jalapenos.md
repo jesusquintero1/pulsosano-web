@@ -35,6 +35,7 @@ entidades:
   - nombre: "Salmonelosis"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Salmonelosis"
+imagen: "/img/noticias/cdc-alerta-sobre-brote-multiestatal-de-salmonella-vinculado-a-jalapenos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

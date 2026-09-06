@@ -14,6 +14,7 @@ tags:
   - "cannabis"
   - "prevencion-pediatrica"
   - "seguridad-en-el-hogar"
+imagen: "/img/noticias/marihuana-comestible-y-ninos-riesgos-de-intoxicacion-por-thc-que-los-padres.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

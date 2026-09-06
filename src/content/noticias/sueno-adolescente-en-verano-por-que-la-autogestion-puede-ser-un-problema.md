@@ -28,7 +28,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Higiene_del_sue%C3%B1o"
   - nombre: "Retraso de fase del sueño"
     tipo: "MedicalCondition"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/4141680-1.jpg"
+imagen: "/img/noticias/sueno-adolescente-en-verano-por-que-la-autogestion-puede-ser-un-problema.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

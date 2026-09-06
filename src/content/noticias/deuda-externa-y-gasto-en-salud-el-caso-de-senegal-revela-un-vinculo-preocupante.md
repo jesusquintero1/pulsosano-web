@@ -34,6 +34,7 @@ entidades:
   - nombre: "Cobertura sanitaria universal"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Cobertura_sanitaria_universal"
+imagen: "/img/noticias/deuda-externa-y-gasto-en-salud-el-caso-de-senegal-revela-un-vinculo-preocupante.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

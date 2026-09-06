@@ -32,7 +32,7 @@ entidades:
   - nombre: "Administración de Alimentos y Medicamentos de Estados Unidos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Administración_de_Alimentos_y_Medicamentos"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/AP26131788035261-1024x576.jpg"
+imagen: "/img/noticias/brote-de-cyclospora-el-dilema-entre-nutricion-y-seguridad-alimentaria.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

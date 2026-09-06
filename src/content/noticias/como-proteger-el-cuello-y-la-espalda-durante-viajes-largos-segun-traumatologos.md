@@ -30,7 +30,7 @@ entidades:
   - nombre: "Traumatología"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Traumatolog%C3%ADa"
-imagen: "https://efesalud.com/wp-content/uploads/2025/08/viajes-columna-vertebral-maletas.jpg"
+imagen: "/img/noticias/como-proteger-el-cuello-y-la-espalda-durante-viajes-largos-segun-traumatologos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

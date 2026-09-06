@@ -35,6 +35,7 @@ entidades:
   - nombre: "Cataplejía"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Cataplej%C3%ADa"
+imagen: "/img/noticias/fda-aprueba-orzeyful-primer-farmaco-de-su-clase-para-la-narcolepsia-tipo-1.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

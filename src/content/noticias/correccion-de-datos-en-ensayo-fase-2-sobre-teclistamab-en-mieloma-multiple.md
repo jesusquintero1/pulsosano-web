@@ -32,6 +32,7 @@ entidades:
   - nombre: "Anticuerpo biespecífico"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Anticuerpo_biespec%C3%ADfico"
+imagen: "/img/noticias/correccion-de-datos-en-ensayo-fase-2-sobre-teclistamab-en-mieloma-multiple.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,6 +35,7 @@ entidades:
   - nombre: "Inteligencia artificial en medicina"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Inteligencia_artificial_en_medicina"
+imagen: "/img/noticias/ia-entrenada-con-millones-de-imagenes-clinicas-mejora-el-diagnostico-neurologico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

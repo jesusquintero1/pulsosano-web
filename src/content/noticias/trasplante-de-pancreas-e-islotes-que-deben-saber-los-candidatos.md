@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Islotes_de_Langerhans"
   - nombre: "Health Resources and Services Administration"
     tipo: "Organization"
+imagen: "/img/noticias/trasplante-de-pancreas-e-islotes-que-deben-saber-los-candidatos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

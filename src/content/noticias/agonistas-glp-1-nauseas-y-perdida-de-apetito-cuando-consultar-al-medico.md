@@ -30,7 +30,7 @@ entidades:
   - nombre: "Diabetes mellitus tipo 2"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Diabetes_mellitus_tipo_2"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-08/0225_retortijon_0.jpg"
+imagen: "/img/noticias/agonistas-glp-1-nauseas-y-perdida-de-apetito-cuando-consultar-al-medico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

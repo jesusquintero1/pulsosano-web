@@ -34,6 +34,7 @@ entidades:
   - nombre: "Implante anticonceptivo"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Implante_anticonceptivo"
+imagen: "/img/noticias/correccion-publicada-sobre-estudio-de-remocion-de-implantes-anticonceptivos-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,6 +35,7 @@ entidades:
   - nombre: "Gastrostomía"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Gastrostom%C3%ADa"
+imagen: "/img/noticias/cuidados-paliativos-en-cirugia-por-que-deben-ser-el-estandar-de-atencion.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -32,7 +32,7 @@ entidades:
   - nombre: "Garrapata"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Ixodida"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/III-300x219-1.jpg"
+imagen: "/img/noticias/fiebre-hemorragica-crimea-congo-transmision-sintomas-y-por-que-requiere.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

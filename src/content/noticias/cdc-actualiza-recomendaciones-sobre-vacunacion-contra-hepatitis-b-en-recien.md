@@ -13,6 +13,7 @@ tags:
   - "inmunizacion"
   - "cdc"
   - "salud-publica"
+imagen: "/img/noticias/cdc-actualiza-recomendaciones-sobre-vacunacion-contra-hepatitis-b-en-recien.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

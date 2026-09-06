@@ -33,6 +33,7 @@ entidades:
   - nombre: "Vacuna DTP"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_contra_la_difteria,_el_t%C3%A9tanos_y_la_tos_ferina"
+imagen: "/img/noticias/ops-alerta-por-aumento-de-difteria-en-las-americas-mas-de-160-casos-en-2026.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

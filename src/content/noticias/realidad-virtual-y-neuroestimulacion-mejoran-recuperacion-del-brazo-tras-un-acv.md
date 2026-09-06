@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Neuroestimulación transcutánea"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/realidad-virtual-y-neuroestimulacion-mejoran-recuperacion-del-brazo-tras-un-acv.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

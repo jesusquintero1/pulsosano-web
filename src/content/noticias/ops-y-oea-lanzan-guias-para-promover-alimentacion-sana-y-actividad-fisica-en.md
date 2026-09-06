@@ -35,6 +35,7 @@ entidades:
   - nombre: "Organización de los Estados Americanos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_de_los_Estados_Americanos"
+imagen: "/img/noticias/ops-y-oea-lanzan-guias-para-promover-alimentacion-sana-y-actividad-fisica-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

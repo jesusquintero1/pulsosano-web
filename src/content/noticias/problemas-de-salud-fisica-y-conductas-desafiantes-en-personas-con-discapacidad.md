@@ -32,6 +32,7 @@ entidades:
   - nombre: "Atención primaria de salud"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Atenci%C3%B3n_primaria_de_salud"
+imagen: "/img/noticias/problemas-de-salud-fisica-y-conductas-desafiantes-en-personas-con-discapacidad.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

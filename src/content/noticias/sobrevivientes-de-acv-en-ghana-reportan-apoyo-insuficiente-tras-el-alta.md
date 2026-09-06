@@ -29,6 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Accidente_cerebrovascular"
   - nombre: "Modelo de Atención Crónica"
     tipo: "Thing"
+imagen: "/img/noticias/sobrevivientes-de-acv-en-ghana-reportan-apoyo-insuficiente-tras-el-alta.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -33,6 +33,7 @@ entidades:
   - nombre: "Universidad de Oxford"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Universidad_de_Oxford"
+imagen: "/img/noticias/fiebre-de-lassa-dos-ensayos-clinicos-tempranos-impulsan-vacunas-y-tratamientos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

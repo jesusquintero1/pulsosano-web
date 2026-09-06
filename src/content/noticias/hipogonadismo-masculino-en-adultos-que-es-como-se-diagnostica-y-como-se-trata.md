@@ -33,6 +33,7 @@ entidades:
   - nombre: "Hipófisis"
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/Hip%C3%B3fisis"
+imagen: "/img/noticias/hipogonadismo-masculino-en-adultos-que-es-como-se-diagnostica-y-como-se-trata.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

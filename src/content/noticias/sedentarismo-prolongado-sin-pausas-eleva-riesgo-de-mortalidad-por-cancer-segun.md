@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/C%C3%A1ncer"
   - nombre: "Acelerometría"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/sedentarismo-prolongado-sin-pausas-eleva-riesgo-de-mortalidad-por-cancer-segun.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

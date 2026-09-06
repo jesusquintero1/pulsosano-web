@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Joanna Briggs Institute"
     tipo: "Organization"
+imagen: "/img/noticias/listas-de-verificacion-para-el-delirium-que-dice-una-revision-rapida-sobre-su.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

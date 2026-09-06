@@ -35,6 +35,7 @@ entidades:
   - nombre: "Obesidad"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Obesidad"
+imagen: "/img/noticias/agonistas-glp-1-que-son-para-que-sirven-y-que-se-sabe-hasta-ahora.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

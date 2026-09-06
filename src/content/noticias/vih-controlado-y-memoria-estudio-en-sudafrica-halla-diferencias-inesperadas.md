@@ -33,6 +33,7 @@ entidades:
   - nombre: "VIH"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Virus_de_la_inmunodeficiencia_humana"
+imagen: "/img/noticias/vih-controlado-y-memoria-estudio-en-sudafrica-halla-diferencias-inesperadas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

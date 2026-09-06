@@ -33,6 +33,7 @@ entidades:
   - nombre: "Desinformación"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Desinformaci%C3%B3n"
+imagen: "/img/noticias/pandemia-de-covid-19-en-noruega-lecciones-de-ciencia-politica-y-confianza.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

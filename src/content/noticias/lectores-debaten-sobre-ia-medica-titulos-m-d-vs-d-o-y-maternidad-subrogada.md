@@ -27,7 +27,7 @@ entidades:
     tipo: "Thing"
   - nombre: "Doctor en Osteopatía"
     tipo: "Thing"
-imagen: "https://www.statnews.com/wp-content/uploads/2023/11/LettersToEditor_v2_Illustration_MollyFerguson_112723-1024x576.jpg"
+imagen: "/img/noticias/lectores-debaten-sobre-ia-medica-titulos-m-d-vs-d-o-y-maternidad-subrogada.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -31,6 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_por_virus_del_%C3%89bola"
   - nombre: "República Democrática del Congo"
     tipo: "Organization"
+imagen: "/img/noticias/brote-de-ebola-por-virus-bundibugyo-por-que-es-dificil-de-controlar.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

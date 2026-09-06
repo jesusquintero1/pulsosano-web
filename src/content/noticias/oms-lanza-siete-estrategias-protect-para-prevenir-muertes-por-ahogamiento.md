@@ -32,6 +32,7 @@ entidades:
   - nombre: "Organización Mundial de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud"
+imagen: "/img/noticias/oms-lanza-siete-estrategias-protect-para-prevenir-muertes-por-ahogamiento.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

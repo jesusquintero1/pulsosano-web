@@ -33,6 +33,7 @@ entidades:
   - nombre: "Trastorno de ansiedad"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Trastorno_de_ansiedad"
+imagen: "/img/noticias/como-el-patron-inicial-de-prescripcion-de-benzodiacepinas-influye-en-su-uso.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

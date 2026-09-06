@@ -13,6 +13,7 @@ tags:
   - "implementacion"
   - "rehabilitacion"
   - "oncologia"
+imagen: "/img/noticias/ejercicio-personalizado-a-distancia-para-sobrevivientes-de-cancer-como.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

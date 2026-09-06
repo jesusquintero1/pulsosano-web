@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Lactancia_materna"
   - nombre: "China Kadoorie Biobank"
     tipo: "Organization"
+imagen: "/img/noticias/lactancia-materna-y-diabetes-tipo-2-estudio-en-280-000-mujeres-chinas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

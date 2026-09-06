@@ -33,6 +33,7 @@ entidades:
   - nombre: "Vector viral adenoasociado"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Virus_adenoasociado"
+imagen: "/img/noticias/terapia-genica-para-sordera-congenita-segunda-dosis-en-el-oido-contralateral.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

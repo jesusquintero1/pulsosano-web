@@ -31,6 +31,7 @@ entidades:
   - nombre: "JAMA (revista médica)"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/JAMA_(revista)"
+imagen: "/img/noticias/hospitales-que-tambien-aseguran-mejor-atencion-o-mas-concentracion-de-mercado.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Terremoto"
   - nombre: "Equipo Médico de Emergencia"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/dos-semanas-tras-los-sismos-en-venezuela-ops-alerta-sobre-necesidades-de-salud.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

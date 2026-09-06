@@ -32,6 +32,7 @@ entidades:
   - nombre: "Lavado broncoalveolar"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Lavado_broncoalveolar"
+imagen: "/img/noticias/biomarcadores-multi-omicos-podrian-detectar-dano-pulmonar-en-trasplantados-antes.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

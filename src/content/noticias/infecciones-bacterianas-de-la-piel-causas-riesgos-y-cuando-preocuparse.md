@@ -14,6 +14,7 @@ tags:
   - "staphylococcus"
   - "prevencion"
   - "factores-de-riesgo"
+imagen: "/img/noticias/infecciones-bacterianas-de-la-piel-causas-riesgos-y-cuando-preocuparse.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -33,6 +33,7 @@ entidades:
     tipo: "Thing"
   - nombre: "Equipo Médico de Emergencia"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/venezuela-respuesta-sanitaria-al-terremoto-entra-en-fase-de-recuperacion.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

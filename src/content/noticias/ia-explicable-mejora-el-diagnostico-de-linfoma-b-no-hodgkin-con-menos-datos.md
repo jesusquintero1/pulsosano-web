@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Citometr%C3%ADa_de_flujo"
   - nombre: "Inteligencia artificial en medicina"
     tipo: "Thing"
+imagen: "/img/noticias/ia-explicable-mejora-el-diagnostico-de-linfoma-b-no-hodgkin-con-menos-datos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

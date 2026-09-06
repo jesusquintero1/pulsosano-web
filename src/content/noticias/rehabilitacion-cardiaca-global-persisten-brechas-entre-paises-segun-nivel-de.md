@@ -14,6 +14,7 @@ tags:
   - "salud-global"
   - "factores-de-riesgo"
   - "audit-global"
+imagen: "/img/noticias/rehabilitacion-cardiaca-global-persisten-brechas-entre-paises-segun-nivel-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

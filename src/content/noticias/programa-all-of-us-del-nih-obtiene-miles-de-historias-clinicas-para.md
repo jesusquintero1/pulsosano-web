@@ -32,7 +32,7 @@ entidades:
   - nombre: "Institutos Nacionales de Salud (NIH)"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Institutos_Nacionales_de_Salud"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/06/AdobeStock_301029601-1024x576.jpeg"
+imagen: "/img/noticias/programa-all-of-us-del-nih-obtiene-miles-de-historias-clinicas-para.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

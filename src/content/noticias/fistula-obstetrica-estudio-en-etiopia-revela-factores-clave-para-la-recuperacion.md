@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Fisioterapia"
   - nombre: "Método de Kaplan-Meier"
     tipo: "Thing"
+imagen: "/img/noticias/fistula-obstetrica-estudio-en-etiopia-revela-factores-clave-para-la-recuperacion.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

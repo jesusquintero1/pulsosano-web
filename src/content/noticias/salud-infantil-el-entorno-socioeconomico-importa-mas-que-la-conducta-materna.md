@@ -33,6 +33,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Aleatorizaci%C3%B3n_mendeliana"
   - nombre: "Tabaquismo durante el embarazo"
     tipo: "MedicalCondition"
+imagen: "/img/noticias/salud-infantil-el-entorno-socioeconomico-importa-mas-que-la-conducta-materna.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

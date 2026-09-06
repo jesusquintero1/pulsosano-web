@@ -32,7 +32,7 @@ entidades:
   - nombre: "Comunidades autónomas de España"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Comunidad_aut%C3%B3noma"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/hemiciclo-congreso-diputados-foto-congreso.jpg"
+imagen: "/img/noticias/espana-aprueba-ley-para-unificar-el-tamizaje-neonatal-en-todas-sus-regiones.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -14,6 +14,7 @@ tags:
   - "nueva-zelanda"
   - "procesamiento-de-lenguaje-natu"
   - "pandemia"
+imagen: "/img/noticias/covid-19-altero-los-patrones-de-enfermedades-respiratorias-en-nueva-zelanda-y-el.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

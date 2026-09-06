@@ -29,7 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Trastorno_del_sue%C3%B1o"
   - nombre: "Medicina del sueño"
     tipo: "Thing"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2024-11/patrones%20de%20sue%C3%B1o%20shutterstock.jpg"
+imagen: "/img/noticias/evaluar-el-sueno-en-consulta-va-mas-alla-de-contar-las-horas-dormidas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

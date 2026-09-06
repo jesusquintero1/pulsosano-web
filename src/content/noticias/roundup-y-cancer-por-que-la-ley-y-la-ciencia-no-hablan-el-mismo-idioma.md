@@ -33,7 +33,7 @@ entidades:
   - nombre: "Agencia Internacional para la Investigación del Cáncer"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Agencia_Internacional_para_la_Investigaci%C3%B3n_del_C%C3%A1ncer"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/06/GettyImages-2283306424-1024x576.jpg"
+imagen: "/img/noticias/roundup-y-cancer-por-que-la-ley-y-la-ciencia-no-hablan-el-mismo-idioma.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

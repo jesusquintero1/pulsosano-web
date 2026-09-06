@@ -14,6 +14,7 @@ tags:
   - "violencia-sexual"
   - "adolescentes"
   - "anima-aa"
+imagen: "/img/noticias/ops-lanza-kit-anima-aa-para-que-el-sistema-de-salud-responda-a-la-violencia.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

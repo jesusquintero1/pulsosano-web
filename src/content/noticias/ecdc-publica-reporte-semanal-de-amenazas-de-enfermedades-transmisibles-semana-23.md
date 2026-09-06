@@ -14,6 +14,7 @@ tags:
   - "salud-publica"
   - "brotes-infecciosos"
   - "europa"
+imagen: "/img/noticias/ecdc-publica-reporte-semanal-de-amenazas-de-enfermedades-transmisibles-semana-23.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

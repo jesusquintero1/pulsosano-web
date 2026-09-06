@@ -34,6 +34,7 @@ entidades:
   - nombre: "Programa Mundial de Alimentos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Programa_Mundial_de_Alimentos"
+imagen: "/img/noticias/desnutricion-aguda-moderada-en-etiopia-barreras-para-integrarla-al-sistema-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

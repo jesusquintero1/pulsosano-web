@@ -30,6 +30,7 @@ entidades:
   - nombre: "Departamento de Salud y Servicios Humanos de los Estados Unidos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Departamento_de_Salud_y_Servicios_Humanos_de_los_Estados_Unidos"
+imagen: "/img/noticias/hhs-rinde-homenaje-al-oficial-david-rose-en-ceremonia-en-los-cdc.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

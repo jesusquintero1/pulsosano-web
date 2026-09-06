@@ -14,6 +14,7 @@ tags:
   - "electrificacion"
   - "combustibles-contaminantes"
   - "desarrollo-sostenible"
+imagen: "/img/noticias/oms-655-millones-sin-electricidad-y-2000-millones-sin-cocina-limpia-en-2024.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

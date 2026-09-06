@@ -33,6 +33,7 @@ entidades:
   - nombre: "Anemia falciforme"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Anemia_falciforme"
+imagen: "/img/noticias/oms-donaciones-voluntarias-de-sangre-superan-el-85-pero-el-acceso-sigue-siendo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

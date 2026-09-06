@@ -33,7 +33,7 @@ entidades:
   - nombre: "Administración de Alimentos y Medicamentos de Estados Unidos"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Administraci%C3%B3n_de_Alimentos_y_Medicamentos"
-imagen: "https://www.statnews.com/wp-content/uploads/2023/04/AdobeStock_407048578-e1782826693724-1024x576.jpeg"
+imagen: "/img/noticias/noticias-de-biotecnologia-regulador-de-terapia-genica-de-la-fda-renuncia.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

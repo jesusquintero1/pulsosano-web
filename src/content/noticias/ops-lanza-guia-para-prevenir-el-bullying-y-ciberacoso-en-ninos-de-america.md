@@ -35,6 +35,7 @@ entidades:
   - nombre: "Organización Panamericana de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Panamericana_de_la_Salud"
+imagen: "/img/noticias/ops-lanza-guia-para-prevenir-el-bullying-y-ciberacoso-en-ninos-de-america.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

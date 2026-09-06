@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Terapia dirigida contra el cáncer"
     tipo: "Drug"
+imagen: "/img/noticias/tumores-moleculares-en-junta-medica-la-clave-para-democratizar-la-oncologia-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

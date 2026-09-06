@@ -34,6 +34,7 @@ entidades:
   - nombre: "Terremoto"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Terremoto"
+imagen: "/img/noticias/un-mes-tras-el-terremoto-en-venezuela-la-ops-apoya-la-recuperacion-sanitaria-a.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

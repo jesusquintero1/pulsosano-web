@@ -30,7 +30,7 @@ entidades:
   - nombre: "Vacunación"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Vacunaci%C3%B3n"
-imagen: "https://www.statnews.com/wp-content/uploads/2025/04/GettyImages-2207186375-1024x576.jpg"
+imagen: "/img/noticias/nominado-a-cargo-federal-de-salud-tiene-historial-cuestionando-vacunas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

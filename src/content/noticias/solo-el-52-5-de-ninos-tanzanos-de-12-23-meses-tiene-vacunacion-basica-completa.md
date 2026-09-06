@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Vacuna_BCG"
   - nombre: "Encuesta Demográfica y de Salud"
     tipo: "Thing"
+imagen: "/img/noticias/solo-el-52-5-de-ninos-tanzanos-de-12-23-meses-tiene-vacunacion-basica-completa.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

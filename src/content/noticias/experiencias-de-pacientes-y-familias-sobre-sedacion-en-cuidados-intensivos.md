@@ -13,6 +13,7 @@ tags:
   - "experiencia-pacientes"
   - "comunicacion-medica"
   - "investigacion-cualitativa"
+imagen: "/img/noticias/experiencias-de-pacientes-y-familias-sobre-sedacion-en-cuidados-intensivos.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

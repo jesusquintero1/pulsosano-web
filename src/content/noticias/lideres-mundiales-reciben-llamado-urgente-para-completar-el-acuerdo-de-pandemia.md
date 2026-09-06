@@ -33,6 +33,7 @@ entidades:
   - nombre: "G20"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/G20"
+imagen: "/img/noticias/lideres-mundiales-reciben-llamado-urgente-para-completar-el-acuerdo-de-pandemia.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

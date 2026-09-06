@@ -32,6 +32,7 @@ entidades:
   - nombre: "Salud pública"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Salud_p%C3%BAblica"
+imagen: "/img/noticias/trabajadores-migrantes-en-tailandia-se-automedican-por-barreras-economicas-y.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

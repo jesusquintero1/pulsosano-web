@@ -35,7 +35,7 @@ entidades:
   - nombre: "Glándula pineal"
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/Gl%C3%A1ndula_pineal"
-imagen: "https://efesalud.com/wp-content/uploads/2026/07/Jesus-Fernandez_UNIE-Universidad.webp"
+imagen: "/img/noticias/gominolas-de-melatonina-para-dormir-en-verano-lo-que-debes-saber.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

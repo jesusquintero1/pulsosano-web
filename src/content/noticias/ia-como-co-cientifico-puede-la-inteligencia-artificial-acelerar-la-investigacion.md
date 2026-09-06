@@ -31,6 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Inteligencia_artificial_en_medicina"
   - nombre: "Nature Medicine"
     tipo: "Organization"
+imagen: "/img/noticias/ia-como-co-cientifico-puede-la-inteligencia-artificial-acelerar-la-investigacion.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

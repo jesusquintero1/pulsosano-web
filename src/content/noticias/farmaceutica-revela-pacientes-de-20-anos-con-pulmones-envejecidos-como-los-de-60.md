@@ -31,7 +31,7 @@ entidades:
     tipo: "MedicalProcedure"
   - nombre: "Farmacia comunitaria"
     tipo: "Organization"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/ok-soniacebrian.jpg"
+imagen: "/img/noticias/farmaceutica-revela-pacientes-de-20-anos-con-pulmones-envejecidos-como-los-de-60.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

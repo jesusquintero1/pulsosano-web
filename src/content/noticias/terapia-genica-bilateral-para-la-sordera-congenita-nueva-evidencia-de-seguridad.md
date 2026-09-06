@@ -33,6 +33,7 @@ entidades:
   - nombre: "Oído interno"
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/O%C3%ADdo_interno"
+imagen: "/img/noticias/terapia-genica-bilateral-para-la-sordera-congenita-nueva-evidencia-de-seguridad.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

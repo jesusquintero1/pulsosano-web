@@ -29,7 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Medicaid"
   - nombre: "Robert F. Kennedy Jr."
     tipo: "Thing"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/08/GettyImages-1993689815-1024x576.jpg"
+imagen: "/img/noticias/kennedy-y-oz-niegan-recortes-a-medicaid-pero-directores-estatales-advierten-lo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

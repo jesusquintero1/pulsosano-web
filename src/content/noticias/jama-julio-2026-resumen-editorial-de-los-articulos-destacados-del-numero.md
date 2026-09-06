@@ -26,6 +26,7 @@ entidades:
   - nombre: "Journal of the American Medical Association"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/JAMA_(revista)"
+imagen: "/img/noticias/jama-julio-2026-resumen-editorial-de-los-articulos-destacados-del-numero.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

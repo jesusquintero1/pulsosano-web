@@ -35,6 +35,7 @@ entidades:
   - nombre: "Diabetes mellitus"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Diabetes_mellitus"
+imagen: "/img/noticias/ictus-en-jovenes-aumento-durante-la-pandemia-de-covid-19-en-inglaterra.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -33,7 +33,7 @@ entidades:
   - nombre: "Biomarcador"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Biomarcador"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2024-11/alzheimer_imagen_alamy_cordon_press_0.jpg"
+imagen: "/img/noticias/vacuna-bcg-contra-la-tuberculosis-podria-influir-en-biomarcadores-del-alzheimer.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

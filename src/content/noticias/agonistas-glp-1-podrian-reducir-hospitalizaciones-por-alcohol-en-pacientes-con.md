@@ -35,6 +35,7 @@ entidades:
   - nombre: "Semaglutida"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Semaglutida"
+imagen: "/img/noticias/agonistas-glp-1-podrian-reducir-hospitalizaciones-por-alcohol-en-pacientes-con.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

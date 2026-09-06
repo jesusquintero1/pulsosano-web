@@ -32,7 +32,7 @@ entidades:
   - nombre: "Cromosoma"
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/Cromosoma"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/Julio-Munoz-e1387547306470.jpg"
+imagen: "/img/noticias/genoma-humano-completado-un-avance-clave-para-detectar-enfermedades-antes-de-que.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

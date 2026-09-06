@@ -30,7 +30,7 @@ entidades:
   - nombre: "Adolescencia"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Adolescencia"
-imagen: "https://efesalud.com/wp-content/uploads/2026/08/verguenza-cuerpo-adolescencia-2.webp"
+imagen: "/img/noticias/verguenza-corporal-en-adolescentes-cuando-se-convierte-en-problema-de-salud.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

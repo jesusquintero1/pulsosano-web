@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Deterioro_cognitivo"
   - nombre: "Calidad del sueño"
     tipo: "Thing"
+imagen: "/img/noticias/casi-un-tercio-de-adultos-con-asma-en-etiopia-presenta-deterioro-cognitivo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Panamericana_de_la_Salud"
   - nombre: "Transmisión materno-infantil"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/brasil-solicita-validacion-por-eliminar-transmision-materno-infantil-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

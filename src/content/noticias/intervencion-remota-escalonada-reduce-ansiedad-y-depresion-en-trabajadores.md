@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Trastorno_de_ansiedad"
   - nombre: "Problem Management Plus"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/intervencion-remota-escalonada-reduce-ansiedad-y-depresion-en-trabajadores.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

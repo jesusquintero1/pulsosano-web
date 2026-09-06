@@ -33,6 +33,7 @@ entidades:
   - nombre: "Seguridad alimentaria"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Seguridad_alimentaria"
+imagen: "/img/noticias/programa-agricola-multisectorial-y-vih-en-senegal-resultados-de-un-estudio.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -34,7 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Fluoroquinolona"
   - nombre: "Profilaxis antibiótica"
     tipo: "MedicalProcedure"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2022-01/leucemia.jpg"
+imagen: "/img/noticias/fluoroquinolonas-en-leucemia-aguda-nuevo-estudio-refuerza-su-uso-como-profilaxis.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

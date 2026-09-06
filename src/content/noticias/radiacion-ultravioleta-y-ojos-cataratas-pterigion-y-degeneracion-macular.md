@@ -33,7 +33,7 @@ entidades:
   - nombre: "Pterigion"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Pterigi%C3%B3n"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/barraquergafas-1.jpg"
+imagen: "/img/noticias/radiacion-ultravioleta-y-ojos-cataratas-pterigion-y-degeneracion-macular.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

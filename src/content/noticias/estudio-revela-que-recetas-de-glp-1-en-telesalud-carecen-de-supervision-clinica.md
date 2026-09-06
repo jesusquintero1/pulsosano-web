@@ -32,7 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Telemedicina"
   - nombre: "JAMA (revista médica)"
     tipo: "Organization"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/jamastudy-2-1024x576.jpg"
+imagen: "/img/noticias/estudio-revela-que-recetas-de-glp-1-en-telesalud-carecen-de-supervision-clinica.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

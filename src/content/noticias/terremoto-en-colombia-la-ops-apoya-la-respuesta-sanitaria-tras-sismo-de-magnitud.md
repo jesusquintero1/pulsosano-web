@@ -32,6 +32,7 @@ entidades:
   - nombre: "Terremoto"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Terremoto"
+imagen: "/img/noticias/terremoto-en-colombia-la-ops-apoya-la-respuesta-sanitaria-tras-sismo-de-magnitud.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

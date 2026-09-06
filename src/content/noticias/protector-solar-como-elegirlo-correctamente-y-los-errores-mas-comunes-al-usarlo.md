@@ -33,7 +33,7 @@ entidades:
   - nombre: "Radiación ultravioleta"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Radiaci%C3%B3n_ultravioleta"
-imagen: "https://efesalud.com/wp-content/uploads/2026/07/El-dr.-Tomas-Toledo-baja-1024x827.webp"
+imagen: "/img/noticias/protector-solar-como-elegirlo-correctamente-y-los-errores-mas-comunes-al-usarlo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

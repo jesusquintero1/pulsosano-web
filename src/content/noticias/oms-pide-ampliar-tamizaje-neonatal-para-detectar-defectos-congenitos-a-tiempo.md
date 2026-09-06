@@ -14,6 +14,7 @@ tags:
   - "oms"
   - "mortalidad-infantil"
   - "salud-publica"
+imagen: "/img/noticias/oms-pide-ampliar-tamizaje-neonatal-para-detectar-defectos-congenitos-a-tiempo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

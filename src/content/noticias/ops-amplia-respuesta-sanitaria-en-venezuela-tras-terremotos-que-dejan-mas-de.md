@@ -30,6 +30,7 @@ entidades:
   - nombre: "Terremoto"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Terremoto"
+imagen: "/img/noticias/ops-amplia-respuesta-sanitaria-en-venezuela-tras-terremotos-que-dejan-mas-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

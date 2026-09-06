@@ -31,6 +31,7 @@ entidades:
     tipo: "MedicalCondition"
   - nombre: "Telerehabilitación"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/ia-y-telerehabilitacion-para-prevenir-caidas-en-adultos-mayores-ensayo-clinico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

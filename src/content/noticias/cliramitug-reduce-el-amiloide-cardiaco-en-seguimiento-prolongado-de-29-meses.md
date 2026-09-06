@@ -32,6 +32,7 @@ entidades:
   - nombre: "Anticuerpo monoclonal"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Anticuerpo_monoclonal"
+imagen: "/img/noticias/cliramitug-reduce-el-amiloide-cardiaco-en-seguimiento-prolongado-de-29-meses.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

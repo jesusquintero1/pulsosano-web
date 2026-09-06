@@ -32,6 +32,7 @@ entidades:
   - nombre: "Antihipertensivos"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Antihipertensivo"
+imagen: "/img/noticias/efectos-adversos-de-antihipertensivos-que-revela-un-nuevo-metaanalisis-en-red.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

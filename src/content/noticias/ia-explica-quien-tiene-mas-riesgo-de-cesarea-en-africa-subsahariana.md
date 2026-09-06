@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Aprendizaje_autom%C3%A1tico"
   - nombre: "Encuesta Demográfica y de Salud"
     tipo: "Thing"
+imagen: "/img/noticias/ia-explica-quien-tiene-mas-riesgo-de-cesarea-en-africa-subsahariana.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

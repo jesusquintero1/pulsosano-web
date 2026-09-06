@@ -30,6 +30,7 @@ entidades:
   - nombre: "Centros para el Control y la Prevención de Enfermedades"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Centros_para_el_Control_y_la_Prevenci%C3%B3n_de_Enfermedades"
+imagen: "/img/noticias/cdc-reporta-reduccion-de-infecciones-adquiridas-en-hospitales-durante-2023.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

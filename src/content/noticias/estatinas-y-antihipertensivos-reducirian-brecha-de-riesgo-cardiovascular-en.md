@@ -33,7 +33,7 @@ entidades:
   - nombre: "Hipertensión arterial"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Hipertensi%C3%B3n_arterial"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/AdobeStock_1926133471-1024x576.jpeg"
+imagen: "/img/noticias/estatinas-y-antihipertensivos-reducirian-brecha-de-riesgo-cardiovascular-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

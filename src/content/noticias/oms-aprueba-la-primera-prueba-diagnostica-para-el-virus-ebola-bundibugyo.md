@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud"
   - nombre: "Reacción en cadena de la polimerasa (PCR)"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/oms-aprueba-la-primera-prueba-diagnostica-para-el-virus-ebola-bundibugyo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

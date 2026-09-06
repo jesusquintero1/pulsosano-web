@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/VIH/sida"
   - nombre: "Modelo de riesgos proporcionales de Cox"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/sarcoma-de-kaposi-pulmonar-en-tanzania-supervivencia-y-factores-asociados.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

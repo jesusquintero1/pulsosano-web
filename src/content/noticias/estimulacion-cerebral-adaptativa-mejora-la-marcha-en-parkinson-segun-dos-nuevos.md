@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Estimulaci%C3%B3n_cerebral_profunda"
   - nombre: "Neuromodulación"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/estimulacion-cerebral-adaptativa-mejora-la-marcha-en-parkinson-segun-dos-nuevos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

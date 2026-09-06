@@ -33,6 +33,7 @@ entidades:
   - nombre: "Trypanosoma cruzi"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Trypanosoma_cruzi"
+imagen: "/img/noticias/alimentos-inseguros-causan-866-millones-de-enfermedades-y-15-millones-de-muertes.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

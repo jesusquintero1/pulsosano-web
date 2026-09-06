@@ -32,7 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Suplemento_diet%C3%A9tico"
   - nombre: "Nutrición deportiva"
     tipo: "Thing"
-imagen: "https://efesalud.com/wp-content/uploads/2026/06/suplementos-nutricionales-futbol-barbara-sanchez-1024x659.webp"
+imagen: "/img/noticias/creatina-proteinas-y-vinagre-los-suplementos-que-usan-los-futbolistas-en-el.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

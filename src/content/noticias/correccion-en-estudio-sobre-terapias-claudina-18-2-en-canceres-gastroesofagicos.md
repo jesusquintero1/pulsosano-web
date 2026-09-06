@@ -33,6 +33,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/C%C3%A1ncer_g%C3%A1strico"
   - nombre: "Conjugado anticuerpo-fármaco"
     tipo: "Drug"
+imagen: "/img/noticias/correccion-en-estudio-sobre-terapias-claudina-18-2-en-canceres-gastroesofagicos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

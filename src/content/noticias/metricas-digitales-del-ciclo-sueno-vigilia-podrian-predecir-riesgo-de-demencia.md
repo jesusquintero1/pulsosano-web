@@ -14,6 +14,7 @@ tags:
   - "salud-cerebral"
   - "deteccion-temprana"
   - "neurologia"
+imagen: "/img/noticias/metricas-digitales-del-ciclo-sueno-vigilia-podrian-predecir-riesgo-de-demencia.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

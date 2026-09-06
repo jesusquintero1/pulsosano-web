@@ -33,6 +33,7 @@ entidades:
   - nombre: "Dengue"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Dengue"
+imagen: "/img/noticias/ops-alerta-sobre-riesgos-de-salud-del-fenomeno-el-nino-2026-2027-en-las-americas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -33,6 +33,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Aleatorizaci%C3%B3n_mendeliana"
   - nombre: "Pequeño para la edad gestacional"
     tipo: "MedicalCondition"
+imagen: "/img/noticias/condicion-socioeconomica-familiar-supera-habitos-prenatales-como-factor-de-salud.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

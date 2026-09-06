@@ -31,7 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Parto_prematuro"
   - nombre: "BCNatal"
     tipo: "Organization"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/prototipo_1.jpg"
+imagen: "/img/noticias/placenta-artificial-de-bcnatal-logra-supervivencia-de-21-dias-en-modelo-animal.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

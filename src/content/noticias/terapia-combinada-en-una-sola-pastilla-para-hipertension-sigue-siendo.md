@@ -29,6 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Hipertensión_arterial"
   - nombre: "Terapia de combinación en dosis fija"
     tipo: "MedicalProcedure"
+imagen: "/img/noticias/terapia-combinada-en-una-sola-pastilla-para-hipertension-sigue-siendo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

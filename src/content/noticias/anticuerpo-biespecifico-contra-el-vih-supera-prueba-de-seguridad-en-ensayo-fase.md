@@ -32,6 +32,7 @@ entidades:
   - nombre: "CD4"
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/CD4"
+imagen: "/img/noticias/anticuerpo-biespecifico-contra-el-vih-supera-prueba-de-seguridad-en-ensayo-fase.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,7 +35,7 @@ entidades:
   - nombre: "Comisión Europea"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Comisi%C3%B3n_Europea"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-02/wegovy.jpg"
+imagen: "/img/noticias/wegovy-oral-aprobado-en-europa-primer-antiobesidad-glp-1-sin-inyeccion.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

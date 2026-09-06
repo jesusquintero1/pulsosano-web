@@ -33,6 +33,7 @@ entidades:
   - nombre: "Terapia ocupacional"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Terapia_ocupacional"
+imagen: "/img/noticias/validacion-de-herramienta-para-medir-participacion-de-roles-en-sobrevivientes-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

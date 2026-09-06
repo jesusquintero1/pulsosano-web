@@ -33,6 +33,7 @@ entidades:
   - nombre: "Atención primaria de salud"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Atenci%C3%B3n_primaria_de_salud"
+imagen: "/img/noticias/ia-generativa-en-atencion-primaria-de-kenia-ensayo-clinico-no-muestra-reduccion.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Reglamento_Sanitario_Internacional"
   - nombre: "Agencia nacional de salud pública"
     tipo: "Organization"
+imagen: "/img/noticias/oms-propone-marco-para-fortalecer-agencias-de-salud-publica-ante-emergencias.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

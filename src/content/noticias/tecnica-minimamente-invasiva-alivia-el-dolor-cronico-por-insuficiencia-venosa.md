@@ -33,7 +33,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Escleroterapia"
   - nombre: "Clínica Universidad de Navarra"
     tipo: "Organization"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2023-05/menstruacion.jpg"
+imagen: "/img/noticias/tecnica-minimamente-invasiva-alivia-el-dolor-cronico-por-insuficiencia-venosa.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

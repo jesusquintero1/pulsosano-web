@@ -30,6 +30,7 @@ entidades:
   - nombre: "Una Salud"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Una_salud"
+imagen: "/img/noticias/resistencia-antimicrobiana-que-frena-la-gobernanza-una-salud-en-el-mundo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

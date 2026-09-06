@@ -35,6 +35,7 @@ entidades:
   - nombre: "Atención Primaria de Salud"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Atenci%C3%B3n_primaria_de_salud"
+imagen: "/img/noticias/ops-y-el-salvador-celebran-eliminacion-del-tracoma-y-avances-en-salud-publica.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

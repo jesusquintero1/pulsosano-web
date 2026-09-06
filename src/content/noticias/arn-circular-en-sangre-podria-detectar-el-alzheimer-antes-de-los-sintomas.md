@@ -35,6 +35,7 @@ entidades:
   - nombre: "Biomarcador"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Biomarcador"
+imagen: "/img/noticias/arn-circular-en-sangre-podria-detectar-el-alzheimer-antes-de-los-sintomas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

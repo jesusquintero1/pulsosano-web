@@ -32,7 +32,7 @@ entidades:
   - nombre: "Enfermedad rara"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_rara"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/GettyImages-2238709276-1024x576.jpg"
+imagen: "/img/noticias/arpa-h-destina-160-millones-de-dolares-a-terapias-genicas-personalizadas-para.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

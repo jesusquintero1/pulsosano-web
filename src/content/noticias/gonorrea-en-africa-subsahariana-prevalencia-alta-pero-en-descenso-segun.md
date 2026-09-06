@@ -14,6 +14,7 @@ tags:
   - "resistencia-antimicrobiana"
   - "metaanalisis"
   - "salud-publica"
+imagen: "/img/noticias/gonorrea-en-africa-subsahariana-prevalencia-alta-pero-en-descenso-segun.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

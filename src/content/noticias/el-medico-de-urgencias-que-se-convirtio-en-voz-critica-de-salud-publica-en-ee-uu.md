@@ -29,7 +29,7 @@ entidades:
   - nombre: "Salud pública"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Salud_p%C3%BAblica"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/20260506-bgm-faust-1319-copy-2-1024x576.jpg"
+imagen: "/img/noticias/el-medico-de-urgencias-que-se-convirtio-en-voz-critica-de-salud-publica-en-ee-uu.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

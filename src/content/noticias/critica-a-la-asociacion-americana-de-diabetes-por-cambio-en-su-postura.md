@@ -32,7 +32,7 @@ entidades:
   - nombre: "Diabetes mellitus"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Diabetes_mellitus"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/AdobeStock_954580827-1024x576.jpeg"
+imagen: "/img/noticias/critica-a-la-asociacion-americana-de-diabetes-por-cambio-en-su-postura.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

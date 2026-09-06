@@ -31,6 +31,7 @@ entidades:
     tipo: "Thing"
   - nombre: "Sierra Leona"
     tipo: "Organization"
+imagen: "/img/noticias/mpox-en-sierra-leona-2025-estigma-barreras-sanitarias-y-resiliencia-en-el-brote.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

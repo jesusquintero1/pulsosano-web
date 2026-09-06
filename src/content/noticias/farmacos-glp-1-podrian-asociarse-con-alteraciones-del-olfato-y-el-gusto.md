@@ -34,6 +34,7 @@ entidades:
   - nombre: "Anosmia"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Anosmia"
+imagen: "/img/noticias/farmacos-glp-1-podrian-asociarse-con-alteraciones-del-olfato-y-el-gusto.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

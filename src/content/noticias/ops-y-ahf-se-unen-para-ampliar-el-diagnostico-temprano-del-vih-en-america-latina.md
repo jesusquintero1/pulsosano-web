@@ -35,6 +35,7 @@ entidades:
   - nombre: "Terapia antirretroviral"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Terapia_antirretroviral"
+imagen: "/img/noticias/ops-y-ahf-se-unen-para-ampliar-el-diagnostico-temprano-del-vih-en-america-latina.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

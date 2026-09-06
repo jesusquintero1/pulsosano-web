@@ -35,6 +35,7 @@ entidades:
   - nombre: "Agencia Internacional para la Investigación del Cáncer"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Agencia_Internacional_para_la_Investigaci%C3%B3n_del_C%C3%A1ncer"
+imagen: "/img/noticias/oms-alerta-casos-de-cancer-podrian-casi-duplicarse-para-2050-sin-accion-urgente-2.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

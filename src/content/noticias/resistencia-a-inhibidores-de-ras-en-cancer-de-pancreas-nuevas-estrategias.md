@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Ras_(prote%C3%ADna)"
   - nombre: "Daraxonrasib"
     tipo: "Drug"
+imagen: "/img/noticias/resistencia-a-inhibidores-de-ras-en-cancer-de-pancreas-nuevas-estrategias.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -30,7 +30,7 @@ entidades:
   - nombre: "Enfermedad pulmonar obstructiva crónica"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Enfermedad_pulmonar_obstructiva_cr%C3%B3nica"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/incendio_madrid.jpg"
+imagen: "/img/noticias/incendio-en-madrid-riesgos-para-la-salud-por-humo-y-contaminacion-del-aire.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -33,6 +33,7 @@ entidades:
   - nombre: "Fibrosis hepática"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Fibrosis_hep%C3%A1tica"
+imagen: "/img/noticias/pruebas-no-invasivas-para-fibrosis-hepatica-que-dice-el-estudio-litmus.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

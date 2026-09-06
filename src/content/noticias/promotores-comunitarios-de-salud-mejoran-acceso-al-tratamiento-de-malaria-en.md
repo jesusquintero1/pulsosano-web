@@ -29,6 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Malaria"
   - nombre: "Promotor de salud comunitaria"
     tipo: "Thing"
+imagen: "/img/noticias/promotores-comunitarios-de-salud-mejoran-acceso-al-tratamiento-de-malaria-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

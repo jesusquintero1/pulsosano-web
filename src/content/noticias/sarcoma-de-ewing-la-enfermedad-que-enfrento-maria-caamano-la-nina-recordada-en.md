@@ -28,7 +28,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Sarcoma_de_Ewing"
   - nombre: "Oncología pediátrica"
     tipo: "MedicalProcedure"
-imagen: "https://efesalud.com/wp-content/uploads/2023/01/sarcoma-ewing-maria-caamano-futbol.webp"
+imagen: "/img/noticias/sarcoma-de-ewing-la-enfermedad-que-enfrento-maria-caamano-la-nina-recordada-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

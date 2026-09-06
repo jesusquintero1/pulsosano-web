@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Anopheles_gambiae"
   - nombre: "Resistencia a insecticidas"
     tipo: "Thing"
+imagen: "/img/noticias/vigilancia-de-mosquitos-en-kinshasa-revela-resistencia-a-insecticidas-y-nuevos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

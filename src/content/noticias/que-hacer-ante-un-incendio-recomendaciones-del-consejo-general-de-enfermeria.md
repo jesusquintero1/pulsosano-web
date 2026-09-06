@@ -31,7 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Quemadura"
   - nombre: "Intoxicación por humo"
     tipo: "MedicalCondition"
-imagen: "https://efesalud.com/wp-content/uploads/2025/08/protegerse-incendios-mujer-espaldas-mirando-fuego-1.jpg"
+imagen: "/img/noticias/que-hacer-ante-un-incendio-recomendaciones-del-consejo-general-de-enfermeria.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,6 +35,7 @@ entidades:
   - nombre: "Banco Interamericano de Desarrollo"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Banco_Interamericano_de_Desarrollo"
+imagen: "/img/noticias/bahamas-se-une-a-la-alianza-para-la-atencion-primaria-de-salud-en-las-americas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

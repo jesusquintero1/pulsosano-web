@@ -13,6 +13,7 @@ tags:
   - "politica-sanitaria"
   - "salud-publica"
   - "liderazgo-sanitario"
+imagen: "/img/noticias/asamblea-mundial-de-la-salud-inicia-sesiones-en-ginebra-con-nueva-directiva.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

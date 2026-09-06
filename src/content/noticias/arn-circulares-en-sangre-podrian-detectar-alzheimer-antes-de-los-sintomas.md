@@ -33,6 +33,7 @@ entidades:
   - nombre: "Proteína Tau"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Prote%C3%ADna_tau"
+imagen: "/img/noticias/arn-circulares-en-sangre-podrian-detectar-alzheimer-antes-de-los-sintomas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

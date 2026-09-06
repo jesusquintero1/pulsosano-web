@@ -29,6 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Diabetes_mellitus_tipo_2"
   - nombre: "JAMA Pediatrics"
     tipo: "Organization"
+imagen: "/img/noticias/primera-estimacion-nacional-de-diabetes-tipo-2-en-ninos-de-ee-uu-genera-alerta.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

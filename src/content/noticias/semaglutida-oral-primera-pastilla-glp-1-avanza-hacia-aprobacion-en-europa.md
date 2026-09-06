@@ -13,7 +13,7 @@ tags:
   - "obesidad"
   - "medicamento"
   - "aprobacion-ema"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-05/obesidad_pastilla_oral_medicamento.jpg"
+imagen: "/img/noticias/semaglutida-oral-primera-pastilla-glp-1-avanza-hacia-aprobacion-en-europa.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

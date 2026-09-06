@@ -33,6 +33,7 @@ entidades:
   - nombre: "One Health"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Una_sola_salud"
+imagen: "/img/noticias/cdc-activa-respuesta-de-emergencia-ante-brote-de-gusano-barrenador-en-ee-uu.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

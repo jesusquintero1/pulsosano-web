@@ -13,7 +13,7 @@ tags:
   - "obesidad"
   - "ensayo-clinico"
   - "metabolismo"
-imagen: "https://media.post.rvohealth.io/wp-content/uploads/2026/05/Next_Gen_GLP-1-header-1296x728-1.jpg"
+imagen: "/img/noticias/nuevo-farmaco-dual-glp-1-muestra-mayor-perdida-de-peso-en-ensayo-clinico.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

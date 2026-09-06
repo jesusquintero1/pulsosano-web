@@ -28,7 +28,7 @@ entidades:
     tipo: "Thing"
   - nombre: "Descuento de medicamentos"
     tipo: "MedicalProcedure"
-imagen: "https://www.statnews.com/wp-content/uploads/2021/08/AdobeStock_251252973-1024x576.jpeg"
+imagen: "/img/noticias/ee-uu-revisa-programa-de-descuentos-340b-para-hospitales-y-genera-controversia.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

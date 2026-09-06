@@ -35,6 +35,7 @@ entidades:
   - nombre: "Herpes zóster"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Herpes_z%C3%B3ster"
+imagen: "/img/noticias/la-brecha-de-adherencia-a-medicamentos-se-amplia-y-cobra-vidas-prevenibles.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

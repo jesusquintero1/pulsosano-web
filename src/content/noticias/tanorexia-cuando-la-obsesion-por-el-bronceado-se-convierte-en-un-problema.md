@@ -32,7 +32,7 @@ entidades:
   - nombre: "Radiación ultravioleta"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Radiaci%C3%B3n_ultravioleta"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/bronceado.jpg"
+imagen: "/img/noticias/tanorexia-cuando-la-obsesion-por-el-bronceado-se-convierte-en-un-problema.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

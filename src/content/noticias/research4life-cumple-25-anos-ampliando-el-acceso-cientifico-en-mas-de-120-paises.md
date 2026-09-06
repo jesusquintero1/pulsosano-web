@@ -34,6 +34,7 @@ entidades:
   - nombre: "Acceso abierto (publicación académica)"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Acceso_abierto"
+imagen: "/img/noticias/research4life-cumple-25-anos-ampliando-el-acceso-cientifico-en-mas-de-120-paises.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

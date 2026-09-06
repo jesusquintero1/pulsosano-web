@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud"
   - nombre: "Centros Africanos para el Control y la Prevención de Enfermedades"
     tipo: "Organization"
+imagen: "/img/noticias/oms-y-africa-cdc-lanzan-plan-continental-conjunto-contra-brote-de-ebola-por.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

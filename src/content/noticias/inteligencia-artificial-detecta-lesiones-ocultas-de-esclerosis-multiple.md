@@ -32,7 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Imagen_por_resonancia_magn%C3%A9tica"
   - nombre: "Inteligencia artificial en medicina"
     tipo: "Thing"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-07/ia-cerebro.jpg"
+imagen: "/img/noticias/inteligencia-artificial-detecta-lesiones-ocultas-de-esclerosis-multiple.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

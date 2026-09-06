@@ -30,6 +30,7 @@ entidades:
   - nombre: "Salud pública"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Salud_p%C3%BAblica"
+imagen: "/img/noticias/cdc-y-el-mundial-fifa-2026-preparacion-sanitaria-para-un-evento-masivo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

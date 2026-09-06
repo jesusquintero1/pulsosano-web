@@ -33,6 +33,7 @@ entidades:
   - nombre: "Ensayo clínico"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Ensayo_cl%C3%ADnico"
+imagen: "/img/noticias/correccion-publicada-en-ensayo-fase-2b-sobre-aleniglipron-oral-para-obesidad.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -31,7 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Ensayo_cl%C3%ADnico"
   - nombre: "STAT News"
     tipo: "Organization"
-imagen: "https://www.statnews.com/wp-content/uploads/2025/06/AdobeStock_1206716114-1024x576.jpeg"
+imagen: "/img/noticias/cobertura-medica-laboral-en-ee-uu-senales-de-deterioro-y-diversidad-en-ensayos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

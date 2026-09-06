@@ -32,6 +32,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Transcriptómica"
   - nombre: "Microambiente tumoral"
     tipo: "AnatomicalStructure"
+imagen: "/img/noticias/ia-predice-respuesta-a-inmunoterapia-en-33-tipos-de-cancer-con-mayor-precision.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

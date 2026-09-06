@@ -33,6 +33,7 @@ entidades:
   - nombre: "Donación de sangre"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Donaci%C3%B3n_de_sangre"
+imagen: "/img/noticias/ops-llama-a-fortalecer-la-donacion-voluntaria-de-sangre-en-las-americas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

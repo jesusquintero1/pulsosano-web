@@ -33,6 +33,7 @@ entidades:
   - nombre: "LGBT"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/LGBT"
+imagen: "/img/noticias/el-trabajo-emocional-invisible-que-sostiene-los-programas-lgbtqia-en-salud.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

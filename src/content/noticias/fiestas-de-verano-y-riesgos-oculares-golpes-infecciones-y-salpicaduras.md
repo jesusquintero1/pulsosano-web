@@ -32,7 +32,7 @@ entidades:
   - nombre: "Oftalmología"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Oftalmolog%C3%ADa"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/691009_2_7054544-e1551965346308.jpg"
+imagen: "/img/noticias/fiestas-de-verano-y-riesgos-oculares-golpes-infecciones-y-salpicaduras.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

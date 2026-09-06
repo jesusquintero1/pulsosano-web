@@ -29,6 +29,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/C%C3%A1ncer_infantil"
   - nombre: "Universidad de Gondar"
     tipo: "Organization"
+imagen: "/img/noticias/capacitacion-medica-en-etiopia-logra-detectar-cancer-infantil-en-etapas-mas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

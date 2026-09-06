@@ -33,6 +33,7 @@ entidades:
   - nombre: "Espironolactona"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Espironolactona"
+imagen: "/img/noticias/polipildora-para-insuficiencia-cardiaca-mejora-funcion-del-corazon-en-ensayo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

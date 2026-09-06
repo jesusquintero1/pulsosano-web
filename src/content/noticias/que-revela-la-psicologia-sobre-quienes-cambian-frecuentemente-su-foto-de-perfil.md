@@ -13,7 +13,7 @@ tags:
   - "psicologia-social"
   - "bienestar-emocional"
   - "comportamiento-online"
-imagen: "https://imagenes.20minutos.es/files/image_1920_1080/files/fp/uploads/imagenes/2026/01/15/69693c11000408-71128788.r_d.2089-620-6400.jpeg"
+imagen: "/img/noticias/que-revela-la-psicologia-sobre-quienes-cambian-frecuentemente-su-foto-de-perfil.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Plasmodium_vivax"
   - nombre: "SIVIGILA"
     tipo: "Organization"
+imagen: "/img/noticias/huracan-julia-y-malaria-en-colombia-que-revelo-un-estudio-sobre-su-vinculo.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

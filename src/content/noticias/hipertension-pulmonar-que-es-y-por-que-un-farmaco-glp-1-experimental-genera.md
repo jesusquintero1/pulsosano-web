@@ -29,7 +29,7 @@ entidades:
   - nombre: "Agonistas del receptor GLP-1"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Agonista_del_receptor_de_GLP-1"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/06/AdobeStock_502400445-1024x576.jpeg"
+imagen: "/img/noticias/hipertension-pulmonar-que-es-y-por-que-un-farmaco-glp-1-experimental-genera.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

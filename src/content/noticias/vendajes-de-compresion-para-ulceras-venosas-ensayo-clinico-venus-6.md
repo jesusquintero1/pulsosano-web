@@ -34,6 +34,7 @@ entidades:
   - nombre: "Ensayo clínico aleatorizado"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Ensayo_clínico_aleatorizado"
+imagen: "/img/noticias/vendajes-de-compresion-para-ulceras-venosas-ensayo-clinico-venus-6.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

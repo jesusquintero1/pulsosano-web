@@ -31,6 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Sistema_de_justicia_penal"
   - nombre: "Bienestar infantil"
     tipo: "MedicalCondition"
+imagen: "/img/noticias/hijos-de-madres-encarceladas-estudio-busca-medir-su-salud-y-bienestar.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

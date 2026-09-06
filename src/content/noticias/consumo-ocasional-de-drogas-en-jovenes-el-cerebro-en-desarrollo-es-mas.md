@@ -32,7 +32,7 @@ entidades:
   - nombre: "Sustancia psicoactiva"
     tipo: "Drug"
     wikipedia: "https://es.wikipedia.org/wiki/Sustancia_psicoactiva"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/Ictus-cerebro-e1509023141429-5.jpg"
+imagen: "/img/noticias/consumo-ocasional-de-drogas-en-jovenes-el-cerebro-en-desarrollo-es-mas.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

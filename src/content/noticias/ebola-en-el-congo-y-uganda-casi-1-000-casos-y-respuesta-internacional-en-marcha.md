@@ -14,6 +14,7 @@ tags:
   - "brote-infeccioso"
   - "salud-publica"
   - "cdc"
+imagen: "/img/noticias/ebola-en-el-congo-y-uganda-casi-1-000-casos-y-respuesta-internacional-en-marcha.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

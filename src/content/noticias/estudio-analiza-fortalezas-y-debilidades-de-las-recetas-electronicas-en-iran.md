@@ -14,6 +14,7 @@ tags:
   - "seguridad-del-paciente"
   - "sistemas-de-salud"
   - "iran"
+imagen: "/img/noticias/estudio-analiza-fortalezas-y-debilidades-de-las-recetas-electronicas-en-iran.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

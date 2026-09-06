@@ -32,6 +32,7 @@ entidades:
   - nombre: "Biomarcadores"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Biomarcador"
+imagen: "/img/noticias/envejecimiento-biologico-acelerado-podria-explicar-el-aumento-del-cancer-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

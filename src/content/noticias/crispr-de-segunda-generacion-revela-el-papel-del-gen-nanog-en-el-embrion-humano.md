@@ -14,7 +14,7 @@ tags:
   - "gen-nanog"
   - "biologia-molecular"
   - "medicina-reproductiva"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-06/crispr-embriones.jpg"
+imagen: "/img/noticias/crispr-de-segunda-generacion-revela-el-papel-del-gen-nanog-en-el-embrion-humano.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

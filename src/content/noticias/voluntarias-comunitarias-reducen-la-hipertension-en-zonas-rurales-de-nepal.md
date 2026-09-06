@@ -33,6 +33,7 @@ entidades:
   - nombre: "Atención primaria de salud"
     tipo: "MedicalProcedure"
     wikipedia: "https://es.wikipedia.org/wiki/Atención_primaria_de_salud"
+imagen: "/img/noticias/voluntarias-comunitarias-reducen-la-hipertension-en-zonas-rurales-de-nepal.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

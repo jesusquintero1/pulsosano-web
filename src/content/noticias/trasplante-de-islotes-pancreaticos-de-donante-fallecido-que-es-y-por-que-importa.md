@@ -33,6 +33,7 @@ entidades:
   - nombre: "Hipoglucemia"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Hipoglucemia"
+imagen: "/img/noticias/trasplante-de-islotes-pancreaticos-de-donante-fallecido-que-es-y-por-que-importa.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -35,6 +35,7 @@ entidades:
   - nombre: "Aedes aegypti"
     tipo: "AnatomicalStructure"
     wikipedia: "https://es.wikipedia.org/wiki/Aedes_aegypti"
+imagen: "/img/noticias/casos-de-virus-zika-en-estados-unidos-que-informa-el-cdc.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

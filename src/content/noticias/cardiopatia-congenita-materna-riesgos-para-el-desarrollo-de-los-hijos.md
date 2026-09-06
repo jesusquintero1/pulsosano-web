@@ -35,6 +35,7 @@ entidades:
   - nombre: "Preeclampsia"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Preeclampsia"
+imagen: "/img/noticias/cardiopatia-congenita-materna-riesgos-para-el-desarrollo-de-los-hijos.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -31,7 +31,7 @@ entidades:
     tipo: "Organization"
   - nombre: "Infectología"
     tipo: "Thing"
-imagen: "https://statics-diariomedico.uecdn.es/cms/2026-08/whatsapp_image_2026-08-07_at_12.18.41_1.jpeg"
+imagen: "/img/noticias/marta-lado-la-infectologa-espanola-que-rastrea-brotes-de-ebola-en-sierra-leona.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -32,6 +32,7 @@ entidades:
   - nombre: "JAMA (revista médica)"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/JAMA_(revista)"
+imagen: "/img/noticias/licencias-medicas-y-poder-estatal-que-implica-el-fallo-de-la-corte-suprema-de-ee.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

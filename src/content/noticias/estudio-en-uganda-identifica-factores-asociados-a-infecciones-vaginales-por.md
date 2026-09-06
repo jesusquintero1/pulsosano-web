@@ -31,6 +31,7 @@ entidades:
   - nombre: "Vulvovaginitis por Candida"
     tipo: "MedicalCondition"
     wikipedia: "https://es.wikipedia.org/wiki/Candidiasis_vaginal"
+imagen: "/img/noticias/estudio-en-uganda-identifica-factores-asociados-a-infecciones-vaginales-por.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -32,6 +32,7 @@ entidades:
   - nombre: "Inmunidad de rebaño"
     tipo: "Thing"
     wikipedia: "https://es.wikipedia.org/wiki/Inmunidad_de_grupo"
+imagen: "/img/noticias/cdc-tasas-de-vacunacion-en-jardin-de-infantes-siguen-altas-con-leve-caida-de-01.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

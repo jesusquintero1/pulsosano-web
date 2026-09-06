@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Biomarcador"
   - nombre: "Metabolismo del cáncer"
     tipo: "MedicalCondition"
+imagen: "/img/noticias/la-histidina-un-aminoacido-bajo-la-lupa-como-biomarcador-de-riesgo-en-cancer.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

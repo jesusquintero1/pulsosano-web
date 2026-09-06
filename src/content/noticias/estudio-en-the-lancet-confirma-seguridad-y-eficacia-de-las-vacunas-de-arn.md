@@ -30,7 +30,7 @@ entidades:
   - nombre: "The Lancet"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/The_Lancet"
-imagen: "https://efesalud.com/wp-content/uploads/2021/10/vacunasBalearesIncidencia.jpg"
+imagen: "/img/noticias/estudio-en-the-lancet-confirma-seguridad-y-eficacia-de-las-vacunas-de-arn.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

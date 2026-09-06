@@ -13,6 +13,7 @@ tags:
   - "emergencias-salud"
   - "oms"
   - "simulacion-pandemia"
+imagen: "/img/noticias/oms-simula-respuesta-global-ante-brote-de-enfermedad-para-fortalecer-preparacion.jpg"
 autorIA: "claude-haiku-4-5"
 ---
 

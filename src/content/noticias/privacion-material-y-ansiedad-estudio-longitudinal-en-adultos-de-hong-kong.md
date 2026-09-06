@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Estr%C3%A9s"
   - nombre: "Privación material"
     tipo: "Thing"
+imagen: "/img/noticias/privacion-material-y-ansiedad-estudio-longitudinal-en-adultos-de-hong-kong.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Dermatolog%C3%ADa"
   - nombre: "Modelo de lenguaje de gran escala"
     tipo: "Thing"
+imagen: "/img/noticias/ia-explicable-en-dermatologia-beneficia-a-medicos-pero-puede-sesgar-al-publico.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

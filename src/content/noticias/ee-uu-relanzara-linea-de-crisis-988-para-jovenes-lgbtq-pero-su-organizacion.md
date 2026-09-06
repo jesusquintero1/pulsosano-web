@@ -28,7 +28,7 @@ entidades:
     tipo: "Thing"
   - nombre: "Salud mental LGBTQ+"
     tipo: "MedicalCondition"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/06/AP26176556689291-1024x576.jpg"
+imagen: "/img/noticias/ee-uu-relanzara-linea-de-crisis-988-para-jovenes-lgbtq-pero-su-organizacion.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

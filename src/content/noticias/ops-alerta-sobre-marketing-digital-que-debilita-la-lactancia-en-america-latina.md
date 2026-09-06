@@ -34,6 +34,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Panamericana_de_la_Salud"
   - nombre: "Sucedáneos de la leche materna"
     tipo: "Thing"
+imagen: "/img/noticias/ops-alerta-sobre-marketing-digital-que-debilita-la-lactancia-en-america-latina.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

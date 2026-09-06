@@ -35,6 +35,7 @@ entidades:
   - nombre: "Organización Panamericana de la Salud"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Panamericana_de_la_Salud"
+imagen: "/img/noticias/brasil-dona-115-millones-de-dosis-de-vacunas-a-venezuela-tras-los-terremotos-de.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

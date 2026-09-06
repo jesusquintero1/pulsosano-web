@@ -35,6 +35,7 @@ entidades:
   - nombre: "Sistema de la Integración Centroamericana"
     tipo: "Organization"
     wikipedia: "https://es.wikipedia.org/wiki/Sistema_de_la_Integraci%C3%B3n_Centroamericana"
+imagen: "/img/noticias/ops-y-commca-firman-acuerdo-para-reducir-desigualdades-en-salud-de-mujeres-en.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 

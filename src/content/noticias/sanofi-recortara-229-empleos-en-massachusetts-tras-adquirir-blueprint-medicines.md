@@ -31,7 +31,7 @@ entidades:
     wikipedia: "https://es.wikipedia.org/wiki/Sanofi"
   - nombre: "Blueprint Medicines"
     tipo: "Organization"
-imagen: "https://www.statnews.com/wp-content/uploads/2026/07/GettyImages-2281597952-1024x576.jpg"
+imagen: "/img/noticias/sanofi-recortara-229-empleos-en-massachusetts-tras-adquirir-blueprint-medicines.jpg"
 autorIA: "claude-sonnet-4-6"
 ---
 
