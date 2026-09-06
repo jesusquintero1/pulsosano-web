@@ -61,6 +61,27 @@ Antes de pulsar "Solicitar revisión" en el dashboard de AdSense:
 **Riesgo:** un segundo rechazo endurece la siguiente revisión. No re-solicitar
 sin haber movido la aguja de calidad de forma verificable.
 
+## Segunda fase (2026-09-05) — poda completa del archivo
+
+Diagnóstico con el corpus completo (1.492 artículos): mediana 487 palabras;
+1.104 artículos visibles por debajo de 600 palabras; 31 URLs fuente duplicadas;
+40 artículos con fecha RSS de 2019-2025. Además el CI llevaba 16 días caído
+(SDK `anthropic` 1.x) y el sitio no publicaba nada desde el 20-ago.
+
+| Palanca | Antes | Ahora |
+|---|---|---|
+| Artículos con `noindex` | 94 | **1.202** |
+| Artículos visibles (portada/categorías/sitemap) | 1.398 | **~290** |
+| Umbral | ad hoc | **< 600 palabras** o duplicado por URL fuente |
+| Listados | mostraban `noindex` | los excluyen |
+| Fechas fuera de ventana | 40 | 0 (y el agregador acota a 21 días) |
+
+Los ~290 visibles son los generados desde julio (mediana 917 palabras, FAQs y
+entidades) más los expandidos a mano. Todo artículo nuevo entra ya con ese
+estándar. Reversible: quitar `noindex: true` del frontmatter.
+
+Checklist de re-revisión AdSense actualizada en [`MONETIZACION.md`](MONETIZACION.md).
+
 ## Próximos pasos de fondo (más allá del parche)
 
 1. **Elevar el piso de calidad del generador.** El prompt apunta a 600-850
